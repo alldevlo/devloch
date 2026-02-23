@@ -1,0 +1,51 @@
+{
+  "sourceSlug": "cybersecurite-4500-entreprises",
+  "hero": {
+    "required": true,
+    "sourceUrl": "https://devlo.ch/wp-content/uploads/2024/04/Saporo_Banner_1440_860-N.webp",
+    "localWebpPath": "/images/case-studies/heroes/cybersecurite-4500-entreprises-hero.webp",
+    "status": "ok",
+    "tried": [
+      "/images/case-studies/heroes/cybersecurite-4500-entreprises-hero.webp"
+    ]
+  },
+  "logo": {
+    "required": true,
+    "sourceUrl": "https://devlo.ch/wp-content/uploads/2024/03/0001_Saporo-logo.png",
+    "localWebpPath": "/images/case-studies/logos/cybersecurite-4500-entreprises-logo.webp",
+    "status": "ok",
+    "tried": [
+      "/images/case-studies/logos/cybersecurite-4500-entreprises-logo.webp"
+    ]
+  },
+  "testimonialPhoto": {
+    "required": true,
+    "sourceUrl": "",
+    "localWebpPath": "/images/Olivier-Eyries.webp",
+    "status": "ok",
+    "tried": [
+      "/images/Olivier-Eyries.webp"
+    ]
+  },
+  "extras": [
+    {
+      "sourceUrl": "",
+      "localWebpPath": "/images/devlo_Logo_Name.webp",
+      "status": "ok"
+    },
+    {
+      "sourceUrl": "",
+      "localWebpPath": "/images/service_badge_lemlist-1024x443.webp",
+      "status": "ok"
+    }
+  ],
+  "renamed": [],
+  "status": "pass",
+  "blockers": [],
+  "evidence": {
+    "dataEntrySlug": "cybersecurite-4500-entreprises",
+    "dataEntryClient": "Saporo",
+    "sourceTestimonialsCount": 2
+  },
+  "generatedAt": "2026-02-23T19:40:52.929Z"
+}

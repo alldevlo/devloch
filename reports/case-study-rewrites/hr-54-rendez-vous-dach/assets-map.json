@@ -1,0 +1,51 @@
+{
+  "sourceSlug": "hr-54-rendez-vous-dach",
+  "hero": {
+    "required": true,
+    "sourceUrl": "https://devlo.ch/wp-content/uploads/2024/10/CareerLunch_banner_1440_860.webp",
+    "localWebpPath": "/images/case-studies/heroes/hr-54-rendez-vous-dach-hero.webp",
+    "status": "ok",
+    "tried": [
+      "/images/case-studies/heroes/hr-54-rendez-vous-dach-hero.webp"
+    ]
+  },
+  "logo": {
+    "required": true,
+    "sourceUrl": "https://devlo.ch/wp-content/uploads/2023/09/CareerLunch_logo.jpg",
+    "localWebpPath": "/images/case-studies/logos/hr-54-rendez-vous-dach-logo.webp",
+    "status": "ok",
+    "tried": [
+      "/images/case-studies/logos/hr-54-rendez-vous-dach-logo.webp"
+    ]
+  },
+  "testimonialPhoto": {
+    "required": true,
+    "sourceUrl": "",
+    "localWebpPath": "/images/Raphael-haut.webp",
+    "status": "ok",
+    "tried": [
+      "/images/Raphael-haut.webp"
+    ]
+  },
+  "extras": [
+    {
+      "sourceUrl": "",
+      "localWebpPath": "/images/devlo_Logo_Name.webp",
+      "status": "ok"
+    },
+    {
+      "sourceUrl": "",
+      "localWebpPath": "/images/service_badge_lemlist-1024x443.webp",
+      "status": "ok"
+    }
+  ],
+  "renamed": [],
+  "status": "pass",
+  "blockers": [],
+  "evidence": {
+    "dataEntrySlug": "hr-54-rendez-vous-dach",
+    "dataEntryClient": "CareerLunch",
+    "sourceTestimonialsCount": 1
+  },
+  "generatedAt": "2026-02-23T19:40:26.295Z"
+}

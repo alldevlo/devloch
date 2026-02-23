@@ -19,6 +19,8 @@ export type CaseStudySection = {
 export type CaseStudy = {
   slug: string;
   sourceUrl: string;
+  sourceSlug?: string;
+  legacySlugs?: string[];
   title: string;
   summary: string;
   heroSubtitle: string;
@@ -26,6 +28,15 @@ export type CaseStudy = {
   sector: string;
   heroImageUrl: string;
   clientLogoUrl: string;
+  testimonialPhotoUrl?: string;
+  testimonialPhotoAlt?: string;
+  assetAudit?: {
+    hero: "webp" | "legacy";
+    logo: "webp" | "legacy";
+    testimonialPhoto?: "webp" | "legacy";
+  };
+  migrationStatus?: "raw" | "premium" | "blocked";
+  validationStatus?: "unknown" | "pass" | "warn" | "fail";
   heroStats: CaseStudyStat[];
   campaignDetails: CaseStudyDetail[];
   resultHighlights: string[];

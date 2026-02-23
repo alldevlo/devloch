@@ -1,0 +1,51 @@
+{
+  "sourceSlug": "logiciel-comptable-200k-ca",
+  "hero": {
+    "required": true,
+    "sourceUrl": "https://devlo.ch/wp-content/uploads/2025/04/BrowserPreview_tmp-1.jpg",
+    "localWebpPath": "/images/case-studies/heroes/logiciel-comptable-200k-ca-hero.webp",
+    "status": "ok",
+    "tried": [
+      "/images/case-studies/heroes/logiciel-comptable-200k-ca-hero.webp"
+    ]
+  },
+  "logo": {
+    "required": true,
+    "sourceUrl": "https://devlo.ch/wp-content/uploads/2025/04/Horus_Logo_4k-scaled.png",
+    "localWebpPath": "/images/case-studies/logos/logiciel-comptable-200k-ca-logo.webp",
+    "status": "ok",
+    "tried": [
+      "/images/case-studies/logos/logiciel-comptable-200k-ca-logo.webp"
+    ]
+  },
+  "testimonialPhoto": {
+    "required": true,
+    "sourceUrl": "",
+    "localWebpPath": "/images/Jerome_Tailleur.webp",
+    "status": "ok",
+    "tried": [
+      "/images/Jerome_Tailleur.webp"
+    ]
+  },
+  "extras": [
+    {
+      "sourceUrl": "",
+      "localWebpPath": "/images/devlo_Logo_Name.webp",
+      "status": "ok"
+    },
+    {
+      "sourceUrl": "",
+      "localWebpPath": "/images/service_badge_lemlist-1024x443.webp",
+      "status": "ok"
+    }
+  ],
+  "renamed": [],
+  "status": "pass",
+  "blockers": [],
+  "evidence": {
+    "dataEntrySlug": "logiciel-comptable-200k-ca",
+    "dataEntryClient": "Horus",
+    "sourceTestimonialsCount": 8
+  },
+  "generatedAt": "2026-02-23T19:40:21.156Z"
+}

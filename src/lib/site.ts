@@ -1,25 +1,23 @@
 export const siteConfig = {
   name: "devlo",
   description:
-    "Prospection B2B et generation de rendez-vous qualifies pour equipes commerciales.",
+    "Agence suisse spécialisée en prospection B2B, génération de leads et prise de rendez-vous qualifiés.",
   url: "https://devlo.ch",
   locale: "fr-CH",
   nav: [
     { label: "Accueil", href: "/" },
-    { label: "Agence", href: "/formation-prospection-b2b" },
-    { label: "Academie", href: "/academy-notre-appel" },
-    { label: "Resultats", href: "/resultats" },
-    { label: "Blog", href: "/blog" },
+    { label: "Agence", href: "/" },
+    { label: "Études de cas", href: "/etudes-de-cas" },
+    { label: "Outbound Academy", href: "/academy" },
+    { label: "Consultation gratuite", href: "/consultation" },
   ],
   footer: {
     legal: [
-      { label: "Politique de confidentialite", href: "/politique-confidentialite" },
-      { label: "Conditions academie", href: "/conditions-utilisation-academie" },
-      { label: "Terms", href: "/terms" },
+      { label: "Conditions générales", href: "/conditions" },
     ],
     contact: [
-      { label: "+41 79 756 84 03", href: "tel:+41797568403" },
-      { label: "email@devlo.ch", href: "mailto:email@devlo.ch" },
+      { label: "+41 79 758 64 03", href: "tel:+41797586403" },
+      { label: "emea@devlo.ch", href: "mailto:emea@devlo.ch" },
     ],
   },
 } as const;

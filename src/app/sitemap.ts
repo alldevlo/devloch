@@ -1,19 +1,14 @@
 import type { MetadataRoute } from "next";
 
-import { caseStudies } from "@/lib/case-studies";
+import { caseStudiesCards } from "@/content/masterfile.fr";
 import { siteConfig } from "@/lib/site";
 
 const staticRoutes = [
   "/",
-  "/formation-prospection-b2b",
-  "/academy-notre-appel",
-  "/resultats",
-  "/resultats-cas-etudes",
-  "/blog",
-  "/blog-list",
-  "/politique-confidentialite",
-  "/conditions-utilisation-academie",
-  "/terms",
+  "/etudes-de-cas",
+  "/academy",
+  "/consultation",
+  "/conditions",
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -23,11 +18,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${siteConfig.url}${route}`,
     lastModified: now,
     changeFrequency: route === "/" ? "weekly" : "monthly",
-    priority: route === "/" ? 1 : route.startsWith("/resultats") ? 0.9 : 0.8,
+    priority: route === "/" ? 1 : route === "/etudes-de-cas" ? 0.9 : 0.8,
   }));
 
-  const caseEntries: MetadataRoute.Sitemap = caseStudies.map((study) => ({
-    url: `${siteConfig.url}/resultats/${study.slug}`,
+  const caseEntries: MetadataRoute.Sitemap = caseStudiesCards.map((study) => ({
+    url: `${siteConfig.url}/etudes-de-cas/${study.slug}`,
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.85,

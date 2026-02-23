@@ -1,352 +1,358 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import {
+  CalendarCheck,
+  Database,
+  Gauge,
+  Globe,
+  Handshake,
+  Languages,
+  LayoutTemplate,
+  PenTool,
+  PiggyBank,
+  Rocket,
+  Send,
+  ShieldCheck,
+  Target,
+  Zap,
+} from "lucide-react";
 
-import { WaveDivider } from "@/components/ui/wave-divider";
-import { caseStudyLogos, enterpriseLogos, homeVisuals, testimonialProfiles } from "@/lib/brand-assets";
+import { SectionWrapper } from "@/components/shared/section-wrapper";
+import { AccordionSingle } from "@/components/ui/accordion-single";
+import { buttonClassName } from "@/components/ui/button";
+import { FadeInOnScroll } from "@/components/ui/fade-in-on-scroll";
+import { WistiaThumbnailTrigger } from "@/components/ui/wistia-thumbnail-trigger";
+import { homeContent } from "@/content/masterfile.fr";
 
-const process = [
-  {
-    title: "1. Ciblage ICP",
-    text: "Definition des comptes cibles, filtres firmographiques et priorites sectorielles.",
-  },
-  {
-    title: "2. Prospection multicanale",
-    text: "Sequences email, reseaux sociaux et telephone avec suivi de delivrabilite.",
-  },
-  {
-    title: "3. Qualification",
-    text: "Selection des opportunites qui correspondent au niveau d'urgence et au budget.",
-  },
-  {
-    title: "4. Rendez-vous confirmes",
-    text: "Agenda rempli avec des interlocuteurs pertinents pour l'equipe commerciale.",
-  },
-];
+const noRecruitIcons = [Target, PiggyBank, Rocket] as const;
+const whyIcons = [
+  LayoutTemplate,
+  Zap,
+  Gauge,
+  PiggyBank,
+  Rocket,
+  Handshake,
+  Languages,
+  ShieldCheck,
+] as const;
+const methodIconMap = {
+  Target,
+  PenTool,
+  LayoutTemplate,
+  Database,
+  Send,
+  CalendarCheck,
+} as const;
 
-const metrics = [
-  { value: "+7", label: "Annees d'experience" },
-  { value: "+3k", label: "Prospects engages" },
-  { value: "+12k", label: "Messages envoyes" },
-  { value: "+50k", label: "Comptes analyses" },
-];
+function InfiniteLogoRail({ logos, pauseOnHover = false, reverse = false }: { logos: { src: string; alt: string }[]; pauseOnHover?: boolean; reverse?: boolean }) {
+  const doubled = [...logos, ...logos];
 
-const sectors = [
-  "Logiciels B2B",
-  "Industrie",
-  "RH et recrutement",
-  "Conseil",
-  "Immobilier",
-  "Energie",
-  "Formation",
-  "Mobilite",
-];
+  return (
+    <div className="group relative overflow-hidden py-1">
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-white to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-white to-transparent" />
+      <div
+        className={[
+          "flex min-w-max items-center gap-10",
+          reverse ? "animate-logo-scroll-reverse" : "animate-logo-scroll",
+          pauseOnHover ? "group-hover:[animation-play-state:paused]" : "",
+        ]
+          .filter(Boolean)
+          .join(" ")}
+      >
+        {doubled.map((logo, index) => (
+          <Image
+            key={`${logo.alt}-${index}`}
+            src={logo.src}
+            alt={logo.alt}
+            width={200}
+            height={60}
+            className="h-10 w-auto shrink-0 object-contain opacity-70 grayscale transition duration-200 hover:opacity-100 hover:grayscale-0"
+            loading="lazy"
+            sizes="200px"
+            quality={72}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
-const faqs = [
-  "Quel delai pour obtenir les premiers rendez-vous ?",
-  "Travaillez-vous par secteur ou uniquement par marche cible ?",
-  "Comment suivez-vous la qualite des leads ?",
-  "Peut-on integrer vos actions avec notre CRM ?",
-  "Comment se passe le reporting hebdomadaire ?",
-];
+function ClientsRail({ names, reverse = false }: { names: string[]; reverse?: boolean }) {
+  const logos = names.map((name) => ({ src: `/images/${name}`, alt: name.replace(/\.[a-z0-9]+$/i, "") }));
+  return <InfiniteLogoRail logos={logos} pauseOnHover reverse={reverse} />;
+}
 
 export function HomePage() {
+  const noRecruitCards = homeContent.noRecruitCards;
+  const methodSteps = homeContent.methodSteps;
+  const whyCards = homeContent.whyCards;
+  const writtenTestimonials = homeContent.writtenTestimonials;
+
   return (
     <>
-      <section className="bg-[#f7f8fb]">
-        <div className="mx-auto grid w-full max-w-screen-xl gap-10 px-6 py-14 lg:grid-cols-[1.02fr_0.98fr] lg:px-10 lg:py-16">
+      <section className="bg-white pb-10 pt-12 md:pt-20 lg:pt-24">
+        <div className="mx-auto grid w-full max-w-[1200px] gap-10 px-6 md:px-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-start lg:gap-12">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#1a6d94]">Agence B2B</p>
-            <h1 className="mt-4 max-w-xl text-4xl font-semibold leading-tight text-[#0f2f49] lg:text-5xl">
-              100% orientee vers la prospection et la generation de leads.
-            </h1>
-            <p className="mt-4 max-w-lg text-base leading-7 text-[#254861]/80">
-              Nous construisons des campagnes outbound claires, executables et pilotees par des
-              indicateurs concrets.
-            </p>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <Link prefetch={false}
-                href="/notrerendez-vous"
-                className="inline-flex h-11 items-center rounded-md bg-[#0a608e] px-5 text-sm font-semibold text-white transition hover:bg-[#094f74]"
-              >
-                Demarrer maintenant
-              </Link>
-              <Link prefetch={false}
-                href="/resultats"
-                className="inline-flex h-11 items-center rounded-md border border-[#b8cfe0] bg-white px-5 text-sm font-semibold text-[#12364f]"
-              >
-                Voir les resultats
-              </Link>
-            </div>
+            <FadeInOnScroll>
+              <p className="inline-flex items-center gap-2 rounded-full bg-devlo-100 px-4 py-1.5 text-sm font-semibold text-devlo-700">
+                {homeContent.hero.badge}
+              </p>
+            </FadeInOnScroll>
+
+            <FadeInOnScroll delay={0.1}>
+              <h1 className="mt-5 text-4xl font-extrabold leading-[1.1] tracking-tight text-devlo-900 md:text-5xl lg:text-[56px]">
+                {homeContent.hero.h1}
+              </h1>
+            </FadeInOnScroll>
+
+            <FadeInOnScroll delay={0.2}>
+              <h2 className="mt-5 text-xl font-semibold leading-relaxed text-devlo-700 md:text-2xl">{homeContent.hero.h2}</h2>
+            </FadeInOnScroll>
+
+            <FadeInOnScroll delay={0.3}>
+              <p className="mt-4 text-lg leading-relaxed text-neutral-600">{homeContent.hero.paragraph}</p>
+            </FadeInOnScroll>
+
+            <FadeInOnScroll delay={0.4}>
+              <div className="mt-6 flex flex-wrap gap-4">
+                <Link href={homeContent.hero.ctaPrimary.href} className={buttonClassName("primary", "px-8 py-4 text-base")}> 
+                  {homeContent.hero.ctaPrimary.label}
+                </Link>
+                <Link href={homeContent.hero.ctaSecondary.href} className={buttonClassName("secondary", "px-8 py-4 text-base")}>
+                  {homeContent.hero.ctaSecondary.label}
+                </Link>
+              </div>
+            </FadeInOnScroll>
+
+            <FadeInOnScroll delay={0.5}>
+              <p className="mt-5 text-sm font-semibold text-neutral-600">{homeContent.hero.microProof}</p>
+            </FadeInOnScroll>
           </div>
 
-          <div className="overflow-hidden rounded-xl border border-[#c7d9e7] bg-white p-4 shadow-soft">
-            <Image
-              src={homeVisuals.hero}
-              alt="Vue de l'academie devlo"
-              width={2028}
-              height={1268}
-              className="h-auto w-full rounded-lg object-cover"
-              priority
-            />
-            <div className="mt-4 flex items-center justify-between gap-4">
-              <Image
-                src={homeVisuals.academyCover}
-                alt="Apercu des modules outbound"
-                width={1016}
-                height={614}
-                className="h-14 w-auto object-contain"
+          <FadeInOnScroll delay={0.2} direction="right">
+            <div className="overflow-hidden rounded-2xl border border-neutral-200 shadow-panel">
+              <WistiaThumbnailTrigger
+                videoId={homeContent.hero.wistiaMediaId}
+                title={homeContent.hero.h1}
+                previewSrc={homeContent.hero.posterSrc}
+                previewAlt={homeContent.hero.posterAlt}
+                priority
+                sizes="(min-width: 1024px) 46vw, (min-width: 768px) 88vw, 100vw"
+                className="bg-white"
               />
-              <Image
-                src={homeVisuals.partnerBadge}
-                alt="Badge service partner"
-                width={2220}
-                height={852}
-                className="h-8 w-auto object-contain"
-              />
             </div>
-          </div>
-        </div>
-      </section>
-
-      <WaveDivider />
-
-      <section className="bg-[#f3f4f6] py-4">
-        <div className="mx-auto flex w-full max-w-screen-xl flex-wrap items-center justify-center gap-5 px-6 lg:px-10">
-          {caseStudyLogos.map((logo) => (
-            <div
-              key={logo.name}
-              className="flex h-12 w-[150px] items-center justify-center rounded-md border border-stroke bg-white px-3"
-            >
-              <Image src={logo.src} alt={logo.alt} width={220} height={80} className="max-h-8 w-auto object-contain" />
+            <div className="mt-4 rounded-xl border border-neutral-200 bg-white p-4 shadow-soft">
+              <p className="text-sm font-semibold text-devlo-900">
+                {homeContent.hero.videoTestimonial.client} · {homeContent.hero.videoTestimonial.role} · {homeContent.hero.videoTestimonial.company}
+              </p>
+              <Link href={homeContent.hero.videoTestimonial.href} className="mt-2 inline-flex text-sm font-medium text-devlo-700 hover:text-devlo-900">
+                {homeContent.hero.videoTestimonial.line}
+              </Link>
             </div>
-          ))}
+          </FadeInOnScroll>
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-screen-xl px-6 py-12 lg:px-10">
-        <p className="text-center text-xs font-semibold uppercase tracking-[0.16em] text-[#4d6678]">
-          Entreprises deja accompagnees
-        </p>
-        <div className="mt-6 grid gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
-          {enterpriseLogos.map((logo) => (
-            <article
-              key={logo.name}
-              className="flex h-16 items-center justify-center rounded-md border border-stroke bg-white px-3 shadow-soft"
-            >
-              <Image src={logo.src} alt={logo.alt} width={200} height={70} className="max-h-10 w-auto object-contain" />
-            </article>
-          ))}
-        </div>
-      </section>
+      <SectionWrapper background="white" className="py-[80px] md:py-[120px]">
+        <FadeInOnScroll>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{homeContent.rendezVousTitle}</h2>
+        </FadeInOnScroll>
+        <FadeInOnScroll delay={0.1} className="mt-10">
+          <InfiniteLogoRail logos={homeContent.rendezVousLogos} />
+        </FadeInOnScroll>
+      </SectionWrapper>
 
-      <section id="faq" className="mx-auto w-full max-w-screen-xl px-6 py-14 lg:px-10">
-        <div className="grid gap-6 lg:grid-cols-2">
-          <article className="rounded-xl border border-stroke bg-white p-8 shadow-soft">
-            <p className="text-xs uppercase tracking-[0.16em] text-[#4d6678]">Notre objectif</p>
-            <h2 className="mt-3 text-2xl font-semibold text-[#173b55]">Rendre votre prospection simple et measurable.</h2>
-            <p className="mt-4 text-sm leading-6 text-[#29495f]/80">
-              Nous deployons des sequences precises pour transformer les listes de comptes en
-              conversations qualifiees.
-            </p>
-          </article>
+      <SectionWrapper background="light" className="py-[80px] md:py-[120px]">
+        <FadeInOnScroll>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{homeContent.videoTestimonials.title}</h2>
+        </FadeInOnScroll>
 
-          <article className="rounded-xl border border-stroke bg-white p-8 shadow-soft">
-            <p className="text-xs uppercase tracking-[0.16em] text-[#4d6678]">Notre offre</p>
-            <h2 className="mt-3 text-2xl font-semibold text-[#173b55]">Prospection B2B complete, du ciblage au call.</h2>
-            <p className="mt-4 text-sm leading-6 text-[#29495f]/80">
-              Ciblage, copywriting, execution, qualification et reporting sont centralises dans un
-              systeme unique.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section className="mx-auto w-full max-w-screen-xl px-6 pb-14 lg:px-10">
-        <div className="rounded-2xl bg-white p-8 shadow-panel lg:p-10">
-          <p className="text-center text-xs uppercase tracking-[0.18em] text-[#4d6678]">Processus en 4 etapes</p>
-          <Image
-            src={homeVisuals.tasksBoard}
-            alt="Exemple de taches outbound organisees"
-            width={1366}
-            height={768}
-            className="mx-auto mt-6 h-auto w-full max-w-4xl rounded-lg border border-stroke object-cover"
-          />
-          <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-            {process.map((item) => (
-              <article key={item.title} className="rounded-lg border border-stroke bg-[#f8fafc] p-5">
-                <h3 className="text-sm font-semibold text-[#163852]">{item.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-[#2a4b62]/80">{item.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[#0c587f] py-14 text-white">
-        <div className="mx-auto w-full max-w-screen-xl px-6 lg:px-10">
-          <p className="text-center text-xs uppercase tracking-[0.18em] text-cyan-100/85">Nos resultats</p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-            {metrics.map((item) => (
-              <article key={item.label} className="rounded-lg border border-cyan-200/20 bg-[#0b4f73] p-6 text-center">
-                <p className="text-3xl font-semibold">{item.value}</p>
-                <p className="mt-2 text-xs uppercase tracking-[0.14em] text-cyan-100/80">{item.label}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <WaveDivider tone="dark" />
-
-      <section className="mx-auto w-full max-w-screen-xl px-6 py-14 lg:px-10">
-        <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="overflow-hidden rounded-xl border border-stroke bg-white p-5 shadow-soft">
-            <Image
-              src={homeVisuals.caseVideo}
-              alt="Extrait etude de cas CareerLunch"
-              width={1440}
-              height={860}
-              className="h-auto w-full rounded-lg object-cover"
-            />
-          </div>
-          <div>
-            <p className="text-xs uppercase tracking-[0.18em] text-[#4d6678]">Etudes de cas</p>
-            <h2 className="mt-3 text-3xl font-semibold leading-tight text-[#173b55]">
-              Des campagnes qui transforment des comptes froids en discussions commerciales.
-            </h2>
-            <p className="mt-4 text-sm leading-6 text-[#2d4b62]/80">
-              Chaque mission est pilotee par un plan de compte clair, un rythme hebdomadaire et des
-              feedback loops avec votre equipe.
-            </p>
-            <div className="mt-6 grid gap-3 sm:grid-cols-2">
-              <article className="rounded-lg border border-stroke bg-[#f8fafc] p-4 text-sm text-[#1f4258]">
-                Pipeline plus stable des la 3e semaine.
-              </article>
-              <article className="rounded-lg border border-stroke bg-[#f8fafc] p-4 text-sm text-[#1f4258]">
-                Rendez-vous qualifies et meilleure visibilite du funnel.
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto w-full max-w-screen-xl px-6 pb-14 lg:px-10">
-        <div className="grid gap-8 lg:grid-cols-[1.08fr_0.92fr]">
-          <article className="overflow-hidden rounded-xl border border-stroke bg-white p-5 shadow-soft">
-            <p className="text-xs uppercase tracking-[0.16em] text-[#4d6678]">Preuves sociales</p>
-            <h2 className="mt-3 text-2xl font-semibold text-[#173b55]">Des reponses positives, concretement.</h2>
-            <Image
-              src={homeVisuals.positiveReplies}
-              alt="Collage de reponses positives provenant de campagnes devlo"
-              width={1536}
-              height={1249}
-              className="mt-4 h-auto w-full rounded-lg border border-stroke object-cover"
-            />
-          </article>
-
-          <article className="rounded-xl border border-stroke bg-white p-5 shadow-soft">
-            <p className="text-xs uppercase tracking-[0.16em] text-[#4d6678]">Contacts et references</p>
-            <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-              {testimonialProfiles.map((profile) => (
-                <div key={profile.name} className="rounded-lg border border-stroke bg-[#f8fafc] p-3">
-                  <Image
-                    src={profile.image}
-                    alt={profile.alt}
-                    width={800}
-                    height={800}
-                    className="h-28 w-full rounded-md object-cover"
-                  />
-                  <p className="mt-3 text-sm font-semibold text-[#173b55]">{profile.name}</p>
-                  <p className="text-xs uppercase tracking-[0.12em] text-[#5e798d]">{profile.role}</p>
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {homeContent.videoTestimonials.items.map((item, index) => (
+            <FadeInOnScroll key={item.title} delay={index * 0.2}>
+              <article className="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-panel">
+                <WistiaThumbnailTrigger
+                  videoId={item.wistiaMediaId}
+                  title={item.title}
+                  previewSrc={item.posterSrc}
+                  previewAlt={item.posterAlt}
+                  sizes="(min-width: 1024px) 30vw, (min-width: 768px) 45vw, 100vw"
+                  className="bg-white"
+                />
+                <div className="space-y-2 p-5">
+                  <h3 className="text-xl font-semibold text-devlo-900">{item.title}</h3>
+                  <p className="text-sm text-neutral-600">
+                    {item.client} · {item.role}
+                  </p>
+                  <p className="text-sm leading-7 text-neutral-600">{item.metric}</p>
+                  <Link href={item.href} className="inline-flex text-sm font-semibold text-devlo-700 hover:text-devlo-900">
+                    {item.linkLabel}
+                  </Link>
                 </div>
-              ))}
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section className="mx-auto w-full max-w-screen-xl px-6 pb-14 lg:px-10">
-        <p className="text-center text-xs uppercase tracking-[0.18em] text-[#4d6678]">Secteurs cibles</p>
-        <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {sectors.map((item) => (
-            <div
-              key={item}
-              className="rounded-lg border border-stroke bg-white px-4 py-3 text-center text-sm font-medium text-[#1a3e58] shadow-soft"
-            >
-              {item}
-            </div>
+              </article>
+            </FadeInOnScroll>
           ))}
         </div>
-      </section>
+      </SectionWrapper>
 
-      <section className="bg-[#f6f8fb] py-14">
-        <div className="mx-auto w-full max-w-screen-xl px-6 lg:px-10">
-          <p className="text-center text-xs uppercase tracking-[0.18em] text-[#4d6678]">Pourquoi travailler ensemble</p>
-          <div className="mx-auto mt-7 max-w-4xl divide-y divide-stroke rounded-xl border border-stroke bg-white shadow-soft">
-            {faqs.map((item) => (
-              <details key={item} className="group px-5 py-4">
-                <summary className="cursor-pointer list-none text-sm font-semibold text-[#183d56]">
-                  <span className="flex items-center justify-between gap-4">
-                    {item}
-                    <span className="text-lg text-[#50748c] transition group-open:rotate-45">+</span>
-                  </span>
-                </summary>
-                <p className="mt-3 text-sm leading-6 text-[#2a4b62]/80">
-                  Reponse exemple: nous alignons les objectifs, les cibles et les messages pour
-                  maximiser la conversion des sequences outbound.
-                </p>
-              </details>
+      <SectionWrapper background="white" className="py-[80px] md:py-[120px]">
+        <FadeInOnScroll>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{homeContent.clientsTitle}</h2>
+        </FadeInOnScroll>
+
+        <div className="mt-10 space-y-4">
+          <ClientsRail names={homeContent.clientsLogos.slice(0, 9)} />
+          <ClientsRail names={homeContent.clientsLogos.slice(9, 18)} reverse />
+          <ClientsRail names={homeContent.clientsLogos.slice(18)} />
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper background="light" className="py-[80px] md:py-[120px]">
+        <FadeInOnScroll>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{homeContent.noRecruitTitle}</h2>
+        </FadeInOnScroll>
+
+        <div className="mt-10 grid gap-8 md:grid-cols-3">
+          {noRecruitCards.map((card, index) => {
+            const Icon = noRecruitIcons[index] ?? Target;
+            return (
+              <FadeInOnScroll key={card.title} delay={index * 0.2}>
+                <article className="h-full rounded-2xl border border-neutral-200 bg-white p-6 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-panel">
+                  <Icon className="h-8 w-8 text-devlo-700" aria-hidden />
+                  <h3 className="mt-4 text-2xl font-semibold text-devlo-900">{card.title}</h3>
+                  <p className="mt-3 text-base leading-7 text-neutral-600">{card.text}</p>
+                </article>
+              </FadeInOnScroll>
+            );
+          })}
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper background="white" className="py-[80px] md:py-[120px]">
+        <FadeInOnScroll>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{homeContent.methodTitle}</h2>
+        </FadeInOnScroll>
+
+        <div className="mx-auto mt-12 max-w-[980px] space-y-6">
+          {methodSteps.map((step, index) => {
+            const Icon = methodIconMap[step.icon];
+            return (
+              <FadeInOnScroll key={step.title} delay={index * 0.2}>
+                <article className="relative rounded-2xl border border-neutral-200 bg-white p-6 shadow-soft">
+                  {index < methodSteps.length - 1 ? (
+                    <div className="absolute left-[27px] top-[58px] h-[calc(100%+24px)] border-l-2 border-dashed border-devlo-100" />
+                  ) : null}
+                  <div className="flex items-start gap-4">
+                    <div className="relative z-10 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-devlo-800 text-sm font-bold text-white">
+                      {String(index + 1).padStart(2, "0")}
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3">
+                        <Icon className="h-5 w-5 text-devlo-700" aria-hidden />
+                        <h3 className="text-2xl font-semibold text-devlo-900">{step.title}</h3>
+                      </div>
+                      <p className="mt-3 text-base leading-7 text-neutral-600">{step.text}</p>
+                    </div>
+                  </div>
+                </article>
+              </FadeInOnScroll>
+            );
+          })}
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper background="light" className="py-[80px] md:py-[120px]">
+        <FadeInOnScroll>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{homeContent.whyTitle}</h2>
+        </FadeInOnScroll>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {whyCards.map((card, index) => {
+            const Icon = whyIcons[index] ?? Globe;
+            return (
+              <FadeInOnScroll key={card.title} delay={(index % 4) * 0.2}>
+                <article className="h-full rounded-2xl border border-devlo-100 bg-white p-6 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-panel">
+                  <Icon className="h-7 w-7 text-devlo-700" aria-hidden />
+                  <h3 className="mt-4 text-2xl font-semibold text-devlo-900">{card.title}</h3>
+                  <p className="mt-3 text-base leading-7 text-neutral-600">{card.text}</p>
+                </article>
+              </FadeInOnScroll>
+            );
+          })}
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper background="white" className="py-[80px] md:py-[120px]">
+        <FadeInOnScroll>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{homeContent.writtenTitle}</h2>
+        </FadeInOnScroll>
+
+        <div className="mt-10 overflow-x-auto pb-3 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+          <div className="flex snap-x snap-mandatory gap-6">
+            {writtenTestimonials.map((testimonial, index) => (
+              <FadeInOnScroll key={`${testimonial.author}-${index}`} className="min-w-[88%] snap-start md:min-w-[48%] lg:min-w-[36%]">
+                <article className="h-full rounded-2xl border border-devlo-100 bg-white p-6 shadow-soft">
+                  <div className="flex items-center gap-1 text-accent-gold" aria-label="5 étoiles">
+                    {Array.from({ length: 5 }).map((_, starIndex) => (
+                      <span key={`${testimonial.author}-star-${starIndex}`}>★</span>
+                    ))}
+                  </div>
+                  <p className="mt-4 text-base italic leading-8 text-neutral-600">“{testimonial.quote}”</p>
+                  <div className="mt-6 flex items-center gap-4">
+                    <Image
+                      src={testimonial.photo}
+                      alt={testimonial.author}
+                      width={64}
+                      height={64}
+                      className="h-16 w-16 rounded-full object-cover"
+                      loading="lazy"
+                      sizes="64px"
+                      quality={74}
+                    />
+                    <div>
+                      <p className="text-base font-semibold text-devlo-900">{testimonial.author}</p>
+                      <p className="text-sm text-neutral-600">{testimonial.role}</p>
+                      <p className="text-sm font-semibold text-devlo-700">{testimonial.company}</p>
+                    </div>
+                  </div>
+                </article>
+              </FadeInOnScroll>
             ))}
           </div>
         </div>
-      </section>
+      </SectionWrapper>
 
-      <section className="bg-[#0b587f] py-14 text-white">
-        <div className="mx-auto w-full max-w-screen-xl px-6 text-center lg:px-10">
-          <h2 className="text-3xl font-semibold leading-tight md:text-4xl">
-            Demarrez rapidement et pilotez vos campagnes avec clarte.
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-cyan-100/90 md:text-base">
-            Nous cadrons votre projet en 48h puis nous deployons les actions prioritaires avec un
-            suivi precis des KPI.
-          </p>
-          <Link prefetch={false}
-            href="/notrerendez-vous"
-            className="mt-7 inline-flex h-11 items-center rounded-md bg-white px-6 text-sm font-semibold text-[#0c567e]"
-          >
-            Reserver un appel
-          </Link>
-          <div className="mt-5 flex justify-center">
-            <Image
-              src={homeVisuals.partnerBadge}
-              alt="Top certified lemlist agency"
-              width={2220}
-              height={852}
-              className="h-10 w-auto object-contain"
-            />
+      <SectionWrapper background="dark" className="py-[80px] text-white md:py-[120px]">
+        <FadeInOnScroll>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] md:text-4xl">{homeContent.ctaMid.title}</h2>
+        </FadeInOnScroll>
+        <FadeInOnScroll delay={0.2}>
+          <p className="mx-auto mt-4 max-w-[920px] text-center text-lg leading-8 text-white/90">{homeContent.ctaMid.text}</p>
+        </FadeInOnScroll>
+        <FadeInOnScroll delay={0.3}>
+          <h3 className="mt-8 text-center text-2xl font-semibold md:text-3xl">{homeContent.ctaMid.h3}</h3>
+        </FadeInOnScroll>
+        <FadeInOnScroll delay={0.4}>
+          <p className="mx-auto mt-3 max-w-[900px] text-center text-base leading-7 text-white/90 md:text-lg">{homeContent.ctaMid.h3Text}</p>
+        </FadeInOnScroll>
+        <FadeInOnScroll delay={0.5}>
+          <div className="mt-8 text-center">
+            <Link href={homeContent.ctaMid.cta.href} className={buttonClassName("secondary", "bg-white px-8 py-4 text-base text-devlo-900 hover:text-devlo-900")}>
+              {homeContent.ctaMid.cta.label}
+            </Link>
           </div>
-        </div>
-      </section>
+        </FadeInOnScroll>
+      </SectionWrapper>
 
-      <section className="mx-auto w-full max-w-screen-xl px-6 py-14 lg:px-10">
-        <p className="text-center text-xs uppercase tracking-[0.18em] text-[#4d6678]">FAQ</p>
-        <div className="mx-auto mt-6 max-w-4xl divide-y divide-stroke rounded-xl border border-stroke bg-white shadow-soft">
-          {[
-            "Quels outils utilisez-vous pour la prospection ?",
-            "Combien de comptes ciblez-vous par mois ?",
-            "Comment mesurez-vous le ROI ?",
-          ].map((item) => (
-            <details key={item} className="group px-5 py-4">
-              <summary className="cursor-pointer list-none text-sm font-semibold text-[#183d56]">
-                <span className="flex items-center justify-between gap-4">
-                  {item}
-                  <span className="text-lg text-[#50748c] transition group-open:rotate-45">+</span>
-                </span>
-              </summary>
-            </details>
-          ))}
+      <SectionWrapper background="white" className="py-[80px] md:py-[120px]">
+        <FadeInOnScroll>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{homeContent.faqTitle}</h2>
+        </FadeInOnScroll>
+        <div className="mx-auto mt-10 max-w-[980px]">
+          <AccordionSingle items={homeContent.faqs} />
         </div>
-      </section>
+      </SectionWrapper>
     </>
   );
 }

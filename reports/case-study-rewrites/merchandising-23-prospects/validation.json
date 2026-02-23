@@ -1,0 +1,91 @@
+{
+  "sourceSlug": "merchandising-23-prospects",
+  "route": "/etudes-de-cas/merchandising-23-prospects",
+  "checks": {
+    "build": "warn",
+    "ctaScrollToHubspot": "pass",
+    "stickySubnav": "pass",
+    "stickyCta": "pass",
+    "hubspotPresent": "pass",
+    "sourceAuditBlocksHidden": "pass",
+    "webpOnlyImagesOnPage": "pass",
+    "previewVercelDeployed": "warn",
+    "routePublicOk": "pass",
+    "h1Visible": "pass",
+    "legacyRedirectCanonical": "pass"
+  },
+  "evidence": {
+    "pageUrl": "http://localhost:4021/etudes-de-cas/merchandising-23-prospects",
+    "route": "/etudes-de-cas/merchandising-23-prospects",
+    "sourceSlug": "merchandising-23-prospects",
+    "ctaHrefs": [
+      {
+        "href": "#contact-form",
+        "label": "Obtenir un plan outbound similaire lors d’une rencontre",
+        "variant": "hero"
+      },
+      {
+        "href": "#contact-form",
+        "label": "Obtenir un plan outbound similaire lors d’une rencontre",
+        "variant": "subnav"
+      },
+      {
+        "href": "#contact-form",
+        "label": "Obtenir un plan outbound similaire lors d’une rencontre",
+        "variant": "sidebar"
+      },
+      {
+        "href": "#contact-form",
+        "label": "Obtenir un plan outbound similaire lors d’une rencontre",
+        "variant": "final"
+      }
+    ],
+    "forbiddenMatches": [],
+    "imageRasterOffenders": [],
+    "imageRasterAllowed": [
+      {
+        "src": "/_next/image?url=%2Fimages%2Fdevlo_Logo_Name.webp&w=256&q=75",
+        "ext": ".webp"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fcase-studies%2Flogos%2Fmerchandising-23-prospects-logo.webp&w=3840&q=75",
+        "ext": ".webp"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fcase-studies%2Fheroes%2Fmerchandising-23-prospects-hero.webp&w=3840&q=82",
+        "ext": ".webp"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fcase-studies%2Flogos%2Fmerchandising-23-prospects-logo.webp&w=3840&q=75",
+        "ext": ".webp"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2FXavier_Leuthold.webp&w=3840&q=75",
+        "ext": ".webp"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fdevlo_Logo_Name.webp&w=256&q=75",
+        "ext": ".webp"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fservice_badge_lemlist-1024x443.webp&w=640&q=75",
+        "ext": ".webp"
+      }
+    ],
+    "legacyRedirect": {
+      "route": "/etudes-de-cas/many-ways-70-taux-reponse-merchandising",
+      "status": 308,
+      "location": "/etudes-de-cas/merchandising-23-prospects"
+    },
+    "previewSiteUrl": "",
+    "previewPageUrl": "",
+    "pageHttpStatus": 200,
+    "pageHttpFinalUrl": "http://localhost:4021/etudes-de-cas/merchandising-23-prospects",
+    "h1": "Comment cette société de merchandising a obtenu 70% de réponses et 8% de meetings avec leurs prospects grâce à cette séquence de prospection commerciale B2B",
+    "contactFormPresent": true,
+    "stickySubnavLinks": 9
+  },
+  "blockers": [],
+  "status": "pass",
+  "generatedAt": "2026-02-23T19:41:08.455Z"
+}

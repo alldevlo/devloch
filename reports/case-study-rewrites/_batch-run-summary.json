@@ -1,0 +1,220 @@
+{
+  "mode": "production",
+  "startedAt": "2026-02-23T19:40:15.965Z",
+  "updatedAt": "2026-02-23T19:41:17.077Z",
+  "status": "completed",
+  "totals": {
+    "total": 12,
+    "PASS": 12,
+    "BLOCKED": 0,
+    "PARTIAL": 0,
+    "SKIP": 0
+  },
+  "cases": [
+    {
+      "slug": "logiciel-comptable-200k-ca",
+      "status": "PASS",
+      "reason": "",
+      "previewSiteUrl": "",
+      "previewPageUrl": "",
+      "artifacts": {
+        "sourceHtml": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/logiciel-comptable-200k-ca/source.html",
+        "sourceSnapshotJson": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/logiciel-comptable-200k-ca/source-snapshot.json",
+        "sourceSnapshotMd": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/logiciel-comptable-200k-ca/source-snapshot.md",
+        "rewriteFr": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/logiciel-comptable-200k-ca/rewrite-fr.md",
+        "assetsMap": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/logiciel-comptable-200k-ca/assets-map.json",
+        "validation": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/logiciel-comptable-200k-ca/validation.json",
+        "runSummary": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/logiciel-comptable-200k-ca/run-summary.md"
+      },
+      "updatedAt": "2026-02-23T19:40:21.238Z"
+    },
+    {
+      "slug": "hr-54-rendez-vous-dach",
+      "status": "PASS",
+      "reason": "",
+      "previewSiteUrl": "",
+      "previewPageUrl": "",
+      "artifacts": {
+        "sourceHtml": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/hr-54-rendez-vous-dach/source.html",
+        "sourceSnapshotJson": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/hr-54-rendez-vous-dach/source-snapshot.json",
+        "sourceSnapshotMd": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/hr-54-rendez-vous-dach/source-snapshot.md",
+        "rewriteFr": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/hr-54-rendez-vous-dach/rewrite-fr.md",
+        "assetsMap": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/hr-54-rendez-vous-dach/assets-map.json",
+        "validation": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/hr-54-rendez-vous-dach/validation.json",
+        "runSummary": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/hr-54-rendez-vous-dach/run-summary.md"
+      },
+      "updatedAt": "2026-02-23T19:40:26.318Z"
+    },
+    {
+      "slug": "proprete-urbaine-71-rendez-vous",
+      "status": "PASS",
+      "reason": "",
+      "previewSiteUrl": "",
+      "previewPageUrl": "",
+      "artifacts": {
+        "sourceHtml": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/proprete-urbaine-71-rendez-vous/source.html",
+        "sourceSnapshotJson": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/proprete-urbaine-71-rendez-vous/source-snapshot.json",
+        "sourceSnapshotMd": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/proprete-urbaine-71-rendez-vous/source-snapshot.md",
+        "rewriteFr": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/proprete-urbaine-71-rendez-vous/rewrite-fr.md",
+        "assetsMap": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/proprete-urbaine-71-rendez-vous/assets-map.json",
+        "validation": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/proprete-urbaine-71-rendez-vous/validation.json",
+        "runSummary": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/proprete-urbaine-71-rendez-vous/run-summary.md"
+      },
+      "updatedAt": "2026-02-23T19:40:31.494Z"
+    },
+    {
+      "slug": "biocarburants-52-rendez-vous",
+      "status": "PASS",
+      "reason": "",
+      "previewSiteUrl": "",
+      "previewPageUrl": "",
+      "artifacts": {
+        "sourceHtml": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/biocarburants-52-rendez-vous/source.html",
+        "sourceSnapshotJson": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/biocarburants-52-rendez-vous/source-snapshot.json",
+        "sourceSnapshotMd": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/biocarburants-52-rendez-vous/source-snapshot.md",
+        "rewriteFr": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/biocarburants-52-rendez-vous/rewrite-fr.md",
+        "assetsMap": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/biocarburants-52-rendez-vous/assets-map.json",
+        "validation": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/biocarburants-52-rendez-vous/validation.json",
+        "runSummary": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/biocarburants-52-rendez-vous/run-summary.md"
+      },
+      "updatedAt": "2026-02-23T19:40:36.885Z"
+    },
+    {
+      "slug": "formation-14-rendez-vous",
+      "status": "PASS",
+      "reason": "",
+      "previewSiteUrl": "",
+      "previewPageUrl": "",
+      "artifacts": {
+        "sourceHtml": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/formation-14-rendez-vous/source.html",
+        "sourceSnapshotJson": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/formation-14-rendez-vous/source-snapshot.json",
+        "sourceSnapshotMd": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/formation-14-rendez-vous/source-snapshot.md",
+        "rewriteFr": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/formation-14-rendez-vous/rewrite-fr.md",
+        "assetsMap": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/formation-14-rendez-vous/assets-map.json",
+        "validation": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/formation-14-rendez-vous/validation.json",
+        "runSummary": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/formation-14-rendez-vous/run-summary.md"
+      },
+      "updatedAt": "2026-02-23T19:40:42.184Z"
+    },
+    {
+      "slug": "audiovisuel-16-rendez-vous",
+      "status": "PASS",
+      "reason": "",
+      "previewSiteUrl": "",
+      "previewPageUrl": "",
+      "artifacts": {
+        "sourceHtml": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/audiovisuel-16-rendez-vous/source.html",
+        "sourceSnapshotJson": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/audiovisuel-16-rendez-vous/source-snapshot.json",
+        "sourceSnapshotMd": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/audiovisuel-16-rendez-vous/source-snapshot.md",
+        "rewriteFr": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/audiovisuel-16-rendez-vous/rewrite-fr.md",
+        "assetsMap": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/audiovisuel-16-rendez-vous/assets-map.json",
+        "validation": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/audiovisuel-16-rendez-vous/validation.json",
+        "runSummary": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/audiovisuel-16-rendez-vous/run-summary.md"
+      },
+      "updatedAt": "2026-02-23T19:40:47.640Z"
+    },
+    {
+      "slug": "cybersecurite-4500-entreprises",
+      "status": "PASS",
+      "reason": "",
+      "previewSiteUrl": "",
+      "previewPageUrl": "",
+      "artifacts": {
+        "sourceHtml": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/cybersecurite-4500-entreprises/source.html",
+        "sourceSnapshotJson": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/cybersecurite-4500-entreprises/source-snapshot.json",
+        "sourceSnapshotMd": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/cybersecurite-4500-entreprises/source-snapshot.md",
+        "rewriteFr": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/cybersecurite-4500-entreprises/rewrite-fr.md",
+        "assetsMap": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/cybersecurite-4500-entreprises/assets-map.json",
+        "validation": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/cybersecurite-4500-entreprises/validation.json",
+        "runSummary": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/cybersecurite-4500-entreprises/run-summary.md"
+      },
+      "updatedAt": "2026-02-23T19:40:52.946Z"
+    },
+    {
+      "slug": "biodiversite-70-rendez-vous",
+      "status": "PASS",
+      "reason": "",
+      "previewSiteUrl": "",
+      "previewPageUrl": "",
+      "artifacts": {
+        "sourceHtml": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/biodiversite-70-rendez-vous/source.html",
+        "sourceSnapshotJson": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/biodiversite-70-rendez-vous/source-snapshot.json",
+        "sourceSnapshotMd": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/biodiversite-70-rendez-vous/source-snapshot.md",
+        "rewriteFr": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/biodiversite-70-rendez-vous/rewrite-fr.md",
+        "assetsMap": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/biodiversite-70-rendez-vous/assets-map.json",
+        "validation": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/biodiversite-70-rendez-vous/validation.json",
+        "runSummary": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/biodiversite-70-rendez-vous/run-summary.md"
+      },
+      "updatedAt": "2026-02-23T19:40:58.205Z"
+    },
+    {
+      "slug": "mobilite-40-prospects",
+      "status": "PASS",
+      "reason": "",
+      "previewSiteUrl": "",
+      "previewPageUrl": "",
+      "artifacts": {
+        "sourceHtml": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/mobilite-40-prospects/source.html",
+        "sourceSnapshotJson": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/mobilite-40-prospects/source-snapshot.json",
+        "sourceSnapshotMd": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/mobilite-40-prospects/source-snapshot.md",
+        "rewriteFr": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/mobilite-40-prospects/rewrite-fr.md",
+        "assetsMap": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/mobilite-40-prospects/assets-map.json",
+        "validation": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/mobilite-40-prospects/validation.json",
+        "runSummary": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/mobilite-40-prospects/run-summary.md"
+      },
+      "updatedAt": "2026-02-23T19:41:03.316Z"
+    },
+    {
+      "slug": "merchandising-23-prospects",
+      "status": "PASS",
+      "reason": "",
+      "previewSiteUrl": "",
+      "previewPageUrl": "",
+      "artifacts": {
+        "sourceHtml": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/merchandising-23-prospects/source.html",
+        "sourceSnapshotJson": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/merchandising-23-prospects/source-snapshot.json",
+        "sourceSnapshotMd": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/merchandising-23-prospects/source-snapshot.md",
+        "rewriteFr": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/merchandising-23-prospects/rewrite-fr.md",
+        "assetsMap": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/merchandising-23-prospects/assets-map.json",
+        "validation": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/merchandising-23-prospects/validation.json",
+        "runSummary": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/merchandising-23-prospects/run-summary.md"
+      },
+      "updatedAt": "2026-02-23T19:41:08.456Z"
+    },
+    {
+      "slug": "immobilier-11-prospects",
+      "status": "PASS",
+      "reason": "",
+      "previewSiteUrl": "",
+      "previewPageUrl": "",
+      "artifacts": {
+        "sourceHtml": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/immobilier-11-prospects/source.html",
+        "sourceSnapshotJson": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/immobilier-11-prospects/source-snapshot.json",
+        "sourceSnapshotMd": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/immobilier-11-prospects/source-snapshot.md",
+        "rewriteFr": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/immobilier-11-prospects/rewrite-fr.md",
+        "assetsMap": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/immobilier-11-prospects/assets-map.json",
+        "validation": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/immobilier-11-prospects/validation.json",
+        "runSummary": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/immobilier-11-prospects/run-summary.md"
+      },
+      "updatedAt": "2026-02-23T19:41:11.767Z"
+    },
+    {
+      "slug": "immobilier-30-prospects",
+      "status": "PASS",
+      "reason": "",
+      "previewSiteUrl": "",
+      "previewPageUrl": "",
+      "artifacts": {
+        "sourceHtml": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/immobilier-30-prospects/source.html",
+        "sourceSnapshotJson": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/immobilier-30-prospects/source-snapshot.json",
+        "sourceSnapshotMd": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/immobilier-30-prospects/source-snapshot.md",
+        "rewriteFr": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/immobilier-30-prospects/rewrite-fr.md",
+        "assetsMap": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/immobilier-30-prospects/assets-map.json",
+        "validation": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/immobilier-30-prospects/validation.json",
+        "runSummary": "/Users/charlesperret/My Drive (charles@devlo.ch)/Onboarding/devlo-next/reports/case-study-rewrites/immobilier-30-prospects/run-summary.md"
+      },
+      "updatedAt": "2026-02-23T19:41:17.077Z"
+    }
+  ],
+  "previews": []
+}

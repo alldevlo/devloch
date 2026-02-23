@@ -1,0 +1,51 @@
+{
+  "sourceSlug": "biodiversite-70-rendez-vous",
+  "hero": {
+    "required": true,
+    "sourceUrl": "https://devlo.ch/wp-content/uploads/2024/10/APIDAE_banner_1440_860.webp",
+    "localWebpPath": "/images/case-studies/heroes/biodiversite-70-rendez-vous-hero.webp",
+    "status": "ok",
+    "tried": [
+      "/images/case-studies/heroes/biodiversite-70-rendez-vous-hero.webp"
+    ]
+  },
+  "logo": {
+    "required": true,
+    "sourceUrl": "https://devlo.ch/wp-content/uploads/2024/03/0008_Apidae_logo_2.png",
+    "localWebpPath": "/images/case-studies/logos/biodiversite-70-rendez-vous-logo.webp",
+    "status": "ok",
+    "tried": [
+      "/images/case-studies/logos/biodiversite-70-rendez-vous-logo.webp"
+    ]
+  },
+  "testimonialPhoto": {
+    "required": true,
+    "sourceUrl": "",
+    "localWebpPath": "/images/Tanguy_Coustaline.webp",
+    "status": "ok",
+    "tried": [
+      "/images/Tanguy_Coustaline.webp"
+    ]
+  },
+  "extras": [
+    {
+      "sourceUrl": "",
+      "localWebpPath": "/images/devlo_Logo_Name.webp",
+      "status": "ok"
+    },
+    {
+      "sourceUrl": "",
+      "localWebpPath": "/images/service_badge_lemlist-1024x443.webp",
+      "status": "ok"
+    }
+  ],
+  "renamed": [],
+  "status": "pass",
+  "blockers": [],
+  "evidence": {
+    "dataEntrySlug": "biodiversite-70-rendez-vous",
+    "dataEntryClient": "Apidae",
+    "sourceTestimonialsCount": 2
+  },
+  "generatedAt": "2026-02-23T19:40:58.184Z"
+}

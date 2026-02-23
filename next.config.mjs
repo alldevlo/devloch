@@ -1,3 +1,5 @@
+import { caseStudySlugRedirects } from "./src/lib/case-study-slug-redirects.shared.mjs";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   poweredByHeader: false,
@@ -45,6 +47,17 @@ const nextConfig = {
           },
         ],
       },
+    ];
+  },
+  async redirects() {
+    const caseStudyRedirects = Object.entries(caseStudySlugRedirects).map(([legacySlug, canonicalSlug]) => ({
+      source: `/etudes-de-cas/${legacySlug}`,
+      destination: `/etudes-de-cas/${canonicalSlug}`,
+      permanent: true,
+    }));
+
+    return [
+      ...caseStudyRedirects,
     ];
   },
 };

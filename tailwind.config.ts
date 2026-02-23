@@ -16,6 +16,24 @@ const config: Config = {
         stroke: "rgb(var(--stroke) / <alpha-value>)",
         accent: "rgb(var(--accent) / <alpha-value>)",
         "accent-strong": "rgb(var(--accent-strong) / <alpha-value>)",
+        "accent-red": "#E8475F",
+        "accent-gold": "#F59E0B",
+        devlo: {
+          50: "#F8FAFB",
+          100: "#E8F4F8",
+          600: "#2A6F97",
+          700: "#1E4D6B",
+          800: "#1B3A4B",
+          900: "#0F2B3C",
+        },
+        neutral: {
+          50: "#FFFFFF",
+          100: "#F3F4F6",
+          200: "#E5E7EB",
+          400: "#9CA3AF",
+          600: "#4B5563",
+          900: "#1A1A2E",
+        },
       },
       borderRadius: {
         soft: "var(--radius-soft)",
@@ -30,7 +48,7 @@ const config: Config = {
         30: "7.5rem",
       },
       fontFamily: {
-        sans: ["Avenir Next", "Segoe UI", "Inter", "Helvetica Neue", "Arial", "sans-serif"],
+        sans: ["var(--font-plus-jakarta)", "Avenir Next", "Segoe UI", "Inter", "Helvetica Neue", "Arial", "sans-serif"],
         mono: ["ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
       },
     },

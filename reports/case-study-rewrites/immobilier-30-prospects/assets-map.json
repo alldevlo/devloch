@@ -1,0 +1,49 @@
+{
+  "sourceSlug": "immobilier-30-prospects",
+  "hero": {
+    "required": true,
+    "sourceUrl": "https://devlo.ch/wp-content/uploads/2024/10/Abacus.png",
+    "localWebpPath": "/images/case-studies/heroes/immobilier-30-prospects-hero.webp",
+    "status": "ok",
+    "tried": [
+      "/images/case-studies/heroes/immobilier-30-prospects-hero.webp"
+    ]
+  },
+  "logo": {
+    "required": true,
+    "sourceUrl": "https://devlo.ch/wp-content/uploads/2024/10/Abacus_logo.png",
+    "localWebpPath": "/images/case-studies/logos/immobilier-30-prospects-logo.webp",
+    "status": "ok",
+    "tried": [
+      "/images/case-studies/logos/immobilier-30-prospects-logo.webp"
+    ]
+  },
+  "testimonialPhoto": {
+    "required": false,
+    "sourceUrl": "",
+    "localWebpPath": "",
+    "status": "ok",
+    "tried": []
+  },
+  "extras": [
+    {
+      "sourceUrl": "",
+      "localWebpPath": "/images/devlo_Logo_Name.webp",
+      "status": "ok"
+    },
+    {
+      "sourceUrl": "",
+      "localWebpPath": "/images/service_badge_lemlist-1024x443.webp",
+      "status": "ok"
+    }
+  ],
+  "renamed": [],
+  "status": "pass",
+  "blockers": [],
+  "evidence": {
+    "dataEntrySlug": "immobilier-30-prospects",
+    "dataEntryClient": "Abacus",
+    "sourceTestimonialsCount": 0
+  },
+  "generatedAt": "2026-02-23T19:41:17.055Z"
+}

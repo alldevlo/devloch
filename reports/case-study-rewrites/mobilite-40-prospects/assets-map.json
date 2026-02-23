@@ -1,0 +1,51 @@
+{
+  "sourceSlug": "mobilite-40-prospects",
+  "hero": {
+    "required": true,
+    "sourceUrl": "https://devlo.ch/wp-content/uploads/2024/10/Locky_banner_1440_860.webp",
+    "localWebpPath": "/images/case-studies/heroes/mobilite-40-prospects-hero.webp",
+    "status": "ok",
+    "tried": [
+      "/images/case-studies/heroes/mobilite-40-prospects-hero.webp"
+    ]
+  },
+  "logo": {
+    "required": true,
+    "sourceUrl": "https://devlo.ch/wp-content/uploads/2024/03/0003_Locky_Logo.png",
+    "localWebpPath": "/images/case-studies/logos/mobilite-40-prospects-logo.webp",
+    "status": "ok",
+    "tried": [
+      "/images/case-studies/logos/mobilite-40-prospects-logo.webp"
+    ]
+  },
+  "testimonialPhoto": {
+    "required": true,
+    "sourceUrl": "",
+    "localWebpPath": "/images/case-studies/testimonials/mobilite-40-prospects-testimonial.webp",
+    "status": "ok",
+    "tried": [
+      "/images/case-studies/testimonials/mobilite-40-prospects-testimonial.webp"
+    ]
+  },
+  "extras": [
+    {
+      "sourceUrl": "",
+      "localWebpPath": "/images/devlo_Logo_Name.webp",
+      "status": "ok"
+    },
+    {
+      "sourceUrl": "",
+      "localWebpPath": "/images/service_badge_lemlist-1024x443.webp",
+      "status": "ok"
+    }
+  ],
+  "renamed": [],
+  "status": "pass",
+  "blockers": [],
+  "evidence": {
+    "dataEntrySlug": "mobilite-40-prospects",
+    "dataEntryClient": "Locky",
+    "sourceTestimonialsCount": 2
+  },
+  "generatedAt": "2026-02-23T19:41:03.303Z"
+}

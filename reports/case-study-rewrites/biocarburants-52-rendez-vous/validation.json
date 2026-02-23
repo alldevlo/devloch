@@ -1,0 +1,83 @@
+{
+  "sourceSlug": "biocarburants-52-rendez-vous",
+  "route": "/etudes-de-cas/biocarburants-52-rendez-vous",
+  "checks": {
+    "build": "warn",
+    "ctaScrollToHubspot": "pass",
+    "stickySubnav": "pass",
+    "stickyCta": "pass",
+    "hubspotPresent": "pass",
+    "sourceAuditBlocksHidden": "pass",
+    "webpOnlyImagesOnPage": "pass",
+    "previewVercelDeployed": "warn",
+    "routePublicOk": "pass",
+    "h1Visible": "pass",
+    "legacyRedirectCanonical": "pass"
+  },
+  "evidence": {
+    "pageUrl": "http://localhost:4021/etudes-de-cas/biocarburants-52-rendez-vous",
+    "route": "/etudes-de-cas/biocarburants-52-rendez-vous",
+    "sourceSlug": "biocarburants-52-rendez-vous",
+    "ctaHrefs": [
+      {
+        "href": "#contact-form",
+        "label": "Obtenir un plan outbound similaire lors d’une rencontre",
+        "variant": "hero"
+      },
+      {
+        "href": "#contact-form",
+        "label": "Obtenir un plan outbound similaire lors d’une rencontre",
+        "variant": "subnav"
+      },
+      {
+        "href": "#contact-form",
+        "label": "Obtenir un plan outbound similaire lors d’une rencontre",
+        "variant": "sidebar"
+      },
+      {
+        "href": "#contact-form",
+        "label": "Obtenir un plan outbound similaire lors d’une rencontre",
+        "variant": "final"
+      }
+    ],
+    "forbiddenMatches": [],
+    "imageRasterOffenders": [],
+    "imageRasterAllowed": [
+      {
+        "src": "/_next/image?url=%2Fimages%2Fdevlo_Logo_Name.webp&w=256&q=75",
+        "ext": ".webp"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fcase-studies%2Flogos%2Fbiocarburants-52-rendez-vous-logo.webp&w=3840&q=75",
+        "ext": ".webp"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fcase-studies%2Fheroes%2Fbiocarburants-52-rendez-vous-hero.webp&w=3840&q=82",
+        "ext": ".webp"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fdevlo_Logo_Name.webp&w=256&q=75",
+        "ext": ".webp"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fservice_badge_lemlist-1024x443.webp&w=640&q=75",
+        "ext": ".webp"
+      }
+    ],
+    "legacyRedirect": {
+      "route": "/etudes-de-cas/squareco-52-prospects-interesses-biocarburants",
+      "status": 308,
+      "location": "/etudes-de-cas/biocarburants-52-rendez-vous"
+    },
+    "previewSiteUrl": "",
+    "previewPageUrl": "",
+    "pageHttpStatus": 200,
+    "pageHttpFinalUrl": "http://localhost:4021/etudes-de-cas/biocarburants-52-rendez-vous",
+    "h1": "Comment identifier les meilleurs prospects parmi plusieurs Ideal Customer Profiles (ICP) grâce à des campagnes de prospection commerciale?",
+    "contactFormPresent": true,
+    "stickySubnavLinks": 8
+  },
+  "blockers": [],
+  "status": "pass",
+  "generatedAt": "2026-02-23T19:40:36.884Z"
+}

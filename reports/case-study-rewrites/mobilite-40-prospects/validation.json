@@ -1,0 +1,91 @@
+{
+  "sourceSlug": "mobilite-40-prospects",
+  "route": "/etudes-de-cas/mobilite-40-prospects",
+  "checks": {
+    "build": "warn",
+    "ctaScrollToHubspot": "pass",
+    "stickySubnav": "pass",
+    "stickyCta": "pass",
+    "hubspotPresent": "pass",
+    "sourceAuditBlocksHidden": "pass",
+    "webpOnlyImagesOnPage": "pass",
+    "previewVercelDeployed": "warn",
+    "routePublicOk": "pass",
+    "h1Visible": "pass",
+    "legacyRedirectCanonical": "pass"
+  },
+  "evidence": {
+    "pageUrl": "http://localhost:4021/etudes-de-cas/mobilite-40-prospects",
+    "route": "/etudes-de-cas/mobilite-40-prospects",
+    "sourceSlug": "mobilite-40-prospects",
+    "ctaHrefs": [
+      {
+        "href": "#contact-form",
+        "label": "Obtenir un plan outbound similaire lors d’une rencontre",
+        "variant": "hero"
+      },
+      {
+        "href": "#contact-form",
+        "label": "Obtenir un plan outbound similaire lors d’une rencontre",
+        "variant": "subnav"
+      },
+      {
+        "href": "#contact-form",
+        "label": "Obtenir un plan outbound similaire lors d’une rencontre",
+        "variant": "sidebar"
+      },
+      {
+        "href": "#contact-form",
+        "label": "Obtenir un plan outbound similaire lors d’une rencontre",
+        "variant": "final"
+      }
+    ],
+    "forbiddenMatches": [],
+    "imageRasterOffenders": [],
+    "imageRasterAllowed": [
+      {
+        "src": "/_next/image?url=%2Fimages%2Fdevlo_Logo_Name.webp&w=256&q=75",
+        "ext": ".webp"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fcase-studies%2Flogos%2Fmobilite-40-prospects-logo.webp&w=3840&q=75",
+        "ext": ".webp"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fcase-studies%2Fheroes%2Fmobilite-40-prospects-hero.webp&w=3840&q=82",
+        "ext": ".webp"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fcase-studies%2Flogos%2Fmobilite-40-prospects-logo.webp&w=3840&q=75",
+        "ext": ".webp"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fcase-studies%2Ftestimonials%2Fmobilite-40-prospects-testimonial.webp&w=3840&q=75",
+        "ext": ".webp"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fdevlo_Logo_Name.webp&w=256&q=75",
+        "ext": ".webp"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fservice_badge_lemlist-1024x443.webp&w=640&q=75",
+        "ext": ".webp"
+      }
+    ],
+    "legacyRedirect": {
+      "route": "/etudes-de-cas/locky-40-entreprises-interessees",
+      "status": 308,
+      "location": "/etudes-de-cas/mobilite-40-prospects"
+    },
+    "previewSiteUrl": "",
+    "previewPageUrl": "",
+    "pageHttpStatus": 200,
+    "pageHttpFinalUrl": "http://localhost:4021/etudes-de-cas/mobilite-40-prospects",
+    "h1": "+40 prospects intéressés sur 286 entreprises prospectées par e-mail, appels téléphoniques et prospection LinkedIn",
+    "contactFormPresent": true,
+    "stickySubnavLinks": 9
+  },
+  "blockers": [],
+  "status": "pass",
+  "generatedAt": "2026-02-23T19:41:03.315Z"
+}

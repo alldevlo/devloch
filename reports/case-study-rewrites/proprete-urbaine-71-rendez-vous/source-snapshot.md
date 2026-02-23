@@ -1,0 +1,101 @@
+# proprete-urbaine-71-rendez-vous Source Snapshot (devlo.ch)
+
+- Source domain: https://devlo.ch
+- Sitemap URL: https://devlo.ch/resultats-sitemap.xml
+- Source URL: https://devlo.ch/resultats/proprete-urbaine-71-rendez-vous/
+- Extracted at: 2026-02-23T19:40:31.469Z
+- HTML file: reports/case-study-rewrites/proprete-urbaine-71-rendez-vous/source.html
+
+## Page Metadata
+- Title tag: Comment cette société de gestion du nettoyage a obtenu 71 rendez-vous qualifiés avec des décideurs B2B dans les plus grandes villes de Suisse, France et Belgique. - Agence Prospection B2B Suisse | +200 Leads/Mois | devlo
+
+## Hero / Banner Section (exact source text)
+- H1: Comment cette société de gestion du nettoyage a obtenu 71 rendez-vous qualifiés avec des décideurs B2B dans les plus grandes villes de Suisse, France et Belgique.
+- Intro: Sur un échantillon de plus de 250 villes réparties sur 3 pays, devlo a identifié plus de 500 prospects qualifiés. Ces décideurs sont des élus politiques ou des responsables de la propreté urbaine. Les résultats obtenus sont spectaculaires: notre entreprise de prospection a fait rencontrer notre client plus de 24% des villes contactées.
+
+### Hero KPI Blocks
+- 24% — des villes contactées ont été intéressées par une rencontre suite à notre première campagne
+- 78% — le taux d'ouverture dans le contexte du Business-to-government (B2G)
+
+### Campaign Metadata Blocks
+- Catégories: Génération, prospection et qualification des leads, prise de rendez-vous
+- Services: Nettoyage urbain, gestion des déchets, intelligence artificielle
+- Délai avant les premières réunions: 1 semaine
+- Langage de(s) campagne(s): français et allemand
+
+### Assets Found (Banner / Hero / Logo / Others)
+- Hero images:
+  - https://devlo.ch/wp-content/uploads/2024/10/Cortexia_banner_1440_860.webp
+- Client logos:
+  - (none found)
+- Profile photos:
+  - (none found)
+- Other images:
+  - https://devlo.ch/wp-content/uploads/2023/08/Logo.png
+  - https://devlo.ch/wp-content/uploads/2025/04/BrowserPreview_tmp-1-1024x784.jpg
+  - https://devlo.ch/wp-content/uploads/2025/04/Horus_Logo_4k-scaled.png
+  - https://devlo.ch/wp-content/uploads/2024/10/Abacus-1024x784.png
+  - https://devlo.ch/wp-content/uploads/2024/10/Abacus_logo.png
+  - https://devlo.ch/wp-content/uploads/2020/08/Logo.png
+  - https://devlo.ch/wp-content/uploads/2026/02/service-partner-2026-_-badge-300x115.webp
+  - https://devlo.ch/wp-content/uploads/2020/12/LI.png
+  - https://devlo.ch/wp-content/plugins/translatepress-multilingual/assets/images/flags/fr_FR.png
+  - https://devlo.ch/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_US.png
+  - https://devlo.ch/wp-content/plugins/translatepress-multilingual/assets/images/flags/de_DE.png
+  - https://devlo.ch/wp-content/uploads/2022/12/Academy-scaled.gif
+
+## Main Content Sections (exact source text)
+### 1. À propos de notre client
+Paragraphs:
+1. Cette entreprise a développé une intelligence artificielle qui permet aux villes de mesurer leur propreté en temps réel et d’utiliser leurs ressources en conséquence.
+
+### 2. Les Ideal Customer Profiles
+Paragraphs:
+1. Élus locaux ou responsables de la propreté urbaine
+
+### 3. Défis du client
+Paragraphs:
+1. Notre client n’avait pas le temps pour :
+Bullets:
+- Identifier les villes qui répondent à leurs critères de qualification.
+- Identifier les décideurs les plus pertinents au sein de ces villes et obtenir leurs coordonnées de contact, ainsi que nombreuses informations. L’objectif étant ici de personnaliser nos e-mails de prospection, et les messages LinkedIn avec des informations pertinentes et disponibles publiquement, notamment sur LinkedIn, site web, articles d’actualité, etc.
+- Prospecter, faire le suivi, appeler et qualifier ces leads.
+
+### 4. Nos solutions
+Bullets:
+- “Account-Based Sales” effectuées avec succès: “Account-Based Sales” est une stratégie permettant aux équipes de vente de se concentrer sur des comptes spécifiques de grande valeur et de gagner des affaires auprès d’eux. Nous améliorons chaque campagne en tirant des enseignements et en itérant. Ces campagnes son multicanales: elles comprennent des emails, des appels à froid et messages LinkedIn pour prospecter nos clients potentiels. Pour chaque compte (en d’autres mots les « entreprises » ou, dans le cas présent, « villes »): nous identifions les décideurs les plus pertinents, une ville après l’autre, et nous recueillons des informations à leur sujet. notre équipe élabore des séquences ultra-ciblées pour contacter les villes de premier plan. Pour finir, notre équipe de ventes prospecte ces villes par le biais d’emails, d’appels à froids et de messages LinkedIn. Ensuite, elle qualifie les prospects intéressés et organise une réunion avec notre client.
+- nous identifions les décideurs les plus pertinents, une ville après l’autre, et nous recueillons des informations à leur sujet.
+- notre équipe élabore des séquences ultra-ciblées pour contacter les villes de premier plan.
+- Pour finir, notre équipe de ventes prospecte ces villes par le biais d’emails, d’appels à froids et de messages LinkedIn. Ensuite, elle qualifie les prospects intéressés et organise une réunion avec notre client.
+
+### 5. Nos résultats
+Paragraphs:
+1. Sur les 500 prospects identifiés et contactés, notre client a reçu 71 réponses positives pour un rendez-vous grâce à cette première campagne outbound. Voici les indicateurs de succès de notre campagne :
+Bullets:
+- 78% de taux d’ouverture
+- 3 % de taux de clics
+- 36% de taux de réponse
+
+### 6. Principaux enseignements
+Bullets:
+- Faire des recherches pour comprendre correctement qui est la cible est essentiel Une personne au même intitulé de poste peut avoir des responsabilités différentes en fonction de la taille et de l’organisation de la ville. L’objectif était de cibler le meilleur décideur concerné et susceptible de planifier un rendez-vous un client.
+- Adapter le discours à chaque Ideal Customer Profile (ICP) Une fois de plus, il est apparu clairement que certaines affirmations étaient dépassées en fonction des connaissances techniques et de l’expérience du prospect. Certains éléments d’information n’ont tout simplement pas retenu leur attention. Par exemple, nous avons décidé de mentionner un article de loi pour un certain type de prospect uniquement. Il était essentiel d’adapter autant que possible notre message à leur rôle et connaissances.
+- Être flexibles pour s’adapter aux disponibilités de nos prospects Nous nous sommes rendu compte que de nombreux prospects préféraient parler au téléphone plutôt que d’échanger par e-mail. En effet, certains d’entre eux passent la majeure partie de leur temps sur le terrain et ne consultent leurs courriels qu’une fois par jour. Notre équipe a obtenu de meilleurs résultats en appelant les prospects, même si ce n’était pas la façon dont notre séquence avait été conçue au départ.
+- Obtenir autant d’informations que possible lors des appels de qualification Lors des appels de découverte, au cours desquels nous qualifions les prospects intéressés, nous posons des questions pour identifier leurs points faibles. Nous avons modifié notre processus afin de nous assurer que notre client et ses prospects obtiennent le plus de valeur au cours de leur entretien grâce aux réponses recueillies préalablement.
+
+## Testimonials (parsed)
+- (none parsed)
+
+## CTAs / Links Found In Case Study
+- (none found)
+
+## Out-of-Scope Blocks Detected In Article
+- section.discover-section: Découvrez plus d'études de cas Comment nous avons aidé un éditeur de logiciel comptable à conclure 200’000 € de contrats en Belgique grâce à une stratégie outbound multicanale ciblée 80 rendez-vous qualifiés €200 000 de contrats signés Logiciel de comptabilité et de gestion post-comptable pour les experts-comptables et les PME Français Télémarketing B2B dans l’immobilier Suisse:+30 prospects intéressés pour un rendez-vous 6% d’intérêt 69% de réponses Solution ERP pour les agences immobilières suisses offrant des services de gestion locative Français
+
+## Missing From Source (do not fabricate)
+- Témoignage client (section dedicated parsing)
+- CTA links in article/body
+
+## Ambiguous Claims (internal only)
+- (none detected)
+

@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --canvas: 245 247 251;
+  --canvas: 255 255 255;
   --surface: 255 255 255;
   --paper: 255 255 255;
-  --ink: 16 23 42;
-  --stroke: 205 213 226;
-  --accent: 12 103 194;
-  --accent-strong: 9 86 161;
-  --radius-soft: 0.7rem;
-  --radius-panel: 1.05rem;
+  --ink: 26 26 46;
+  --stroke: 217 230 239;
+  --accent: 14 98 143;
+  --accent-strong: 10 84 122;
+  --radius-soft: 0.55rem;
+  --radius-panel: 1rem;
 }
 
 * {
@@ -23,13 +23,20 @@ body {
   min-height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
-  background:
-    radial-gradient(circle at 15% -10%, rgb(191 221 255 / 0.45), transparent 34%),
-    radial-gradient(circle at 85% 10%, rgb(206 255 236 / 0.28), transparent 35%),
-    rgb(var(--canvas));
+  background: rgb(var(--canvas));
   color: rgb(var(--ink));
-  font-family: "Avenir Next", "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-plus-jakarta), "Avenir Next", "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
 }
 
 a {
@@ -41,13 +48,57 @@ a {
 }
 
 @layer components {
-  .section-pad {
-    @apply mx-auto w-full max-w-screen-xl px-6 py-16 lg:px-10 lg:py-20;
+  .h1-hero {
+    @apply text-4xl font-extrabold leading-[1.1] tracking-tight md:text-5xl lg:text-6xl;
+  }
+
+  .h2-section {
+    @apply text-3xl font-bold leading-[1.2] md:text-4xl lg:text-5xl;
+  }
+
+  .h3-card {
+    @apply text-xl font-semibold leading-snug md:text-2xl;
+  }
+
+  .body-text {
+    @apply text-base font-normal leading-relaxed text-neutral-600 md:text-lg;
+  }
+
+  .label {
+    @apply text-xs font-semibold uppercase tracking-[0.08em] md:text-sm;
+  }
+}
+
+@keyframes logo-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes logo-scroll-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .animate-logo-scroll {
+    animation: logo-scroll 30s linear infinite;
+  }
+
+  .animate-logo-scroll-reverse {
+    animation: logo-scroll-reverse 30s linear infinite;
   }
 }

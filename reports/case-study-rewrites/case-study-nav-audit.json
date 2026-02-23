@@ -1,0 +1,494 @@
+{
+  "base": "http://localhost:4021",
+  "generatedAt": "2026-02-23T19:42:36.576Z",
+  "pages": [
+    {
+      "slug": "logiciel-comptable-200k-ca",
+      "url": "http://localhost:4021/etudes-de-cas/logiciel-comptable-200k-ca",
+      "status": 200,
+      "h1": "Comment nous avons aidé un éditeur de logiciel comptable à conclure 200'000 € de contrats en Belgique grâce à une stratégie outbound multicanale ciblée",
+      "hasHero": true,
+      "hasHubspot": true,
+      "nav": [
+        {
+          "label": "À propos",
+          "href": "#a-propos"
+        },
+        {
+          "label": "ICP",
+          "href": "#icp"
+        },
+        {
+          "label": "Défis du client",
+          "href": "#defi"
+        },
+        {
+          "label": "Nos solutions",
+          "href": "#solutions"
+        },
+        {
+          "label": "Résultats",
+          "href": "#resultats"
+        },
+        {
+          "label": "Principaux enseignements",
+          "href": "#enseignements"
+        },
+        {
+          "label": "Témoignage",
+          "href": "#temoignage"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "forbiddenVisible": []
+    },
+    {
+      "slug": "hr-54-rendez-vous-dach",
+      "url": "http://localhost:4021/etudes-de-cas/hr-54-rendez-vous-dach",
+      "status": 200,
+      "h1": "Comment CareerLunch a obtenu 54 rendez-vous commerciaux dans la région DACH",
+      "hasHero": true,
+      "hasHubspot": true,
+      "nav": [
+        {
+          "label": "À propos",
+          "href": "#contexte"
+        },
+        {
+          "label": "ICP",
+          "href": "#icp"
+        },
+        {
+          "label": "Défis du client",
+          "href": "#defi"
+        },
+        {
+          "label": "Nos solutions",
+          "href": "#solutions"
+        },
+        {
+          "label": "Résultats",
+          "href": "#resultats"
+        },
+        {
+          "label": "Principaux enseignements",
+          "href": "#enseignements"
+        },
+        {
+          "label": "Témoignage",
+          "href": "#temoignage"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "forbiddenVisible": []
+    },
+    {
+      "slug": "proprete-urbaine-71-rendez-vous",
+      "url": "http://localhost:4021/etudes-de-cas/proprete-urbaine-71-rendez-vous",
+      "status": 200,
+      "h1": "Comment cette société de gestion du nettoyage a obtenu 71 rendez-vous qualifiés avec des décideurs B2B dans les plus grandes villes de Suisse, France et Belgique.",
+      "hasHero": true,
+      "hasHubspot": true,
+      "nav": [
+        {
+          "label": "À propos",
+          "href": "#a-propos"
+        },
+        {
+          "label": "ICP",
+          "href": "#icp"
+        },
+        {
+          "label": "Défis du client",
+          "href": "#defi"
+        },
+        {
+          "label": "Nos solutions",
+          "href": "#solutions"
+        },
+        {
+          "label": "Résultats",
+          "href": "#resultats"
+        },
+        {
+          "label": "Principaux enseignements",
+          "href": "#enseignements"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "forbiddenVisible": []
+    },
+    {
+      "slug": "biocarburants-52-rendez-vous",
+      "url": "http://localhost:4021/etudes-de-cas/biocarburants-52-rendez-vous",
+      "status": 200,
+      "h1": "Comment identifier les meilleurs prospects parmi plusieurs Ideal Customer Profiles (ICP) grâce à des campagnes de prospection commerciale?",
+      "hasHero": true,
+      "hasHubspot": true,
+      "nav": [
+        {
+          "label": "À propos",
+          "href": "#a-propos"
+        },
+        {
+          "label": "ICP",
+          "href": "#icp"
+        },
+        {
+          "label": "Défis du client",
+          "href": "#defi"
+        },
+        {
+          "label": "Nos solutions",
+          "href": "#solutions"
+        },
+        {
+          "label": "Résultats",
+          "href": "#resultats"
+        },
+        {
+          "label": "Principaux enseignements",
+          "href": "#enseignements"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "forbiddenVisible": []
+    },
+    {
+      "slug": "formation-14-rendez-vous",
+      "url": "http://localhost:4021/etudes-de-cas/formation-14-rendez-vous",
+      "status": 200,
+      "h1": "Planification de Rendez-vous B2B avec Décideurs “formation & développement des compétences” (L&D): 45% des prospects répondent",
+      "hasHero": true,
+      "hasHubspot": true,
+      "nav": [
+        {
+          "label": "À propos",
+          "href": "#a-propos"
+        },
+        {
+          "label": "ICP",
+          "href": "#icp"
+        },
+        {
+          "label": "Défis du client",
+          "href": "#defi"
+        },
+        {
+          "label": "Nos solutions",
+          "href": "#solutions"
+        },
+        {
+          "label": "Résultats",
+          "href": "#resultats"
+        },
+        {
+          "label": "Témoignage",
+          "href": "#temoignage"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "forbiddenVisible": []
+    },
+    {
+      "slug": "audiovisuel-16-rendez-vous",
+      "url": "http://localhost:4021/etudes-de-cas/audiovisuel-16-rendez-vous",
+      "status": 200,
+      "h1": "Comment cet intégrateur audiovisuel a obtenu 16 rendez-vous qualifiés grâce à notre agence de prospection commerciale B2B",
+      "hasHero": true,
+      "hasHubspot": true,
+      "nav": [
+        {
+          "label": "À propos",
+          "href": "#a-propos"
+        },
+        {
+          "label": "ICP",
+          "href": "#icp"
+        },
+        {
+          "label": "Défis du client",
+          "href": "#defi"
+        },
+        {
+          "label": "Nos solutions",
+          "href": "#solutions"
+        },
+        {
+          "label": "Résultats",
+          "href": "#resultats"
+        },
+        {
+          "label": "Principaux enseignements",
+          "href": "#enseignements"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "forbiddenVisible": []
+    },
+    {
+      "slug": "cybersecurite-4500-entreprises",
+      "url": "http://localhost:4021/etudes-de-cas/cybersecurite-4500-entreprises",
+      "status": 200,
+      "h1": "Comment Saporo a généré des rendez-vous qualifiés en cybersécurité B2B grâce à plus de 10 campagnes outbound",
+      "hasHero": true,
+      "hasHubspot": true,
+      "nav": [
+        {
+          "label": "À propos",
+          "href": "#contexte"
+        },
+        {
+          "label": "ICP",
+          "href": "#icp"
+        },
+        {
+          "label": "Défis du client",
+          "href": "#defi"
+        },
+        {
+          "label": "Nos solutions",
+          "href": "#solutions"
+        },
+        {
+          "label": "Résultats",
+          "href": "#resultats"
+        },
+        {
+          "label": "Principaux enseignements",
+          "href": "#enseignements"
+        },
+        {
+          "label": "Témoignage",
+          "href": "#temoignage"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "forbiddenVisible": []
+    },
+    {
+      "slug": "biodiversite-70-rendez-vous",
+      "url": "http://localhost:4021/etudes-de-cas/biodiversite-70-rendez-vous",
+      "status": 200,
+      "h1": "Comment cette association a externalisé son acquisition de clients et obtenu 70 rendez-vous qualifiés avec des entreprises comme l'UEFA, TAG Heuer, Rothschild, etc.",
+      "hasHero": true,
+      "hasHubspot": true,
+      "nav": [
+        {
+          "label": "À propos",
+          "href": "#a-propos"
+        },
+        {
+          "label": "ICP",
+          "href": "#icp"
+        },
+        {
+          "label": "Défis du client",
+          "href": "#defi"
+        },
+        {
+          "label": "Nos solutions",
+          "href": "#solutions"
+        },
+        {
+          "label": "Témoignage",
+          "href": "#temoignage"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "forbiddenVisible": []
+    },
+    {
+      "slug": "mobilite-40-prospects",
+      "url": "http://localhost:4021/etudes-de-cas/mobilite-40-prospects",
+      "status": 200,
+      "h1": "+40 prospects intéressés sur 286 entreprises prospectées par e-mail, appels téléphoniques et prospection LinkedIn",
+      "hasHero": true,
+      "hasHubspot": true,
+      "nav": [
+        {
+          "label": "À propos",
+          "href": "#a-propos"
+        },
+        {
+          "label": "ICP",
+          "href": "#icp"
+        },
+        {
+          "label": "Défis du client",
+          "href": "#defi"
+        },
+        {
+          "label": "Nos solutions",
+          "href": "#solutions"
+        },
+        {
+          "label": "Résultats",
+          "href": "#resultats"
+        },
+        {
+          "label": "Principaux enseignements",
+          "href": "#enseignements"
+        },
+        {
+          "label": "Témoignage",
+          "href": "#temoignage"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "forbiddenVisible": []
+    },
+    {
+      "slug": "merchandising-23-prospects",
+      "url": "http://localhost:4021/etudes-de-cas/merchandising-23-prospects",
+      "status": 200,
+      "h1": "Comment cette société de merchandising a obtenu 70% de réponses et 8% de meetings avec leurs prospects grâce à cette séquence de prospection commerciale B2B",
+      "hasHero": true,
+      "hasHubspot": true,
+      "nav": [
+        {
+          "label": "À propos",
+          "href": "#a-propos"
+        },
+        {
+          "label": "ICP",
+          "href": "#icp"
+        },
+        {
+          "label": "Défis du client",
+          "href": "#defi"
+        },
+        {
+          "label": "Nos solutions",
+          "href": "#solutions"
+        },
+        {
+          "label": "Résultats",
+          "href": "#resultats"
+        },
+        {
+          "label": "Principaux enseignements",
+          "href": "#enseignements"
+        },
+        {
+          "label": "Témoignage",
+          "href": "#temoignage"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "forbiddenVisible": []
+    },
+    {
+      "slug": "immobilier-11-prospects",
+      "url": "http://localhost:4021/etudes-de-cas/immobilier-11-prospects",
+      "status": 200,
+      "h1": "L’immobilier et la prospection commerciale B2B: comment cibler et démarcher des prospects pour la location de surfaces commerciales",
+      "hasHero": true,
+      "hasHubspot": true,
+      "nav": [
+        {
+          "label": "À propos",
+          "href": "#a-propos"
+        },
+        {
+          "label": "ICP",
+          "href": "#icp"
+        },
+        {
+          "label": "Défis du client",
+          "href": "#defi"
+        },
+        {
+          "label": "Nos solutions",
+          "href": "#solutions"
+        },
+        {
+          "label": "Résultats",
+          "href": "#resultats"
+        },
+        {
+          "label": "Principaux enseignements",
+          "href": "#enseignements"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "forbiddenVisible": []
+    },
+    {
+      "slug": "immobilier-30-prospects",
+      "url": "http://localhost:4021/etudes-de-cas/immobilier-30-prospects",
+      "status": 200,
+      "h1": "Télémarketing B2B dans l’immobilier suisse : +30 prospects intéressés pour un rendez-vous",
+      "hasHero": true,
+      "hasHubspot": true,
+      "nav": [
+        {
+          "label": "À propos",
+          "href": "#a-propos"
+        },
+        {
+          "label": "ICP",
+          "href": "#icp"
+        },
+        {
+          "label": "Défis du client",
+          "href": "#defi"
+        },
+        {
+          "label": "Nos solutions",
+          "href": "#solutions"
+        },
+        {
+          "label": "Résultats",
+          "href": "#resultats"
+        },
+        {
+          "label": "Principaux enseignements",
+          "href": "#enseignements"
+        },
+        {
+          "label": "Témoignage",
+          "href": "#temoignage"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "forbiddenVisible": []
+    }
+  ]
+}
