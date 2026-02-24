@@ -287,9 +287,9 @@ export function HomePage() {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper background=”white” className=”py-[80px] md:py-[120px]”>
+      <SectionWrapper background="white" className="py-[80px] md:py-[120px]">
         <FadeInOnScroll>
-          <h2 className=”text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl”>{homeContent.writtenTitle}</h2>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{homeContent.writtenTitle}</h2>
         </FadeInOnScroll>
         <WrittenTestimonialsCarousel testimonials={writtenTestimonials} />
       </SectionWrapper>
