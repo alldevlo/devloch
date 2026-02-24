@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 declare global {
   interface Window {
@@ -26,6 +26,7 @@ type HubspotFormProps = {
 
 export function HubspotForm({ portalId, formId, region, targetId }: HubspotFormProps) {
   const initialized = useRef(false);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     const render = () => {
@@ -37,6 +38,7 @@ export function HubspotForm({ portalId, formId, region, targetId }: HubspotFormP
         region,
         target: `#${targetId}`,
       });
+      setLoaded(true);
     };
 
     if (window.hbspt) {
@@ -57,5 +59,17 @@ export function HubspotForm({ portalId, formId, region, targetId }: HubspotFormP
     };
   }, [portalId, formId, region, targetId]);
 
-  return <div id={targetId} />;
+  return (
+    <div className="relative">
+      {!loaded && (
+        <div className="flex min-h-[320px] items-center justify-center rounded-xl bg-neutral-50">
+          <div className="flex flex-col items-center gap-3 text-neutral-400">
+            <div className="h-8 w-8 animate-spin rounded-full border-2 border-neutral-200 border-t-devlo-600" />
+            <span className="text-sm">Chargement du formulaire…</span>
+          </div>
+        </div>
+      )}
+      <div id={targetId} className={loaded ? "" : "hidden"} />
+    </div>
+  );
 }

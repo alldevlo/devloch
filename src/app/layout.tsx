@@ -19,6 +19,23 @@ export const metadata: Metadata = {
   title: "devlo — Agence B2B de Prospection Commerciale en Suisse",
   description:
     "Agence B2B spécialisée en prospection commerciale, télémarketing et génération de rendez-vous qualifiés.",
+  openGraph: {
+    siteName: "devlo",
+    locale: "fr_CH",
+    type: "website",
+    images: [
+      {
+        url: "/images/devlo_Logo_Name.webp",
+        width: 1200,
+        height: 630,
+        alt: "devlo — Agence B2B de Prospection Commerciale",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/devlo_Logo_Name.webp"],
+  },
 };
 
 export default function RootLayout({

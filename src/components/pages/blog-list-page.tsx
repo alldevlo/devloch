@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 import { WaveDivider } from "@/components/ui/wave-divider";
 
@@ -84,14 +84,11 @@ function PostCard({ post }: { post: BlogPost }) {
           className="h-full w-full object-cover"
         />
       </div>
-      <h2 className="mt-4 text-lg font-semibold leading-6 text-[#153a54]">{post.title}</h2>
-      <p className="mt-2 text-sm leading-6 text-[#2d4c63]/80">{post.excerpt}</p>
-      <Link prefetch={false}
-        href="#"
-        className="mt-4 inline-flex items-center text-xs font-semibold uppercase tracking-[0.13em] text-[#0b628f]"
-      >
-        Lire article
-      </Link>
+      <h2 className="mt-4 text-lg font-semibold leading-6 text-devlo-900">{post.title}</h2>
+      <p className="mt-2 text-sm leading-6 text-devlo-700/80">{post.excerpt}</p>
+      <span className="mt-4 inline-flex items-center text-xs font-semibold uppercase tracking-[0.13em] text-devlo-600">
+        Bientôt disponible
+      </span>
     </article>
   );
 }
@@ -102,7 +99,7 @@ export function BlogListPage() {
 
   return (
     <>
-      <section className="bg-[#074f74] pt-16 text-white">
+      <section className="bg-devlo-800 pt-16 text-white">
         <div className="mx-auto w-full max-w-screen-xl px-6 pb-14 text-center lg:px-10">
           <h1 className="text-4xl font-semibold leading-tight lg:text-5xl">
             Ameliorer votre acquisition client B2B.
@@ -130,16 +127,16 @@ export function BlogListPage() {
 
       <section className="mx-auto w-full max-w-screen-xl px-6 pb-16 lg:px-10">
         <div className="rounded-xl border border-stroke bg-white p-8 shadow-soft lg:p-10">
-          <h2 className="text-2xl font-semibold text-[#183d56]">Besoin dun plan outbound adapte ?</h2>
-          <p className="mt-3 max-w-2xl text-sm leading-6 text-[#2d4c63]/80">
-            Nous analysons vos segments cibles et proposons un plan actionnable pour accelerer votre
+          <h2 className="text-2xl font-semibold text-devlo-900">Besoin d&apos;un plan outbound adapté ?</h2>
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-devlo-700/80">
+            Nous analysons vos segments cibles et proposons un plan actionnable pour accélérer votre
             acquisition B2B.
           </p>
           <Link prefetch={false}
             href="/notrerendez-vous"
-            className="mt-6 inline-flex h-11 items-center rounded-md bg-[#0a608e] px-5 text-sm font-semibold text-white"
+            className="mt-6 inline-flex h-11 items-center rounded-md bg-devlo-700 px-5 text-sm font-semibold text-white hover:bg-devlo-900 transition-colors"
           >
-            Planifier un echange
+            Planifier un échange
           </Link>
         </div>
       </section>

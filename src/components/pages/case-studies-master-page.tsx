@@ -61,7 +61,7 @@ export function CaseStudiesMasterPage() {
                   ))}
                 </div>
                 <p className="mt-4 text-sm font-medium text-neutral-600">{study.sector}</p>
-                <Link href={`/etudes-de-cas/${study.slug}`} className="mt-5 inline-flex text-sm font-semibold text-devlo-700 hover:text-devlo-900">
+                <Link href={`/etudes-de-cas/${study.slug}`} aria-label={`En savoir plus sur l'étude de cas ${study.client}`} className="mt-5 inline-flex text-sm font-semibold text-devlo-700 hover:text-devlo-900">
                   En savoir plus →
                 </Link>
               </div>

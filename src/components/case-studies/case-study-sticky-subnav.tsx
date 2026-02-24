@@ -63,7 +63,7 @@ export function CaseStudyStickySubnav({
   }
 
   return (
-    <div data-case-study-sticky-subnav="" className="sticky top-[86px] z-30 hidden lg:block">
+    <div data-case-study-sticky-subnav="" className="sticky top-[86px] z-30 hidden md:block">
       <div className="rounded-2xl border border-neutral-200/90 bg-white/90 px-4 py-3 shadow-soft backdrop-blur-md">
         <div className="flex items-center gap-4">
           <nav aria-label="Navigation de l’étude de cas" className="min-w-0 flex-1">

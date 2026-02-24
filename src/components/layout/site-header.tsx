@@ -137,7 +137,7 @@ export function SiteHeader() {
             animate={{ y: 0 }}
             exit={{ y: 120 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="fixed bottom-0 left-0 right-0 z-40 border-t border-neutral-200 bg-white p-4 md:hidden"
+            className="fixed bottom-0 left-0 right-0 z-40 border-t border-neutral-200 bg-white px-4 pt-4 pb-[max(1rem,env(safe-area-inset-bottom))] md:hidden"
           >
             <Link href={mainNav.cta.href} className={buttonClassName("primary", "w-full py-4 text-base")}>
               {mainNav.cta.label}
