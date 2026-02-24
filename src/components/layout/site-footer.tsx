@@ -27,7 +27,7 @@ export function SiteFooter() {
       <div className="mx-auto grid w-full max-w-[1200px] gap-12 px-6 md:grid-cols-2 md:px-12 lg:grid-cols-[1fr_1fr_2fr_1fr]">
         <div>
           <Image
-            src="/images/devlo_Logo_Name.webp"
+            src="/images/devlo-logo.webp"
             alt="devlo logo"
             width={128}
             height={42}
@@ -63,7 +63,15 @@ export function SiteFooter() {
             </Link>
             <Image
               src={footerContent.badge}
-              alt="Badge Lemlist"
+              alt="Badge Lemlist 2025"
+              width={211}
+              height={91}
+              className="h-auto w-[150px]"
+              loading="lazy"
+            />
+            <Image
+              src={footerContent.badge2}
+              alt="Badge Lemlist 2026"
               width={211}
               height={91}
               className="h-auto w-[150px]"

@@ -43,7 +43,7 @@ export type CaseStudyCard = {
 };
 
 export const mainNav = {
-  logo: "/images/devlo_Logo_Name.webp",
+  logo: "/images/devlo-logo.webp",
   links: [
     { label: "Agence", href: "/" },
     { label: "Études de cas", href: "/etudes-de-cas" },
@@ -179,7 +179,7 @@ export const homeContent = {
         posterAlt: "Bannière de l'étude de cas Abacus en génération de leads immobiliers",
         client: "Stephan Nuzzolo",
         role: "Directeur",
-        photo: "/images/Stephan_Nuzzolo-2.webp",
+        photo: "/images/Stephan_Nuzzolo.webp",
         metric: "Plus de 30 prospects intéressés générés pour leur solution",
         linkLabel: "→ vers étude de cas Abacus",
         href: "/etudes-de-cas/immobilier-30-prospects",
@@ -191,7 +191,7 @@ export const homeContent = {
         posterAlt: "Bannière de l'étude de cas APIDAE sur la biodiversité",
         client: "Tanguy Coustaline",
         role: "Président",
-        photo: "/images/Tanguy-Coustaline.webp",
+        photo: "/images/Tanguy_Coustaline.webp",
         metric: "70 rendez-vous qualifiés avec des marques prestigieuses",
         linkLabel: "→ vers étude de cas Apidae",
         href: "/etudes-de-cas/biodiversite-70-rendez-vous",
@@ -200,22 +200,29 @@ export const homeContent = {
   },
   clientsTitle: "Nos clients",
   clientsLogos: [
-    "home/brands/abacus.png",
-    "home/brands/apidae.png",
-    "home/brands/careerlunch.png",
-    "home/brands/cegos.png",
-    "home/brands/hiag.png",
-    "home/brands/lemanvisio.png",
-    "home/brands/locky.png",
-    "home/brands/many-ways.png",
-    "home/brands/saporo.png",
-    "home/brands/squareco.png",
-    "Monizze.png",
+    "Abacus_logo.webp",
+    "Apidae_log.webp",
+    "CareerLunch_logo.webp",
+    "Cegos_Logo.webp",
+    "HIAG_logo.webp",
+    "Lemanvisio_Logo.webp",
+    "Locky_Logo.webp",
+    "Many_ways_logo.webp",
+    "Saporo_logo.webp",
+    // TODO: SquareCo_logo.webp missing — add when file is available
+    "Monizze_Logo.webp",
     "Horus.webp",
-    "IDDI_banner.webp",
-    // TODO: add flat paths for StrongNetwork, Swiss Digital Network, Tune Insight,
-    // Und du, Urbantz, Webforce, FusionOne, Lane, Redguard, Referwell
-    // once files are placed in public/images/ root
+    "IDDI_logo.webp",
+    "FusionOne_logo.webp",
+    "Lane_logo.webp",
+    "Redguard_logo.webp",
+    "Referwell_logo.webp",
+    "StrongNetwork_logo.webp",
+    "Swiss_Digital_Network_logo.webp",
+    "Tune_Insight_logo.webp",
+    "Undu_du_logo.webp",
+    "Urbantz_logo.webp",
+    "Webforce_logo.webp",
   ],
   noRecruitTitle: "Développez votre chiffre d'affaires sans recruter",
   noRecruitCards: [
@@ -308,7 +315,7 @@ export const homeContent = {
       author: "Anthony Crémer",
       role: "Revenue Ops Analyst",
       company: "Monizze",
-      photo: "/images/Anthony_CREMER.jpg",
+      photo: "/images/Anthony_CREMER.webp",
     },
     {
       quote:
@@ -324,7 +331,7 @@ export const homeContent = {
       author: "Tanguy Coustaline",
       role: "Président",
       company: "APIDAE",
-      photo: "/images/Tanguy-Coustaline.webp",
+      photo: "/images/Tanguy_Coustaline.webp",
     },
     {
       quote:
@@ -332,7 +339,7 @@ export const homeContent = {
       author: "Stephan Nuzzolo",
       role: "Directeur",
       company: "Abacus",
-      photo: "/images/Stephan_Nuzzolo-2.webp",
+      photo: "/images/Stephan_Nuzzolo.webp",
     },
     {
       quote:
@@ -356,7 +363,7 @@ export const homeContent = {
       author: "Xavier Leuthold",
       role: "Fondateur",
       company: "Many Ways SA",
-      photo: "/images/Xavier_Leuthold.jpg",
+      photo: "/images/Xavier_Leuthold_Many_Ways.webp",
     },
   ] as WrittenTestimonial[],
   ctaMid: {
@@ -824,7 +831,8 @@ export const conditionsContent = {
 };
 
 export const footerContent = {
-  badge: "/images/service_badge_lemlist-1024x443.webp",
+  badge: "/images/service_badge_lemlist-2025.webp",
+  badge2: "/images/service_badge_lemlist_2026.webp",
   linkedin: "https://www.linkedin.com/company/devlo-connects-you-with-more-prospects/",
   navigation: [
     { label: "Accueil", href: "/" },
