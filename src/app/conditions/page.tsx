@@ -3,23 +3,16 @@ import type { Metadata } from "next";
 import { JsonLd } from "@/components/seo/json-ld";
 import { ConditionsMasterPage } from "@/components/pages/conditions-master-page";
 import { conditionsSeo } from "@/content/masterfile.fr";
+import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildBreadcrumbSchema } from "@/lib/seo/schema-builders";
-import { siteConfig } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: conditionsSeo.title,
+const conditionsTitle = conditionsSeo.title.replace(/\s*\|\s*devlo$/i, "");
+
+export const metadata: Metadata = buildPageMetadata({
+  title: conditionsTitle,
   description: conditionsSeo.description,
-  alternates: {
-    canonical: "/conditions",
-  },
-  openGraph: {
-    title: conditionsSeo.title,
-    description: conditionsSeo.description,
-    type: "website",
-    locale: "fr_CH",
-    url: `${siteConfig.url}/conditions`,
-  },
-};
+  path: "/conditions",
+});
 
 export default function Page() {
   return (

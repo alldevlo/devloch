@@ -5,8 +5,8 @@ import { CaseStudyMasterPage } from "@/components/pages/case-study-master-page";
 import { caseStudiesCards, caseStudiesSeo } from "@/content/masterfile.fr";
 import { resolveCaseStudyCanonicalSlug } from "@/lib/case-study-slug-redirects";
 import { caseStudies } from "@/lib/case-studies";
+import { buildPageMetadata, resolveOgImagePath } from "@/lib/seo/metadata";
 import { buildBreadcrumbSchema } from "@/lib/seo/schema-builders";
-import { siteConfig } from "@/lib/site";
 
 type Params = {
   params: { slug: string };
@@ -23,38 +23,23 @@ export function generateMetadata({ params }: Params): Metadata {
   const canonicalSlug = resolveCaseStudyCanonicalSlug(params.slug);
   const cardStudy = caseStudiesCards.find((item) => item.slug === params.slug) ?? caseStudiesCards.find((item) => item.slug === canonicalSlug);
   const detailedStudy = caseStudies.find((item) => item.slug === params.slug) ?? caseStudies.find((item) => item.slug === canonicalSlug);
-  const study =
-    cardStudy ??
-    (detailedStudy
-      ? {
-          title: detailedStudy.title,
-          metrics:
-            detailedStudy.resultHighlights.length > 0
-              ? detailedStudy.resultHighlights
-              : detailedStudy.heroStats.map((stat) => `${stat.value} ${stat.label}`),
-        }
-      : null);
-  if (!study) {
-    return {
-      title: caseStudiesSeo.title,
-      description: caseStudiesSeo.description,
-    };
-  }
 
-  return {
-    title: study.title,
-    description: study.metrics.join(" · "),
-    alternates: {
-      canonical: `/etudes-de-cas/${canonicalSlug}`,
-    },
-    openGraph: {
-      title: study.title,
-      description: study.metrics.join(" · "),
-      type: "article",
-      locale: "fr_CH",
-      url: `${siteConfig.url}/etudes-de-cas/${canonicalSlug}`,
-    },
-  };
+  const title = cardStudy?.title ?? detailedStudy?.title ?? caseStudiesSeo.title.replace(/\s*\|\s*devlo$/i, "");
+  const descriptionSource =
+    detailedStudy?.summary ??
+    (cardStudy
+      ? `${cardStudy.client} — ${cardStudy.sector}. ${cardStudy.metrics.slice(0, 3).join(" · ")}.`
+      : caseStudiesSeo.description);
+  const description = descriptionSource.length > 160 ? `${descriptionSource.slice(0, 157).trimEnd()}...` : descriptionSource;
+  const imagePath = resolveOgImagePath(cardStudy?.banner ?? detailedStudy?.heroImageUrl);
+
+  return buildPageMetadata({
+    title,
+    description,
+    path: `/etudes-de-cas/${canonicalSlug}`,
+    type: "article",
+    imagePath,
+  });
 }
 
 export default function Page({ params }: Params) {

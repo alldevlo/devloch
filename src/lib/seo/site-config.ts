@@ -1,16 +1,16 @@
 /**
- * Central SEO & structured data configuration for devlo-agency.ch
+ * Central SEO & structured data configuration for devlo.ch
  *
  * This file holds all site-level constants used for JSON-LD schemas,
  * Open Graph defaults, and metadata base values.
  *
- * TODO: Fill in every field marked "TODO" before go-live on devlo-agency.ch
+ * TODO: Fill in every field marked "TODO" before go-live on devlo.ch
  */
 
 export const seoConfig = {
   siteName: "devlo",
   /** Canonical production domain — do NOT change to staging URL */
-  siteUrl: "https://devlo-agency.ch",
+  siteUrl: "https://devlo.ch",
   locale: "fr_CH",
 
   /**
@@ -18,14 +18,14 @@ export const seoConfig = {
    * Must be exactly 1200×630 px.
    * TODO: Replace with a properly designed editorial OG image.
    */
-  defaultOgImage: "/images/devlo-logo.webp",
+  defaultOgImage: "/images/devlo_OG_Banner.webp",
 
   organization: {
     name: "devlo",
     /** TODO: Confirm exact legal entity name (Sàrl, SA, GmbH?) */
     legalName: "devlo",
-    url: "https://devlo-agency.ch",
-    logo: "https://devlo-agency.ch/images/devlo-logo.webp",
+    url: "https://devlo.ch",
+    logo: "https://devlo.ch/images/devlo-logo.webp",
     /** TODO: Confirm exact founding year */
     foundingDate: "2020",
     description:

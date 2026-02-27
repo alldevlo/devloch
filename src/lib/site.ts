@@ -1,8 +1,34 @@
+const PRODUCTION_SITE_URL = "https://devlo.ch";
+
+function normalizePublicUrl(rawUrl: string): string {
+  const trimmed = rawUrl.trim();
+  if (!trimmed) return PRODUCTION_SITE_URL;
+
+  try {
+    const parsed = new URL(trimmed);
+    return parsed.origin;
+  } catch {
+    return PRODUCTION_SITE_URL;
+  }
+}
+
+function resolveSiteUrl(): string {
+  if (process.env.VERCEL_ENV === "production") {
+    return PRODUCTION_SITE_URL;
+  }
+
+  if (process.env.NEXT_PUBLIC_SITE_URL) {
+    return normalizePublicUrl(process.env.NEXT_PUBLIC_SITE_URL);
+  }
+
+  return PRODUCTION_SITE_URL;
+}
+
 export const siteConfig = {
   name: "devlo",
   description:
     "Agence suisse spécialisée en prospection B2B, génération de leads et prise de rendez-vous qualifiés.",
-  url: "https://devlo-agency.ch",
+  url: resolveSiteUrl(),
   locale: "fr-CH",
   nav: [
     { label: "Accueil", href: "/" },

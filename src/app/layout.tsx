@@ -6,6 +6,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { LovalingoNextProvider } from "@/components/providers/lovalingo-next-provider";
 import { JsonLd } from "@/components/seo/json-ld";
+import { buildLanguageAlternates, defaultOgImagePath, toAbsoluteUrl } from "@/lib/seo/metadata";
 import { siteConfig } from "@/lib/site";
 
 import "./globals.css";
@@ -19,33 +20,54 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "devlo — Agence B2B de Prospection Commerciale en Suisse",
-    template: "%s",
+    default: "Agence de prospection commerciale B2B en Suisse",
+    template: "%s | devlo",
   },
   description:
-    "Agence B2B spécialisée en prospection commerciale, télémarketing et génération de rendez-vous qualifiés.",
+    "Agence B2B en Suisse spécialisée en génération de leads et rendez-vous qualifiés. Campagnes cold email, LinkedIn et téléprospection orientées résultats.",
   robots: {
     index: true,
     follow: true,
     googleBot: { index: true, follow: true },
   },
+  alternates: {
+    canonical: "/",
+    languages: buildLanguageAlternates("/"),
+  },
   openGraph: {
+    title: "Agence de prospection commerciale B2B en Suisse",
+    description:
+      "Agence B2B en Suisse spécialisée en génération de leads et rendez-vous qualifiés. Campagnes cold email, LinkedIn et téléprospection orientées résultats.",
     siteName: "devlo",
     locale: "fr_CH",
     type: "website",
+    url: toAbsoluteUrl("/"),
     images: [
       {
-        url: "/images/devlo-logo.webp",
+        url: defaultOgImagePath,
         width: 1200,
-        height: 670,
+        height: 630,
         alt: "devlo — Agence B2B de Prospection Commerciale",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/images/devlo-logo.webp"],
+    title: "Agence de prospection commerciale B2B en Suisse",
+    description:
+      "Agence B2B en Suisse spécialisée en génération de leads et rendez-vous qualifiés. Campagnes cold email, LinkedIn et téléprospection orientées résultats.",
+    images: [defaultOgImagePath],
   },
+  icons: {
+    icon: [
+      { url: "/images/devlo_favicon.ico", type: "image/x-icon" },
+      { url: "/images/devlo_favicon.svg", type: "image/svg+xml" },
+      { url: "/images/devlo_favicon-96x96.webp", type: "image/webp", sizes: "96x96" },
+    ],
+    apple: [{ url: "/images/devlo_apple-touch-icon.webp", sizes: "180x180", type: "image/webp" }],
+    shortcut: ["/images/devlo_favicon.ico"],
+  },
+  manifest: "/site.webmanifest",
 };
 
 /** Organization JSON-LD — injected on every page via root layout */
@@ -135,6 +157,23 @@ const usLocalBusinessSchema = {
   },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Prospection commerciale B2B externalisée",
+  serviceType: "Génération de leads B2B et prise de rendez-vous qualifiés",
+  provider: {
+    "@type": "Organization",
+    name: "devlo",
+    url: siteConfig.url,
+  },
+  areaServed: ["CH", "BE", "FR", "DE", "LU", "US", "CA"],
+  availableChannel: {
+    "@type": "ServiceChannel",
+    serviceUrl: `${siteConfig.url}/consultation`,
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -143,7 +182,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={`${plusJakartaSans.variable} min-h-screen bg-canvas font-sans text-ink antialiased`}>
-        <JsonLd schema={[organizationSchema, swissLocalBusinessSchema, usLocalBusinessSchema]} />
+        <JsonLd schema={[organizationSchema, swissLocalBusinessSchema, usLocalBusinessSchema, serviceSchema]} />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-soft focus:bg-paper focus:px-4 focus:py-2 focus:text-sm"

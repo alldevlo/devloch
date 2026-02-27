@@ -25,6 +25,90 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://devlo-agency.ch/etudes-de-cas/audiovisuel-16-rendez-vous</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo-agency.ch/en/etudes-de-cas/audiovisuel-16-rendez-vous</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo-agency.ch/de/etudes-de-cas/audiovisuel-16-rendez-vous</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo-agency.ch/nl/etudes-de-cas/audiovisuel-16-rendez-vous</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo-agency.ch/etudes-de-cas</loc>
+    <lastmod>2026-02-26T22:52:54+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo-agency.ch/en/etudes-de-cas</loc>
+    <lastmod>2026-02-26T22:52:56+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo-agency.ch/de/etudes-de-cas</loc>
+    <lastmod>2026-02-26T22:53:02+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo-agency.ch/nl/etudes-de-cas</loc>
+    <lastmod>2026-02-26T22:53:04+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo-agency.ch/etudes-de-cas/biocarburants-52-rendez-vous</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo-agency.ch/en/etudes-de-cas/biocarburants-52-rendez-vous</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo-agency.ch/de/etudes-de-cas/biocarburants-52-rendez-vous</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo-agency.ch/nl/etudes-de-cas/biocarburants-52-rendez-vous</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo-agency.ch/etudes-de-cas/proprete-urbaine-71-rendez-vous</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo-agency.ch/en/etudes-de-cas/proprete-urbaine-71-rendez-vous</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo-agency.ch/de/etudes-de-cas/proprete-urbaine-71-rendez-vous</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo-agency.ch/nl/etudes-de-cas/proprete-urbaine-71-rendez-vous</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://devlo-agency.ch/etudes-de-cas/iddi-generation-leads-biotech-pharma</loc>
     <lastmod>2026-02-26T23:24:20+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -69,30 +153,6 @@
   <url>
     <loc>https://devlo-agency.ch/nl/etudes-de-cas/cybersecurite-4500-entreprises</loc>
     <lastmod>2026-02-26T23:09:26+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo-agency.ch/etudes-de-cas</loc>
-    <lastmod>2026-02-26T22:52:54+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo-agency.ch/en/etudes-de-cas</loc>
-    <lastmod>2026-02-26T22:52:56+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo-agency.ch/de/etudes-de-cas</loc>
-    <lastmod>2026-02-26T22:53:02+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo-agency.ch/nl/etudes-de-cas</loc>
-    <lastmod>2026-02-26T22:53:04+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

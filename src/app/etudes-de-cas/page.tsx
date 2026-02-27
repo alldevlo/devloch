@@ -3,23 +3,16 @@ import type { Metadata } from "next";
 import { JsonLd } from "@/components/seo/json-ld";
 import { CaseStudiesMasterPage } from "@/components/pages/case-studies-master-page";
 import { caseStudiesSeo } from "@/content/masterfile.fr";
+import { buildPageMetadata } from "@/lib/seo/metadata";
 import { buildBreadcrumbSchema } from "@/lib/seo/schema-builders";
-import { siteConfig } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: caseStudiesSeo.title,
+const caseStudiesTitle = caseStudiesSeo.title.replace(/\s*\|\s*devlo$/i, "");
+
+export const metadata: Metadata = buildPageMetadata({
+  title: caseStudiesTitle,
   description: caseStudiesSeo.description,
-  alternates: {
-    canonical: "/etudes-de-cas",
-  },
-  openGraph: {
-    title: caseStudiesSeo.title,
-    description: caseStudiesSeo.description,
-    type: "website",
-    locale: "fr_CH",
-    url: `${siteConfig.url}/etudes-de-cas`,
-  },
-};
+  path: "/etudes-de-cas",
+});
 
 export default function Page() {
   return (
