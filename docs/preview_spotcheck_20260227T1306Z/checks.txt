@@ -1,0 +1,40 @@
+== preconnects ==
+<link rel="preconnect" href="https://cdn.lovalingo.com" crossorigin="anonymous"/>
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous"/>
+<link rel="preconnect" href="https://www.google-analytics.com" crossorigin="anonymous"/>
+
+== home section headings order snippet ==
+Nos études de cas
+Notre méthodologie de prospection outbound en 6 étapes
+Développez votre chiffre d'affaires sans recruter
+Nos études de cas
+Notre méthodologie de prospection outbound en 6 étapes
+
+== footer case links class markers ==
+whitespace-nowrap
+text-ellipsis
+lg:overflow-visible
+xl:text-sm
+whitespace-nowrap
+text-ellipsis
+lg:overflow-visible
+xl:text-sm
+whitespace-nowrap
+text-ellipsis
+lg:overflow-visible
+xl:text-sm
+whitespace-nowrap
+text-ellipsis
+lg:overflow-visible
+xl:text-sm
+whitespace-nowrap
+text-ellipsis
+lg:overflow-visible
+xl:text-sm
+
+== case card logo bg ==
+bg-[#ffffff]
+bg-[#ffffff]
+bg-[#ffffff]
+bg-[#ffffff]
+bg-[#ffffff]

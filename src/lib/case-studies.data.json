@@ -548,6 +548,12 @@
     "sector": "Formation professionnelle, développement des compétences, coaching",
     "heroImageUrl": "/images/Cegos_banner.webp",
     "clientLogoUrl": "/images/Cegos_Logo.webp",
+    "testimonialVideo": {
+      "wistiaMediaId": "knadmb8za5",
+      "previewSrc": "/images/video-thumb-cegos.webp",
+      "previewAlt": "Vidéo témoignage Cegos",
+      "title": "Témoignage vidéo Cegos"
+    },
     "heroStats": [
       {
         "value": "73%",
@@ -1240,7 +1246,7 @@
     "legacySlugs": [
       "many-ways-70-taux-reponse-merchandising"
     ],
-    "testimonialPhotoUrl": "/images/Xavier_Leuthold.webp",
+    "testimonialPhotoUrl": "/images/Xavier_Leuthold_Many_Ways.webp",
     "testimonialPhotoAlt": "Photo de Xavier Leuthold",
     "migrationStatus": "premium",
     "validationStatus": "unknown",
@@ -1374,6 +1380,12 @@
     "sector": "Solution ERP pour les agences immobilières suisses offrant des services de gestion locative",
     "heroImageUrl": "/images/Abacus_banner.webp",
     "clientLogoUrl": "/images/Abacus_logo.webp",
+    "testimonialVideo": {
+      "wistiaMediaId": "cr7dgltkvu",
+      "previewSrc": "/images/video-thumb-abacus.webp",
+      "previewAlt": "Vidéo témoignage Abacus",
+      "title": "Témoignage vidéo Abacus"
+    },
     "heroStats": [
       {
         "value": "6%",
@@ -1411,7 +1423,10 @@
     "sections": [
       {
         "heading": "Témoignage du client",
-        "paragraphs": [],
+        "paragraphs": [
+          "Nous recherchions un partenaire qui nous permette d’aller rechercher de la prospection à froid et nous n'avions pas d'expérience dans ce domaine-là. Mon nom est Stephan Nuzzolo et je suis le Directeur d’Abacus Services. Nous avons des clients dans trois domaines: l’immobilier, les fiduciaires et le monde de la construction. Ils ont des particularités de gestion clairement différentes. Nous devons créer la confiance chez nos clients. Nous avons pour se faire aussi besoin d'accéder aux décideurs et pour le coup, rassurer aussi sur les nouvelles fonctionnalités. Je recommande devlo parce qu'ils ont vraiment compris ce que nous faisions. Ils se sont immergés dans la culture de notre entreprise, nos produits, ils ont fait une veille concurrentielle. Le fait d'être local sur la Suisse Romande nous a aussi permis d'avoir le bon langage et la bonne approche avec nos prospects. Ça s'est très bien passé, j'ai beaucoup apprécié le fait que devlo se soit intéressé sur la structure de nos produits et de bien comprendre dans quel contexte nous étions. Les cibles clients que nous avons décidées ensemble ont été bien travaillées. Ensuite, le script a très bien été réalisé, ce qui a permis de faire des téléphones qui étaient très proches de la réalité que nous avions sur le terrain. Nous avons eu de bons résultats, nous avons déjà réussi à organiser des rendez-vous avec nos clients. Ça nous a permis de rapidement faire des présentations, ensuite on a eu un nombre considérable de prospects qui sont maintenant référencés pour lesquelles nous avons envoyé des documentations. J'ai trouvé l’approche client - c’est-à-dire de pouvoir proposer des packages avec des prestations et un périmètre qui étaient clairement définis - quelque chose qui m'a beaucoup séduit au départ, puisque ça m'a permis de bien définir ma campagne avec un budget établi. C'est un domaine où j’ai beaucoup apprécié collaborer avec devlo sur le fait qu'on avait des tableaux de bord, on connaissait exactement en temps réel l’état d'avancement de la prospection. On a fait une séance pour bien comprendre les chiffres, comprendre ce qui s'est bien passé, moins bien passé, donc le bilan de la campagne a été fait. J’ai été très satisfait à ce niveau-là.",
+          "Stephan Nuzzolo, Directeur d’Abacus Services"
+        ],
         "bullets": []
       },
       {
@@ -1629,7 +1644,7 @@
     "slug": "iddi-generation-leads-biotech-pharma",
     "sourceUrl": "https://devlo.ch/etudes-de-cas/iddi-generation-leads-biotech-pharma/",
     "sourceSlug": "iddi-generation-leads-biotech-pharma",
-    "title": "Cold outreach : voici comment notre agence a obtenu des rendez-vous qualifiés avec des entreprises biotechnologiques et pharmaceutiques",
+    "title": "Voici comment votre agence a obtenu des rendez-vous qualifiés avec des entreprises biotechnologiques et pharmaceutiques",
     "summary": "IDDI, CRO spécialisé en biostatistique et gestion des données cliniques, génère des rendez-vous qualifiés auprès de décideurs biotech et pharma.",
     "heroSubtitle": "IDDI, CRO spécialisé en biostatistique et gestion des données cliniques, voulait accélérer l’obtention de rendez-vous qualifiés avec des décideurs biotech/pharma via une prospection multicanale.",
     "client": "IDDI",
@@ -1738,13 +1753,6 @@
           "Les appels à froid restent décisifs quand email/LinkedIn plafonnent.",
           "La combinaison signaux d’engagement + appels augmente les chances de démos qualifiées."
         ]
-      },
-      {
-        "heading": "La séquence de prospection",
-        "paragraphs": [
-          "Séquence utilisée : devlo_outreach_sequence_C1_IDDI_EN"
-        ],
-        "bullets": []
       }
     ],
     "objectives": [

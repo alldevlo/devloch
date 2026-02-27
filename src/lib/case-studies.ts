@@ -30,6 +30,12 @@ export type CaseStudy = {
   clientLogoUrl: string;
   testimonialPhotoUrl?: string;
   testimonialPhotoAlt?: string;
+  testimonialVideo?: {
+    wistiaMediaId: string;
+    previewSrc: string;
+    previewAlt: string;
+    title?: string;
+  };
   assetAudit?: {
     hero: "webp" | "legacy";
     logo: "webp" | "legacy";

@@ -7,6 +7,7 @@ import { SectionWrapper } from "@/components/shared/section-wrapper";
 import { FadeInOnScroll } from "@/components/ui/fade-in-on-scroll";
 import { buttonClassName } from "@/components/ui/button";
 import { HubspotForm } from "@/components/ui/hubspot-form";
+import { WistiaThumbnailTrigger } from "@/components/ui/wistia-thumbnail-trigger";
 import { caseStudiesCards, consultationContent } from "@/content/masterfile.fr";
 import { type CaseStudy, type CaseStudySection, caseStudyBySlug } from "@/lib/case-studies";
 import { resolveCaseStudyCanonicalSlug } from "@/lib/case-study-slug-redirects";
@@ -118,43 +119,8 @@ function parseBulletDisplay(
   return null;
 }
 
-function findCampaignDetailValue(study: CaseStudy, labelKeywords: string[]): string | null {
-  const detail = study.campaignDetails.find((item) => {
-    const normalized = normalizeLoose(item.label);
-    return labelKeywords.some((keyword) => normalized.includes(keyword));
-  });
-  return detail?.value?.trim() ?? null;
-}
-
 function uniqueAndTrim(values: string[]): string[] {
   return Array.from(new Set(values.map((value) => value.trim()).filter(Boolean)));
-}
-
-function deriveObjectives(study: CaseStudy): string[] {
-  const inferred: string[] = [];
-  const icpValue = findCampaignDetailValue(study, ["icp", "profils clients", "ideal customer"]);
-  const languageValue = findCampaignDetailValue(study, ["langue", "language"]);
-  const categoryValue = findCampaignDetailValue(study, ["categorie", "category"]);
-
-  if (icpValue) {
-    inferred.push("Obtenir des rendez-vous qualifiés auprès des ICP prioritaires.");
-  }
-
-  if (categoryValue) {
-    inferred.push("Déployer une prospection multicanale alignée sur des objectifs commerciaux mesurables.");
-  }
-
-  if (languageValue) {
-    inferred.push(`Exécuter la campagne en ${languageValue.toLowerCase()}.`);
-  }
-
-  if (study.resultHighlights.some((line) => normalizeLoose(line).includes("no-show"))) {
-    inferred.push("Réduire les no-shows grâce à une gestion inbox structurée.");
-  }
-
-  inferred.push("Accélérer la génération de leads qualifiés pour alimenter le pipeline commercial.");
-
-  return uniqueAndTrim(inferred).slice(0, 5);
 }
 
 function deriveOutcomes(study: CaseStudy): string[] {
@@ -288,10 +254,6 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
     );
   }
 
-  const objectiveItems =
-    detailedStudy.objectives && detailedStudy.objectives.length > 0
-      ? uniqueAndTrim(detailedStudy.objectives).slice(0, 5)
-      : deriveObjectives(detailedStudy);
   const outcomeItems =
     detailedStudy.outcomes && detailedStudy.outcomes.length > 0
       ? uniqueAndTrim(detailedStudy.outcomes).slice(0, 5)
@@ -361,6 +323,7 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
   ].filter(Boolean) as { id: string; label: string }[];
 
   const heroImage = detailedStudy.heroImageUrl || study.banner;
+  const isIddiStudy = detailedStudy.slug === "iddi-generation-leads-biotech-pharma";
   const testimonialAvatarSrc = detailedStudy.testimonialPhotoUrl;
   const testimonialAvatarAlt = detailedStudy.testimonialPhotoAlt ?? `Photo de profil de ${detailedStudy.client}`;
   const introParagraphs = [detailedStudy.summary];
@@ -451,7 +414,7 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
                   src={heroImage}
                   alt={study.client}
                   fill
-                  className="object-cover"
+                  className={isIddiStudy ? "object-contain bg-white p-3 md:p-4" : "object-cover"}
                   priority
                   sizes="(max-width: 640px) 92vw, (max-width: 1024px) 88vw, (max-width: 1280px) 42vw, 520px"
                   quality={74}
@@ -477,16 +440,16 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
                 </div>
               </article>
 
-              <article className="rounded-panel border border-neutral-200 bg-white p-5 shadow-[0_10px_24px_rgba(15,43,60,0.05)]">
+              <article className={["rounded-panel border border-neutral-200 bg-white shadow-[0_10px_24px_rgba(15,43,60,0.05)]", isIddiStudy ? "p-4 md:p-5" : "p-5"].join(" ")}>
                 <div className="flex items-center justify-between gap-3">
                   <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-devlo-700">Résultats clés</h2>
                   <span className="hidden rounded-full border border-devlo-100 bg-devlo-50 px-3 py-1 text-[11px] font-semibold text-devlo-700 md:inline-flex">
                     KPIs observés
                   </span>
                 </div>
-                <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                <div className={["mt-4 grid sm:grid-cols-2", isIddiStudy ? "gap-2.5" : "gap-3"].join(" ")}>
                   {detailedStudy.resultHighlights.map((line, index) => (
-                    <div key={`${study.slug}-highlight-${index}`} className="rounded-xl border border-neutral-200 bg-white px-4 py-3">
+                    <div key={`${study.slug}-highlight-${index}`} className={["rounded-xl border border-neutral-200 bg-white", isIddiStudy ? "px-3.5 py-2.5" : "px-4 py-3"].join(" ")}>
                       <p className="text-sm font-medium leading-6 text-neutral-800">{line}</p>
                     </div>
                   ))}
@@ -654,6 +617,19 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
                     ) : null}
                   </div>
 
+                  {detailedStudy.testimonialVideo ? (
+                    <div className="mt-5 overflow-hidden rounded-2xl border border-neutral-200 bg-white">
+                      <WistiaThumbnailTrigger
+                        videoId={detailedStudy.testimonialVideo.wistiaMediaId}
+                        title={detailedStudy.testimonialVideo.title ?? `Témoignage vidéo ${detailedStudy.client}`}
+                        previewSrc={detailedStudy.testimonialVideo.previewSrc}
+                        previewAlt={detailedStudy.testimonialVideo.previewAlt}
+                        sizes="(min-width: 1280px) 640px, (min-width: 768px) 80vw, 94vw"
+                        className="bg-white"
+                      />
+                    </div>
+                  ) : null}
+
                   {testimonialSection.paragraphs[0] ? (
                     <blockquote className="mt-5 rounded-2xl border border-devlo-100 bg-devlo-50/80 p-6 text-lg leading-8 text-neutral-800 md:text-xl">
                       {testimonialSection.paragraphs[0]}
@@ -742,31 +718,17 @@ export function CaseStudyMasterPage({ slug }: { slug: string }) {
                 </p>
 
                 <div className="mt-5 rounded-2xl border border-neutral-200 bg-neutral-50/70 p-4 md:p-5">
-                  <div className="grid gap-4 md:grid-cols-2">
-                    <article className="rounded-xl border border-neutral-200 bg-white px-4 py-3">
-                      <h3 className="text-xs font-semibold uppercase tracking-[0.12em] text-devlo-700">Objectifs</h3>
-                      <ul className="mt-2 space-y-2 text-sm leading-6 text-neutral-700">
-                        {objectiveItems.map((objective, index) => (
-                          <li key={`${detailedStudy.slug}-objective-${index}`} className="flex gap-2">
-                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-devlo-700" />
-                            <span>{objective}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </article>
-
-                    <article className="rounded-xl border border-neutral-200 bg-white px-4 py-3">
-                      <h3 className="text-xs font-semibold uppercase tracking-[0.12em] text-devlo-700">Résultats</h3>
-                      <ul className="mt-2 space-y-2 text-sm leading-6 text-neutral-700">
-                        {outcomeItems.map((outcome, index) => (
-                          <li key={`${detailedStudy.slug}-outcome-${index}`} className="flex gap-2">
-                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-devlo-700" />
-                            <span>{outcome}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </article>
-                  </div>
+                  <article className="rounded-xl border border-neutral-200 bg-white px-4 py-3">
+                    <h3 className="text-xs font-semibold uppercase tracking-[0.12em] text-devlo-700">Résultats</h3>
+                    <ul className="mt-2 space-y-2 text-sm leading-6 text-neutral-700">
+                      {outcomeItems.map((outcome, index) => (
+                        <li key={`${detailedStudy.slug}-outcome-${index}`} className="flex gap-2">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-devlo-700" />
+                          <span>{outcome}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
                 </div>
 
                 <div className="mt-5 flex flex-wrap gap-3">

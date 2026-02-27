@@ -5,14 +5,31 @@ import { Linkedin } from "lucide-react";
 import { footerContent } from "@/content/masterfile.fr";
 import { WaveDivider } from "@/components/ui/wave-divider";
 
-function FooterList({ title, links, columns = 1 }: { title: string; links: { label: string; href: string }[]; columns?: 1 | 2 }) {
+function FooterList({
+  title,
+  links,
+  columns = 1,
+  compactLinks = false,
+}: {
+  title: string;
+  links: { label: string; href: string }[];
+  columns?: 1 | 2;
+  compactLinks?: boolean;
+}) {
   return (
     <div>
       <p className="text-sm font-semibold uppercase tracking-[0.08em] text-white">{title}</p>
-      <ul className={["mt-4", columns === 2 ? "grid grid-cols-2 gap-x-4 gap-y-2.5" : "space-y-2.5"].join(" ")}>
+      <ul className={["mt-4", columns === 2 ? "grid grid-cols-2 gap-x-6 gap-y-2.5" : "space-y-2.5"].join(" ")}>
         {links.map((link) => (
           <li key={`${title}-${link.href}`}>
-            <Link href={link.href} className="text-sm text-neutral-300 transition hover:text-white">
+            <Link
+              href={link.href}
+              className={[
+                compactLinks
+                  ? "block whitespace-nowrap overflow-hidden text-ellipsis text-[13px] text-neutral-300 transition hover:text-white lg:overflow-visible lg:text-clip xl:text-sm"
+                  : "text-sm text-neutral-300 transition hover:text-white",
+              ].join(" ")}
+            >
               {link.label}
             </Link>
           </li>
@@ -27,7 +44,7 @@ export function SiteFooter() {
     <>
       <WaveDivider variant="layered-top" />
       <footer className="relative bg-devlo-900 pb-20 pt-16 text-white md:pt-20">
-        <div className="mx-auto w-full max-w-[1400px] px-6 md:px-8">
+        <div className="mx-auto w-full max-w-[1320px] px-6 md:px-8">
           <div className="mb-8 flex flex-wrap items-center gap-3 md:mb-10 lg:mb-12">
             {footerContent.badges.map((badge) => (
               <Image
@@ -44,7 +61,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mx-auto grid w-full max-w-[1400px] gap-10 px-6 md:grid-cols-2 md:px-8 lg:grid-cols-[1.25fr_1fr_2fr]">
+        <div className="mx-auto grid w-full max-w-[1320px] gap-10 px-6 md:grid-cols-2 md:px-8 lg:grid-cols-[1.35fr_0.5fr_2.15fr]">
           <div>
             <Image
               src="/images/devlo-logo.webp"
@@ -55,7 +72,7 @@ export function SiteFooter() {
               loading="lazy"
             />
 
-            <p className="mt-4 text-sm leading-7 text-neutral-300">{footerContent.mission}</p>
+            <p className="mt-4 max-w-[620px] text-sm leading-6 text-neutral-300">{footerContent.mission}</p>
 
             <div className="mt-6 grid gap-5 text-sm text-neutral-300 md:grid-cols-2 md:gap-8">
               <div>
@@ -84,16 +101,16 @@ export function SiteFooter() {
             </div>
           </div>
 
-          <div className="lg:border-l lg:border-devlo-800 lg:pl-10">
+          <div className="lg:ml-4 lg:border-l lg:border-devlo-800 lg:pl-14">
             <FooterList title="Navigation" links={footerContent.navigation} />
           </div>
 
           <div className="lg:border-l lg:border-devlo-800 lg:pl-10">
-            <FooterList title="Études de cas" links={footerContent.caseLinks} columns={2} />
+            <FooterList title="Études de cas" links={footerContent.caseLinks} columns={2} compactLinks />
           </div>
         </div>
 
-        <div className="mx-auto mt-12 flex w-full max-w-[1400px] flex-col gap-3 border-t border-devlo-800 px-6 pt-8 text-xs text-neutral-400 md:flex-row md:items-center md:justify-between md:px-8">
+        <div className="mx-auto mt-12 flex w-full max-w-[1320px] flex-col gap-3 border-t border-devlo-800 px-6 pt-8 text-xs text-neutral-400 md:flex-row md:items-center md:justify-between md:px-8">
           <Link href={footerContent.bottomLink.href} className="transition hover:text-white">
             {footerContent.bottomLink.label}
           </Link>

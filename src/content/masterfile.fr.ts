@@ -81,7 +81,7 @@ export const homeContent = {
       client: "Stephan Nuzzolo",
       role: "Directeur",
       company: "Abacus",
-      line: "Plus de 30 prospects intéressés générés pour leur solution →",
+      line: "Plus de 30 prospects intéressés générés pour leur solution",
       href: "/etudes-de-cas/immobilier-30-prospects",
     },
     microProof: "⭐ 4.9/5 satisfaction client · 7% taux d'intérêt moyen · +1'000 campagnes",

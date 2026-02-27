@@ -126,33 +126,38 @@ export function HomePage() {
   const methodSteps = homeContent.methodSteps;
   const whyCards = homeContent.whyCards;
   const writtenTestimonials = homeContent.writtenTestimonials;
+  const rendezVousRowCount = 3;
+  const rendezVousPerRow = Math.ceil(homeContent.rendezVousLogos.length / rendezVousRowCount);
+  const rendezVousRows = Array.from({ length: rendezVousRowCount }, (_, index) =>
+    homeContent.rendezVousLogos.slice(index * rendezVousPerRow, (index + 1) * rendezVousPerRow),
+  ).filter((row) => row.length > 0);
 
   return (
     <>
       <section className="bg-white pb-10 pt-12 md:pt-20 lg:pt-24">
         <div className="mx-auto grid w-full max-w-[1400px] gap-10 px-6 md:px-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-start lg:gap-12">
           <div>
-            <FadeInOnScroll>
+            <FadeInOnScroll eager>
               <p className="inline-flex items-center gap-2 rounded-full bg-devlo-100 px-4 py-1.5 text-sm font-semibold text-devlo-700">
                 {homeContent.hero.badge}
               </p>
             </FadeInOnScroll>
 
-            <FadeInOnScroll delay={0.1}>
+            <FadeInOnScroll delay={0.1} eager>
               <h1 className="mt-5 text-4xl font-extrabold leading-[1.1] tracking-tight text-devlo-900 md:text-5xl lg:text-[56px]">
                 {homeContent.hero.h1}
               </h1>
             </FadeInOnScroll>
 
-            <FadeInOnScroll delay={0.2}>
+            <FadeInOnScroll delay={0.2} eager>
               <h2 className="mt-5 text-xl font-semibold leading-relaxed text-devlo-700 md:text-2xl">{homeContent.hero.h2}</h2>
             </FadeInOnScroll>
 
-            <FadeInOnScroll delay={0.3}>
+            <FadeInOnScroll delay={0.3} eager>
               <p className="mt-4 text-lg leading-relaxed text-neutral-600">{homeContent.hero.paragraph}</p>
             </FadeInOnScroll>
 
-            <FadeInOnScroll delay={0.4}>
+            <FadeInOnScroll delay={0.4} eager>
               <div className="mt-6 flex flex-wrap gap-4">
                 <Link href={homeContent.hero.ctaPrimary.href} className={buttonClassName("primary", "px-8 py-4 text-base")}> 
                   {homeContent.hero.ctaPrimary.label}
@@ -163,12 +168,12 @@ export function HomePage() {
               </div>
             </FadeInOnScroll>
 
-            <FadeInOnScroll delay={0.5}>
+            <FadeInOnScroll delay={0.5} eager>
               <p className="mt-5 text-sm font-semibold text-neutral-600">{homeContent.hero.microProof}</p>
             </FadeInOnScroll>
           </div>
 
-          <FadeInOnScroll delay={0.2} direction="right">
+          <FadeInOnScroll delay={0.2} direction="right" eager>
             <div className="overflow-hidden rounded-2xl border border-neutral-200 shadow-panel">
               <WistiaThumbnailTrigger
                 videoId={homeContent.hero.wistiaMediaId}
@@ -180,14 +185,16 @@ export function HomePage() {
                 className="bg-white"
               />
             </div>
-            <div className="mt-4 rounded-xl border border-neutral-200 bg-white p-4 shadow-soft">
-              <p className="text-sm font-semibold text-devlo-900">
-                {homeContent.hero.videoTestimonial.client} · {homeContent.hero.videoTestimonial.role} · {homeContent.hero.videoTestimonial.company}
+            <Link
+              href={homeContent.hero.videoTestimonial.href}
+              className="mt-4 block rounded-xl border border-neutral-200 bg-white p-4 shadow-soft transition hover:-translate-y-0.5 hover:shadow-panel"
+            >
+              <p className="text-sm font-semibold text-devlo-900">{homeContent.hero.videoTestimonial.line}</p>
+              <p className="mt-2 text-sm font-semibold text-devlo-900">{homeContent.hero.videoTestimonial.client}</p>
+              <p className="mt-1 text-sm text-neutral-600">
+                {homeContent.hero.videoTestimonial.role}, {homeContent.hero.videoTestimonial.company}
               </p>
-              <Link href={homeContent.hero.videoTestimonial.href} className="mt-2 inline-flex text-sm font-medium text-devlo-700 hover:text-devlo-900">
-                {homeContent.hero.videoTestimonial.line}
-              </Link>
-            </div>
+            </Link>
           </FadeInOnScroll>
         </div>
       </section>
@@ -200,10 +207,9 @@ export function HomePage() {
           <div className="relative mt-10 -mx-6 space-y-4 overflow-hidden md:-mx-12 lg:-mx-16">
             <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-[8vw] bg-gradient-to-r from-white to-transparent" />
             <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-[8vw] bg-gradient-to-l from-white to-transparent" />
-            <InfiniteLogoRail logos={homeContent.rendezVousLogos.slice(0, 17)} duration="slow" />
-            <InfiniteLogoRail logos={homeContent.rendezVousLogos.slice(17, 33)} reverse duration="slow" />
-            <InfiniteLogoRail logos={homeContent.rendezVousLogos.slice(33, 49)} duration="slow" />
-            <InfiniteLogoRail logos={homeContent.rendezVousLogos.slice(49)} reverse duration="slow" />
+            {rendezVousRows.map((logos, index) => (
+              <InfiniteLogoRail key={`rendez-vous-row-${index}`} logos={logos} reverse={index % 2 === 1} duration="slow" />
+            ))}
           </div>
         </FadeInOnScroll>
       </SectionWrapper>
@@ -290,6 +296,13 @@ export function HomePage() {
         </div>
       </SectionWrapper>
 
+      <SectionWrapper background="light" className="py-[80px] md:py-[120px]">
+        <FadeInOnScroll>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">Nos études de cas</h2>
+        </FadeInOnScroll>
+        <CaseStudiesCarousel cards={caseStudiesCards} />
+      </SectionWrapper>
+
       <SectionWrapper background="white" className="py-[80px] md:py-[120px]">
         <FadeInOnScroll>
           <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{homeContent.methodTitle}</h2>
@@ -349,13 +362,6 @@ export function HomePage() {
           <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{homeContent.writtenTitle}</h2>
         </FadeInOnScroll>
         <WrittenTestimonialsCarousel testimonials={writtenTestimonials} />
-      </SectionWrapper>
-
-      <SectionWrapper background="light" className="py-[80px] md:py-[120px]">
-        <FadeInOnScroll>
-          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">Nos études de cas</h2>
-        </FadeInOnScroll>
-        <CaseStudiesCarousel cards={caseStudiesCards} />
       </SectionWrapper>
 
       <WaveDivider variant="layered-top" />

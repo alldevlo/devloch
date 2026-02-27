@@ -48,7 +48,7 @@ export function CaseStudiesMasterPage() {
                         width={260}
                         height={100}
                         className={[
-                          "w-auto rounded-md bg-white/95 object-contain shadow-sm",
+                          "w-auto rounded-md bg-[#ffffff] object-contain shadow-sm",
                           study.largeLogo ? "h-12 p-2 md:h-14" : "h-9 p-1.5",
                         ].join(" ")}
                         loading="lazy"

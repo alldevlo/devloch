@@ -1,0 +1,39 @@
+=== HOME ===
+Card line 1 present: YES
+Card line 2 present: YES
+Card line 3 present: NO
+Card target link present: YES
+
+Section heading order snapshot:
+Nos études de cas
+Notre méthodologie de prospection outbound en 6 étapes
+Développez votre chiffre d'affaires sans recruter
+Nos études de cas
+Notre méthodologie de prospection outbound en 6 étapes
+
+=== ABACUS ===
+Vistia video id cr7dgltkvu present: YES
+Written testimonial starts with expected sentence: YES
+Attribution present: YES
+Avatar asset Stephan present: YES
+
+=== IDDI ===
+Title starts with required phrase: YES
+Sequence section removed: YES
+Hero uses object-contain class: YES
+Contact block only Résultats: YES
+
+=== CEGOS ===
+Vistia video id knadmb8za5 present: YES
+Written testimonial text present: YES
+Video appears before quote: NO
+
+=== LOCKY / MANY WAYS / HORUS ===
+Locky testimonial photo path current:
+/images/Locky_banner.webp
+/images/Locky_banner.webp
+/images/Locky_Logo.webp\
+/images/Locky_banner.webp\
+/images/Locky_Logo.webp\
+Many Ways uses new Xavier asset: YES
+Horus logo path correct: YES
