@@ -11,6 +11,7 @@ declare global {
           formId: string;
           region: string;
           target: string;
+          onFormSubmitted?: () => void;
         }) => void;
       };
     };
@@ -75,6 +76,7 @@ export function HubspotForm({ portalId, formId, region, targetId }: HubspotFormP
   const [loaded, setLoaded] = useState(false);
   const [isNearViewport, setIsNearViewport] = useState(false);
   const [loadError, setLoadError] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
     if (isNearViewport) return;
@@ -109,6 +111,9 @@ export function HubspotForm({ portalId, formId, region, targetId }: HubspotFormP
         formId,
         region,
         target: `#${targetId}`,
+        onFormSubmitted: () => {
+          setSubmitted(true);
+        },
       });
       setLoaded(true);
       setLoadError(false);
@@ -134,7 +139,7 @@ export function HubspotForm({ portalId, formId, region, targetId }: HubspotFormP
 
   return (
     <div ref={containerRef} className="relative">
-      {!loaded && (
+      {!loaded && !submitted && (
         <div className="flex min-h-[320px] items-center justify-center rounded-xl bg-neutral-50">
           <div className="flex flex-col items-center gap-3 text-neutral-400">
             <div className="h-8 w-8 animate-spin rounded-full border-2 border-neutral-200 border-t-devlo-600" />
@@ -144,7 +149,14 @@ export function HubspotForm({ portalId, formId, region, targetId }: HubspotFormP
           </div>
         </div>
       )}
-      <div id={targetId} className={loaded ? "" : "hidden"} />
+      <div id={targetId} className={loaded && !submitted ? "" : "hidden"} />
+      <div className={submitted ? "" : "hidden"}>
+        <div className="flex min-h-[320px] items-center rounded-xl border border-emerald-200 bg-emerald-50 p-6">
+          <p className="text-sm font-medium leading-6 text-emerald-900">
+            Merci pour votre prise de contact. Nous reviendrons vers vous sous 24 heures.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

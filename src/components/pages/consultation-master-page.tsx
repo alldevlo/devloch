@@ -8,37 +8,60 @@ export function ConsultationMasterPage() {
 
   return (
     <SectionWrapper background="white" className="pt-[80px] md:pt-[120px]">
-      {/* ── H1 ──────────────────────────────────────────────────────────── */}
-      <FadeInOnScroll>
-        <h1 className="max-w-4xl text-4xl font-extrabold leading-[1.1] text-devlo-900 md:text-5xl lg:text-[52px]">
-          {c.h1}
-        </h1>
-      </FadeInOnScroll>
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,430px)] lg:items-start">
+        <div className="min-w-0">
+          {/* ── H1 ──────────────────────────────────────────────────────── */}
+          <FadeInOnScroll>
+            <h1 className="max-w-4xl text-4xl font-extrabold leading-[1.1] text-devlo-900 md:text-5xl lg:text-[52px]">
+              {c.h1}
+            </h1>
+          </FadeInOnScroll>
 
-      {/* ── Reassurance badges ─────────────────────────────────────────── */}
-      <FadeInOnScroll delay={0.05}>
-        <div className="mt-6 flex flex-wrap gap-3">
-          {c.reassurance.map((badge) => (
-            <span
-              key={badge}
-              className="inline-flex items-center gap-1.5 rounded-full border border-neutral-200 bg-neutral-100 px-4 py-1.5 text-sm font-medium text-neutral-700"
-            >
-              <span className="text-green-600">✓</span>
-              {badge}
-            </span>
-          ))}
+          {/* ── Reassurance badges ─────────────────────────────────────── */}
+          <FadeInOnScroll delay={0.05}>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {c.reassurance.map((badge) => (
+                <span
+                  key={badge}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-neutral-200 bg-neutral-100 px-4 py-1.5 text-sm font-medium text-neutral-700"
+                >
+                  <span className="text-green-600">✓</span>
+                  {badge}
+                </span>
+              ))}
+            </div>
+          </FadeInOnScroll>
+
+          {/* ── Intro paragraph ────────────────────────────────────────── */}
+          <FadeInOnScroll delay={0.1}>
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-neutral-600">
+              {c.intro}
+            </p>
+          </FadeInOnScroll>
         </div>
-      </FadeInOnScroll>
 
-      {/* ── Intro paragraph ────────────────────────────────────────────── */}
-      <FadeInOnScroll delay={0.1}>
-        <p className="mt-6 max-w-3xl text-lg leading-8 text-neutral-600">
-          {c.intro}
-        </p>
-      </FadeInOnScroll>
+        {/* ── Form ─────────────────────────────────────────────────────── */}
+        <FadeInOnScroll delay={0.15}>
+          <div className="rounded-2xl border border-neutral-200 bg-white p-5 shadow-soft md:p-7">
+            <h2 className="mb-1 text-2xl font-bold text-devlo-900">
+              {c.formTitle}
+            </h2>
+            <p className="mb-6 text-neutral-600">{c.formSubtitle}</p>
+            <HubspotForm
+              portalId={c.hubspot.portalId}
+              formId={c.hubspot.formId}
+              region={c.hubspot.region}
+              targetId="hubspot-consultation"
+            />
+            <p className="mt-4 text-center text-sm text-neutral-500">
+              {c.postForm}
+            </p>
+          </div>
+        </FadeInOnScroll>
+      </div>
 
       {/* ── Deliverables ───────────────────────────────────────────────── */}
-      <FadeInOnScroll delay={0.15}>
+      <FadeInOnScroll delay={0.2}>
         <div className="mt-10">
           <h2 className="mb-6 text-xl font-bold text-devlo-900">
             {c.deliverablesTitle}
@@ -61,7 +84,7 @@ export function ConsultationMasterPage() {
       </FadeInOnScroll>
 
       {/* ── Proof stat ─────────────────────────────────────────────────── */}
-      <FadeInOnScroll delay={0.2}>
+      <FadeInOnScroll delay={0.25}>
         <div className="mt-10 rounded-xl bg-slate-900 px-6 py-5 text-white">
           <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-5">
             <span className="text-4xl font-extrabold text-blue-400">
@@ -76,7 +99,7 @@ export function ConsultationMasterPage() {
       </FadeInOnScroll>
 
       {/* ── For who ────────────────────────────────────────────────────── */}
-      <FadeInOnScroll delay={0.25}>
+      <FadeInOnScroll delay={0.3}>
         <div className="mt-10">
           <h2 className="mb-2 text-xl font-bold text-devlo-900">
             {c.forWhoTitle}
@@ -90,27 +113,6 @@ export function ConsultationMasterPage() {
               </li>
             ))}
           </ul>
-        </div>
-      </FadeInOnScroll>
-
-      {/* ── Form ───────────────────────────────────────────────────────── */}
-      <FadeInOnScroll delay={0.3}>
-        <div className="mt-14">
-          <h2 className="mb-1 text-2xl font-bold text-devlo-900">
-            {c.formTitle}
-          </h2>
-          <p className="mb-6 text-neutral-600">{c.formSubtitle}</p>
-          <div className="rounded-2xl border border-neutral-200 bg-white p-5 shadow-soft md:p-8">
-            <HubspotForm
-              portalId={c.hubspot.portalId}
-              formId={c.hubspot.formId}
-              region={c.hubspot.region}
-              targetId="hubspot-consultation"
-            />
-          </div>
-          <p className="mt-4 text-center text-sm text-neutral-500">
-            {c.postForm}
-          </p>
         </div>
       </FadeInOnScroll>
     </SectionWrapper>
