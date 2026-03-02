@@ -12,6 +12,17 @@ const staticRoutes = [
   "/consultation",
   "/conditions",
   "/etudes-de-cas",
+  "/services",
+  "/services/outbound-multicanal",
+  "/services/cold-email",
+  "/services/linkedin-outreach",
+  "/services/cold-calling",
+  "/services/intent-data",
+  "/services/enrichissement-clay",
+  "/services/generation-leads",
+  "/services/qualification-leads",
+  "/services/prise-de-rendez-vous",
+  "/services/crm-delivrabilite",
 ] as const;
 
 export function GET() {

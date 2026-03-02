@@ -1,56 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://devlo.ch/etudes-de-cas</loc>
-    <lastmod>2026-02-27T15:46:48+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/en/etudes-de-cas</loc>
-    <lastmod>2026-02-27T13:19:38+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/de/etudes-de-cas</loc>
-    <lastmod>2026-02-27T15:42:48+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/nl/etudes-de-cas</loc>
-    <lastmod>2026-02-27T15:46:29+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/consultation</loc>
-    <lastmod>2026-02-27T16:45:20+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/en/consultation</loc>
-    <lastmod>2026-02-27T12:14:24+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/de/consultation</loc>
-    <lastmod>2026-02-27T15:35:50+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/nl/consultation</loc>
-    <lastmod>2026-02-27T16:44:55+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://devlo.ch/</loc>
-    <lastmod>2026-02-27T15:18:45+00:00</lastmod>
+    <lastmod>2026-02-27T18:40:27+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -68,265 +20,31 @@
   </url>
   <url>
     <loc>https://devlo.ch/nl/</loc>
+    <lastmod>2026-02-27T18:40:23+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://devlo.ch/etudes-de-cas/cortexia-71-rendez-vous-decideurs-urbains</loc>
+    <loc>https://devlo.ch/etudes-de-cas</loc>
+    <lastmod>2026-02-27T16:49:29+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devlo.ch/en/etudes-de-cas/cortexia-71-rendez-vous-decideurs-urbains</loc>
+    <loc>https://devlo.ch/en/etudes-de-cas</loc>
+    <lastmod>2026-02-27T13:19:38+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devlo.ch/de/etudes-de-cas/cortexia-71-rendez-vous-decideurs-urbains</loc>
+    <loc>https://devlo.ch/de/etudes-de-cas</loc>
+    <lastmod>2026-02-27T16:49:03+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devlo.ch/nl/etudes-de-cas/cortexia-71-rendez-vous-decideurs-urbains</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/etudes-de-cas/hr-54-rendez-vous-dach</loc>
-    <lastmod>2026-02-27T16:25:42+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/en/etudes-de-cas/hr-54-rendez-vous-dach</loc>
-    <lastmod>2026-02-27T12:42:24+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/de/etudes-de-cas/hr-54-rendez-vous-dach</loc>
-    <lastmod>2026-02-27T16:22:23+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/nl/etudes-de-cas/hr-54-rendez-vous-dach</loc>
-    <lastmod>2026-02-27T16:25:32+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/etudes-de-cas/immobilier-30-prospects</loc>
-    <lastmod>2026-02-27T16:41:43+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/en/etudes-de-cas/immobilier-30-prospects</loc>
-    <lastmod>2026-02-27T12:50:43+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/de/etudes-de-cas/immobilier-30-prospects</loc>
-    <lastmod>2026-02-27T16:41:34+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/nl/etudes-de-cas/immobilier-30-prospects</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/etudes-de-cas/immobilier-11-prospects</loc>
-    <lastmod>2026-02-27T16:38:34+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/en/etudes-de-cas/immobilier-11-prospects</loc>
-    <lastmod>2026-02-27T12:47:34+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/de/etudes-de-cas/immobilier-11-prospects</loc>
-    <lastmod>2026-02-27T16:35:23+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/nl/etudes-de-cas/immobilier-11-prospects</loc>
-    <lastmod>2026-02-27T16:38:26+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/etudes-de-cas/iddi-generation-leads-biotech-pharma</loc>
-    <lastmod>2026-02-27T16:32:28+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/en/etudes-de-cas/iddi-generation-leads-biotech-pharma</loc>
-    <lastmod>2026-02-27T12:45:08+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/de/etudes-de-cas/iddi-generation-leads-biotech-pharma</loc>
-    <lastmod>2026-02-27T16:29:26+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/nl/etudes-de-cas/iddi-generation-leads-biotech-pharma</loc>
-    <lastmod>2026-02-27T16:32:20+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/etudes-de-cas/formation-14-rendez-vous</loc>
-    <lastmod>2026-02-27T16:19:27+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/en/etudes-de-cas/formation-14-rendez-vous</loc>
-    <lastmod>2026-02-27T12:38:24+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/de/etudes-de-cas/formation-14-rendez-vous</loc>
-    <lastmod>2026-02-27T16:16:17+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/nl/etudes-de-cas/formation-14-rendez-vous</loc>
-    <lastmod>2026-02-27T16:19:18+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/etudes-de-cas/cybersecurite-4500-entreprises</loc>
-    <lastmod>2026-02-27T16:12:52+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/en/etudes-de-cas/cybersecurite-4500-entreprises</loc>
-    <lastmod>2026-02-27T12:35:43+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/de/etudes-de-cas/cybersecurite-4500-entreprises</loc>
-    <lastmod>2026-02-27T16:08:39+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/nl/etudes-de-cas/cybersecurite-4500-entreprises</loc>
-    <lastmod>2026-02-27T16:12:43+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/etudes-de-cas/biodiversite-70-rendez-vous</loc>
-    <lastmod>2026-02-27T16:05:19+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/en/etudes-de-cas/biodiversite-70-rendez-vous</loc>
-    <lastmod>2026-02-27T12:32:29+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/de/etudes-de-cas/biodiversite-70-rendez-vous</loc>
-    <lastmod>2026-02-27T16:02:26+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/nl/etudes-de-cas/biodiversite-70-rendez-vous</loc>
-    <lastmod>2026-02-27T16:05:09+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/etudes-de-cas/biocarburants-52-rendez-vous</loc>
-    <lastmod>2026-02-27T15:59:24+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/en/etudes-de-cas/biocarburants-52-rendez-vous</loc>
-    <lastmod>2026-02-27T12:29:22+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/de/etudes-de-cas/biocarburants-52-rendez-vous</loc>
-    <lastmod>2026-02-27T15:56:11+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/nl/etudes-de-cas/biocarburants-52-rendez-vous</loc>
-    <lastmod>2026-02-27T15:59:17+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/etudes-de-cas/audiovisuel-16-rendez-vous</loc>
-    <lastmod>2026-02-27T15:53:20+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/en/etudes-de-cas/audiovisuel-16-rendez-vous</loc>
-    <lastmod>2026-02-27T12:26:23+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/de/etudes-de-cas/audiovisuel-16-rendez-vous</loc>
-    <lastmod>2026-02-27T15:50:20+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/nl/etudes-de-cas/audiovisuel-16-rendez-vous</loc>
-    <lastmod>2026-02-27T15:53:11+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/conditions</loc>
-    <lastmod>2026-02-27T15:33:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/en/conditions</loc>
-    <lastmod>2026-02-27T13:14:23+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/de/conditions</loc>
-    <lastmod>2026-02-27T15:29:35+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://devlo.ch/nl/conditions</loc>
-    <lastmod>2026-02-27T15:32:49+00:00</lastmod>
+    <loc>https://devlo.ch/nl/etudes-de-cas</loc>
+    <lastmod>2026-02-27T16:51:24+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -355,52 +73,196 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devlo.ch/etudes-de-cas/proprete-urbaine-71-rendez-vous</loc>
-    <lastmod>2026-02-27T13:05:34+00:00</lastmod>
+    <loc>https://devlo.ch/etudes-de-cas/biodiversite-70-rendez-vous</loc>
+    <lastmod>2026-02-27T17:15:11+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devlo.ch/en/etudes-de-cas/proprete-urbaine-71-rendez-vous</loc>
-    <lastmod>2026-02-27T13:05:23+00:00</lastmod>
+    <loc>https://devlo.ch/en/etudes-de-cas/biodiversite-70-rendez-vous</loc>
+    <lastmod>2026-02-27T12:32:29+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devlo.ch/de/etudes-de-cas/proprete-urbaine-71-rendez-vous</loc>
+    <loc>https://devlo.ch/de/etudes-de-cas/biodiversite-70-rendez-vous</loc>
+    <lastmod>2026-02-27T17:11:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://devlo.ch/nl/etudes-de-cas/proprete-urbaine-71-rendez-vous</loc>
+    <loc>https://devlo.ch/nl/etudes-de-cas/biodiversite-70-rendez-vous</loc>
+    <lastmod>2026-02-27T17:14:43+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/etudes-de-cas/immobilier-30-prospects</loc>
+    <lastmod>2026-02-27T18:56:28+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/en/etudes-de-cas/immobilier-30-prospects</loc>
+    <lastmod>2026-02-27T12:50:43+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/de/etudes-de-cas/immobilier-30-prospects</loc>
+    <lastmod>2026-02-27T17:47:57+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/nl/etudes-de-cas/immobilier-30-prospects</loc>
+    <lastmod>2026-02-27T18:56:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/etudes-de-cas/formation-14-rendez-vous</loc>
+    <lastmod>2026-02-27T17:29:10+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/en/etudes-de-cas/formation-14-rendez-vous</loc>
+    <lastmod>2026-02-27T12:38:24+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/de/etudes-de-cas/formation-14-rendez-vous</loc>
+    <lastmod>2026-02-27T17:25:43+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/nl/etudes-de-cas/formation-14-rendez-vous</loc>
+    <lastmod>2026-02-27T17:28:44+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/consultation</loc>
+    <lastmod>2026-02-27T16:45:20+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/en/consultation</loc>
+    <lastmod>2026-02-27T12:14:24+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/de/consultation</loc>
+    <lastmod>2026-02-27T15:35:50+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/nl/consultation</loc>
+    <lastmod>2026-02-27T16:44:55+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://devlo.ch/etudes-de-cas/monizze-120-rendez-vous</loc>
-    <lastmod>2026-02-27T13:03:11+00:00</lastmod>
+    <lastmod>2026-03-02T10:53:30+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://devlo.ch/en/etudes-de-cas/monizze-120-rendez-vous</loc>
-    <lastmod>2026-02-27T13:03:02+00:00</lastmod>
+    <lastmod>2026-03-02T10:53:01+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://devlo.ch/de/etudes-de-cas/monizze-120-rendez-vous</loc>
+    <lastmod>2026-03-02T10:53:09+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://devlo.ch/nl/etudes-de-cas/monizze-120-rendez-vous</loc>
+    <lastmod>2026-03-02T10:53:18+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/etudes-de-cas/cortexia-71-rendez-vous-decideurs-urbains</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/en/etudes-de-cas/cortexia-71-rendez-vous-decideurs-urbains</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/de/etudes-de-cas/cortexia-71-rendez-vous-decideurs-urbains</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/nl/etudes-de-cas/cortexia-71-rendez-vous-decideurs-urbains</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/etudes-de-cas/cybersecurite-4500-entreprises</loc>
+    <lastmod>2026-02-27T17:23:31+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/en/etudes-de-cas/cybersecurite-4500-entreprises</loc>
+    <lastmod>2026-02-27T12:35:43+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/de/etudes-de-cas/cybersecurite-4500-entreprises</loc>
+    <lastmod>2026-02-27T17:18:48+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/nl/etudes-de-cas/cybersecurite-4500-entreprises</loc>
+    <lastmod>2026-02-27T17:23:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/etudes-de-cas/biocarburants-52-rendez-vous</loc>
+    <lastmod>2026-02-27T17:09:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/en/etudes-de-cas/biocarburants-52-rendez-vous</loc>
+    <lastmod>2026-02-27T12:29:22+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/de/etudes-de-cas/biocarburants-52-rendez-vous</loc>
+    <lastmod>2026-02-27T15:56:11+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/nl/etudes-de-cas/biocarburants-52-rendez-vous</loc>
+    <lastmod>2026-02-27T17:08:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://devlo.ch/etudes-de-cas/mobilite-40-prospects</loc>
-    <lastmod>2026-02-27T12:59:47+00:00</lastmod>
+    <lastmod>2026-02-27T19:23:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -412,17 +274,87 @@
   </url>
   <url>
     <loc>https://devlo.ch/de/etudes-de-cas/mobilite-40-prospects</loc>
+    <lastmod>2026-02-27T19:17:37+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://devlo.ch/nl/etudes-de-cas/mobilite-40-prospects</loc>
+    <lastmod>2026-02-27T19:22:35+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/en/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/de/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/nl/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/conditions</loc>
+    <lastmod>2026-02-27T15:33:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/en/conditions</loc>
+    <lastmod>2026-02-27T13:14:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/de/conditions</loc>
+    <lastmod>2026-02-27T15:29:35+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/nl/conditions</loc>
+    <lastmod>2026-02-27T15:32:49+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/etudes-de-cas/hr-54-rendez-vous-dach</loc>
+    <lastmod>2026-02-27T17:35:12+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/en/etudes-de-cas/hr-54-rendez-vous-dach</loc>
+    <lastmod>2026-02-27T12:42:24+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/de/etudes-de-cas/hr-54-rendez-vous-dach</loc>
+    <lastmod>2026-02-27T17:31:57+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/nl/etudes-de-cas/hr-54-rendez-vous-dach</loc>
+    <lastmod>2026-02-27T17:34:41+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://devlo.ch/etudes-de-cas/merchandising-23-prospects</loc>
-    <lastmod>2026-02-27T12:56:42+00:00</lastmod>
+    <lastmod>2026-02-27T19:13:59+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -434,17 +366,43 @@
   </url>
   <url>
     <loc>https://devlo.ch/de/etudes-de-cas/merchandising-23-prospects</loc>
+    <lastmod>2026-02-27T19:09:33+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://devlo.ch/nl/etudes-de-cas/merchandising-23-prospects</loc>
+    <lastmod>2026-02-27T19:13:36+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/etudes-de-cas/proprete-urbaine-71-rendez-vous</loc>
+    <lastmod>2026-02-27T19:40:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/en/etudes-de-cas/proprete-urbaine-71-rendez-vous</loc>
+    <lastmod>2026-02-27T13:05:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/de/etudes-de-cas/proprete-urbaine-71-rendez-vous</loc>
+    <lastmod>2026-02-27T19:36:28+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/nl/etudes-de-cas/proprete-urbaine-71-rendez-vous</loc>
+    <lastmod>2026-02-27T19:39:38+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://devlo.ch/etudes-de-cas/logiciel-comptable-200k-ca</loc>
-    <lastmod>2026-02-27T12:53:55+00:00</lastmod>
+    <lastmod>2026-02-27T19:07:26+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -456,11 +414,85 @@
   </url>
   <url>
     <loc>https://devlo.ch/de/etudes-de-cas/logiciel-comptable-200k-ca</loc>
+    <lastmod>2026-02-27T19:02:06+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://devlo.ch/nl/etudes-de-cas/logiciel-comptable-200k-ca</loc>
+    <lastmod>2026-02-27T19:06:57+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/etudes-de-cas/immobilier-11-prospects</loc>
+    <lastmod>2026-02-27T17:46:04+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/en/etudes-de-cas/immobilier-11-prospects</loc>
+    <lastmod>2026-02-27T12:47:34+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/de/etudes-de-cas/immobilier-11-prospects</loc>
+    <lastmod>2026-02-27T17:43:01+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/nl/etudes-de-cas/immobilier-11-prospects</loc>
+    <lastmod>2026-02-27T17:45:44+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/etudes-de-cas/iddi-generation-leads-biotech-pharma</loc>
+    <lastmod>2026-02-27T17:41:06+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/en/etudes-de-cas/iddi-generation-leads-biotech-pharma</loc>
+    <lastmod>2026-02-27T12:45:08+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/de/etudes-de-cas/iddi-generation-leads-biotech-pharma</loc>
+    <lastmod>2026-02-27T17:37:50+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/nl/etudes-de-cas/iddi-generation-leads-biotech-pharma</loc>
+    <lastmod>2026-02-27T17:40:45+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/etudes-de-cas/audiovisuel-16-rendez-vous</loc>
+    <lastmod>2026-02-27T17:01:18+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/en/etudes-de-cas/audiovisuel-16-rendez-vous</loc>
+    <lastmod>2026-02-27T12:26:23+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/de/etudes-de-cas/audiovisuel-16-rendez-vous</loc>
+    <lastmod>2026-02-27T16:56:52+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://devlo.ch/nl/etudes-de-cas/audiovisuel-16-rendez-vous</loc>
+    <lastmod>2026-02-27T17:00:56+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

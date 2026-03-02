@@ -12,6 +12,20 @@
   --accent-strong: 10 84 122;
   --radius-soft: 0.55rem;
   --radius-panel: 1rem;
+
+  /* Services design system */
+  --primary: #0f4eff;
+  --primary-dark: #0a38cc;
+  --primary-light: #eef2ff;
+  --service-accent: #00e5a0;
+  --text-primary: #0d0d0d;
+  --text-secondary: #4a4a4a;
+  --text-muted: #8c8c8c;
+  --bg-white: #ffffff;
+  --bg-subtle: #f7f8fc;
+  --bg-dark: #08080f;
+  --border: #e5e7eb;
+  --border-strong: #d1d5db;
 }
 
 * {
@@ -95,6 +109,18 @@ a {
 }
 
 @layer utilities {
+  .font-service-display {
+    font-family: var(--font-syne), "Avenir Next", "Segoe UI", sans-serif;
+  }
+
+  .font-service-body {
+    font-family: var(--font-dm-sans), "Avenir Next", "Segoe UI", sans-serif;
+  }
+
+  .font-service-mono {
+    font-family: var(--font-jetbrains-mono), "SFMono-Regular", Menlo, monospace;
+  }
+
   .text-balance {
     text-wrap: balance;
   }
