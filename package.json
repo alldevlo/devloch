@@ -11,6 +11,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "check:hadoseo-metadata": "node scripts/verify-hadoseo-metadata.mjs",
     "check:deploy": "npm run lint && npm run build",
     "sync:case-studies": "node scripts/sync-case-studies.mjs",
     "vercel:link": "npx vercel link",
