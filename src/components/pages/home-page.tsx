@@ -165,6 +165,9 @@ export function HomePage() {
                 <Link href={homeContent.hero.ctaSecondary.href} className={buttonClassName("secondary", "px-8 py-4 text-base")}>
                   {homeContent.hero.ctaSecondary.label}
                 </Link>
+                <Link href={homeContent.hero.ctaServices.href} className={buttonClassName("secondary", "px-8 py-4 text-base")}>
+                  {homeContent.hero.ctaServices.label}
+                </Link>
               </div>
             </FadeInOnScroll>
 

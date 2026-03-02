@@ -48,6 +48,7 @@ export const mainNav = {
   links: [
     { label: "Agence", href: "/" },
     { label: "Études de cas", href: "/etudes-de-cas" },
+    { label: "Services", href: "/services" },
     { label: "Outbound Academy", href: "/academy" },
   ] as NavLink[],
   cta: {
@@ -74,6 +75,7 @@ export const homeContent = {
       "Plus que des consultants : votre partenaire de confiance n°1 pour la génération de leads, la prospection multicanal et la prise de rendez-vous B2B.",
     ctaPrimary: { label: "Planifier votre consultation gratuite →", href: "/consultation" },
     ctaSecondary: { label: "Voir nos résultats →", href: "/etudes-de-cas" },
+    ctaServices: { label: "Voir nos services →", href: "/services" },
     wistiaMediaId: "cr7dgltkvu",
     posterSrc: "/images/video-thumb-abacus.webp",
     posterAlt: "Aperçu de la vidéo témoignage Abacus",
