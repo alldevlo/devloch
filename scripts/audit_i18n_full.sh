@@ -58,6 +58,11 @@ check_canonical_live() {
   fi
 }
 
+is_devlo_absolute_url() {
+  local value="$1"
+  [[ "$value" =~ ^https://devlo\.ch($|/) ]]
+}
+
 {
   echo "# I18N + SEO Full Audit"
   echo
@@ -104,11 +109,11 @@ for locale in fr en de nl; do
 
     hreflang_status="FAIL"
     if [[ -n "$fr_hreflang" && -n "$en_hreflang" && -n "$de_hreflang" && -n "$nl_hreflang" && -n "$xd_hreflang" ]] \
-      && [[ "$fr_hreflang" == https://devlo.ch/* ]] \
-      && [[ "$en_hreflang" == https://devlo.ch/* ]] \
-      && [[ "$de_hreflang" == https://devlo.ch/* ]] \
-      && [[ "$nl_hreflang" == https://devlo.ch/* ]] \
-      && [[ "$xd_hreflang" == https://devlo.ch/* ]]; then
+      && is_devlo_absolute_url "$fr_hreflang" \
+      && is_devlo_absolute_url "$en_hreflang" \
+      && is_devlo_absolute_url "$de_hreflang" \
+      && is_devlo_absolute_url "$nl_hreflang" \
+      && is_devlo_absolute_url "$xd_hreflang"; then
       hreflang_status="PASS"
     fi
 
