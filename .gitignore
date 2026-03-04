@@ -27,9 +27,18 @@ yarn-error.log*
 
 # local env files
 .env*.local
+.env.local.*
 
 # vercel
 .vercel
+
+# local audit/temp artifacts
+docs/**/raw/
+docs/i18n_sanity_migration/phase3_audit_*/
+docs/mobile_audit_*/
+scripts/_tmp*
+scripts/_inputs/
+scripts/run_prechecks_and_translate.sh
 
 # typescript
 *.tsbuildinfo
