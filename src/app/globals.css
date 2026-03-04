@@ -84,11 +84,6 @@ body {
   background-image: none !important;
 }
 
-/* Hide Lovalingo's built-in floating switcher; we render a custom header switcher. */
-div[data-lovalingo-exclude="true"] {
-  display: none !important;
-}
-
 a {
   color: inherit;
 }

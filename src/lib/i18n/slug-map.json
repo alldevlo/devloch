@@ -1,0 +1,506 @@
+{
+  "academy": {
+    "fr": "/academy",
+    "en": "/en/academy",
+    "de": "/de/academy",
+    "nl": "/nl/academy"
+  },
+  "case-studies": {
+    "fr": "/etudes-de-cas",
+    "en": "/en/etudes-de-cas",
+    "de": "/de/etudes-de-cas",
+    "nl": "/nl/etudes-de-cas"
+  },
+  "case-study:audiovisuel-16-rendez-vous": {
+    "fr": "/etudes-de-cas/audiovisuel-16-rendez-vous",
+    "en": "/en/casestudy/audiovisual-16-meetings",
+    "de": "/de/fallstudien/av-integration-16-termine",
+    "nl": "/nl/casestudy/audiovisual-16-meetings"
+  },
+  "case-study:biocarburants-52-rendez-vous": {
+    "fr": "/etudes-de-cas/biocarburants-52-rendez-vous",
+    "en": "/en/casestudy/biofuels-52-sales-meetings",
+    "de": "/de/etudes-de-cas/biocarburants-52-rendez-vous",
+    "nl": "/nl/casestudy/biofuels-52-sales-meetings"
+  },
+  "case-study:biodiversite-70-rendez-vous": {
+    "fr": "/etudes-de-cas/biodiversite-70-rendez-vous",
+    "en": "/en/casestudy/biodiversity-70-meetings",
+    "de": "/de/fallstudien/biodiversitat-70-termine",
+    "nl": "/nl/casestudy/biodiversity-70-meetings"
+  },
+  "case-study:cybersecurite-4500-entreprises": {
+    "fr": "/etudes-de-cas/cybersecurite-4500-entreprises",
+    "en": "/en/etudes-de-cas/cybersecurite-4500-entreprises",
+    "de": "/de/etudes-de-cas/cybersecurite-4500-entreprises",
+    "nl": "/nl/etudes-de-cas/cybersecurite-4500-entreprises"
+  },
+  "case-study:formation-14-rendez-vous": {
+    "fr": "/etudes-de-cas/formation-14-rendez-vous",
+    "en": "/en/casestudy/learning-development-14-meetings",
+    "de": "/de/fallstudien/training-14-termine",
+    "nl": "/nl/casestudy/learning-development-14-meetings"
+  },
+  "case-study:hr-54-rendez-vous-dach": {
+    "fr": "/etudes-de-cas/hr-54-rendez-vous-dach",
+    "en": "/en/etudes-de-cas/hr-54-rendez-vous-dach",
+    "de": "/de/etudes-de-cas/hr-54-rendez-vous-dach",
+    "nl": "/nl/etudes-de-cas/hr-54-rendez-vous-dach"
+  },
+  "case-study:iddi-generation-leads-biotech-pharma": {
+    "fr": "/etudes-de-cas/iddi-generation-leads-biotech-pharma",
+    "en": "/en/etudes-de-cas/iddi-generation-leads-biotech-pharma",
+    "de": "/de/etudes-de-cas/iddi-generation-leads-biotech-pharma",
+    "nl": "/nl/etudes-de-cas/iddi-generation-leads-biotech-pharma"
+  },
+  "case-study:immobilier-11-prospects": {
+    "fr": "/etudes-de-cas/immobilier-11-prospects",
+    "en": "/en/casestudy/commercial-real-estate-11-prospects",
+    "de": "/de/fallstudien/gewerbeimmobilien-11-interessenten",
+    "nl": "/nl/casestudy/commercial-real-estate-11-prospects"
+  },
+  "case-study:immobilier-30-prospects": {
+    "fr": "/etudes-de-cas/immobilier-30-prospects",
+    "en": "/en/etudes-de-cas/immobilier-30-prospects",
+    "de": "/de/fallstudien/immobilien-30-interessenten",
+    "nl": "/nl/etudes-de-cas/immobilier-30-prospects"
+  },
+  "case-study:logiciel-comptable-200k-ca": {
+    "fr": "/etudes-de-cas/logiciel-comptable-200k-ca",
+    "en": "/en/etudes-de-cas/logiciel-comptable-200k-ca",
+    "de": "/de/etudes-de-cas/logiciel-comptable-200k-ca",
+    "nl": "/nl/etudes-de-cas/logiciel-comptable-200k-ca"
+  },
+  "case-study:merchandising-23-prospects": {
+    "fr": "/etudes-de-cas/merchandising-23-prospects",
+    "en": "/en/etudes-de-cas/merchandising-23-prospects",
+    "de": "/de/fallstudien/merchandising-23-interessenten",
+    "nl": "/nl/etudes-de-cas/merchandising-23-prospects"
+  },
+  "case-study:mobilite-40-prospects": {
+    "fr": "/etudes-de-cas/mobilite-40-prospects",
+    "en": "/en/etudes-de-cas/mobilite-40-prospects",
+    "de": "/de/fallstudien/mobilitat-40-interessenten",
+    "nl": "/nl/etudes-de-cas/mobilite-40-prospects"
+  },
+  "case-study:monizze-120-rendez-vous": {
+    "fr": "/etudes-de-cas/monizze-120-rendez-vous",
+    "en": "/en/etudes-de-cas/monizze-120-rendez-vous",
+    "de": "/de/etudes-de-cas/monizze-120-rendez-vous",
+    "nl": "/nl/etudes-de-cas/monizze-120-rendez-vous"
+  },
+  "case-study:proprete-urbaine-71-rendez-vous": {
+    "fr": "/etudes-de-cas/proprete-urbaine-71-rendez-vous",
+    "en": "/en/casestudy/urban-cleanliness-71-meetings",
+    "de": "/de/etudes-de-cas/proprete-urbaine-71-rendez-vous",
+    "nl": "/nl/casestudy/urban-cleanliness-71-meetings"
+  },
+  "conditions": {
+    "fr": "/conditions",
+    "en": "/en/conditions",
+    "de": "/de/conditions",
+    "nl": "/nl/conditions"
+  },
+  "consultation": {
+    "fr": "/consultation",
+    "en": "/en/consultation",
+    "de": "/de/consultation",
+    "nl": "/nl/consultation"
+  },
+  "home": {
+    "fr": "/",
+    "en": "/en",
+    "de": "/de",
+    "nl": "/nl"
+  },
+  "page:2020-b2b-sales-leaders-teams": {
+    "fr": "/2020-b2b-sales-leaders-teams",
+    "en": "/en/2020-b2b-sales-leaders-teams",
+    "de": "/de/2020-b2b-sales-leaders-teams",
+    "nl": "/nl/2020-b2b-sales-leaders-teams"
+  },
+  "page:5-raisons-pour-lesquelles-la-prospection-commerciale-b2b-est-cruciale": {
+    "fr": "/5-raisons-pour-lesquelles-la-prospection-commerciale-b2b-est-cruciale",
+    "en": "/en/5-raisons-pour-lesquelles-la-prospection-commerciale-b2b-est-cruciale",
+    "de": "/de/5-raisons-pour-lesquelles-la-prospection-commerciale-b2b-est-cruciale",
+    "nl": "/nl/5-raisons-pour-lesquelles-la-prospection-commerciale-b2b-est-cruciale"
+  },
+  "page:5-reasons-why-b2b-sales-prospecting-is-essential": {
+    "fr": "/5-reasons-why-b2b-sales-prospecting-is-essential",
+    "en": "/en/5-reasons-why-b2b-sales-prospecting-is-essential",
+    "de": "/de/5-reasons-why-b2b-sales-prospecting-is-essential",
+    "nl": "/nl/5-reasons-why-b2b-sales-prospecting-is-essential"
+  },
+  "page:academy-our-call": {
+    "fr": "/academy-our-call",
+    "en": "/en/academy-our-call",
+    "de": "/de/academy-our-call",
+    "nl": "/nl/academy-our-call"
+  },
+  "page:academy-terms-conditions": {
+    "fr": "/academy-terms-conditions",
+    "en": "/en/academy-terms-conditions",
+    "de": "/de/academy-terms-conditions",
+    "nl": "/nl/academy-terms-conditions"
+  },
+  "page:akademie-unser-ruf": {
+    "fr": "/akademie-unser-ruf",
+    "en": "/en/akademie-unser-ruf",
+    "de": "/de/akademie-unser-ruf",
+    "nl": "/nl/akademie-unser-ruf"
+  },
+  "page:ausbildung-prospektion-b2b": {
+    "fr": "/ausbildung-prospektion-b2b",
+    "en": "/en/ausbildung-prospektion-b2b",
+    "de": "/de/ausbildung-prospektion-b2b",
+    "nl": "/nl/ausbildung-prospektion-b2b"
+  },
+  "page:b2b-sales-training-academy": {
+    "fr": "/b2b-sales-training-academy",
+    "en": "/en/b2b-sales-training-academy",
+    "de": "/de/b2b-sales-training-academy",
+    "nl": "/nl/b2b-sales-training-academy"
+  },
+  "page:blog": {
+    "fr": "/blog",
+    "en": "/en/blog",
+    "de": "/de/blog",
+    "nl": "/nl/blog"
+  },
+  "page:call": {
+    "fr": "/call",
+    "en": "/en/call",
+    "de": "/de/call",
+    "nl": "/nl/call"
+  },
+  "page:casestudy": {
+    "fr": "/casestudy",
+    "en": "/en/casestudy",
+    "de": "/de/casestudy",
+    "nl": "/nl/casestudy"
+  },
+  "page:casestudy__accounting-200k-revenue": {
+    "fr": "/casestudy/accounting-200k-revenue",
+    "en": "/en/casestudy/accounting-200k-revenue",
+    "de": "/de/casestudy/accounting-200k-revenue",
+    "nl": "/nl/casestudy/accounting-200k-revenue"
+  },
+  "page:casestudy__cybersecurity-4500-companies": {
+    "fr": "/casestudy/cybersecurity-4500-companies",
+    "en": "/en/casestudy/cybersecurity-4500-companies",
+    "de": "/de/casestudy/cybersecurity-4500-companies",
+    "nl": "/nl/casestudy/cybersecurity-4500-companies"
+  },
+  "page:casestudy__hr-54-meetings-dach": {
+    "fr": "/casestudy/hr-54-meetings-dach",
+    "en": "/en/casestudy/hr-54-meetings-dach",
+    "de": "/de/casestudy/hr-54-meetings-dach",
+    "nl": "/nl/casestudy/hr-54-meetings-dach"
+  },
+  "page:casestudy__merchandising-23-prospects": {
+    "fr": "/casestudy/merchandising-23-prospects",
+    "en": "/en/casestudy/merchandising-23-prospects",
+    "de": "/de/casestudy/merchandising-23-prospects",
+    "nl": "/nl/casestudy/merchandising-23-prospects"
+  },
+  "page:casestudy__mobility-40-prospects": {
+    "fr": "/casestudy/mobility-40-prospects",
+    "en": "/en/casestudy/mobility-40-prospects",
+    "de": "/de/casestudy/mobility-40-prospects",
+    "nl": "/nl/casestudy/mobility-40-prospects"
+  },
+  "page:casestudy__real-estate-30-prospects": {
+    "fr": "/casestudy/real-estate-30-prospects",
+    "en": "/en/casestudy/real-estate-30-prospects",
+    "de": "/de/casestudy/real-estate-30-prospects",
+    "nl": "/nl/casestudy/real-estate-30-prospects"
+  },
+  "page:conditions-utilisation-academie": {
+    "fr": "/conditions-utilisation-academie",
+    "en": "/en/conditions-utilisation-academie",
+    "de": "/de/conditions-utilisation-academie",
+    "nl": "/nl/conditions-utilisation-academie"
+  },
+  "page:courriel-quelquun-vendre-quelque-chose": {
+    "fr": "/courriel-quelquun-vendre-quelque-chose",
+    "en": "/en/courriel-quelquun-vendre-quelque-chose",
+    "de": "/de/courriel-quelquun-vendre-quelque-chose",
+    "nl": "/nl/courriel-quelquun-vendre-quelque-chose"
+  },
+  "page:developpement-ventes-peche-au-harpon": {
+    "fr": "/developpement-ventes-peche-au-harpon",
+    "en": "/en/developpement-ventes-peche-au-harpon",
+    "de": "/de/developpement-ventes-peche-au-harpon",
+    "nl": "/nl/developpement-ventes-peche-au-harpon"
+  },
+  "page:devlo-b2b-lead-generation-partner": {
+    "fr": "/devlo-b2b-lead-generation-partner",
+    "en": "/en/devlo-b2b-lead-generation-partner",
+    "de": "/de/devlo-b2b-lead-generation-partner",
+    "nl": "/nl/devlo-b2b-lead-generation-partner"
+  },
+  "page:eliminated-kpis-in-2020": {
+    "fr": "/eliminated-kpis-in-2020",
+    "en": "/en/eliminated-kpis-in-2020",
+    "de": "/de/eliminated-kpis-in-2020",
+    "nl": "/nl/eliminated-kpis-in-2020"
+  },
+  "page:ergebnisse_fall_studien": {
+    "fr": "/ergebnisse_fall_studien",
+    "en": "/en/ergebnisse-fall-studien",
+    "de": "/de/ergebnisse_fall_studien",
+    "nl": "/nl/ergebnisse-fall-studien"
+  },
+  "page:ergebnisse_fall_studien__page__2": {
+    "fr": "/ergebnisse_fall_studien/page/2",
+    "en": "/en/ergebnisse-fall-studien/page/2",
+    "de": "/de/ergebnisse_fall_studien/page/2",
+    "nl": "/nl/ergebnisse-fall-studien/page/2"
+  },
+  "page:externaliser-le-developpement-des-ventes-b2b-comment-eviter-les-depenses-excessives": {
+    "fr": "/externaliser-le-developpement-des-ventes-b2b-comment-eviter-les-depenses-excessives",
+    "en": "/en/externaliser-le-developpement-des-ventes-b2b-comment-eviter-les-depenses-excessives",
+    "de": "/de/externaliser-le-developpement-des-ventes-b2b-comment-eviter-les-depenses-excessives",
+    "nl": "/nl/externaliser-le-developpement-des-ventes-b2b-comment-eviter-les-depenses-excessives"
+  },
+  "page:fallstudien": {
+    "fr": "/fallstudien",
+    "en": "/en/fallstudien",
+    "de": "/de/fallstudien",
+    "nl": "/nl/fallstudien"
+  },
+  "page:fallstudien__biokraftstoffe-52-termine": {
+    "fr": "/fallstudien/biokraftstoffe-52-termine",
+    "en": "/en/fallstudien/biokraftstoffe-52-termine",
+    "de": "/de/fallstudien/biokraftstoffe-52-termine",
+    "nl": "/nl/fallstudien/biokraftstoffe-52-termine"
+  },
+  "page:fallstudien__buchhaltungssoftware-200k-umsatz": {
+    "fr": "/fallstudien/buchhaltungssoftware-200k-umsatz",
+    "en": "/en/fallstudien/buchhaltungssoftware-200k-umsatz",
+    "de": "/de/fallstudien/buchhaltungssoftware-200k-umsatz",
+    "nl": "/nl/fallstudien/buchhaltungssoftware-200k-umsatz"
+  },
+  "page:fallstudien__cybersicherheit-4500-unternehmen": {
+    "fr": "/fallstudien/cybersicherheit-4500-unternehmen",
+    "en": "/en/fallstudien/cybersicherheit-4500-unternehmen",
+    "de": "/de/fallstudien/cybersicherheit-4500-unternehmen",
+    "nl": "/nl/fallstudien/cybersicherheit-4500-unternehmen"
+  },
+  "page:fallstudien__hr-54-termine-dach": {
+    "fr": "/fallstudien/hr-54-termine-dach",
+    "en": "/en/fallstudien/hr-54-termine-dach",
+    "de": "/de/fallstudien/hr-54-termine-dach",
+    "nl": "/nl/fallstudien/hr-54-termine-dach"
+  },
+  "page:fallstudien__stadtreinigung-71-termine": {
+    "fr": "/fallstudien/stadtreinigung-71-termine",
+    "en": "/en/fallstudien/stadtreinigung-71-termine",
+    "de": "/de/fallstudien/stadtreinigung-71-termine",
+    "nl": "/nl/fallstudien/stadtreinigung-71-termine"
+  },
+  "page:indicateurs-de-performance-elimines-2020": {
+    "fr": "/indicateurs-de-performance-elimines-2020",
+    "en": "/en/indicateurs-de-performance-elimines-2020",
+    "de": "/de/indicateurs-de-performance-elimines-2020",
+    "nl": "/nl/indicateurs-de-performance-elimines-2020"
+  },
+  "page:lancement-devlo-partenaire-de-confiance-generation-de-prospects": {
+    "fr": "/lancement-devlo-partenaire-de-confiance-generation-de-prospects",
+    "en": "/en/lancement-devlo-partenaire-de-confiance-generation-de-prospects",
+    "de": "/de/lancement-devlo-partenaire-de-confiance-generation-de-prospects",
+    "nl": "/nl/lancement-devlo-partenaire-de-confiance-generation-de-prospects"
+  },
+  "page:mark-roberge-predictions-prescriptions-2021": {
+    "fr": "/mark-roberge-predictions-prescriptions-2021",
+    "en": "/en/mark-roberge-predictions-prescriptions-2021",
+    "de": "/de/mark-roberge-predictions-prescriptions-2021",
+    "nl": "/nl/mark-roberge-predictions-prescriptions-2021"
+  },
+  "page:merci__page__2": {
+    "fr": "/merci/page/2",
+    "en": "/en/merci/page/2",
+    "de": "/de/merci/page/2",
+    "nl": "/nl/merci/page/2"
+  },
+  "page:oui-a-reduction-friction-commerciale": {
+    "fr": "/oui-a-reduction-friction-commerciale",
+    "en": "/en/oui-a-reduction-friction-commerciale",
+    "de": "/de/oui-a-reduction-friction-commerciale",
+    "nl": "/nl/oui-a-reduction-friction-commerciale"
+  },
+  "page:our-call": {
+    "fr": "/our-call",
+    "en": "/en/our-call",
+    "de": "/de/our-call",
+    "nl": "/nl/our-call"
+  },
+  "page:outsourcing-b2b-sales-development-avoid-overspending": {
+    "fr": "/outsourcing-b2b-sales-development-avoid-overspending",
+    "en": "/en/outsourcing-b2b-sales-development-avoid-overspending",
+    "de": "/de/outsourcing-b2b-sales-development-avoid-overspending",
+    "nl": "/nl/outsourcing-b2b-sales-development-avoid-overspending"
+  },
+  "page:personalisation-digitalisation-are-so-important": {
+    "fr": "/personalisation-digitalisation-are-so-important",
+    "en": "/en/personalisation-digitalisation-are-so-important",
+    "de": "/de/personalisation-digitalisation-are-so-important",
+    "nl": "/nl/personalisation-digitalisation-are-so-important"
+  },
+  "page:personalized-b2b-sales-sequences": {
+    "fr": "/personalized-b2b-sales-sequences",
+    "en": "/en/personalized-b2b-sales-sequences",
+    "de": "/de/personalized-b2b-sales-sequences",
+    "nl": "/nl/personalized-b2b-sales-sequences"
+  },
+  "page:personnalisation-digitalisation-sont-si-importantes": {
+    "fr": "/personnalisation-digitalisation-sont-si-importantes",
+    "en": "/en/personnalisation-digitalisation-sont-si-importantes",
+    "de": "/de/personnalisation-digitalisation-sont-si-importantes",
+    "nl": "/nl/personnalisation-digitalisation-sont-si-importantes"
+  },
+  "page:politique-confidentialite": {
+    "fr": "/politique-confidentialite",
+    "en": "/en/politique-confidentialite",
+    "de": "/de/politique-confidentialite",
+    "nl": "/nl/politique-confidentialite"
+  },
+  "page:privacy-policy": {
+    "fr": "/privacy-policy",
+    "en": "/en/privacy-policy",
+    "de": "/de/privacy-policy",
+    "nl": "/nl/privacy-policy"
+  },
+  "page:resultats-cas-etudes": {
+    "fr": "/resultats-cas-etudes",
+    "en": "/en/resultats-cas-etudes",
+    "de": "/de/resultats-cas-etudes",
+    "nl": "/nl/resultats-cas-etudes"
+  },
+  "page:resultats-cas-etudes__page__2": {
+    "fr": "/resultats-cas-etudes/page/2",
+    "en": "/en/resultats-cas-etudes/page/2",
+    "de": "/de/resultats-cas-etudes/page/2",
+    "nl": "/nl/resultats-cas-etudes/page/2"
+  },
+  "page:results_cas_studies": {
+    "fr": "/results_cas_studies",
+    "en": "/en/results_cas_studies",
+    "de": "/de/results-cas-studies",
+    "nl": "/nl/results-cas-studies"
+  },
+  "page:results_cas_studies__page__2": {
+    "fr": "/results_cas_studies/page/2",
+    "en": "/en/results_cas_studies/page/2",
+    "de": "/de/results-cas-studies/page/2",
+    "nl": "/nl/results-cas-studies/page/2"
+  },
+  "page:sales-development-is-like-spearfishing": {
+    "fr": "/sales-development-is-like-spearfishing",
+    "en": "/en/sales-development-is-like-spearfishing",
+    "de": "/de/sales-development-is-like-spearfishing",
+    "nl": "/nl/sales-development-is-like-spearfishing"
+  },
+  "page:telefonanruf": {
+    "fr": "/telefonanruf",
+    "en": "/en/telefonanruf",
+    "de": "/de/telefonanruf",
+    "nl": "/nl/telefonanruf"
+  },
+  "page:terms": {
+    "fr": "/terms",
+    "en": "/en/terms",
+    "de": "/de/terms",
+    "nl": "/nl/terms"
+  },
+  "page:ultimate-sales-training-course": {
+    "fr": "/ultimate-sales-training-course",
+    "en": "/en/ultimate-sales-training-course",
+    "de": "/de/ultimate-sales-training-course",
+    "nl": "/nl/ultimate-sales-training-course"
+  },
+  "page:ultimativer-verkaufstrainingskurs": {
+    "fr": "/ultimativer-verkaufstrainingskurs",
+    "en": "/en/ultimativer-verkaufstrainingskurs",
+    "de": "/de/ultimativer-verkaufstrainingskurs",
+    "nl": "/nl/ultimativer-verkaufstrainingskurs"
+  },
+  "page:unser-termin": {
+    "fr": "/unser-termin",
+    "en": "/en/unser-termin",
+    "de": "/de/unser-termin",
+    "nl": "/nl/unser-termin"
+  },
+  "page:yes-to-reducing-sales-friction": {
+    "fr": "/yes-to-reducing-sales-friction",
+    "en": "/en/yes-to-reducing-sales-friction",
+    "de": "/de/yes-to-reducing-sales-friction",
+    "nl": "/nl/yes-to-reducing-sales-friction"
+  },
+  "service:cold-calling": {
+    "fr": "/services/cold-calling",
+    "en": "/en/services/cold-calling",
+    "de": "/de/services/cold-calling",
+    "nl": "/nl/services/cold-calling"
+  },
+  "service:cold-email": {
+    "fr": "/services/cold-email",
+    "en": "/en/services/cold-email",
+    "de": "/de/services/cold-email",
+    "nl": "/nl/services/cold-email"
+  },
+  "service:crm-delivrabilite": {
+    "fr": "/services/crm-delivrabilite",
+    "en": "/en/services/crm-delivrabilite",
+    "de": "/de/services/crm-delivrabilite",
+    "nl": "/nl/services/crm-delivrabilite"
+  },
+  "service:enrichissement-clay": {
+    "fr": "/services/enrichissement-clay",
+    "en": "/en/services/enrichissement-clay",
+    "de": "/de/services/enrichissement-clay",
+    "nl": "/nl/services/enrichissement-clay"
+  },
+  "service:generation-leads": {
+    "fr": "/services/generation-leads",
+    "en": "/en/services/generation-leads",
+    "de": "/de/services/generation-leads",
+    "nl": "/nl/services/generation-leads"
+  },
+  "service:intent-data": {
+    "fr": "/services/intent-data",
+    "en": "/en/services/intent-data",
+    "de": "/de/services/intent-data",
+    "nl": "/nl/services/intent-data"
+  },
+  "service:linkedin-outreach": {
+    "fr": "/services/linkedin-outreach",
+    "en": "/en/services/linkedin-outreach",
+    "de": "/de/services/linkedin-outreach",
+    "nl": "/nl/services/linkedin-outreach"
+  },
+  "service:outbound-multicanal": {
+    "fr": "/services/outbound-multicanal",
+    "en": "/en/services/outbound-multicanal",
+    "de": "/de/services/outbound-multicanal",
+    "nl": "/nl/services/outbound-multicanal"
+  },
+  "service:prise-de-rendez-vous": {
+    "fr": "/services/prise-de-rendez-vous",
+    "en": "/en/services/prise-de-rendez-vous",
+    "de": "/de/services/prise-de-rendez-vous",
+    "nl": "/nl/services/prise-de-rendez-vous"
+  },
+  "service:qualification-leads": {
+    "fr": "/services/qualification-leads",
+    "en": "/en/services/qualification-leads",
+    "de": "/de/services/qualification-leads",
+    "nl": "/nl/services/qualification-leads"
+  },
+  "services": {
+    "fr": "/services",
+    "en": "/en/services",
+    "de": "/de/services",
+    "nl": "/nl/services"
+  }
+}

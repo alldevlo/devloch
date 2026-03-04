@@ -3,11 +3,10 @@ import { existsSync } from "node:fs";
 import { join } from "node:path";
 
 import { hadoseoMetadataByRoute } from "@/content/hadoseo-metadata";
+import { buildLanguageAlternatesForFrPath, normalizePath as normalizeLocalizedPath } from "@/lib/i18n/slug-map";
 import { siteConfig } from "@/lib/site";
 
 export const defaultOgImagePath = "/images/devlo_OG_Banner.webp";
-
-type SupportedLang = "fr" | "en" | "de" | "nl";
 
 export function normalizeRoute(path: string): string {
   if (!path || path === "/") return "/";
@@ -19,26 +18,12 @@ export function stripDevloSuffix(title: string): string {
   return title.replace(/\s*\|\s*devlo\s*$/i, "").trim();
 }
 
-function localizedPath(lang: SupportedLang, path: string): string {
-  const normalized = normalizeRoute(path);
-  if (lang === "fr") return normalized;
-  return normalized === "/" ? `/${lang}` : `/${lang}${normalized}`;
-}
-
 export function buildLanguageAlternates(path: string): NonNullable<Metadata["alternates"]>["languages"] {
-  const languages: Record<string, string> = {
-    fr: localizedPath("fr", path),
-    en: localizedPath("en", path),
-    de: localizedPath("de", path),
-    nl: localizedPath("nl", path),
-    "x-default": localizedPath("fr", path),
-  };
-
-  return languages as NonNullable<Metadata["alternates"]>["languages"];
+  return buildLanguageAlternatesForFrPath(path) as NonNullable<Metadata["alternates"]>["languages"];
 }
 
 export function toAbsoluteUrl(path: string): string {
-  return `${siteConfig.url}${normalizeRoute(path)}`;
+  return `${siteConfig.url}${normalizeLocalizedPath(path)}`;
 }
 
 export function getHadoSeoMetadataOverride(path: string) {

@@ -428,8 +428,6 @@ const nextConfig = {
         destination: "/consultation",
         permanent: true,
       },
-      // Lovalingo PATH mode uses /en/* localized URLs. Keep specific legacy /en/*
-      // redirects above, but do not blanket-redirect all /en paths to "/" anymore.
     ];
 
     // ─── DE language pages (/de/*) ────────────────────────────────────────────
@@ -552,8 +550,6 @@ const nextConfig = {
         destination: "/etudes-de-cas",
         permanent: true,
       },
-      // Lovalingo PATH mode now handles /de/* localized URLs. Keep only the
-      // specific legacy DE redirects above; do not blanket-redirect /de paths.
     ];
 
     // ─── FR blog posts (WordPress, no equivalent in new site) ─────────────────
@@ -730,21 +726,11 @@ const nextConfig = {
         ...wpResultatRedirects, // specific WP long slugs — must be before wildcard
         ...resultatRedirects,
         ...appAliasRedirects,
-        ...enRedirects,
-        ...deRedirects,
         ...frBlogRedirects,
         ...wordpressRedirects,
         ...oldPageRedirects,
       ]),
     );
-  },
-  async rewrites() {
-    return {
-      beforeFiles: [
-        { source: "/:locale(fr|en|de|nl)", destination: "/" },
-        { source: "/:locale(fr|en|de|nl)/:path*", destination: "/:path*" },
-      ],
-    };
   },
 };
 

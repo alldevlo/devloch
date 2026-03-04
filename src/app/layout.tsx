@@ -4,7 +4,6 @@ import Script from "next/script";
 
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
-import { LovalingoNextProvider } from "@/components/providers/lovalingo-next-provider";
 import { JsonLd } from "@/components/seo/json-ld";
 import { buildLanguageAlternates, defaultOgImagePath, toAbsoluteUrl } from "@/lib/seo/metadata";
 import { siteConfig } from "@/lib/site";
@@ -212,15 +211,13 @@ export default function RootLayout({
         >
           Aller au contenu
         </a>
-        <LovalingoNextProvider>
-          <div className="relative flex min-h-screen flex-col">
-            <SiteHeader />
-            <main id="main-content" className="flex-1 pt-16 md:pt-20 lg:pt-20">
-              {children}
-            </main>
-            <SiteFooter />
-          </div>
-        </LovalingoNextProvider>
+        <div className="relative flex min-h-screen flex-col">
+          <SiteHeader />
+          <main id="main-content" className="flex-1 pt-16 md:pt-20 lg:pt-20">
+            {children}
+          </main>
+          <SiteFooter />
+        </div>
       </body>
     </html>
   );
