@@ -5,7 +5,8 @@ import Link from "next/link";
 import { Linkedin } from "lucide-react";
 import { usePathname } from "next/navigation";
 
-import { getLocalizedCaseStudies } from "@/lib/i18n/case-studies-content";
+import { getCaseStudyFooterLabel } from "@/data/case-studies-footer-labels";
+import { footerCaseStudies } from "@/data/footer-case-studies";
 import { getLocalizedMasterfileContent } from "@/lib/i18n/masterfile-content";
 import { resolvePathForLocale, splitLocalePath, type SupportedLocale } from "@/lib/i18n/slug-map";
 import { getLocalizedServicesContent } from "@/lib/i18n/services-content";
@@ -135,7 +136,6 @@ export function SiteFooter() {
     copyright: string;
   };
   const localizedServices = getLocalizedServicesContent(locale).SERVICE_HUB_CARDS;
-  const localizedCaseStudies = getLocalizedCaseStudies(locale);
   const labels = footerLabelsByLocale[locale];
   const toLocaleHref = (frPath: string) => resolvePathForLocale(frPath, locale).path;
 
@@ -152,14 +152,10 @@ export function SiteFooter() {
     ...localizedServices.map((service) => ({ label: service.title, href: toLocaleHref(service.href) })),
   ];
 
-  const caseStudyLinks = Array.from(
-    new Map(
-      localizedCaseStudies.map((study) => [
-        toLocaleHref(`/etudes-de-cas/${study.slug}`),
-        { label: study.client, href: toLocaleHref(`/etudes-de-cas/${study.slug}`) },
-      ]),
-    ).values(),
-  );
+  const caseStudyLinks = footerCaseStudies.map((study) => ({
+    label: getCaseStudyFooterLabel(study.slug, locale),
+    href: toLocaleHref(study.href),
+  }));
 
   return (
     <footer className="relative border-t border-neutral-200 bg-white pb-20 pt-16 text-devlo-900 md:pt-20">
