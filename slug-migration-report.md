@@ -1,13 +1,14 @@
 # Slug Migration Report
 
-Generated: 2026-03-06T09:04:45.436Z
+Generated: 2026-03-06T09:15:08.000Z
 
 ## Résumé exécutable
 - Router: App Router (`src/app/[locale]/[[...slug]]/page.tsx`)
 - Entrées slug-map: **84**
 - Entrées incomplètes (fr/en/de/nl manquants): **0**
 - Sanity docs patchés: **26/84**
-- Validation locale automatique: **overallPass=true**, checks=336, failures=0
+- Validation locale automatique locale: **overallPass=true**, checks=336, failures=0
+- Validation locale automatique production: **overallPass=true**, checks=336, failures=0
 
 ## Slugs modifiés dans Sanity (ancien → nouveau)
 - Changements FR: 16
@@ -69,5 +70,6 @@ Generated: 2026-03-06T09:04:45.436Z
 
 ## Preuves
 - Synchronisation Sanity: `/tmp/sanity_slug_sync.json`
-- Validation full matrix: `docs/i18n_sanity_migration/check_success_20260306T105430/summary.json`
+- Validation full matrix locale: `docs/i18n_sanity_migration/check_success_20260306T105430/summary.json`
+- Validation full matrix production: `docs/i18n_sanity_migration/check_success_20260306T111139/summary.json`
 - Build local: `npm run build` (OK)
