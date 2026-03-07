@@ -2,12 +2,14 @@ import { SectionWrapper } from "@/components/shared/section-wrapper";
 import { FadeInOnScroll } from "@/components/ui/fade-in-on-scroll";
 import { HubspotForm } from "@/components/ui/hubspot-form";
 import { consultationContent } from "@/content/masterfile.fr";
+import type { SupportedLocale } from "@/lib/i18n/slug-map";
 
 type ConsultationMasterPageProps = {
   content?: typeof consultationContent;
+  locale?: SupportedLocale;
 };
 
-export function ConsultationMasterPage({ content = consultationContent }: ConsultationMasterPageProps) {
+export function ConsultationMasterPage({ content = consultationContent, locale = "fr" }: ConsultationMasterPageProps) {
   const c = content;
 
   return (
@@ -56,6 +58,7 @@ export function ConsultationMasterPage({ content = consultationContent }: Consul
               formId={c.hubspot.formId}
               region={c.hubspot.region}
               targetId="hubspot-consultation"
+              locale={locale}
             />
             <p className="mt-4 text-center text-sm text-neutral-500">
               {c.postForm}

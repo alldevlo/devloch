@@ -1,20 +1,29 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import type { SupportedLocale } from "@/lib/i18n/slug-map";
+
+type HubspotFormApi = {
+  setFieldValue?: (fieldName: string, value: string) => void;
+};
+
+type HubspotCreateConfig = {
+  portalId: string;
+  formId: string;
+  region: string;
+  target: string;
+  properties?: Record<string, string>;
+  onFormReady?: (form: unknown) => void;
+  onBeforeFormSubmit?: (submissionValues: unknown, form: unknown) => void;
+  onFormSubmit?: (form: unknown) => void;
+  onFormSubmitted?: () => void;
+};
 
 declare global {
   interface Window {
     hbspt?: {
       forms: {
-        create: (config: {
-          portalId: string;
-          formId: string;
-          region: string;
-          target: string;
-          onFormReady?: (form: unknown) => void;
-          onFormSubmit?: (form: unknown) => void;
-          onFormSubmitted?: () => void;
-        }) => void;
+        create: (config: HubspotCreateConfig) => HubspotFormApi;
       };
     };
   }
@@ -25,8 +34,44 @@ type HubspotFormProps = {
   formId: string;
   region: string;
   targetId: string;
+  locale?: SupportedLocale;
   hiddenFields?: Record<string, string>;
   onSubmitted?: () => void;
+};
+
+const copyByLocale: Record<
+  SupportedLocale,
+  {
+    loading: string;
+    loadError: string;
+    submissionError: string;
+    successMessage: string;
+  }
+> = {
+  fr: {
+    loading: "Chargement du formulaire…",
+    loadError: "Impossible de charger le formulaire.",
+    submissionError: "La soumission HubSpot a échoué. Merci de vérifier les champs requis.",
+    successMessage: "Merci pour votre prise de contact. Nous reviendrons vers vous sous 24 heures.",
+  },
+  en: {
+    loading: "Loading form…",
+    loadError: "Unable to load the form.",
+    submissionError: "HubSpot submission failed. Please verify the required fields.",
+    successMessage: "Thank you for reaching out. We will get back to you within 24 hours.",
+  },
+  de: {
+    loading: "Formular wird geladen…",
+    loadError: "Das Formular konnte nicht geladen werden.",
+    submissionError: "Die HubSpot-Übermittlung ist fehlgeschlagen. Bitte prüfen Sie die Pflichtfelder.",
+    successMessage: "Vielen Dank für Ihre Kontaktaufnahme. Wir melden uns innerhalb von 24 Stunden bei Ihnen.",
+  },
+  nl: {
+    loading: "Formulier wordt geladen…",
+    loadError: "Het formulier kon niet worden geladen.",
+    submissionError: "HubSpot-verzending is mislukt. Controleer de verplichte velden.",
+    successMessage: "Bedankt voor je aanvraag. We nemen binnen 24 uur contact met je op.",
+  },
 };
 
 const RESERVED_FORM_HEIGHT_CLASS = "min-h-[560px] md:min-h-[640px]";
@@ -90,6 +135,11 @@ function resolveFormElement(formRef: unknown, targetId: string): HTMLFormElement
   return container?.querySelector("form") ?? null;
 }
 
+function dispatchValueChange(element: HTMLInputElement | HTMLTextAreaElement) {
+  element.dispatchEvent(new Event("input", { bubbles: true }));
+  element.dispatchEvent(new Event("change", { bubbles: true }));
+}
+
 function syncHiddenFields(form: HTMLFormElement, hiddenFields?: Record<string, string>) {
   if (!hiddenFields) return;
 
@@ -97,12 +147,14 @@ function syncHiddenFields(form: HTMLFormElement, hiddenFields?: Record<string, s
     const input = form.querySelector<HTMLInputElement>(`input[name="${name}"]`);
     if (input) {
       input.value = value;
+      dispatchValueChange(input);
       return;
     }
 
     const textarea = form.querySelector<HTMLTextAreaElement>(`textarea[name="${name}"]`);
     if (textarea) {
       textarea.value = value;
+      dispatchValueChange(textarea);
       return;
     }
 
@@ -114,9 +166,35 @@ function syncHiddenFields(form: HTMLFormElement, hiddenFields?: Record<string, s
   });
 }
 
-export function HubspotForm({ portalId, formId, region, targetId, hiddenFields, onSubmitted }: HubspotFormProps) {
+function syncFormInstanceValues(formInstance: HubspotFormApi | null, hiddenFields?: Record<string, string>) {
+  if (!formInstance || typeof formInstance.setFieldValue !== "function" || !hiddenFields) return;
+
+  Object.entries(hiddenFields).forEach(([name, value]) => {
+    try {
+      formInstance.setFieldValue?.(name, value);
+    } catch {
+      if (process.env.NODE_ENV !== "production") {
+        // eslint-disable-next-line no-console
+        console.warn(`[HubSpot] Unable to set field value for "${name}"`);
+      }
+    }
+  });
+}
+
+export function HubspotForm({
+  portalId,
+  formId,
+  region,
+  targetId,
+  locale = "fr",
+  hiddenFields,
+  onSubmitted,
+}: HubspotFormProps) {
+  const copy = copyByLocale[locale];
   const initialized = useRef(false);
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const formInstanceRef = useRef<HubspotFormApi | null>(null);
+  const hiddenFieldsRef = useRef<Record<string, string> | undefined>(hiddenFields);
   const [loaded, setLoaded] = useState(false);
   const [isNearViewport, setIsNearViewport] = useState(false);
   const [loadError, setLoadError] = useState(false);
@@ -124,7 +202,12 @@ export function HubspotForm({ portalId, formId, region, targetId, hiddenFields, 
   const [submissionError, setSubmissionError] = useState<string | null>(null);
 
   useEffect(() => {
+    hiddenFieldsRef.current = hiddenFields;
+  }, [hiddenFields]);
+
+  useEffect(() => {
     initialized.current = false;
+    formInstanceRef.current = null;
     setLoaded(false);
     setSubmitted(false);
     setLoadError(false);
@@ -158,22 +241,33 @@ export function HubspotForm({ portalId, formId, region, targetId, hiddenFields, 
 
     const render = () => {
       if (cancelled || !window.hbspt || initialized.current) return;
-      const hiddenSnapshot = hiddenFields;
       initialized.current = true;
-      window.hbspt.forms.create({
+      const instance = window.hbspt.forms.create({
         portalId,
         formId,
         region,
         target: `#${targetId}`,
+        properties: hiddenFieldsRef.current,
         onFormReady: (formRef: unknown) => {
           const form = resolveFormElement(formRef, targetId);
-          if (!form) return;
-          syncHiddenFields(form, hiddenSnapshot);
+          if (form) {
+            syncHiddenFields(form, hiddenFieldsRef.current);
+          }
+          syncFormInstanceValues(formInstanceRef.current, hiddenFieldsRef.current);
+        },
+        onBeforeFormSubmit: (_submissionValues: unknown, formRef: unknown) => {
+          const form = resolveFormElement(formRef, targetId);
+          if (form) {
+            syncHiddenFields(form, hiddenFieldsRef.current);
+          }
+          syncFormInstanceValues(formInstanceRef.current, hiddenFieldsRef.current);
         },
         onFormSubmit: (formRef: unknown) => {
           const form = resolveFormElement(formRef, targetId);
-          if (!form) return;
-          syncHiddenFields(form, hiddenSnapshot);
+          if (form) {
+            syncHiddenFields(form, hiddenFieldsRef.current);
+          }
+          syncFormInstanceValues(formInstanceRef.current, hiddenFieldsRef.current);
           setSubmissionError(null);
         },
         onFormSubmitted: () => {
@@ -181,6 +275,8 @@ export function HubspotForm({ portalId, formId, region, targetId, hiddenFields, 
           onSubmitted?.();
         },
       });
+      formInstanceRef.current = instance;
+      syncFormInstanceValues(formInstanceRef.current, hiddenFieldsRef.current);
       setLoaded(true);
       setLoadError(false);
     };
@@ -201,7 +297,18 @@ export function HubspotForm({ portalId, formId, region, targetId, hiddenFields, 
     return () => {
       cancelled = true;
     };
-  }, [formId, hiddenFields, isNearViewport, onSubmitted, portalId, region, targetId]);
+  }, [formId, isNearViewport, onSubmitted, portalId, region, targetId]);
+
+  useEffect(() => {
+    if (!loaded || submitted) return;
+
+    const container = document.getElementById(targetId);
+    const form = container?.querySelector("form");
+    if (form instanceof HTMLFormElement) {
+      syncHiddenFields(form, hiddenFields);
+    }
+    syncFormInstanceValues(formInstanceRef.current, hiddenFields);
+  }, [hiddenFields, loaded, submitted, targetId]);
 
   useEffect(() => {
     const onMessage = (event: MessageEvent) => {
@@ -215,13 +322,13 @@ export function HubspotForm({ portalId, formId, region, targetId, hiddenFields, 
           // eslint-disable-next-line no-console
           console.error("[HubSpot] Form submission failed", payload.data);
         }
-        setSubmissionError("La soumission HubSpot a échoué. Merci de vérifier les champs requis.");
+        setSubmissionError(copy.submissionError);
       }
     };
 
     window.addEventListener("message", onMessage);
     return () => window.removeEventListener("message", onMessage);
-  }, []);
+  }, [copy.submissionError]);
 
   return (
     <div ref={containerRef} className="relative">
@@ -229,9 +336,7 @@ export function HubspotForm({ portalId, formId, region, targetId, hiddenFields, 
         <div className={`flex ${RESERVED_FORM_HEIGHT_CLASS} items-center justify-center rounded-xl bg-neutral-50`}>
           <div className="flex flex-col items-center gap-3 text-neutral-400">
             <div className="h-8 w-8 animate-spin rounded-full border-2 border-neutral-200 border-t-devlo-600" />
-            <span className="text-sm">
-              {loadError ? "Impossible de charger le formulaire." : "Chargement du formulaire…"}
-            </span>
+            <span className="text-sm">{loadError ? copy.loadError : copy.loading}</span>
           </div>
         </div>
       )}
@@ -242,7 +347,7 @@ export function HubspotForm({ portalId, formId, region, targetId, hiddenFields, 
       <div className={submitted ? "" : "hidden"}>
         <div className={`flex ${RESERVED_FORM_HEIGHT_CLASS} items-center rounded-xl border border-emerald-200 bg-emerald-50 p-6`}>
           <p className="text-sm font-medium leading-6 text-emerald-900">
-            Merci pour votre prise de contact. Nous reviendrons vers vous sous 24 heures.
+            {copy.successMessage}
           </p>
         </div>
       </div>

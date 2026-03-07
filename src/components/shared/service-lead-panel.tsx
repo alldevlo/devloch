@@ -128,6 +128,7 @@ export function ServiceLeadPanel({ service, locale = "fr" }: ServiceLeadPanelPro
             <HubSpotForm
               serviceInterest={service.configuratorServiceLabel}
               configuratorData={configuratorData}
+              locale={locale}
               onSuccess={() => setStep(2)}
             />
           </div>

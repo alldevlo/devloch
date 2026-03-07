@@ -355,6 +355,7 @@ export default async function LocalizedRoutePage({ params }: Params) {
         content={
           localizedTemplate.content.consultationContent as Parameters<typeof ConsultationMasterPage>[0]["content"]
         }
+        locale={resolved.locale}
       />
     );
   }

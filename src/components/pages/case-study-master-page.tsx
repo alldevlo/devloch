@@ -904,6 +904,7 @@ export function CaseStudyMasterPage({
                   formId={consultationData.hubspot.formId}
                   region={consultationData.hubspot.region}
                   targetId={`hubspot-case-${study.slug}`}
+                  locale={locale}
                 />
               </div>
             </div>

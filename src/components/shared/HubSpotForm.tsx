@@ -4,6 +4,7 @@ import { useId, useMemo } from "react";
 
 import { HubspotForm } from "@/components/ui/hubspot-form";
 import { buildStrategySelections, HUBSPOT_FORM_ID, HUBSPOT_PORTAL_ID } from "@/lib/hubspot";
+import type { SupportedLocale } from "@/lib/i18n/slug-map";
 
 declare global {
   interface Window {
@@ -14,10 +15,11 @@ declare global {
 type HubSpotFormProps = {
   serviceInterest: string;
   configuratorData?: string;
+  locale?: SupportedLocale;
   onSuccess?: () => void;
 };
 
-export function HubSpotForm({ serviceInterest, configuratorData, onSuccess }: HubSpotFormProps) {
+export function HubSpotForm({ serviceInterest, configuratorData, locale = "fr", onSuccess }: HubSpotFormProps) {
   const reactId = useId();
   const targetId = useMemo(() => `hubspot-services-${reactId.replace(/:/g, "")}`, [reactId]);
 
@@ -27,8 +29,9 @@ export function HubSpotForm({ serviceInterest, configuratorData, onSuccess }: Hu
         serviceInterest,
         configuratorData,
         pageUrl: typeof window !== "undefined" ? window.location.href : "",
+        locale,
       }),
-    [configuratorData, serviceInterest],
+    [configuratorData, locale, serviceInterest],
   );
 
   return (
@@ -39,8 +42,8 @@ export function HubSpotForm({ serviceInterest, configuratorData, onSuccess }: Hu
       targetId={targetId}
       hiddenFields={{
         strategy_selections: strategySelections,
-        service_interest: serviceInterest,
       }}
+      locale={locale}
       onSubmitted={() => {
         window.dataLayer?.push({ event: "lead_form_submit", service: serviceInterest });
         onSuccess?.();
