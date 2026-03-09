@@ -42,8 +42,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       const isBlog = path.includes("/blog");
       const isGeo = path.includes("/prospection-commerciale-");
       const isAgence = path.endsWith("/agence");
+      const isAlternative = path.includes("/alternative-");
 
-      const lastModifiedDate = isHome || isService || isBlog || isGeo || isAgence
+      const lastModifiedDate = isHome || isService || isBlog || isGeo || isAgence || isAlternative
         ? new Date("2026-03-09")
         : new Date("2026-03-01");
 
@@ -51,7 +52,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url,
         lastModified: lastModifiedDate,
         changeFrequency: isHome ? "weekly" : isService ? "monthly" : isCaseStudy ? "yearly" : isBlog ? "monthly" : ("monthly" as const),
-        priority: isHome ? 1.0 : isService ? 0.9 : isCaseStudy ? 0.8 : isBlog ? 0.7 : isGeo ? 0.8 : isAgence ? 0.8 : 0.6,
+        priority: isHome ? 1.0 : isService ? 0.9 : isCaseStudy ? 0.8 : isBlog ? 0.7 : isGeo ? 0.8 : isAgence ? 0.8 : isAlternative ? 0.75 : 0.6,
       };
     });
 }

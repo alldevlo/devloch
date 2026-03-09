@@ -292,5 +292,23 @@
     "en": null,
     "de": null,
     "nl": null
+  },
+  "alternative:alternative-undersales": {
+    "fr": "/alternative-undersales",
+    "en": null,
+    "de": null,
+    "nl": null
+  },
+  "alternative:alternative-lalaleads": {
+    "fr": "/alternative-lalaleads",
+    "en": null,
+    "de": null,
+    "nl": null
+  },
+  "alternative:alternative-agences-prospection-b2b": {
+    "fr": "/alternative-agences-prospection-b2b",
+    "en": null,
+    "de": null,
+    "nl": null
   }
 }
