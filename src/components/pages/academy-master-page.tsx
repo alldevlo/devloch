@@ -85,6 +85,31 @@ export function AcademyMasterPage({
         </FadeInOnScroll>
       </SectionWrapper>
 
+      <SectionWrapper background="white" className="py-[80px] md:py-[100px]">
+        <div className="mx-auto max-w-[720px] text-center">
+          <FadeInOnScroll>
+            <h2 className="text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{content.whyTraining.title}</h2>
+          </FadeInOnScroll>
+          <div className="mt-6 space-y-5">
+            {content.whyTraining.paragraphs.map((p, i) => (
+              <FadeInOnScroll key={i} delay={i * 0.1}>
+                <p className="text-lg leading-8 text-neutral-600">{p}</p>
+              </FadeInOnScroll>
+            ))}
+          </div>
+          <FadeInOnScroll delay={0.3}>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+              <Link href={content.whyTraining.cta1.href} target="_blank" rel="noreferrer" className={buttonClassName("primary", "px-8 py-4 text-base")}>
+                {content.whyTraining.cta1.label}
+              </Link>
+              <Link href={content.whyTraining.cta2.href} className={buttonClassName("outline", "px-8 py-4 text-base")}>
+                {content.whyTraining.cta2.label}
+              </Link>
+            </div>
+          </FadeInOnScroll>
+        </div>
+      </SectionWrapper>
+
       <SectionWrapper background="light" className="py-[80px] md:py-[120px]">
         <FadeInOnScroll>
           <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{content.h2Second}</h2>
@@ -158,6 +183,30 @@ export function AcademyMasterPage({
 
       <SectionWrapper background="light" className="py-[80px] md:py-[120px]">
         <FadeInOnScroll>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{content.chaptersTitle}</h2>
+        </FadeInOnScroll>
+        <div className="mx-auto mt-10 max-w-[860px] space-y-4">
+          {content.chapters.map((chapter, index) => (
+            <FadeInOnScroll key={chapter.number} delay={index * 0.07}>
+              <article className="flex items-start gap-5 rounded-2xl border border-neutral-200 bg-white p-6 shadow-soft">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-devlo-700 text-sm font-bold text-white">
+                  {chapter.number}
+                </span>
+                <div>
+                  <h3 className="text-lg font-semibold text-devlo-900">{chapter.title}</h3>
+                  <p className="mt-1.5 text-base leading-7 text-neutral-600">{chapter.description}</p>
+                  <Link href={chapter.link.href} className="mt-3 inline-flex text-sm font-semibold text-devlo-700 hover:underline">
+                    {chapter.link.label} →
+                  </Link>
+                </div>
+              </article>
+            </FadeInOnScroll>
+          ))}
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper background="white" className="py-[80px] md:py-[120px]">
+        <FadeInOnScroll>
           <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{content.learnTitle}</h2>
         </FadeInOnScroll>
         <FadeInOnScroll delay={0.1}>
@@ -177,6 +226,26 @@ export function AcademyMasterPage({
             </FadeInOnScroll>
           ))}
         </div>
+      </SectionWrapper>
+
+      <SectionWrapper background="light" className="py-[80px] md:py-[120px]">
+        <FadeInOnScroll>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{content.personas.title}</h2>
+        </FadeInOnScroll>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {content.personas.items.map((persona, index) => (
+            <FadeInOnScroll key={persona.title} delay={(index % 2) * 0.15}>
+              <article className="h-full rounded-2xl border border-neutral-200 bg-white p-6 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-panel">
+                <span className="text-3xl">{persona.icon}</span>
+                <h3 className="mt-3 text-lg font-semibold text-devlo-900">{persona.title}</h3>
+                <p className="mt-2 text-base leading-7 text-neutral-600">{persona.description}</p>
+              </article>
+            </FadeInOnScroll>
+          ))}
+        </div>
+        <FadeInOnScroll delay={0.3}>
+          <p className="mt-6 text-center text-sm text-neutral-500">{content.personas.note}</p>
+        </FadeInOnScroll>
       </SectionWrapper>
 
       <SectionWrapper background="dark" className="py-[80px] text-white md:py-[120px]">

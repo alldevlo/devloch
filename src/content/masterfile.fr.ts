@@ -632,13 +632,13 @@ export const caseStudiesCards: CaseStudyCard[] = [
 ];
 
 export const academySeo = {
-  title: "Outbound Academy | Formation prospection B2B pour SDR et BDR",
+  title: "Formation prospection B2B gratuite | Outbound Academy devlo",
   description:
-    "Formation prospection B2B avec 50 tutoriels vidéo: cold email, LinkedIn, téléprospection et génération de leads. Méthodologie complète, accès à vie.",
+    "Formation prospection commerciale B2B gratuite : 50 tutoriels, cold email, LinkedIn, téléprospection. Accès à vie + communauté + études de cas.",
 };
 
 export const academyContent = {
-  h1: "Formation pour commerciaux, SDR et BDR",
+  h1: "Formation prospection commerciale B2B : maîtrisez le cold outreach en 2,5 heures",
   h2: "Identifiez, générez et rencontrez vos prospects B2B grâce à des campagnes de prospection multicanal ultra-ciblées et personnalisées",
   video1: "gj1ltuo3tm",
   ctaFreeChapter: {
@@ -657,7 +657,7 @@ export const academyContent = {
     href: "https://academy.devlo.ch/invitation?code=GE7JA6",
   },
   logosTitle: "Ces entreprises nous font confiance",
-  testimonialsTitle: "Section témoignages Academy",
+  testimonialsTitle: "Ils ont transformé leur prospection B2B",
   testimonials: [
     {
       quote:
@@ -665,7 +665,7 @@ export const academyContent = {
       author: "Jurica Karlo Welina",
       role: "Business Development Manager",
       company: "InsiderCX",
-      photo: "/images/Jurica.jpg",
+      photo: "/images/jurica-karlo.webp",
     },
     {
       quote:
@@ -673,7 +673,7 @@ export const academyContent = {
       author: "Maxime Dumont",
       role: "Mind-shift Activator",
       company: "Mind-shifters",
-      photo: "/images/Maxime_Dumont.jpeg",
+      photo: "/images/Maxime_Dumont.webp",
     },
     {
       quote:
@@ -681,7 +681,7 @@ export const academyContent = {
       author: "Fabio Oliva",
       role: "Fondateur",
       company: "Workflowed",
-      photo: "/images/Fabio_Oliva.jpeg",
+      photo: "/images/Fabio_Oliva.webp",
     },
   ],
   learnTitle: "Ce que vous allez apprendre",
@@ -792,6 +792,36 @@ export const academyContent = {
       label: "Profiter de l'offre spéciale →",
       href: "https://academy.devlo.ch/invitation?code=GE7JA6",
     },
+  },
+  whyTraining: {
+    title: "Pourquoi une formation prospection commerciale B2B ?",
+    paragraphs: [
+      "Les formations classiques en prospection B2B coûtent entre 1'000€ et 2'000€ et s'étalent sur plusieurs semaines. Elles sont souvent théoriques et déconnectées des outils que vous utilisez au quotidien.",
+      "L'Outbound Academy de devlo est différente : 50 tutoriels vidéo ultra-concrets, basés sur +1'000 campagnes réelles lancées depuis 2020. Chaque chapitre vous montre exactement quoi faire, avec quels outils, et avec quels résultats attendre.",
+      "Accès à vie. Pas de limite de durée. Mises à jour régulières. Et si vous voulez aller plus loin, notre équipe peut prendre le relais et exécuter pour vous.",
+    ],
+    cta1: { label: "Commencer gratuitement →", href: "https://academy.devlo.ch/invitation?code=GE7JA6" },
+    cta2: { label: "Parler à un expert", href: "/consultation" },
+  },
+  chaptersTitle: "Formation prospection commerciale : structure complète",
+  chapters: [
+    { number: "01", title: "Ciblage de précision et ICP", description: "Définissez votre Profil Client Idéal. Sélectionnez les secteurs, tailles d'entreprise et décideurs qui génèrent le plus de rendez-vous.", link: { label: "Voir comment nos experts ciblent pour vous", href: "/services" } },
+    { number: "02", title: "Extraction de données B2B", description: "Construisez des listes de prospects qualifiés avec Sales Navigator, Apollo et les bases de données B2B.", link: { label: "Générer des leads qualifiés", href: "/services/generation-leads" } },
+    { number: "03", title: "Enrichissement et vérification", description: "Enrichissez vos données avec Clay, vérifiez les emails, et préparez des campagnes à haute délivrabilité.", link: { label: "Enrichir vos données", href: "/services/enrichissement-clay" } },
+    { number: "04", title: "Cold email B2B", description: "Rédigez des séquences email qui obtiennent 45%+ de taux d'ouverture. Templates, copywriting et délivrabilité.", link: { label: "Externaliser votre cold email", href: "/services/cold-email" } },
+    { number: "05", title: "Prospection LinkedIn", description: "Automatisez votre prospection LinkedIn : invitations personnalisées, messages et suivi multicanal.", link: { label: "Laisser nos experts gérer LinkedIn", href: "/services/linkedin-outreach" } },
+    { number: "06", title: "Téléprospection B2B", description: "Techniques d'appel à froid : scripts, objection handling, et qualification de rendez-vous.", link: { label: "Téléprospection externalisée", href: "/services/cold-calling" } },
+    { number: "07", title: "Séquences multicanales", description: "Combinez email, LinkedIn et téléphone dans des séquences automatisées pour maximiser votre taux de réponse.", link: { label: "Discutez de votre stratégie multicanale", href: "/consultation" } },
+  ],
+  personas: {
+    title: "Qui devrait suivre cette formation ?",
+    items: [
+      { icon: "🎯", title: "SDR — Sales Development Representatives", description: "Vous démarrez en prospection B2B ? Apprenez les fondamentaux du cold outreach et de la qualification de leads." },
+      { icon: "🚀", title: "BDR — Business Development Representatives", description: "Vous cherchez à scaler votre génération de leads ? Maîtrisez les outils et techniques avancées." },
+      { icon: "💼", title: "Entrepreneurs B2B", description: "Vous lancez un nouveau produit ou marché ? Construisez votre machine de prospection de zéro, sans recruter." },
+      { icon: "📊", title: "Directeurs commerciaux", description: "Vous encadrez une équipe de vente ? Formez vos équipes avec une méthodologie éprouvée sur +1'000 campagnes." },
+    ],
+    note: "Aucun prérequis nécessaire.",
   },
 };
 

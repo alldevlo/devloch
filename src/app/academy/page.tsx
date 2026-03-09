@@ -5,7 +5,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { AcademyMasterPage } from "@/components/pages/academy-master-page";
 import { academyContent, academySeo } from "@/content/masterfile.fr";
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { buildBreadcrumbSchema, buildFaqPageSchema, buildVideoObjectSchema } from "@/lib/seo/schema-builders";
+import { buildBreadcrumbSchema, buildCourseSchema, buildFaqPageSchema, buildVideoObjectSchema } from "@/lib/seo/schema-builders";
 
 const academyTitle = academySeo.title.replace(/\s*\|\s*devlo$/i, "");
 
@@ -26,6 +26,7 @@ export default function Page() {
       <JsonLd
         schema={[
           buildBreadcrumbSchema(breadcrumbItems),
+          buildCourseSchema(),
           buildFaqPageSchema(academyContent.faqs),
           buildVideoObjectSchema({
             name: "Formation prospection B2B — Outbound Academy devlo",

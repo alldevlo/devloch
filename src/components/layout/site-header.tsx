@@ -55,12 +55,12 @@ const navCopyByLocale: Record<
     showServices: "Afficher les services",
     openMenu: "Ouvrir le menu",
     closeMenu: "Fermer le menu",
-    markets: "Marchés",
+    markets: "Présence",
     marketsCH: "Suisse",
     marketsBE: "Belgique",
     marketsFR: "France",
-    openMarketsMenu: "Ouvrir le menu marchés",
-    showMarkets: "Afficher les marchés",
+    openMarketsMenu: "Ouvrir le menu présence",
+    showMarkets: "Afficher la présence",
   },
   en: {
     navigationAria: "Main navigation",
@@ -76,12 +76,12 @@ const navCopyByLocale: Record<
     showServices: "Show services",
     openMenu: "Open menu",
     closeMenu: "Close menu",
-    markets: "Markets",
+    markets: "Coverage",
     marketsCH: "Switzerland",
     marketsBE: "Belgium",
     marketsFR: "France",
-    openMarketsMenu: "Open markets menu",
-    showMarkets: "Show markets",
+    openMarketsMenu: "Open coverage menu",
+    showMarkets: "Show coverage",
   },
   de: {
     navigationAria: "Hauptnavigation",
@@ -97,12 +97,12 @@ const navCopyByLocale: Record<
     showServices: "Leistungen anzeigen",
     openMenu: "Menü öffnen",
     closeMenu: "Menü schließen",
-    markets: "Märkte",
+    markets: "Präsenz",
     marketsCH: "Schweiz",
     marketsBE: "Belgien",
     marketsFR: "Frankreich",
-    openMarketsMenu: "Märkte-Menü öffnen",
-    showMarkets: "Märkte anzeigen",
+    openMarketsMenu: "Präsenz-Menü öffnen",
+    showMarkets: "Präsenz anzeigen",
   },
   nl: {
     navigationAria: "Hoofdnavigatie",
@@ -118,12 +118,12 @@ const navCopyByLocale: Record<
     showServices: "Diensten tonen",
     openMenu: "Menu openen",
     closeMenu: "Menu sluiten",
-    markets: "Markten",
+    markets: "Aanwezigheid",
     marketsCH: "Zwitserland",
     marketsBE: "België",
     marketsFR: "Frankrijk",
-    openMarketsMenu: "Marktenmenu openen",
-    showMarkets: "Markten tonen",
+    openMarketsMenu: "Aanwezigheid menu openen",
+    showMarkets: "Aanwezigheid tonen",
   },
 };
 
@@ -162,6 +162,8 @@ export function SiteHeader() {
   const [isMobileMarketsOpen, setIsMobileMarketsOpen] = useState(false);
   const servicesMenuRef = useRef<HTMLDivElement | null>(null);
   const marketsMenuRef = useRef<HTMLDivElement | null>(null);
+  const servicesCloseTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const marketsCloseTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     let rafId = 0;
@@ -261,13 +263,18 @@ export function SiteHeader() {
                     key={item.key}
                     ref={servicesMenuRef}
                     className="relative"
-                    onMouseEnter={() => setIsServicesMenuOpen(true)}
-                    onMouseLeave={() => setIsServicesMenuOpen(false)}
+                    onMouseEnter={() => {
+                      if (servicesCloseTimer.current) clearTimeout(servicesCloseTimer.current);
+                      setIsServicesMenuOpen(true);
+                    }}
+                    onMouseLeave={() => {
+                      servicesCloseTimer.current = setTimeout(() => setIsServicesMenuOpen(false), 120);
+                    }}
                     onFocusCapture={() => setIsServicesMenuOpen(true)}
                   >
                     <div
                       className={[
-                        "group flex items-center gap-1 rounded-full border px-2 py-0.5 transition-colors",
+                        "group flex items-center gap-0 rounded-full border px-2 py-0.5 transition-colors",
                         isServicesMenuOpen
                           ? "border-devlo-700 bg-devlo-700 text-white"
                           : "border-transparent bg-transparent text-devlo-900 hover:border-devlo-700 hover:bg-devlo-700",
@@ -292,7 +299,7 @@ export function SiteHeader() {
                         aria-expanded={isServicesMenuOpen}
                         onClick={() => setIsServicesMenuOpen((prev) => !prev)}
                         className={[
-                          "inline-flex h-8 w-8 items-center justify-center rounded-full transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-devlo-700 focus-visible:ring-offset-2",
+                          "inline-flex h-6 w-6 items-center justify-center rounded-full transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-devlo-700 focus-visible:ring-offset-2",
                           isServicesMenuOpen
                             ? "text-white hover:bg-white/15"
                             : "text-devlo-700 group-hover:text-white hover:bg-white/15",
@@ -303,7 +310,7 @@ export function SiteHeader() {
                     </div>
 
                     {isServicesMenuOpen ? (
-                      <div className="absolute right-0 top-[calc(100%+8px)] z-[70] w-[760px] overflow-hidden rounded-2xl border border-devlo-700 bg-devlo-700 p-4 text-white shadow-panel motion-safe:animate-fade-in-up">
+                      <div className="absolute left-1/2 top-[calc(100%+4px)] z-[70] w-[760px] -translate-x-1/2 overflow-hidden rounded-2xl border border-devlo-700 bg-devlo-700 p-4 text-white shadow-panel motion-safe:animate-fade-in-up">
                         <div>
                           <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-white/80">
                             {navCopy.allServices}
@@ -342,13 +349,18 @@ export function SiteHeader() {
                     key={item.key}
                     ref={marketsMenuRef}
                     className="relative"
-                    onMouseEnter={() => setIsMarketsMenuOpen(true)}
-                    onMouseLeave={() => setIsMarketsMenuOpen(false)}
+                    onMouseEnter={() => {
+                      if (marketsCloseTimer.current) clearTimeout(marketsCloseTimer.current);
+                      setIsMarketsMenuOpen(true);
+                    }}
+                    onMouseLeave={() => {
+                      marketsCloseTimer.current = setTimeout(() => setIsMarketsMenuOpen(false), 120);
+                    }}
                     onFocusCapture={() => setIsMarketsMenuOpen(true)}
                   >
                     <div
                       className={[
-                        "group flex items-center gap-1 rounded-full border px-2 py-0.5 transition-colors",
+                        "group flex items-center gap-0 rounded-full border px-2 py-0.5 transition-colors",
                         isMarketsMenuOpen
                           ? "border-devlo-700 bg-devlo-700 text-white"
                           : "border-transparent bg-transparent text-devlo-900 hover:border-devlo-700 hover:bg-devlo-700",
@@ -373,7 +385,7 @@ export function SiteHeader() {
                         aria-expanded={isMarketsMenuOpen}
                         onClick={() => setIsMarketsMenuOpen((prev) => !prev)}
                         className={[
-                          "inline-flex h-8 w-8 items-center justify-center rounded-full transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-devlo-700 focus-visible:ring-offset-2",
+                          "inline-flex h-6 w-6 items-center justify-center rounded-full transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-devlo-700 focus-visible:ring-offset-2",
                           isMarketsMenuOpen
                             ? "text-white hover:bg-white/15"
                             : "text-devlo-700 group-hover:text-white hover:bg-white/15",
@@ -384,7 +396,7 @@ export function SiteHeader() {
                     </div>
 
                     {isMarketsMenuOpen ? (
-                      <div className="absolute left-0 top-[calc(100%+8px)] z-[70] w-56 overflow-hidden rounded-2xl border border-devlo-700 bg-devlo-700 p-3 text-white shadow-panel motion-safe:animate-fade-in-up">
+                      <div className="absolute left-0 top-[calc(100%+4px)] z-[70] w-56 overflow-hidden rounded-2xl border border-devlo-700 bg-devlo-700 p-3 text-white shadow-panel motion-safe:animate-fade-in-up">
                         <div className="flex flex-col gap-1">
                           {geoLinks.map((geo) => (
                             <Link

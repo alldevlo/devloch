@@ -184,3 +184,32 @@ export function buildReviewSchema(reviews: ReviewSchemaInput[]) {
     })),
   };
 }
+
+export function buildCourseSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "Formation prospection commerciale B2B",
+    description:
+      "Formation gratuite : 50 tutoriels vidéo, cold email, LinkedIn, téléprospection. Accès à vie.",
+    url: `${siteConfig.url}/academy`,
+    provider: {
+      "@type": "Organization",
+      name: "devlo",
+      url: siteConfig.url,
+    },
+    isAccessibleForFree: true,
+    hasCourseInstance: {
+      "@type": "CourseInstance",
+      courseMode: "online",
+      name: "Formation prospection B2B — Accès à vie",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      bestRating: "5",
+      worstRating: "1",
+      ratingCount: "47",
+    },
+  };
+}
