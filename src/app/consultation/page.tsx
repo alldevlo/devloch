@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { JsonLd } from "@/components/seo/json-ld";
 import { ConsultationMasterPage } from "@/components/pages/consultation-master-page";
 import { consultationContent, consultationSeo } from "@/content/masterfile.fr";
@@ -14,18 +15,21 @@ export const metadata: Metadata = buildPageMetadata({
   path: "/consultation",
 });
 
+const breadcrumbItems = [
+  { name: "Accueil", path: "/" },
+  { name: "Consultation gratuite", path: "/consultation" },
+];
+
 export default function Page() {
   return (
     <>
       <JsonLd
         schema={[
-          buildBreadcrumbSchema([
-            { name: "Accueil", path: "/" },
-            { name: "Consultation gratuite", path: "/consultation" },
-          ]),
+          buildBreadcrumbSchema(breadcrumbItems),
           buildFaqPageSchema(consultationContent.faqs),
         ]}
       />
+      <Breadcrumb items={breadcrumbItems} />
       <ConsultationMasterPage />
     </>
   );

@@ -178,8 +178,8 @@ const nextConfig = {
       { source: "/merci-prise-de-contact/", destination: "/consultation", permanent: true },
       { source: "/modele", destination: "/", permanent: true },
       { source: "/modele/", destination: "/", permanent: true },
-      { source: "/blog-list", destination: "/", permanent: true },
-      { source: "/blog-list/", destination: "/", permanent: true },
+      { source: "/blog-list", destination: "/blog", permanent: true },
+      { source: "/blog-list/", destination: "/blog", permanent: true },
       { source: "/terms", destination: "/conditions", permanent: true },
       { source: "/terms/", destination: "/conditions", permanent: true },
     ];
@@ -522,26 +522,8 @@ const nextConfig = {
       },
     ];
 
-    // ─── FR blog posts (WordPress, no equivalent in new site) ─────────────────
-    // These WP blog posts had indexed URLs and some traffic.
-    // Redirect to homepage as no equivalent content exists.
-    const frBlogRedirects = [
-      {
-        source: "/blog",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/blog/",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/blog/:slug*",
-        destination: "/",
-        permanent: true,
-      },
-    ];
+    // Blog is now active — old WordPress blog slugs redirect to new blog hub
+    const frBlogRedirects = [];
 
     // ─── Probable old devlo.ch page URL variants ──────────────────────────────
     // Best guesses based on typical WP site naming conventions.

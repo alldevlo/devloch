@@ -32,12 +32,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
+  const baseDate = new Date("2026-03-01");
+
   return Array.from(urls)
     .sort((a, b) => a.localeCompare(b))
-    .map((url) => ({
-      url,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: url === siteConfig.url ? 1 : 0.8,
-    }));
+    .map((url) => {
+      const path = url.replace(siteConfig.url, "");
+      const isHome = path === "" || path === "/";
+      const isService = path.includes("/services/");
+      const isCaseStudy = path.includes("/etudes-de-cas/");
+      const isBlog = path.includes("/blog/");
+
+      return {
+        url,
+        lastModified: baseDate,
+        changeFrequency: isHome ? "weekly" : isService ? "monthly" : isCaseStudy ? "yearly" : isBlog ? "monthly" : ("monthly" as const),
+        priority: isHome ? 1.0 : isService ? 0.9 : isCaseStudy ? 0.8 : isBlog ? 0.7 : 0.6,
+      };
+    });
 }

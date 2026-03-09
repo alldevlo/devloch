@@ -1,3 +1,4 @@
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { JsonLd } from "@/components/seo/json-ld";
 import { CaseStudyBadge } from "@/components/shared/case-study-badge";
 import { CaseStudyGrid } from "@/components/shared/case-study-grid";
@@ -130,21 +131,24 @@ export function ServicePageTemplate({ service, locale = "fr" }: ServicePageProps
     `${localizedService.faqItems.length} ${copy.faqQuestions}`,
   ];
 
+  const breadcrumbItems = [
+    { name: copy.home, path: resolvePathForLocale("/", locale).path },
+    { name: copy.services, path: resolvePathForLocale("/services", locale).path },
+    { name: localizedService.navTitle, path: resolvePathForLocale(localizedService.path, locale).path },
+  ];
+
   const schemas = [
     buildServiceSchema(localizedService),
     buildFaqPageSchema(localizedService.faqItems),
     buildHowToSchema(localizedService.processTitle, localizedService.processSteps),
-    buildBreadcrumbSchema([
-      { name: copy.home, path: resolvePathForLocale("/", locale).path },
-      { name: copy.services, path: resolvePathForLocale("/services", locale).path },
-      { name: localizedService.navTitle, path: resolvePathForLocale(localizedService.path, locale).path },
-    ]),
+    buildBreadcrumbSchema(breadcrumbItems),
   ];
 
   return (
     <>
       <JsonLd schema={schemas} />
       <main>
+        <Breadcrumb items={breadcrumbItems} />
         <ServiceHero
           currentSlug={localizedService.slug}
           locale={locale}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { JsonLd } from "@/components/seo/json-ld";
 import { ConditionsMasterPage } from "@/components/pages/conditions-master-page";
 import { conditionsSeo } from "@/content/masterfile.fr";
@@ -14,15 +15,16 @@ export const metadata: Metadata = buildPageMetadata({
   path: "/conditions",
 });
 
+const breadcrumbItems = [
+  { name: "Accueil", path: "/" },
+  { name: "Conditions générales", path: "/conditions" },
+];
+
 export default function Page() {
   return (
     <>
-      <JsonLd
-        schema={buildBreadcrumbSchema([
-          { name: "Accueil", path: "/" },
-          { name: "Conditions générales", path: "/conditions" },
-        ])}
-      />
+      <JsonLd schema={buildBreadcrumbSchema(breadcrumbItems)} />
+      <Breadcrumb items={breadcrumbItems} />
       <ConditionsMasterPage />
     </>
   );

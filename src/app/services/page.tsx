@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { JsonLd } from "@/components/seo/json-ld";
 import { ServicesHubPage as ServicesHubView } from "@/components/pages/services-hub-page";
 import { buildPageMetadata } from "@/lib/seo/metadata";
@@ -22,16 +23,17 @@ export const metadata: Metadata = {
   ],
 };
 
+const breadcrumbItems = [
+  { name: "Accueil", path: "/" },
+  { name: "Services", path: "/services" },
+];
+
 export default function ServicesHubRoutePage() {
   const content = getLocalizedServicesContent("fr");
   return (
     <>
-      <JsonLd
-        schema={buildBreadcrumbSchema([
-          { name: "Accueil", path: "/" },
-          { name: "Services", path: "/services" },
-        ])}
-      />
+      <JsonLd schema={buildBreadcrumbSchema(breadcrumbItems)} />
+      <Breadcrumb items={breadcrumbItems} />
       <ServicesHubView cards={content.SERVICE_HUB_CARDS} copy={content.hubCopy} caseStudies={content.ALL_CASE_STUDIES} />
     </>
   );

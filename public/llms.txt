@@ -40,11 +40,24 @@
 - [Monizze — 120 rendez-vous](https://devlo.ch/etudes-de-cas/monizze-120-rendez-vous): Fintech belge, 120 rendez-vous qualifies.
 - [IDDI — Generation leads biotech pharma](https://devlo.ch/etudes-de-cas/iddi-generation-leads-biotech-pharma): CRO biotech/pharma, generation de leads qualifies.
 
+## Prospection par pays
+
+- [Prospection commerciale en Suisse](https://devlo.ch/prospection-commerciale-suisse): Campagnes B2B ciblees sur le marche suisse romand, alemanique et tessinois.
+- [Prospection commerciale en Belgique](https://devlo.ch/prospection-commerciale-belgique): Campagnes B2B en francais et neerlandais pour le marche belge.
+- [Prospection commerciale en France](https://devlo.ch/prospection-commerciale-france): Campagnes outbound pour penetrer le marche francais.
+
+## Blog
+
+- [Cold email B2B : guide complet](https://devlo.ch/blog/cold-email-b2b-guide-complet): Comment structurer et deployer des campagnes cold email performantes.
+- [Externaliser sa prospection commerciale](https://devlo.ch/blog/externaliser-prospection-commerciale): Guide decisionnel pour externaliser la prospection B2B.
+- [Intent data : identifier les prospects](https://devlo.ch/blog/intent-data-prospects-prets-acheter): Utiliser les signaux d'intention d'achat pour cibler les bons prospects.
+
 ## Pages principales
 
 - [Accueil](https://devlo.ch/)
 - [Etudes de cas](https://devlo.ch/etudes-de-cas)
 - [Outbound Academy](https://devlo.ch/academy)
+- [Blog](https://devlo.ch/blog)
 - [Consultation gratuite](https://devlo.ch/consultation)
 
 ## Contact

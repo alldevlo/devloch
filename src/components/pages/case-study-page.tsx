@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
+import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { RelatedCaseStudies } from "@/components/shared/related-case-studies";
 import { caseStudies, caseStudyBySlug } from "@/lib/case-studies";
 
 export function CaseStudyPage({ slug }: { slug: string }) {
@@ -14,6 +16,13 @@ export function CaseStudyPage({ slug }: { slug: string }) {
 
   return (
     <>
+      <Breadcrumb
+        items={[
+          { name: "Accueil", path: "/" },
+          { name: "Études de cas", path: "/etudes-de-cas" },
+          { name: study.client, path: `/etudes-de-cas/${slug}` },
+        ]}
+      />
       <section className="mx-auto w-full max-w-screen-xl px-6 py-12 lg:px-10">
         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#4d6678]">Etude de cas</p>
         <h1 className="mt-3 max-w-5xl text-3xl font-semibold leading-tight text-[#153a54] md:text-4xl">{study.title}</h1>
@@ -148,6 +157,8 @@ export function CaseStudyPage({ slug }: { slug: string }) {
           ))}
         </div>
       </section>
+
+      <RelatedCaseStudies currentSlug={slug} />
 
       <section className="mx-auto w-full max-w-screen-xl px-6 pb-14 lg:px-10">
         <div className="grid gap-4 md:grid-cols-2">
