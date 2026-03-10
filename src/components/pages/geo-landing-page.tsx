@@ -13,10 +13,21 @@ export function GeoLandingPage({ data }: { data: GeoPageData }) {
     .map((slug) => caseStudyBySlug[slug])
     .filter(Boolean);
 
-  const breadcrumbItems = [
-    { name: "Accueil", path: "/" },
-    { name: data.h1, path: `/${data.slug}` },
-  ];
+  const logos = data.excludeLogos
+    ? TRUSTED_LOGOS_STRIP.filter((l) => !data.excludeLogos!.includes(l.alt))
+    : TRUSTED_LOGOS_STRIP;
+
+  const breadcrumbItems =
+    data.country === "ch"
+      ? [
+          { name: "Accueil", path: "/" },
+          { name: data.h1, path: `/${data.slug}` },
+        ]
+      : [
+          { name: "Accueil", path: "/" },
+          { name: "Présence", path: "/prospection-commerciale-suisse" },
+          { name: data.h1, path: `/${data.slug}` },
+        ];
 
   return (
     <>
@@ -48,7 +59,7 @@ export function GeoLandingPage({ data }: { data: GeoPageData }) {
           <div className="relative overflow-hidden rounded-2xl border border-neutral-200 bg-white p-2">
             <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-[8vw] bg-gradient-to-r from-white to-transparent" />
             <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-[8vw] bg-gradient-to-l from-white to-transparent" />
-            <InfiniteLogoRail logos={TRUSTED_LOGOS_STRIP} duration="slow" pauseOnHover />
+            <InfiniteLogoRail logos={logos} duration="slow" pauseOnHover />
           </div>
         </div>
       </section>

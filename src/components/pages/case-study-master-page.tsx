@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -13,6 +14,11 @@ import { localizeGeoTermsInObject } from "@/lib/i18n/geo-terms";
 import { resolvePathForLocale, type SupportedLocale } from "@/lib/i18n/slug-map";
 import { type CaseStudy, type CaseStudySection, caseStudyBySlug } from "@/lib/case-studies";
 import { resolveCaseStudyCanonicalSlug } from "@/lib/case-study-slug-redirects";
+
+const DeferredCaseStudySwitcher = dynamic(
+  () => import("@/components/shared/case-study-switcher").then((m) => m.CaseStudySwitcher),
+  { ssr: false },
+);
 
 const anchorIds = {
   about: "a-propos",
@@ -503,6 +509,10 @@ export function CaseStudyMasterPage({
                 {copy.backToCaseStudies}
               </Link>
             </FadeInOnScroll>
+
+            <div className="mt-4">
+              <DeferredCaseStudySwitcher currentSlug={canonicalSlug} />
+            </div>
 
             <FadeInOnScroll delay={0.08} eager>
               <h1 className="mt-5 text-3xl font-extrabold leading-[1.1] tracking-tight text-devlo-900 md:text-4xl lg:text-5xl">

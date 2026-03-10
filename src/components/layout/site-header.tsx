@@ -139,7 +139,6 @@ export function SiteHeader() {
     { key: "caseStudies", href: toCurrentLocalePath("/etudes-de-cas") as string, label: navCopy.caseStudies },
     { key: "services", href: toCurrentLocalePath("/services") as string, label: navCopy.services },
     { key: "markets", href: toCurrentLocalePath("/prospection-commerciale-suisse") as string, label: navCopy.markets },
-    { key: "academy", href: toCurrentLocalePath("/academy") as string, label: navCopy.academy },
   ] as const;
 
   const geoLinks = [
@@ -251,11 +250,11 @@ export function SiteHeader() {
         ].join(" ")}
       >
         <div className="mx-auto flex h-16 w-full max-w-[1260px] items-center justify-between px-6 md:h-20 md:px-10">
-          <Link href={toCurrentLocalePath("/")} className="inline-flex min-h-[44px] items-center" aria-label={navCopy.homeAria}>
+          <Link href={toCurrentLocalePath("/")} className="mr-4 inline-flex min-h-[44px] items-center" aria-label={navCopy.homeAria}>
             <Image src={mainNav.logo} alt="devlo logo" width={240} height={80} className="h-14 w-auto md:h-16" />
           </Link>
 
-          <nav className="hidden items-center gap-8 md:flex" aria-label={navCopy.navigationAria}>
+          <nav className="hidden items-center gap-6 md:flex" aria-label={navCopy.navigationAria}>
             {navItems.map((item) => {
               if (item.key === "services") {
                 return (
@@ -327,7 +326,16 @@ export function SiteHeader() {
                               </Link>
                             ))}
                           </div>
-                          <div className="mt-4 border-t border-white/20 pt-3">
+                          <div className="mt-2 border-t border-white/20 pt-2">
+                            <Link
+                              href={toCurrentLocalePath("/academy")}
+                              className="flex rounded-xl border border-white/20 bg-white/10 px-3 py-2 transition hover:border-white/40 hover:bg-white/15"
+                            >
+                              <p className="text-sm font-semibold text-white">{navCopy.academy}</p>
+                              <p className="mt-0.5 text-xs text-white/75">Formation prospection B2B gratuite</p>
+                            </Link>
+                          </div>
+                          <div className="mt-3 border-t border-white/20 pt-3">
                             <Link
                               href={toCurrentLocalePath("/services")}
                               className="inline-flex rounded-full border border-white/30 bg-white px-3 py-1.5 text-xs font-semibold text-devlo-700 transition hover:bg-devlo-50"
@@ -421,7 +429,7 @@ export function SiteHeader() {
                   key={item.href}
                   href={item.href}
                   className={[
-                    "inline-flex min-h-[44px] items-center border-b-2 text-[14px] font-semibold uppercase tracking-[0.08em] transition-colors",
+                    "inline-flex min-h-[44px] items-center whitespace-nowrap border-b-2 text-[14px] font-semibold uppercase tracking-[0.08em] transition-colors",
                     active ? "border-devlo-600 text-devlo-700" : "border-transparent text-devlo-900 hover:text-devlo-600",
                   ].join(" ")}
                 >
@@ -432,7 +440,7 @@ export function SiteHeader() {
 
             <div className="flex items-center gap-3">
               <LanguageSwitcher />
-              <Link href={consultationHref} className={buttonClassName("outline", "px-5 py-2.5 text-sm")}>
+              <Link href={consultationHref} className={buttonClassName("outline", "whitespace-nowrap px-5 py-2.5 text-sm")}>
                 {navCopy.cta}
               </Link>
             </div>
@@ -502,6 +510,15 @@ export function SiteHeader() {
                                 <p className="text-xs text-neutral-500">{service.subtitle}</p>
                               </Link>
                             ))}
+                          </div>
+                          <div className="mt-1.5">
+                            <Link
+                              href={toCurrentLocalePath("/academy")}
+                              className="block rounded-lg border border-devlo-100 bg-devlo-50 px-3 py-2 transition hover:border-devlo-700/30"
+                            >
+                              <p className="text-sm font-semibold text-devlo-900">{navCopy.academy}</p>
+                              <p className="text-xs text-neutral-500">Formation prospection B2B gratuite</p>
+                            </Link>
                           </div>
                           <div className="mt-2 border-t border-neutral-200 pt-2">
                             <Link

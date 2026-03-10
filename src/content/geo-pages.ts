@@ -8,6 +8,7 @@ export type GeoPageData = {
   h1: string;
   intro: string[];
   caseStudySlugs: string[];
+  excludeLogos?: string[];
   faqs: ServiceFaq[];
   localBusiness: {
     name: string;
@@ -34,15 +35,21 @@ export const GEO_PAGES: Record<string, GeoPageData> = {
     intro: [
       "Basée à Rivaz dans le canton de Vaud, devlo accompagne les entreprises suisses et internationales dans leur développement commercial B2B sur le marché helvétique.",
       "Notre connaissance du tissu économique suisse — romand, alémanique et tessinois — nous permet de construire des campagnes outbound multicanales adaptées aux spécificités locales.",
-      "Plus de 500 campagnes déployées en Suisse depuis 2020, avec un taux de réponse moyen de 12 % sur les décideurs contactés.",
+      "Plus de 200 campagnes déployées en Suisse depuis 2018, avec un taux de réponse moyen de 7% sur les décideurs contactés.",
     ],
     caseStudySlugs: [
       "hr-54-rendez-vous-dach",
       "proprete-urbaine-71-rendez-vous",
-      "mobilite-40-prospects",
+      "formation-14-rendez-vous",
+      "biocarburants-52-rendez-vous",
+      "audiovisuel-16-rendez-vous",
+      "cybersecurite-4500-entreprises",
+      "merchandising-23-prospects",
+      "biodiversite-70-rendez-vous",
       "immobilier-30-prospects",
       "immobilier-11-prospects",
     ],
+    excludeLogos: ["Locky"],
     faqs: [
       {
         question: "Quels secteurs prospectez-vous en Suisse ?",
@@ -88,6 +95,7 @@ export const GEO_PAGES: Record<string, GeoPageData> = {
     caseStudySlugs: [
       "logiciel-comptable-200k-ca",
       "monizze-120-rendez-vous",
+      "mobilite-40-prospects",
     ],
     faqs: [
       {
@@ -104,6 +112,31 @@ export const GEO_PAGES: Record<string, GeoPageData> = {
         question: "Ciblez-vous les PME ou les grandes entreprises en Belgique ?",
         answer:
           "Les deux. Nous adaptons la stratégie selon votre ICP : ABM pour les grands comptes, volume pour les PME. La Belgique est un marché idéal pour les deux approches.",
+      },
+      {
+        question: "Prospectez-vous aussi en Flandre et à Bruxelles en néerlandais ?",
+        answer:
+          "Absolument. Notre équipe rédige des séquences natives en français et en néerlandais. Pour la Flandre, nous adaptons le ton et les références culturelles. À Bruxelles, nous proposons des campagnes bilingues FR/NL selon le profil du décideur ciblé.",
+      },
+      {
+        question: "Quels sont vos résultats typiques en Belgique ?",
+        answer:
+          "Sur nos campagnes belges les plus récentes : 80 rendez-vous qualifiés et 200'000 EUR de contrats signés pour Horus Software, 120 rendez-vous pour Monizze, et 14% de taux d'intérêt pour Locky. Le taux de conversion moyen se situe entre 8 et 12%.",
+      },
+      {
+        question: "Ciblez-vous les marchés publics belges ?",
+        answer:
+          "Nous ne ciblons pas directement les marchés publics (qui suivent des processus d'appels d'offres), mais nous aidons nos clients à entrer en contact avec les décideurs des administrations communales, régionales et fédérales dans un cadre B2B classique avant les phases formelles d'achat.",
+      },
+      {
+        question: "Quelle est la différence entre prospecter en Belgique et en France ?",
+        answer:
+          "La Belgique est un marché plus concentré avec un tissu économique dense. Les décideurs belges sont souvent plus accessibles et réactifs. Le bilinguisme FR/NL nécessite une approche adaptée par région. En France, les volumes sont plus importants mais la concurrence sur les boites de réception aussi.",
+      },
+      {
+        question: "Combien coûte une campagne de prospection ciblant la Belgique ?",
+        answer:
+          "Nos forfaits pour la Belgique démarrent à CHF 2'500/mois. Le tarif dépend du nombre de canaux activés (email, LinkedIn, téléphone), du volume de prospects et de la complexité de votre ICP. La plupart de nos clients belges investissent entre CHF 3'000 et CHF 5'000 par mois.",
       },
     ],
     localBusiness: {
@@ -127,9 +160,7 @@ export const GEO_PAGES: Record<string, GeoPageData> = {
       "Agence suisse de prospection commerciale B2B active en France. Campagnes cold email, LinkedIn et calling pour générer des leads qualifiés auprès de décideurs français.",
     h1: "Prospection commerciale B2B en France",
     intro: [
-      "Depuis notre base suisse, nous accompagnons des entreprises qui souhaitent pénétrer ou accélérer leur développement sur le marché français.",
-      "La France est notre deuxième marché par volume de campagnes. Nous ciblons principalement l'Île-de-France, Lyon, Marseille et les pôles économiques régionaux.",
-      "Notre approche combine la rigueur suisse avec une parfaite maîtrise des codes commerciaux français pour des campagnes outbound performantes.",
+      "Depuis notre base suisse, nous accompagnons des entreprises qui souhaitent pénétrer ou accélérer leur développement sur le marché français. Des entreprises françaises se tournent également vers notre agence pour rencontrer leurs futurs clients dans la région DACH (Suisse, Allemagne, et Autriche), mais aussi en Belgique et en Europe.",
     ],
     caseStudySlugs: [
       "biodiversite-70-rendez-vous",
@@ -152,6 +183,31 @@ export const GEO_PAGES: Record<string, GeoPageData> = {
         question: "Comment gérez-vous la conformité RGPD pour la France ?",
         answer:
           "Toutes nos campagnes sont conformes au RGPD. Nous utilisons uniquement des données B2B professionnelles, avec opt-out systématique et traçabilité complète.",
+      },
+      {
+        question: "Quels sont les délais pour lancer une campagne de prospection en France ?",
+        answer:
+          "Comptez 2 à 3 semaines de préparation : définition de l'ICP, construction des listes de prospects, rédaction des séquences et configuration technique. Les premiers résultats arrivent généralement dès la 4e semaine après le lancement.",
+      },
+      {
+        question: "Prospectez-vous dans toute la France ou uniquement en Île-de-France ?",
+        answer:
+          "Nous couvrons l'ensemble du territoire français. Si l'Île-de-France concentre la majorité de nos campagnes, nous ciblons aussi Lyon, Marseille, Bordeaux, Nantes, Toulouse et tous les pôles économiques régionaux selon votre ICP.",
+      },
+      {
+        question: "Quelle est votre approche pour prospecter des grands comptes en France ?",
+        answer:
+          "Pour les grands comptes, nous déployons une stratégie ABM (Account-Based Marketing) combinant cold email personnalisé, approche LinkedIn ciblée et recherche de signaux d'achat. Chaque décideur reçoit un message adapté à son rôle et à son contexte.",
+      },
+      {
+        question: "Proposez-vous des campagnes multilingues pour la France et la Suisse ?",
+        answer:
+          "Oui. Nos équipes rédigent en français, allemand, anglais et néerlandais. Pour un client qui cible simultanément la France et la Suisse alémanique, nous créons des séquences distinctes adaptées linguistiquement et culturellement à chaque marché.",
+      },
+      {
+        question: "Comment mesurez-vous le ROI d'une campagne de prospection en France ?",
+        answer:
+          "Nous suivons le taux d'ouverture, le taux de réponse, le nombre de rendez-vous qualifiés et le taux de conversion en opportunités commerciales. Nos clients reçoivent des rapports hebdomadaires et mensuels avec tous les KPIs. En moyenne, nos campagnes génèrent un ROI positif dès les 2 premiers mois.",
       },
     ],
     localBusiness: {
