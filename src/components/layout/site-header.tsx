@@ -39,6 +39,7 @@ const navCopyByLocale: Record<
     marketsFR: string;
     openMarketsMenu: string;
     showMarkets: string;
+    academySubtitle: string;
   }
 > = {
   fr: {
@@ -61,6 +62,7 @@ const navCopyByLocale: Record<
     marketsFR: "France",
     openMarketsMenu: "Ouvrir le menu présence",
     showMarkets: "Afficher la présence",
+    academySubtitle: "{navCopy.academySubtitle}",
   },
   en: {
     navigationAria: "Main navigation",
@@ -82,6 +84,7 @@ const navCopyByLocale: Record<
     marketsFR: "France",
     openMarketsMenu: "Open coverage menu",
     showMarkets: "Show coverage",
+    academySubtitle: "Free B2B outbound training",
   },
   de: {
     navigationAria: "Hauptnavigation",
@@ -103,6 +106,7 @@ const navCopyByLocale: Record<
     marketsFR: "Frankreich",
     openMarketsMenu: "Präsenz-Menü öffnen",
     showMarkets: "Präsenz anzeigen",
+    academySubtitle: "Kostenlose B2B-Akquise-Schulung",
   },
   nl: {
     navigationAria: "Hoofdnavigatie",
@@ -124,6 +128,7 @@ const navCopyByLocale: Record<
     marketsFR: "Frankrijk",
     openMarketsMenu: "Aanwezigheid menu openen",
     showMarkets: "Aanwezigheid tonen",
+    academySubtitle: "Gratis B2B outbound training",
   },
 };
 
@@ -332,7 +337,7 @@ export function SiteHeader() {
                               className="flex rounded-xl border border-white/20 bg-white/10 px-3 py-2 transition hover:border-white/40 hover:bg-white/15"
                             >
                               <p className="text-sm font-semibold text-white">{navCopy.academy}</p>
-                              <p className="mt-0.5 text-xs text-white/75">Formation prospection B2B gratuite</p>
+                              <p className="mt-0.5 text-xs text-white/75">{navCopy.academySubtitle}</p>
                             </Link>
                           </div>
                           <div className="mt-3 border-t border-white/20 pt-3">
@@ -517,7 +522,7 @@ export function SiteHeader() {
                               className="block rounded-lg border border-devlo-100 bg-devlo-50 px-3 py-2 transition hover:border-devlo-700/30"
                             >
                               <p className="text-sm font-semibold text-devlo-900">{navCopy.academy}</p>
-                              <p className="text-xs text-neutral-500">Formation prospection B2B gratuite</p>
+                              <p className="text-xs text-neutral-500">{navCopy.academySubtitle}</p>
                             </Link>
                           </div>
                           <div className="mt-2 border-t border-neutral-200 pt-2">

@@ -511,7 +511,7 @@ export function CaseStudyMasterPage({
             </FadeInOnScroll>
 
             <div className="mt-4">
-              <DeferredCaseStudySwitcher currentSlug={canonicalSlug} />
+              <DeferredCaseStudySwitcher currentSlug={canonicalSlug} locale={locale} />
             </div>
 
             <FadeInOnScroll delay={0.08} eager>
