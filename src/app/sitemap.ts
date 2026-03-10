@@ -23,7 +23,8 @@ function normalizeSitemapPath(path: string): string | null {
 export default function sitemap(): MetadataRoute.Sitemap {
   const urls = new Set<string>();
 
-  for (const [, entry] of entriesByPageId()) {
+  for (const [pageId, entry] of entriesByPageId()) {
+    if (pageId.startsWith("page:")) continue;
     for (const path of [entry.fr, entry.en, entry.de, entry.nl]) {
       if (!path) continue;
       const normalized = normalizeSitemapPath(path);
@@ -32,13 +33,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
+  // Standalone FR page with its own page.tsx (not an alias)
+  urls.add(`${siteConfig.url}/politique-confidentialite`);
+
   return Array.from(urls)
     .sort((a, b) => a.localeCompare(b))
     .map((url) => {
       const path = url.replace(siteConfig.url, "");
       const isHome = path === "" || path === "/";
       const isService = path.includes("/services/");
-      const isCaseStudy = path.includes("/etudes-de-cas/");
+      const isCaseStudy = path.includes("/etudes-de-cas/") || path.includes("/casestudy/") || path.includes("/fallstudien/");
       const isBlog = path.includes("/blog");
       const isGeo = path.includes("/prospection-commerciale-");
       const isAgence = path.endsWith("/agence");
