@@ -27,6 +27,7 @@ import { WaveDivider } from "@/components/ui/wave-divider";
 import { WistiaThumbnailTrigger } from "@/components/ui/wistia-thumbnail-trigger";
 import { caseStudiesCards, homeContent } from "@/content/masterfile.fr";
 import type { CaseStudyCard as MasterCaseStudyCard } from "@/content/masterfile.fr";
+import { SERVICE_HUB_CARDS } from "@/content/services";
 
 const noRecruitIcons = [Target, PiggyBank, Rocket] as const;
 const whyIcons = [
@@ -53,6 +54,14 @@ const DeferredCaseStudiesCarousel = dynamic(
   {
     ssr: false,
     loading: () => <div className="mt-10 h-[360px] rounded-2xl border border-neutral-200 bg-white/70" />,
+  },
+);
+
+const DeferredServicesCarousel = dynamic(
+  () => import("@/components/home/services-carousel").then((module) => module.ServicesCarousel),
+  {
+    ssr: false,
+    loading: () => <div className="mt-10 h-[320px] rounded-2xl border border-neutral-200 bg-white/70" />,
   },
 );
 
@@ -85,6 +94,13 @@ const caseStudiesTitleByLocale = {
   en: "Our case studies",
   de: "Unsere Fallstudien",
   nl: "Onze praktijkvoorbeelden",
+} as const;
+
+const servicesTitleByLocale = {
+  fr: "Nos services",
+  en: "Our services",
+  de: "Unsere Leistungen",
+  nl: "Onze diensten",
 } as const;
 
 function normalizeMetricSeparator(value: string): string {
@@ -250,6 +266,13 @@ export function HomePage({ content = homeContent, studies = caseStudiesCards, lo
 
       <SectionWrapper background="light" className="py-[80px] md:py-[120px]">
         <FadeInOnScroll>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{caseStudiesTitleByLocale[locale]}</h2>
+        </FadeInOnScroll>
+        <DeferredCaseStudiesCarousel cards={studies} locale={locale} />
+      </SectionWrapper>
+
+      <SectionWrapper background="light" className="py-[80px] md:py-[120px]">
+        <FadeInOnScroll>
           <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{content.noRecruitTitle}</h2>
         </FadeInOnScroll>
 
@@ -269,11 +292,11 @@ export function HomePage({ content = homeContent, studies = caseStudiesCards, lo
         </div>
       </SectionWrapper>
 
-      <SectionWrapper background="light" className="py-[80px] md:py-[120px]">
+      <SectionWrapper background="white" className="py-[80px] md:py-[120px]">
         <FadeInOnScroll>
-          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{caseStudiesTitleByLocale[locale]}</h2>
+          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{servicesTitleByLocale[locale]}</h2>
         </FadeInOnScroll>
-        <DeferredCaseStudiesCarousel cards={studies} locale={locale} />
+        <DeferredServicesCarousel cards={SERVICE_HUB_CARDS} locale={locale} />
       </SectionWrapper>
 
       <SectionWrapper background="white" className="py-[80px] md:py-[120px]">

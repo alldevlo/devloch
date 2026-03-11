@@ -62,7 +62,7 @@ const navCopyByLocale: Record<
     marketsFR: "France",
     openMarketsMenu: "Ouvrir le menu présence",
     showMarkets: "Afficher la présence",
-    academySubtitle: "{navCopy.academySubtitle}",
+    academySubtitle: "Formation prospection B2B gratuite",
   },
   en: {
     navigationAria: "Main navigation",

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { JsonLd } from "@/components/seo/json-ld";
+import { WaveDivider } from "@/components/ui/wave-divider";
 import { CTASection } from "@/components/shared/cta-section";
 import { FAQSection } from "@/components/shared/faq-section";
 import { buildPageMetadata } from "@/lib/seo/metadata";
@@ -32,7 +34,7 @@ const aboutPageSchema = {
     name: "devlo",
     url: siteConfig.url,
     foundingDate: "2020",
-    foundingLocation: "Rivaz, Vaud, Suisse",
+    foundingLocation: "Lausanne, Vaud, Suisse",
     founder: {
       "@type": "Person",
       name: agencyContent.founderName,
@@ -60,7 +62,7 @@ export default function AgencePage() {
       <section className="bg-gradient-to-b from-[#074f74] to-[#0a3a54] py-16 text-white md:py-24">
         <div className="mx-auto w-full max-w-screen-xl px-6 lg:px-10">
           <p className="text-xs font-semibold uppercase tracking-[0.1em] text-white/60">
-            Fondée en 2020 — Rivaz, Suisse
+            Fondée en 2020 — Lausanne, Suisse
           </p>
           <h1 className="mt-4 max-w-3xl text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
             {agencyContent.h1}
@@ -85,6 +87,8 @@ export default function AgencePage() {
         </div>
       </section>
 
+      <WaveDivider variant="layered-bottom" />
+
       {/* Stats */}
       <section className="bg-white py-14">
         <div className="mx-auto w-full max-w-screen-xl px-6 lg:px-10">
@@ -98,6 +102,8 @@ export default function AgencePage() {
           </div>
         </div>
       </section>
+
+      <WaveDivider tone="light" />
 
       {/* Story */}
       <section className="bg-[#f7f8fc] py-14 md:py-18">
@@ -122,23 +128,44 @@ export default function AgencePage() {
               <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--primary)]">
                 Fondateur
               </p>
-              <h2 className="mt-3 text-2xl font-bold text-[#153a54]">{agencyContent.founderName}</h2>
-              <p className="mt-1 text-sm text-neutral-500">{agencyContent.founderRole}</p>
+              <div className="mt-3 flex items-start gap-5">
+                <Image
+                  src="/images/charles-perret.webp"
+                  alt="Charles Perret — Fondateur de devlo"
+                  width={96}
+                  height={96}
+                  className="rounded-2xl object-cover"
+                />
+                <div>
+                  <h2 className="text-2xl font-bold text-[#153a54]">{agencyContent.founderName}</h2>
+                  <p className="mt-1 text-sm text-neutral-500">{agencyContent.founderRole}</p>
+                </div>
+              </div>
               <p className="mt-4 text-sm leading-7 text-neutral-600">
                 Entrepreneur B2B basé en Suisse, Charles a fondé devlo après avoir constaté le manque d&apos;agences outbound rigoureuses sur les marchés francophones. Il s&apos;est donné pour mission de créer une agence qui livre des résultats mesurables — pas des rapports PowerPoint.
               </p>
-              <a
-                href={agencyContent.founderLinkedIn}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-4 inline-flex items-center text-sm font-semibold text-[#074f74] hover:underline"
-              >
-                Profil LinkedIn →
-              </a>
+              <div className="mt-4 flex flex-wrap items-center gap-4">
+                <a
+                  href={agencyContent.founderLinkedIn}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center text-sm font-semibold text-[#074f74] hover:underline"
+                >
+                  Profil LinkedIn →
+                </a>
+                <Link
+                  href="/services"
+                  className="inline-flex items-center text-sm font-semibold text-[#074f74] hover:underline"
+                >
+                  Voir les services →
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
+      <WaveDivider tone="light" />
 
       {/* Markets */}
       <section className="bg-white py-14 md:py-18">
@@ -147,7 +174,7 @@ export default function AgencePage() {
             Marchés
           </p>
           <h2 className="mt-3 text-2xl font-bold text-[#153a54] md:text-3xl">
-            Actifs sur 4 marchés
+            {agencyContent.marketsHeading}
           </h2>
           <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {agencyContent.markets.map((market) => (
@@ -160,8 +187,11 @@ export default function AgencePage() {
               </div>
             ))}
           </div>
+          <p className="mt-6 text-sm text-neutral-500">{agencyContent.marketsNote}</p>
         </div>
       </section>
+
+      <WaveDivider tone="light" />
 
       {/* Values */}
       <section className="bg-[#f7f8fc] py-14 md:py-18">
@@ -187,6 +217,8 @@ export default function AgencePage() {
       </section>
 
       <FAQSection title="Questions sur l'agence" items={agencyContent.faq} />
+
+      <WaveDivider variant="layered-top" />
 
       <CTASection
         title="Travaillons ensemble"
