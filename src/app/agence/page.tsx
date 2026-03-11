@@ -56,11 +56,10 @@ export default function AgencePage() {
           aboutPageSchema,
         ]}
       />
-      <Breadcrumb items={breadcrumbItems} />
-
       {/* Hero */}
-      <section className="bg-gradient-to-b from-[#074f74] to-[#0a3a54] py-16 text-white md:py-24">
-        <div className="mx-auto w-full max-w-screen-xl px-6 lg:px-10">
+      <section className="bg-gradient-to-b from-[#074f74] to-[#0a3a54] pt-2 pb-16 text-white md:pb-24">
+        <Breadcrumb items={breadcrumbItems} variant="dark" />
+        <div className="mx-auto w-full max-w-screen-xl px-6 pt-6 lg:px-10">
           <p className="text-xs font-semibold uppercase tracking-[0.1em] text-white/60">
             Fondée en 2020 — Lausanne, Suisse
           </p>

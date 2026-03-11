@@ -7,17 +7,17 @@ type WaveDividerProps = {
 
 export function WaveDivider({ tone = "light", variant = "simple", fromBg, toBg }: WaveDividerProps) {
   if (variant === "layered-top") {
-    const containerBg = fromBg ?? "#F8FAFB";
+    const containerBg = fromBg ?? "#FFFFFF";
     const darkLayer = toBg ?? "#0F2B3C";
-    // Intermediate layers: blend from container toward dark
-    const midLight = fromBg ? blendHex(containerBg, darkLayer, 0.3) : "#AFC8D7";
-    const midMedium = fromBg ? blendHex(containerBg, darkLayer, 0.6) : "#4F809E";
+    const mid1 = fromBg ? blendHex(containerBg, darkLayer, 0.3) : "#AFC8D7";
+    const mid2 = fromBg ? blendHex(containerBg, darkLayer, 0.6) : "#4F809E";
 
+    // Flat at bottom (glued to section above via -mb-1), wavy at top flowing into dark section below
     return (
       <div className="pointer-events-none -mb-1 h-16 w-full overflow-hidden sm:h-20" style={{ backgroundColor: containerBg }}>
         <svg viewBox="0 0 1440 80" preserveAspectRatio="none" className="block h-full w-full" aria-hidden>
-          <path d="M0,44 C170,38 330,46 480,58 C650,72 820,78 980,70 C1160,60 1310,40 1440,44 L1440,80 L0,80 Z" fill={midLight} />
-          <path d="M0,52 C170,46 330,54 480,64 C650,76 820,80 980,74 C1160,66 1310,48 1440,52 L1440,80 L0,80 Z" fill={midMedium} />
+          <path d="M0,44 C170,38 330,46 480,58 C650,72 820,78 980,70 C1160,60 1310,40 1440,44 L1440,80 L0,80 Z" fill={mid1} />
+          <path d="M0,52 C170,46 330,54 480,64 C650,76 820,80 980,74 C1160,66 1310,48 1440,52 L1440,80 L0,80 Z" fill={mid2} />
           <path d="M0,60 C170,54 330,62 480,70 C650,80 820,84 980,78 C1160,72 1310,56 1440,60 L1440,80 L0,80 Z" fill={darkLayer} />
         </svg>
       </div>
@@ -26,26 +26,26 @@ export function WaveDivider({ tone = "light", variant = "simple", fromBg, toBg }
 
   if (variant === "layered-bottom") {
     const containerBg = fromBg ?? "#0F2B3C";
-    const lightTarget = toBg ?? "#FFFFFF";
-    // Intermediate layers: blend from dark toward light
-    const midLight = toBg ? blendHex(containerBg, lightTarget, 0.3) : "#AFC8D7";
-    const midMedium = toBg ? blendHex(containerBg, lightTarget, 0.15) : "#4F809E";
+    const target = toBg ?? "#FFFFFF";
+    // Colors from dark→light: layer 1 (widest, slight blend), layer 2 (medium), layer 3 (target)
+    const mid1 = toBg ? blendHex(containerBg, target, 0.2) : "#2A5068";
+    const mid2 = toBg ? blendHex(containerBg, target, 0.5) : "#7FAABB";
 
+    // Flat at top (glued to dark section above), wavy at bottom flowing into light section below
+    // No transform needed: SVG paths naturally fill bottom, container bg fills top
     return (
       <div className="pointer-events-none -mt-1 h-16 w-full overflow-hidden sm:h-20" style={{ backgroundColor: containerBg }}>
         <svg viewBox="0 0 1440 80" preserveAspectRatio="none" className="block h-full w-full" aria-hidden>
-          <g transform="translate(0,80) scale(1,-1)">
-            <path d="M0,44 C170,38 330,46 480,58 C650,72 820,78 980,70 C1160,60 1310,40 1440,44 L1440,80 L0,80 Z" fill={midLight} />
-            <path d="M0,52 C170,46 330,54 480,64 C650,76 820,80 980,74 C1160,66 1310,48 1440,52 L1440,80 L0,80 Z" fill={midMedium} />
-            <path d="M0,60 C170,54 330,62 480,70 C650,80 820,84 980,78 C1160,72 1310,56 1440,60 L1440,80 L0,80 Z" fill={lightTarget} />
-          </g>
+          <path d="M0,44 C170,38 330,46 480,58 C650,72 820,78 980,70 C1160,60 1310,40 1440,44 L1440,80 L0,80 Z" fill={mid1} />
+          <path d="M0,52 C170,46 330,54 480,64 C650,76 820,80 980,74 C1160,66 1310,48 1440,52 L1440,80 L0,80 Z" fill={mid2} />
+          <path d="M0,60 C170,54 330,62 480,70 C650,80 820,84 980,78 C1160,72 1310,56 1440,60 L1440,80 L0,80 Z" fill={target} />
         </svg>
       </div>
     );
   }
 
   // Simple variant
-  const containerColor = fromBg ?? (tone === "dark" ? undefined : undefined);
+  const containerColor = fromBg;
   const fillColor = toBg ?? (tone === "dark" ? "#0b5b86" : "#f3f4f6");
 
   return (
