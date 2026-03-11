@@ -1,11 +1,12 @@
 import Link from "next/link";
 
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { JsonLd } from "@/components/seo/json-ld";
+import { WaveDivider } from "@/components/ui/wave-divider";
 import { InfiniteLogoRail } from "@/components/shared/logo-rail";
 import { ServicesSectionHeader, ServicesSurfaceCard } from "@/components/services/services-ui";
 import { CaseStudyGrid } from "@/components/shared/case-study-grid";
 import { SectionWrapper } from "@/components/shared/section-wrapper";
-import { buttonClassName } from "@/components/ui/button";
 import { TRUSTED_LOGOS_STRIP } from "@/content/service-brand-assets";
 import type { CaseStudyCard, ServiceHubCard } from "@/content/services";
 import { resolvePathForLocale, type SupportedLocale } from "@/lib/i18n/slug-map";
@@ -42,6 +43,10 @@ export function ServicesHubPage({ cards, copy, caseStudies, locale = "fr" }: Ser
   const labels = breadcrumbLabelsByLocale[locale];
   const toLocalePath = (frPath: string) => resolvePathForLocale(frPath, locale).path;
   const servicesHubPath = toLocalePath("/services");
+  const breadcrumbItems = [
+    { name: labels.home, path: toLocalePath("/") },
+    { name: labels.services, path: servicesHubPath },
+  ];
   const serviceHubSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -60,44 +65,59 @@ export function ServicesHubPage({ cards, copy, caseStudies, locale = "fr" }: Ser
     <>
       <JsonLd
         schema={[
-          buildBreadcrumbSchema([
-            { name: labels.home, path: toLocalePath("/") },
-            { name: labels.services, path: servicesHubPath },
-          ]),
+          buildBreadcrumbSchema(breadcrumbItems),
           serviceHubSchema,
         ]}
       />
 
       <main>
-        <section className="relative overflow-hidden bg-white pt-12 md:pt-14">
-          <div className="pointer-events-none absolute -left-20 top-10 h-56 w-56 rounded-full bg-devlo-100/45 blur-3xl" />
-          <div className="pointer-events-none absolute -right-20 top-16 h-56 w-56 rounded-full bg-devlo-100/35 blur-3xl" />
+        <section className="bg-gradient-to-b from-[#074f74] to-[#0a3a54] pt-2 pb-16 text-white md:pb-20">
+          <Breadcrumb items={breadcrumbItems} variant="dark" />
+          <div className="mx-auto w-full max-w-screen-xl px-6 pt-8 lg:px-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.1em] text-white/60">
+              {copy.eyebrow}
+            </p>
+            <h1 className="mt-4 max-w-4xl text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+              {copy.title}
+            </h1>
+            <p className="mt-5 max-w-3xl text-base leading-7 text-white/85 md:text-lg">
+              {copy.description}
+            </p>
+            <p className="mt-4 max-w-3xl text-sm leading-7 text-white/70">{copy.intro}</p>
 
-          <SectionWrapper background="white" className="relative !bg-transparent !pb-4 !pt-0 md:!pb-5">
-            <div className="max-w-4xl">
-              <ServicesSectionHeader eyebrow={copy.eyebrow} title={copy.title} description={copy.description} />
-
-              <p className="mt-4 max-w-3xl text-sm leading-7 text-neutral-500">{copy.intro}</p>
-
-              <div className="mt-6 flex flex-wrap items-center gap-3">
-                <a href="#nos-services" className={buttonClassName("secondary", "px-7 py-3.5 text-sm")}>
-                  {copy.ctaDiscover}
-                </a>
-                <Link href={toLocalePath("/consultation")} className={buttonClassName("primary", "px-7 py-3.5 text-sm")}>
-                  {copy.ctaConsultation}
-                </Link>
-                <Link href={toLocalePath("/etudes-de-cas")} className={buttonClassName("secondary", "px-7 py-3.5 text-sm")}>
-                  {copy.ctaResults}
-                </Link>
-              </div>
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <a
+                href="#nos-services"
+                className="inline-flex h-12 items-center rounded-lg bg-white px-6 text-sm font-semibold uppercase tracking-[0.1em] text-[#074f74] transition hover:bg-white/90"
+              >
+                {copy.ctaDiscover}
+              </a>
+              <Link
+                href={toLocalePath("/consultation")}
+                className="inline-flex h-12 items-center rounded-lg border border-white/30 px-6 text-sm font-semibold uppercase tracking-[0.1em] text-white transition hover:border-white/60"
+              >
+                {copy.ctaConsultation}
+              </Link>
+              <Link
+                href={toLocalePath("/etudes-de-cas")}
+                className="inline-flex h-12 items-center rounded-lg border border-white/30 px-6 text-sm font-semibold uppercase tracking-[0.1em] text-white transition hover:border-white/60"
+              >
+                {copy.ctaResults}
+              </Link>
             </div>
+          </div>
+        </section>
 
-            <div className="relative my-[2cm] -mx-6 overflow-hidden md:-mx-12 lg:-mx-16">
+        <WaveDivider variant="layered-bottom" fromBg="#0a3a54" toBg="#FFFFFF" />
+
+        <section className="bg-white py-10">
+          <div className="mx-auto max-w-screen-xl px-6 lg:px-10">
+            <div className="relative overflow-hidden">
               <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-[8vw] bg-gradient-to-r from-white to-transparent" />
               <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-[8vw] bg-gradient-to-l from-white to-transparent" />
               <InfiniteLogoRail logos={TRUSTED_LOGOS_STRIP} duration="slow" pauseOnHover />
             </div>
-          </SectionWrapper>
+          </div>
         </section>
 
         <SectionWrapper id="nos-services" background="white" className="!pt-0">

@@ -1,5 +1,5 @@
-import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { JsonLd } from "@/components/seo/json-ld";
+import { WaveDivider } from "@/components/ui/wave-divider";
 import { CaseStudyBadge } from "@/components/shared/case-study-badge";
 import { CaseStudyGrid } from "@/components/shared/case-study-grid";
 import { CTASection } from "@/components/shared/cta-section";
@@ -172,7 +172,6 @@ export function ServicePageTemplate({ service, locale = "fr" }: ServicePageProps
     <>
       <JsonLd schema={schemas} />
       <main>
-        <Breadcrumb items={breadcrumbItems} />
         <ServiceHero
           currentSlug={localizedService.slug}
           locale={locale}
@@ -180,7 +179,10 @@ export function ServicePageTemplate({ service, locale = "fr" }: ServicePageProps
           subtitle={localizedService.pageSubtitle}
           paragraphs={localizedService.heroParagraphs}
           quickFacts={quickFacts}
+          breadcrumbItems={breadcrumbItems}
         />
+
+        <WaveDivider variant="layered-bottom" fromBg="#0a3a54" toBg="#FFFFFF" />
 
         <section className="bg-white py-10 md:py-14">
           <div className="mx-auto grid w-full max-w-[1400px] grid-cols-1 gap-8 px-4 sm:px-5 md:px-8 lg:grid-cols-[minmax(0,1.06fr)_minmax(0,0.94fr)] lg:items-start lg:gap-10">

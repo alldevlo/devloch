@@ -1,6 +1,9 @@
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { ServiceSwitcher } from "@/components/shared/service-switcher";
 import type { ServiceSlug } from "@/content/services";
 import type { SupportedLocale } from "@/lib/i18n/slug-map";
+
+type BreadcrumbItem = { name: string; path: string };
 
 type ServiceHeroProps = {
   currentSlug: ServiceSlug;
@@ -9,6 +12,7 @@ type ServiceHeroProps = {
   subtitle: string;
   paragraphs: string[];
   quickFacts: string[];
+  breadcrumbItems?: BreadcrumbItem[];
 };
 
 const sectionAnchorsByLocale: Record<SupportedLocale, { id: string; label: string }[]> = {
@@ -52,39 +56,38 @@ const sectionNavAriaByLocale: Record<SupportedLocale, string> = {
   nl: "Sectienavigatie",
 };
 
-export function ServiceHero({ currentSlug, locale = "fr", title, subtitle, paragraphs, quickFacts }: ServiceHeroProps) {
+export function ServiceHero({ currentSlug, locale = "fr", title, subtitle, paragraphs, quickFacts, breadcrumbItems }: ServiceHeroProps) {
   const sectionAnchors = sectionAnchorsByLocale[locale];
   return (
-    <section className="relative overflow-hidden border-b border-neutral-200 bg-white">
-      <div className="pointer-events-none absolute -left-16 top-10 h-44 w-44 rounded-full bg-devlo-100/40 blur-3xl" />
-      <div className="pointer-events-none absolute -right-16 top-20 h-52 w-52 rounded-full bg-devlo-100/30 blur-3xl" />
+    <section className="bg-gradient-to-b from-[#074f74] to-[#0a3a54] pt-2 pb-10 text-white md:pb-12">
+      {breadcrumbItems && <Breadcrumb items={breadcrumbItems} variant="dark" />}
 
-      <div className="relative mx-auto w-full max-w-[1400px] px-6 pb-8 pt-6 md:px-8 md:pb-10 md:pt-8">
+      <div className="mx-auto w-full max-w-[1400px] px-6 pt-6 md:px-8 md:pt-8">
         <div className="max-w-md">
           <ServiceSwitcher currentSlug={currentSlug} locale={locale} />
         </div>
 
-        <p className="mt-4 inline-flex items-center rounded-full bg-devlo-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.09em] text-devlo-700">
+        <p className="mt-4 inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.09em] text-white/80">
           {badgeByLocale[locale]}
         </p>
 
-        <h1 className="mt-3 max-w-5xl text-3xl font-extrabold leading-[1.08] tracking-tight text-devlo-900 md:text-4xl lg:text-[44px]">
+        <h1 className="mt-3 max-w-5xl text-3xl font-extrabold leading-[1.08] tracking-tight md:text-4xl lg:text-[44px]">
           {title}
         </h1>
-        <p className="mt-3 max-w-3xl text-base font-semibold leading-7 text-devlo-700 md:text-lg md:leading-8">{subtitle}</p>
+        <p className="mt-3 max-w-3xl text-base font-semibold leading-7 text-white/85 md:text-lg md:leading-8">{subtitle}</p>
 
         <div className="mt-4 flex flex-wrap gap-2">
           {quickFacts.map((fact) => (
             <span
               key={fact}
-              className="inline-flex items-center rounded-full border border-neutral-200 bg-white/85 px-3 py-1 text-xs font-semibold text-neutral-700 shadow-soft"
+              className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold text-white/90"
             >
               {fact}
             </span>
           ))}
         </div>
 
-        <div className="mt-4 max-w-4xl space-y-3 text-sm leading-7 text-neutral-600 md:text-base md:leading-8">
+        <div className="mt-4 max-w-4xl space-y-3 text-sm leading-7 text-white/75 md:text-base md:leading-8">
           {paragraphs.map((paragraph, index) => (
             <p key={`${title}-paragraph-${index}`}>{paragraph}</p>
           ))}
@@ -96,7 +99,7 @@ export function ServiceHero({ currentSlug, locale = "fr", title, subtitle, parag
               <li key={anchor.id}>
                 <a
                   href={`#${anchor.id}`}
-                  className="inline-flex items-center rounded-full border border-neutral-200 bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.06em] text-devlo-700 transition hover:border-devlo-700/40 hover:text-devlo-900"
+                  className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.06em] text-white/80 transition hover:border-white/40 hover:bg-white/20"
                 >
                   {anchor.label}
                 </a>

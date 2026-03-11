@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { WaveDivider } from "@/components/ui/wave-divider";
 import { CTASection } from "@/components/shared/cta-section";
 import { FAQSection } from "@/components/shared/faq-section";
 import { InfiniteLogoRail } from "@/components/shared/logo-rail";
@@ -31,10 +32,9 @@ export function GeoLandingPage({ data }: { data: GeoPageData }) {
 
   return (
     <>
-      <Breadcrumb items={breadcrumbItems} />
-
-      <section className="bg-gradient-to-b from-[#074f74] to-[#0a3a54] py-16 text-white md:py-24">
-        <div className="mx-auto w-full max-w-screen-xl px-6 text-center lg:px-10">
+      <section className="bg-gradient-to-b from-[#074f74] to-[#0a3a54] pt-2 pb-16 text-white md:pb-24">
+        <Breadcrumb items={breadcrumbItems} variant="dark" />
+        <div className="mx-auto w-full max-w-screen-xl px-6 pt-8 text-center lg:px-10">
           <h1 className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
             {data.h1}
           </h1>
@@ -54,7 +54,9 @@ export function GeoLandingPage({ data }: { data: GeoPageData }) {
         </div>
       </section>
 
-      <section className="border-b border-neutral-200 bg-white py-10">
+      <WaveDivider variant="layered-bottom" fromBg="#0a3a54" toBg="#FFFFFF" />
+
+      <section className="bg-white py-10">
         <div className="mx-auto max-w-[1400px] px-4 sm:px-5 md:px-8">
           <div className="relative overflow-hidden rounded-2xl border border-neutral-200 bg-white p-2">
             <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-[8vw] bg-gradient-to-r from-white to-transparent" />
