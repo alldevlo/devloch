@@ -136,7 +136,7 @@ export default function AgencePage() {
               </p>
               <div className="mt-3 flex items-start gap-5">
                 <Image
-                  src="/images/charles-perret.webp"
+                  src="/images/ProfilePicture2025.webp"
                   alt="Charles Perret — Fondateur de devlo"
                   width={96}
                   height={96}
