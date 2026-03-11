@@ -645,6 +645,32 @@ const nextConfig = {
       { source: "/nl/services/prise-de-rendez-vous/", destination: "/nl/services/afspraak-boeken", permanent: true },
       { source: "/nl/services/qualification-leads", destination: "/nl/services/lead-kwalificatie", permanent: true },
       { source: "/nl/services/qualification-leads/", destination: "/nl/services/lead-kwalificatie", permanent: true },
+      // Conditions (untranslated slugs)
+      { source: "/en/conditions", destination: "/en/terms", permanent: true },
+      { source: "/en/conditions/", destination: "/en/terms", permanent: true },
+      { source: "/de/conditions", destination: "/de/agb", permanent: true },
+      { source: "/de/conditions/", destination: "/de/agb", permanent: true },
+      { source: "/nl/conditions", destination: "/nl/voorwaarden", permanent: true },
+      { source: "/nl/conditions/", destination: "/nl/voorwaarden", permanent: true },
+      // Consultation (untranslated slugs)
+      { source: "/de/consultation", destination: "/de/beratung", permanent: true },
+      { source: "/de/consultation/", destination: "/de/beratung", permanent: true },
+      { source: "/nl/consultation", destination: "/nl/adviesgesprek", permanent: true },
+      { source: "/nl/consultation/", destination: "/nl/adviesgesprek", permanent: true },
+      // NL case study slugs (were copies of EN, now translated)
+      { source: "/nl/casestudy/audiovisual-16-meetings", destination: "/nl/casestudy/audiovisueel-16-afspraken", permanent: true },
+      { source: "/nl/casestudy/biofuels-52-sales-meetings", destination: "/nl/casestudy/biobrandstoffen-52-afspraken", permanent: true },
+      { source: "/nl/casestudy/biodiversity-70-meetings", destination: "/nl/casestudy/biodiversiteit-70-afspraken", permanent: true },
+      { source: "/nl/casestudy/cybersecurity-4500-companies", destination: "/nl/casestudy/cybersecurity-4500-bedrijven", permanent: true },
+      { source: "/nl/casestudy/learning-development-14-meetings", destination: "/nl/casestudy/opleiding-14-afspraken", permanent: true },
+      { source: "/nl/casestudy/hr-54-meetings-dach", destination: "/nl/casestudy/hr-54-afspraken-dach", permanent: true },
+      { source: "/nl/casestudy/iddi-lead-generation-biotech-pharma", destination: "/nl/casestudy/iddi-leadgeneratie-biotech-pharma", permanent: true },
+      { source: "/nl/casestudy/commercial-real-estate-11-prospects", destination: "/nl/casestudy/commercieel-vastgoed-11-prospects", permanent: true },
+      { source: "/nl/casestudy/real-estate-30-prospects", destination: "/nl/casestudy/vastgoed-30-prospects", permanent: true },
+      { source: "/nl/casestudy/accounting-200k-revenue", destination: "/nl/casestudy/boekhouding-200k-omzet", permanent: true },
+      { source: "/nl/casestudy/mobility-40-prospects", destination: "/nl/casestudy/mobiliteit-40-prospects", permanent: true },
+      { source: "/nl/casestudy/monizze-120-appointments", destination: "/nl/casestudy/monizze-120-afspraken", permanent: true },
+      { source: "/nl/casestudy/urban-cleanliness-71-meetings", destination: "/nl/casestudy/stedelijke-reiniging-71-afspraken", permanent: true },
     ];
 
     return excludeRscRequests(
