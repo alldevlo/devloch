@@ -572,7 +572,7 @@ export default function AiSalesOpsPage() {
             />
           </FadeInOnScroll>
 
-          <FadeInOnScroll delay={0.06} className="mt-8 rounded-2xl border border-neutral-200 bg-white p-2">
+          <FadeInOnScroll delay={0.06} className="mt-8 overflow-hidden rounded-2xl border border-neutral-200 bg-white p-2">
             <InfiniteLogoRail logos={TRUSTED_LOGOS_STRIP} duration="slow" pauseOnHover />
           </FadeInOnScroll>
 
