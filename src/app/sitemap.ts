@@ -33,6 +33,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
+  urls.add(`${siteConfig.url}/ai-sales-ops`);
+
   return Array.from(urls)
     .sort((a, b) => a.localeCompare(b))
     .map((url) => {

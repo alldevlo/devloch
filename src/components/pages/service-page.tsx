@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { JsonLd } from "@/components/seo/json-ld";
 import { WaveDivider } from "@/components/ui/wave-divider";
 import { CaseStudyBadge } from "@/components/shared/case-study-badge";
@@ -11,6 +13,7 @@ import { ServiceHero } from "@/components/shared/service-hero";
 import { ServiceLeadPanel } from "@/components/shared/service-lead-panel";
 import { ServiceProcess } from "@/components/shared/service-process";
 import { ServicesSectionHeader, ServicesSurfaceCard } from "@/components/services/services-ui";
+import { buttonClassName } from "@/components/ui/button";
 import { TRUSTED_LOGOS_STRIP } from "@/content/service-brand-assets";
 import { type ServicePageData } from "@/content/services";
 import { articles } from "@/content/blog/articles";
@@ -154,6 +157,8 @@ export function ServicePageTemplate({ service, locale = "fr" }: ServicePageProps
     `${caseStudiesForService.length} ${copy.caseStudiesRelated}`,
     `${localizedService.faqItems.length} ${copy.faqQuestions}`,
   ];
+  const aiSalesOpsEligibleServices = new Set(["outbound-multicanal", "cold-email", "enrichissement-clay"]);
+  const showAiSalesOpsBridge = locale === "fr" && aiSalesOpsEligibleServices.has(localizedService.slug);
 
   const breadcrumbItems = [
     { name: copy.home, path: resolvePathForLocale("/", locale).path },
@@ -245,6 +250,34 @@ export function ServicePageTemplate({ service, locale = "fr" }: ServicePageProps
         </section>
 
         <FAQSection id="faq" title={localizedService.faqTitle} items={localizedService.faqItems} />
+
+        {showAiSalesOpsBridge ? (
+          <section className="border-t border-neutral-200 bg-white py-14">
+            <div className="mx-auto max-w-7xl px-6">
+              <ServicesSurfaceCard className="overflow-hidden border-devlo-200 bg-devlo-900 p-6 text-white shadow-panel md:p-8">
+                <div className="grid gap-6 md:grid-cols-[minmax(0,1fr)_auto] md:items-center">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.08em] text-white/70">Nouveau chez devlo</p>
+                    <h2 className="mt-3 text-2xl font-bold leading-tight md:text-3xl">
+                      {"Découvrez aussi AI Sales Ops, notre couche d'automatisation IA pour équipes commerciales B2B"}
+                    </h2>
+                    <p className="mt-3 max-w-3xl text-sm leading-7 text-white/75 md:text-base">
+                      {"Si vous voulez compléter ce service avec des workflows IA pour l'inbox, le CRM, la préparation de rendez-vous, le reporting ou les battle cards, nous pouvons les déployer en complément de votre machine outbound."}
+                    </p>
+                  </div>
+                  <div className="flex flex-wrap gap-3">
+                    <Link href="/ai-sales-ops" className={buttonClassName("outline", "px-6 py-3 text-sm")}>
+                      Voir AI Sales Ops →
+                    </Link>
+                    <Link href="/consultation" className={buttonClassName("secondary", "border-white/20 bg-white/5 px-6 py-3 text-sm text-white hover:border-white/35 hover:text-white")}>
+                      Réserver un diagnostic
+                    </Link>
+                  </div>
+                </div>
+              </ServicesSurfaceCard>
+            </div>
+          </section>
+        ) : null}
 
         {relatedArticles.length > 0 && (
           <section className="border-t border-neutral-200 bg-[#f7f8fc] py-14">

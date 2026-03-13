@@ -77,11 +77,12 @@ body {
   font-family: var(--font-plus-jakarta), "Avenir Next", "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
 }
 
-/* Ensure the final content block before footer ends on pure white. */
-#main-content > :last-child,
-#main-content > :last-child > :last-child {
-  background-color: #ffffff !important;
-  background-image: none !important;
+/* Ensure the final content block before footer ends on pure white,
+   but skip elements that explicitly declare a dark background (e.g. dark CTA sections). */
+#main-content > :last-child:not([data-dark]),
+#main-content > :last-child > :last-child:not([data-dark]) {
+  background-color: #ffffff;
+  background-image: none;
 }
 
 a {

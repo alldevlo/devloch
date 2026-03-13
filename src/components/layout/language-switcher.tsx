@@ -25,16 +25,18 @@ export function LanguageSwitcher({ mobile = false }: LanguageSwitcherProps) {
   const currentLocale = splitLocalePath(pathname).locale;
 
   const items = useMemo(() => {
-    return localeOptions.map((option) => {
-      const resolved = resolvePathForLocale(pathname, option.locale);
-      return {
-        ...option,
-        href: resolved.path,
-        found: resolved.found,
-        pageId: resolved.pageId,
-      };
-    });
-  }, [pathname]);
+    return localeOptions
+      .map((option) => {
+        const resolved = resolvePathForLocale(pathname, option.locale);
+        return {
+          ...option,
+          href: resolved.path,
+          found: resolved.found,
+          pageId: resolved.pageId,
+        };
+      })
+      .filter((item) => item.locale === currentLocale || item.found);
+  }, [pathname, currentLocale]);
 
   useEffect(() => {
     setIsOpen(false);

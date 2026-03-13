@@ -28,6 +28,8 @@ const footerLabelsByLocale: Record<
     officeSwiss: string;
     officeUs: string;
     servicesHome: string;
+    aiSalesOps: string;
+    aiSalesOpsItems: { label: string; href: string }[];
   }
 > = {
   fr: {
@@ -41,6 +43,18 @@ const footerLabelsByLocale: Record<
     officeSwiss: "Bureau Suisse:",
     officeUs: "Bureau US:",
     servicesHome: "Services",
+    aiSalesOps: "AI Sales Ops",
+    aiSalesOpsItems: [
+      { label: "AI Sales Ops", href: "/ai-sales-ops" },
+      { label: "Inbox Manager", href: "/ai-sales-ops#systemes" },
+      { label: "Knowledge Bot", href: "/ai-sales-ops#systemes" },
+      { label: "Meeting Prep & CRM", href: "/ai-sales-ops#systemes" },
+      { label: "Battle Cards", href: "/ai-sales-ops#systemes" },
+      { label: "Sales Writer", href: "/ai-sales-ops#systemes" },
+      { label: "Team Performance", href: "/ai-sales-ops#systemes" },
+      { label: "Reporting Portal", href: "/ai-sales-ops#systemes" },
+      { label: "Diagnostic gratuit", href: "/ai-sales-ops#diagnostic" },
+    ],
   },
   en: {
     navigation: "Navigation",
@@ -53,6 +67,18 @@ const footerLabelsByLocale: Record<
     officeSwiss: "Swiss Office:",
     officeUs: "US Office:",
     servicesHome: "Services",
+    aiSalesOps: "AI Sales Ops",
+    aiSalesOpsItems: [
+      { label: "AI Sales Ops", href: "/ai-sales-ops" },
+      { label: "Inbox Manager", href: "/ai-sales-ops#systemes" },
+      { label: "Knowledge Bot", href: "/ai-sales-ops#systemes" },
+      { label: "Meeting Prep & CRM", href: "/ai-sales-ops#systemes" },
+      { label: "Battle Cards", href: "/ai-sales-ops#systemes" },
+      { label: "Sales Writer", href: "/ai-sales-ops#systemes" },
+      { label: "Team Performance", href: "/ai-sales-ops#systemes" },
+      { label: "Reporting Portal", href: "/ai-sales-ops#systemes" },
+      { label: "Free diagnostic", href: "/ai-sales-ops#diagnostic" },
+    ],
   },
   de: {
     navigation: "Navigation",
@@ -65,6 +91,18 @@ const footerLabelsByLocale: Record<
     officeSwiss: "Schweizer Büro:",
     officeUs: "US-Büro:",
     servicesHome: "Leistungen",
+    aiSalesOps: "AI Sales Ops",
+    aiSalesOpsItems: [
+      { label: "AI Sales Ops", href: "/ai-sales-ops" },
+      { label: "Inbox Manager", href: "/ai-sales-ops#systemes" },
+      { label: "Knowledge Bot", href: "/ai-sales-ops#systemes" },
+      { label: "Meeting Prep & CRM", href: "/ai-sales-ops#systemes" },
+      { label: "Battle Cards", href: "/ai-sales-ops#systemes" },
+      { label: "Sales Writer", href: "/ai-sales-ops#systemes" },
+      { label: "Team Performance", href: "/ai-sales-ops#systemes" },
+      { label: "Reporting Portal", href: "/ai-sales-ops#systemes" },
+      { label: "Kostenloses Erstgespräch", href: "/ai-sales-ops#diagnostic" },
+    ],
   },
   nl: {
     navigation: "Navigatie",
@@ -77,6 +115,18 @@ const footerLabelsByLocale: Record<
     officeSwiss: "Zwitsers kantoor:",
     officeUs: "VS-kantoor:",
     servicesHome: "Diensten",
+    aiSalesOps: "AI Sales Ops",
+    aiSalesOpsItems: [
+      { label: "AI Sales Ops", href: "/ai-sales-ops" },
+      { label: "Inbox Manager", href: "/ai-sales-ops#systemes" },
+      { label: "Knowledge Bot", href: "/ai-sales-ops#systemes" },
+      { label: "Meeting Prep & CRM", href: "/ai-sales-ops#systemes" },
+      { label: "Battle Cards", href: "/ai-sales-ops#systemes" },
+      { label: "Sales Writer", href: "/ai-sales-ops#systemes" },
+      { label: "Team Performance", href: "/ai-sales-ops#systemes" },
+      { label: "Reporting Portal", href: "/ai-sales-ops#systemes" },
+      { label: "Gratis diagnose", href: "/ai-sales-ops#diagnostic" },
+    ],
   },
 };
 
@@ -187,7 +237,7 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div className="mx-auto grid w-full max-w-[1320px] gap-10 px-6 md:grid-cols-2 md:px-8 lg:grid-cols-[1.2fr_0.52fr_0.72fr_1.56fr]">
+      <div className="mx-auto grid w-full max-w-[1320px] gap-10 px-6 md:grid-cols-2 md:px-8 lg:grid-cols-[1.1fr_0.48fr_0.62fr_0.62fr_1.18fr]">
         <div>
           <Image
             src="/images/devlo-logo.webp"
@@ -227,15 +277,19 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="lg:ml-4 lg:border-l lg:border-neutral-200 lg:pl-14">
+        <div className="lg:ml-4 lg:border-l lg:border-neutral-200 lg:pl-10">
           <FooterList title={labels.navigation} links={navigationLinks} />
         </div>
 
-        <div className="lg:border-l lg:border-neutral-200 lg:pl-10">
+        <div className="lg:border-l lg:border-neutral-200 lg:pl-8">
           <FooterList title={labels.services} links={serviceLinks} compactLinks />
         </div>
 
-        <div className="lg:border-l lg:border-neutral-200 lg:pl-10">
+        <div className="lg:border-l lg:border-neutral-200 lg:pl-8">
+          <FooterList title={labels.aiSalesOps} links={labels.aiSalesOpsItems} compactLinks />
+        </div>
+
+        <div className="lg:border-l lg:border-neutral-200 lg:pl-8">
           <FooterList
             title={labels.caseStudies}
             links={caseStudyLinks}

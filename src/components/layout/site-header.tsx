@@ -40,6 +40,9 @@ const navCopyByLocale: Record<
     openMarketsMenu: string;
     showMarkets: string;
     academySubtitle: string;
+    aiSalesOps: string;
+    aiSalesOpsSubtitle: string;
+    newBadge: string;
   }
 > = {
   fr: {
@@ -63,6 +66,9 @@ const navCopyByLocale: Record<
     openMarketsMenu: "Ouvrir le menu présence",
     showMarkets: "Afficher la présence",
     academySubtitle: "Formation prospection B2B gratuite",
+    aiSalesOps: "AI Sales Ops",
+    aiSalesOpsSubtitle: "Systèmes IA pour équipes commerciales B2B",
+    newBadge: "Nouveau",
   },
   en: {
     navigationAria: "Main navigation",
@@ -85,6 +91,9 @@ const navCopyByLocale: Record<
     openMarketsMenu: "Open coverage menu",
     showMarkets: "Show coverage",
     academySubtitle: "Free B2B outbound training",
+    aiSalesOps: "AI Sales Ops",
+    aiSalesOpsSubtitle: "AI systems for B2B sales teams",
+    newBadge: "New",
   },
   de: {
     navigationAria: "Hauptnavigation",
@@ -107,6 +116,9 @@ const navCopyByLocale: Record<
     openMarketsMenu: "Präsenz-Menü öffnen",
     showMarkets: "Präsenz anzeigen",
     academySubtitle: "Kostenlose B2B-Akquise-Schulung",
+    aiSalesOps: "AI Sales Ops",
+    aiSalesOpsSubtitle: "KI-Systeme für B2B-Vertriebsteams",
+    newBadge: "Neu",
   },
   nl: {
     navigationAria: "Hoofdnavigatie",
@@ -129,6 +141,9 @@ const navCopyByLocale: Record<
     openMarketsMenu: "Aanwezigheid menu openen",
     showMarkets: "Aanwezigheid tonen",
     academySubtitle: "Gratis B2B outbound training",
+    aiSalesOps: "AI Sales Ops",
+    aiSalesOpsSubtitle: "AI-systemen voor B2B salesteams",
+    newBadge: "Nieuw",
   },
 };
 
@@ -151,6 +166,7 @@ export function SiteHeader() {
     { href: "/prospection-commerciale-belgique", label: navCopy.marketsBE, flag: "🇧🇪" },
     { href: "/prospection-commerciale-france", label: navCopy.marketsFR, flag: "🇫🇷" },
   ];
+  const aiSalesOpsHref = "/ai-sales-ops";
   const consultationHref = toCurrentLocalePath("/consultation");
   const localizedServicesCards = getLocalizedServicesContent(currentLocale).SERVICE_HUB_CARDS.map((service) => ({
     ...service,
@@ -319,6 +335,23 @@ export function SiteHeader() {
                           <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-white/80">
                             {navCopy.allServices}
                           </p>
+                          <div className="mt-3 rounded-2xl border border-white/20 bg-white/10 p-3">
+                            <Link
+                              href={aiSalesOpsHref}
+                              className="flex items-start justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-3 py-3 transition hover:border-white/35 hover:bg-white/10"
+                            >
+                              <div>
+                                <div className="flex flex-wrap items-center gap-2">
+                                  <p className="text-sm font-semibold text-white">{navCopy.aiSalesOps}</p>
+                                  <span className="rounded-full bg-white px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-devlo-700">
+                                    {navCopy.newBadge}
+                                  </span>
+                                </div>
+                                <p className="mt-1 text-xs leading-5 text-white/75">{navCopy.aiSalesOpsSubtitle}</p>
+                              </div>
+                              <span className="text-sm font-semibold text-white">→</span>
+                            </Link>
+                          </div>
                           <div className="mt-3 grid gap-2 sm:grid-cols-2">
                             {localizedServicesCards.map((service) => (
                               <Link
@@ -504,6 +537,23 @@ export function SiteHeader() {
 
                       {isMobileServicesOpen ? (
                         <div className="mt-2 overflow-hidden motion-safe:animate-fade-in-up">
+                          <Link
+                            href={aiSalesOpsHref}
+                            className="mb-2 block rounded-xl border border-devlo-200 bg-devlo-50 px-3 py-3 transition hover:border-devlo-400"
+                          >
+                            <div className="flex items-center justify-between gap-3">
+                              <div>
+                                <div className="flex flex-wrap items-center gap-2">
+                                  <p className="text-sm font-semibold text-devlo-900">{navCopy.aiSalesOps}</p>
+                                  <span className="rounded-full bg-devlo-700 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-white">
+                                    {navCopy.newBadge}
+                                  </span>
+                                </div>
+                                <p className="mt-1 text-xs text-neutral-600">{navCopy.aiSalesOpsSubtitle}</p>
+                              </div>
+                              <span className="text-sm font-semibold text-devlo-700">→</span>
+                            </div>
+                          </Link>
                           <div className="grid gap-1.5">
                             {localizedServicesCards.map((service) => (
                               <Link
