@@ -24,7 +24,7 @@ import { localizeGeoTermsInObject } from "@/lib/i18n/geo-terms";
 import { getLocalizedServicesContent } from "@/lib/i18n/services-content";
 import { resolvePathForLocale, type SupportedLocale } from "@/lib/i18n/slug-map";
 import { toAbsoluteUrl } from "@/lib/seo/metadata";
-import { buildBreadcrumbSchema, buildFaqPageSchema, buildHowToSchema } from "@/lib/seo/schema-builders";
+import { buildArticleSchema, buildBreadcrumbSchema, buildFaqPageSchema, buildHowToSchema } from "@/lib/seo/schema-builders";
 import { RichParagraph } from "@/lib/utils/rich-text";
 
 function buildServiceSchema(service: ServicePageData) {
@@ -220,6 +220,15 @@ export function ServicePageTemplate({ service, locale = "fr" }: ServicePageProps
     buildFaqPageSchema(localizedService.faqItems),
     buildHowToSchema(localizedService.processTitle, localizedService.processSteps),
     buildBreadcrumbSchema(breadcrumbItems),
+    buildArticleSchema({
+      headline: localizedService.pageTitle,
+      description: localizedService.metadataDescription,
+      path: resolvePathForLocale(localizedService.path, locale).path,
+      datePublished: localizedService.datePublished ?? "2024-06-15",
+      dateModified: localizedService.dateModified ?? "2026-03-01",
+      author: "Charles Perret",
+      authorUrl: "https://www.linkedin.com/in/charlesperret/",
+    }),
   ];
 
   return (

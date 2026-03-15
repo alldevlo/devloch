@@ -9,7 +9,7 @@ import { CTASection } from "@/components/shared/cta-section";
 import { FAQSection } from "@/components/shared/faq-section";
 import { SummarySection } from "@/components/shared/summary-section";
 import { RichParagraph } from "@/lib/utils/rich-text";
-import { buildBreadcrumbSchema, buildFaqPageSchema } from "@/lib/seo/schema-builders";
+import { buildArticleSchema, buildBreadcrumbSchema, buildFaqPageSchema } from "@/lib/seo/schema-builders";
 import { siteConfig } from "@/lib/site";
 import { agencyContent } from "@/content/agency";
 import { getLocalizedAgencyContent } from "@/lib/i18n/agency-content";
@@ -168,6 +168,15 @@ export function AgencyMasterPage({ locale = "fr" }: AgencyMasterPageProps) {
           buildBreadcrumbSchema(breadcrumbItems),
           buildFaqPageSchema(content.faq),
           aboutPageSchema,
+          buildArticleSchema({
+            headline: content.h1,
+            description: content.metaDescription,
+            path: agencyPath,
+            datePublished: content.datePublished ?? "2024-06-15",
+            dateModified: content.dateModified ?? "2026-03-01",
+            author: "Charles Perret",
+            authorUrl: "https://www.linkedin.com/in/charlesperret/",
+          }),
         ]}
       />
 

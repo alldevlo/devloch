@@ -38,7 +38,11 @@ export function AuthorByline({
   const labels = labelsByLocale[locale];
 
   return (
-    <div className="flex flex-wrap items-center gap-3 text-sm text-neutral-500">
+    <div
+      className="flex flex-wrap items-center gap-3 text-sm text-neutral-500"
+      itemScope
+      itemType="https://schema.org/Person"
+    >
       <div className="flex items-center gap-2">
         <Image
           src={avatarSrc}
@@ -49,23 +53,24 @@ export function AuthorByline({
           loading="lazy"
           sizes="32px"
           quality={74}
+          itemProp="image"
         />
         <span>
           {labels.by}{" "}
-          <span className="font-semibold text-[var(--text-primary)]">{name}</span>
-          <span className="hidden sm:inline">, {role}</span>
+          <span className="font-semibold text-[var(--text-primary)]" itemProp="name">{name}</span>
+          <span className="hidden sm:inline" itemProp="jobTitle">, {role}</span>
         </span>
       </div>
       {datePublished && (
         <span className="before:mr-3 before:content-['·']">
           {labels.published}{" "}
-          <time dateTime={datePublished}>{formatDate(datePublished, locale)}</time>
+          <time dateTime={datePublished} itemProp="datePublished">{formatDate(datePublished, locale)}</time>
         </span>
       )}
       {dateModified && dateModified !== datePublished && (
         <span className="before:mr-3 before:content-['·']">
           {labels.updated}{" "}
-          <time dateTime={dateModified}>{formatDate(dateModified, locale)}</time>
+          <time dateTime={dateModified} itemProp="dateModified">{formatDate(dateModified, locale)}</time>
         </span>
       )}
     </div>

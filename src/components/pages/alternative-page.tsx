@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { AuthorByline } from "@/components/shared/author-byline";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { JsonLd } from "@/components/seo/json-ld";
 import { CTASection } from "@/components/shared/cta-section";
 import { FAQSection } from "@/components/shared/faq-section";
 import { InfiniteLogoRail } from "@/components/shared/logo-rail";
@@ -11,6 +12,7 @@ import { type AlternativePageData } from "@/content/alternatives";
 import { caseStudyBySlug } from "@/lib/case-studies";
 import { getLocalizedAlternativeContent } from "@/lib/i18n/alternatives-content";
 import { resolvePathForLocale, type SupportedLocale } from "@/lib/i18n/slug-map";
+import { buildArticleSchema, buildBreadcrumbSchema, buildFaqPageSchema } from "@/lib/seo/schema-builders";
 import { RichParagraph } from "@/lib/utils/rich-text";
 
 const copyByLocale: Record<
@@ -127,6 +129,21 @@ export function AlternativePage({ data, locale = "fr" }: { data: AlternativePage
 
   return (
     <>
+      <JsonLd
+        schema={[
+          buildBreadcrumbSchema(breadcrumbItems),
+          buildFaqPageSchema(faqs),
+          buildArticleSchema({
+            headline: h1,
+            description: intro[0] ?? h1,
+            path: altPath,
+            datePublished,
+            dateModified,
+            author: "Charles Perret",
+            authorUrl: "https://www.linkedin.com/in/charlesperret/",
+          }),
+        ]}
+      />
       <Breadcrumb items={breadcrumbItems} />
 
       {/* Hero */}

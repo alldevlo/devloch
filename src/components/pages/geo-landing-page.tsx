@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { AuthorByline } from "@/components/shared/author-byline";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { JsonLd } from "@/components/seo/json-ld";
 import { WaveDivider } from "@/components/ui/wave-divider";
 import { CTASection } from "@/components/shared/cta-section";
 import { FAQSection } from "@/components/shared/faq-section";
@@ -12,6 +13,7 @@ import { type GeoPageData } from "@/content/geo-pages";
 import { caseStudyBySlug } from "@/lib/case-studies";
 import { getLocalizedGeoContent } from "@/lib/i18n/geo-content";
 import { resolvePathForLocale, type SupportedLocale } from "@/lib/i18n/slug-map";
+import { buildArticleSchema, buildBreadcrumbSchema, buildFaqPageSchema } from "@/lib/seo/schema-builders";
 import { RichParagraph } from "@/lib/utils/rich-text";
 
 const copyByLocale: Record<
@@ -109,6 +111,21 @@ export function GeoLandingPage({ data, locale = "fr" }: { data: GeoPageData; loc
 
   return (
     <>
+      <JsonLd
+        schema={[
+          buildBreadcrumbSchema(breadcrumbItems),
+          buildFaqPageSchema(faqs),
+          buildArticleSchema({
+            headline: h1,
+            description: intro[0] ?? h1,
+            path: geoPath,
+            datePublished,
+            dateModified,
+            author: "Charles Perret",
+            authorUrl: "https://www.linkedin.com/in/charlesperret/",
+          }),
+        ]}
+      />
       <section className="bg-gradient-to-b from-[#074f74] to-[#0a3a54] pt-2 pb-16 text-white md:pb-24">
         <Breadcrumb items={breadcrumbItems} variant="dark" />
         <div className="mx-auto w-full max-w-screen-xl px-6 pt-8 text-center lg:px-10">
