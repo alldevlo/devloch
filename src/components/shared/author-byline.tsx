@@ -30,7 +30,7 @@ function formatDate(iso: string, locale: SupportedLocale): string {
 export function AuthorByline({
   name = "Charles Perret",
   role = "Founder, devlo",
-  avatarSrc = "/images/charles-perret.webp",
+  avatarSrc = "/images/CharlesPerretProfilePicture2025.webp",
   datePublished,
   dateModified,
   locale = "fr",

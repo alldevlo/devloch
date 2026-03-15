@@ -151,7 +151,7 @@ Count: **179** files (including `.DS_Store`)
 - `blue_square.webp`
 - `careerlunch-banner.webp`
 - `cegos.webp`
-- `charles-perret.webp`
+- `CharlesPerretProfilePicture2025.webp`
 - `cold-outreach.webp`
 - `confiserie_leonidas.webp`
 - `cover-mac.webp`
