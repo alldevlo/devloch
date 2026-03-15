@@ -7,16 +7,16 @@ export type CaseStudyBrandAsset = {
 };
 
 export const TRUSTED_LOGOS_STRIP: Array<{ src: string; alt: string }> = [
-  { src: "/images/Monizze_Logo.webp", alt: "Monizze" },
-  { src: "/images/Horus_logo.webp", alt: "Horus Software" },
-  { src: "/images/CareerLunch_logo.webp", alt: "CareerLunch" },
-  { src: "/images/Saporo_logo.webp", alt: "Saporo" },
-  { src: "/images/Cegos_Logo.webp", alt: "Cegos" },
-  { src: "/images/Abacus_logo.webp", alt: "Abacus" },
-  { src: "/images/Apidae_log.webp", alt: "APIDAE" },
-  { src: "/images/IDDI_logo.webp", alt: "IDDI" },
-  { src: "/images/Locky_Logo.webp", alt: "Locky" },
-  { src: "/images/HIAG_logo.webp", alt: "HIAG" },
+  { src: "/images/Monizze_Logo.webp", alt: "Monizze logo" },
+  { src: "/images/Horus_logo.webp", alt: "Horus Software logo" },
+  { src: "/images/CareerLunch_logo.webp", alt: "CareerLunch logo" },
+  { src: "/images/Saporo_logo.webp", alt: "Saporo logo" },
+  { src: "/images/Cegos_Logo.webp", alt: "Cegos logo" },
+  { src: "/images/Abacus_logo.webp", alt: "Abacus logo" },
+  { src: "/images/Apidae_log.webp", alt: "APIDAE logo" },
+  { src: "/images/IDDI_logo.webp", alt: "IDDI logo" },
+  { src: "/images/Locky_Logo.webp", alt: "Locky logo" },
+  { src: "/images/HIAG_logo.webp", alt: "HIAG logo" },
 ];
 
 export const CASE_STUDY_BRAND_ASSETS: Record<string, CaseStudyBrandAsset> = {

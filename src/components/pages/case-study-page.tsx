@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
+import { AuthorByline } from "@/components/shared/author-byline";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { RelatedCaseStudies } from "@/components/shared/related-case-studies";
 import { caseStudies, caseStudyBySlug } from "@/lib/case-studies";
@@ -32,6 +33,9 @@ export function CaseStudyPage({ slug }: { slug: string }) {
       <section className="mx-auto w-full max-w-screen-xl px-6 py-12 lg:px-10">
         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#4d6678]">Etude de cas</p>
         <h1 className="mt-3 max-w-5xl text-3xl font-semibold leading-tight text-[#153a54] md:text-4xl">{study.title}</h1>
+        <div className="mt-3">
+          <AuthorByline datePublished="2024-06-15" dateModified="2026-03-01" />
+        </div>
         <p className="mt-4 max-w-4xl text-sm leading-6 text-[#2b4c64]/85 md:text-base">{study.summary}</p>
 
         {study.heroSubtitle && study.heroSubtitle !== study.summary ? (

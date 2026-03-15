@@ -30,7 +30,10 @@ const railLogoSizesByAlt: Record<string, string> = {
 const defaultRailLogoSizes = "(max-width: 768px) 120px, 160px";
 
 export function namesToLogoItems(names: string[]): LogoItem[] {
-  return names.map((name) => ({ src: `/images/${name}`, alt: name.replace(/\.[a-z0-9]+$/i, "") }));
+  return names.map((name) => {
+    const base = name.replace(/\.[a-z0-9]+$/i, "").replace(/^Logo[_-]?/i, "").replace(/[_-]/g, " ");
+    return { src: `/images/${name}`, alt: `${base} logo` };
+  });
 }
 
 export function InfiniteLogoRail({

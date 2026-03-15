@@ -23,24 +23,26 @@ function TestimonialCard({
           <span key={i}>{star}</span>
         ))}
       </div>
-      <p className="mt-4 line-clamp-5 text-sm italic leading-7 text-neutral-600">&ldquo;{t.quote}&rdquo;</p>
-      <div className="mt-5 flex items-center gap-3">
-        <Image
-          src={t.photo}
-          alt={t.author}
-          width={44}
-          height={44}
-          className="h-11 w-11 shrink-0 rounded-full object-cover"
-          loading="lazy"
-          sizes="44px"
-          quality={74}
-        />
-        <div>
-          <p className="text-sm font-semibold text-devlo-900">{t.author}</p>
-          <p className="text-xs text-neutral-600">{t.role}</p>
-          <p className="text-xs font-semibold text-devlo-700">{t.company}</p>
-        </div>
-      </div>
+      <blockquote className="mt-4">
+        <p className="line-clamp-5 text-sm italic leading-7 text-neutral-600">&ldquo;{t.quote}&rdquo;</p>
+        <footer className="mt-5 flex items-center gap-3">
+          <Image
+            src={t.photo}
+            alt={t.author}
+            width={44}
+            height={44}
+            className="h-11 w-11 shrink-0 rounded-full object-cover"
+            loading="lazy"
+            sizes="44px"
+            quality={74}
+          />
+          <cite className="not-italic">
+            <p className="text-sm font-semibold text-devlo-900">{t.author}</p>
+            <p className="text-xs text-neutral-600">{t.role}</p>
+            <p className="text-xs font-semibold text-devlo-700">{t.company}</p>
+          </cite>
+        </footer>
+      </blockquote>
     </article>
   );
 }

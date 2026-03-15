@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { AuthorByline } from "@/components/shared/author-byline";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { WaveDivider } from "@/components/ui/wave-divider";
 import { CTASection } from "@/components/shared/cta-section";
@@ -106,6 +107,9 @@ export function GeoLandingPage({ data, locale = "fr" }: { data: GeoPageData; loc
           <h1 className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
             {h1}
           </h1>
+          <div className="mt-4 flex justify-center">
+            <AuthorByline datePublished="2024-06-15" dateModified="2026-03-01" locale={locale} />
+          </div>
           <div className="mx-auto mt-6 max-w-3xl space-y-4">
             {intro.map((p, i) => (
               <p key={i} className="text-base leading-7 text-white/85 md:text-lg">

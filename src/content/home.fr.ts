@@ -262,17 +262,17 @@ export const kpiMetrics: MetricItem[] = [
 export const enterpriseTitle = "Certaines sociétés rencontrées avec succès";
 
 export const enterpriseLogos: LogoItem[] = [
-  { name: "LafargeHolcim", src: "/images/Logo_LafargeHolcim.webp", alt: "LafargeHolcim" },
+  { name: "LafargeHolcim", src: "/images/Logo_LafargeHolcim.webp", alt: "LafargeHolcim logo" },
   { name: "ABB", src: "/images/Logo_ABB.webp", alt: "ABB logo" },
-  { name: "Hublot", src: "/images/Logo_Hublot.webp", alt: "Hublot" },
-  { name: "Longines", src: "/images/Logo_Longines.webp", alt: "Longines" },
-  { name: "Lombard Odier", src: "/images/Logo_Lombard_Odier.webp", alt: "Lombard Odier" },
-  { name: "BHP", src: "/images/Logo_BHP.webp", alt: "BHP" },
-  { name: "Adecco", src: "/images/Logo_Adecco.webp", alt: "Adecco" },
-  { name: "Banque Cantonale de Fribourg", src: "/images/Logo_BCF.webp", alt: "Banque Cantonale de Fribourg" },
-  { name: "Merck", src: "/images/Logo_Merck.webp", alt: "Merck" },
-  { name: "Apple", src: "/images/Logo_Apple.webp", alt: "Apple" },
-  { name: "Implenia", src: "/images/Logo_Implenia.webp", alt: "Implenia" },
+  { name: "Hublot", src: "/images/Logo_Hublot.webp", alt: "Hublot logo" },
+  { name: "Longines", src: "/images/Logo_Longines.webp", alt: "Longines logo" },
+  { name: "Lombard Odier", src: "/images/Logo_Lombard_Odier.webp", alt: "Lombard Odier logo" },
+  { name: "BHP", src: "/images/Logo_BHP.webp", alt: "BHP logo" },
+  { name: "Adecco", src: "/images/Logo_Adecco.webp", alt: "Adecco logo" },
+  { name: "Banque Cantonale de Fribourg", src: "/images/Logo_BCF.webp", alt: "Banque Cantonale de Fribourg logo" },
+  { name: "Merck", src: "/images/Logo_Merck.webp", alt: "Merck logo" },
+  { name: "Apple", src: "/images/Logo_Apple.webp", alt: "Apple logo" },
+  { name: "Implenia", src: "/images/Logo_Implenia.webp", alt: "Implenia logo" },
 ];
 
 export const proofVideoId = "cr7dgltkvu";
@@ -280,19 +280,19 @@ export const proofVideoId = "cr7dgltkvu";
 export const testimonials: TestimonialItem[] = [
   {
     image: "/images/Olivier-Eyries.webp",
-    imageAlt: "Olivier",
+    imageAlt: "Olivier Eyries, CEO de Saporo",
     content:
       "Je pense que devlo est une organisation partenaire de rêve pour les start-ups qui cherchent à valider leur product-market fit et à obtenir le plus grand nombre possible de rendez-vous qualifiés avec très peu de temps et de ressources. En particulier, le professionnalisme de son fondateur Charles a fait que l’ensemble du processus, de la génération de prospects, à la structuration d’une campagne, jusqu’à l’obtention de rendez-vous, soit une collaboration très agréable et efficace. Pour donner un aperçu, notre première campagne avec devlo: 81% de taux d’ouverture, 54% de taux de réponse et 16% de prospects intéressés par une rencontre avec Saporo. C’est très efficace, surtout dans un secteur aussi complexe que la cybersécurité. Olivier Eyries – CEO – Saporo",
   },
   {
     image: "/images/Tanguy-Coustaline.webp",
-    imageAlt: "Tanguy",
+    imageAlt: "Tanguy Coustaline, Président d'APIDAE",
     content:
       "Installer des ruches sur le toit de son entreprise ne vient pas spontanément à l’esprit ! C’est là que devlo est venu à notre rescousse ! Les connaissances et l’expérience de devlo en matière de développement des ventes sont ce dont nous avions besoin pour avancer rapidement et rencontrer des prospects qualifiés. A l’issue de notre première campagne, nous avons obtenu un taux de réponse de 39% et 13% des prospects contactés sont intéressés pour en savoir plus sur notre association. Il ne tient maintenant qu’à nous de transformer l’essai et de convaincre de nouveaux partenaires de soutenir la biodiversité avec APIDAE! Tanguy – Président – APIDAE",
   },
   {
     image: "/images/Raphael-haut.webp",
-    imageAlt: "Raphael",
+    imageAlt: "Raphael, Head of Business Development chez CareerLunch",
     content:
       "Charles est l’un des experts en vente les plus créatifs et les plus enthousiastes que je connaisse. J’ai travaillé avec lui sur plusieurs campagnes. Il nous a aidés à mettre en place des campagnes de vente hyper-personnalisées, à atteindre des centaines de prospects et, finalement, à obtenir des rendez-vous commerciaux qualifiés. En outre, il nous a également conseillé afin d’affiner notre processus de vente, ce qui a été très utile pour l’ensemble du département des ventes. Je recommande vivement ses compétences et ses services à toutes les startups et PMEs qui souhaitent passer rapidement à la vitesse supérieure.",
     author: "Raphael - Head of Business Development & Marketing - CareerLunch",
@@ -314,9 +314,9 @@ export const caseStudySlides: CaseStudySlide[] = [
       "Comment identifier les meilleurs prospects parmi plusieurs Ideal Customer Profiles (ICP) grâce à des campagnes de prospection commerciale?",
     href: "/resultats/biocarburants-52-rendez-vous",
     hero: "/images/case-studies/heroes/biocarburants-52-rendez-vous-hero.webp",
-    heroAlt: "SquareCo_banner",
+    heroAlt: "Bannière étude de cas SquareCo — 52 rendez-vous qualifiés",
     logo: "/images/case-studies/logos/biocarburants-52-rendez-vous-logo.png",
-    logoAlt: "SquareCo_logo",
+    logoAlt: "SquareCo logo",
   },
   {
     title:
@@ -331,7 +331,7 @@ export const caseStudySlides: CaseStudySlide[] = [
     title: "+40 prospects intéressés sur 286 entreprises prospectées par e-mail, appels téléphoniques et prospection LinkedIn",
     href: "/resultats/mobilite-40-prospects",
     hero: "/images/case-studies/heroes/mobilite-40-prospects-hero.webp",
-    heroAlt: "Locky_banner",
+    heroAlt: "Bannière étude de cas Locky — 40 prospects qualifiés",
     logo: "/images/case-studies/logos/mobilite-40-prospects-logo.png",
     logoAlt: "Locky logo",
   },
@@ -340,7 +340,7 @@ export const caseStudySlides: CaseStudySlide[] = [
       "Comment cette association a externalisé son acquisition de clients et obtenu 70 rendez-vous qualifiés avec des entreprises comme l’UEFA, TAG Heuer, Rothschild, etc.",
     href: "/resultats/biodiversite-70-rendez-vous",
     hero: "/images/case-studies/heroes/biodiversite-70-rendez-vous-hero.webp",
-    heroAlt: "APIDAE_banner",
+    heroAlt: "Bannière étude de cas APIDAE — 70 rendez-vous qualifiés",
     logo: "/images/case-studies/logos/biodiversite-70-rendez-vous-logo.png",
     logoAlt: "Apidae logo",
   },
@@ -348,7 +348,7 @@ export const caseStudySlides: CaseStudySlide[] = [
     title: "Cybersécurité B2B: Agence de prospection commerciale email et téléphonique",
     href: "/resultats/cybersecurite-4500-entreprises",
     hero: "/images/case-studies/heroes/cybersecurite-4500-entreprises-hero.webp",
-    heroAlt: "Saporo_Banner",
+    heroAlt: "Bannière étude de cas Saporo — 4500 entreprises ciblées",
     logo: "/images/case-studies/logos/cybersecurite-4500-entreprises-logo.png",
     logoAlt: "Saporo logo",
   },
@@ -357,7 +357,7 @@ export const caseStudySlides: CaseStudySlide[] = [
       "Comment cet intégrateur audiovisuel a obtenu 16 rendez-vous qualifiés grâce à notre agence de prospection commerciale B2B",
     href: "/resultats/audiovisuel-16-rendez-vous",
     hero: "/images/case-studies/heroes/audiovisuel-16-rendez-vous-hero.webp",
-    heroAlt: "LEMANVISIO",
+    heroAlt: "Bannière étude de cas Lemanvisio — 16 rendez-vous qualifiés",
     logo: "/images/case-studies/logos/audiovisuel-16-rendez-vous-logo.png",
     logoAlt: "Lemanvisio logo",
   },
@@ -366,7 +366,7 @@ export const caseStudySlides: CaseStudySlide[] = [
       "L’immobilier et la prospection commerciale B2B: comment cibler et démarcher des prospects pour la location de surfaces commerciales",
     href: "/resultats/immobilier-11-prospects",
     hero: "/images/case-studies/heroes/immobilier-11-prospects-hero.webp",
-    heroAlt: "HIAG_banner",
+    heroAlt: "Bannière étude de cas HIAG — 11 prospects immobilier",
     logo: "/images/case-studies/logos/immobilier-11-prospects-logo.png",
     logoAlt: "HIAG logo",
   },
@@ -375,7 +375,7 @@ export const caseStudySlides: CaseStudySlide[] = [
       "Planification de Rendez-vous B2B avec Décideurs “formation & développement des compétences” (L&D): 45% des prospects répondent [Agence de Prospection Commerciale B2B]",
     href: "/resultats/formation-14-rendez-vous",
     hero: "/images/case-studies/heroes/formation-14-rendez-vous-hero.webp",
-    heroAlt: "Cegos_banner",
+    heroAlt: "Bannière étude de cas Cegos — 14 rendez-vous formation",
     logo: "/images/case-studies/logos/formation-14-rendez-vous-logo.png",
     logoAlt: "Cegos logo",
   },
@@ -384,7 +384,7 @@ export const caseStudySlides: CaseStudySlide[] = [
       "Stratégie unique de génération de prospects B2B : Comment CareerLunch a obtenu 54 rendez-vous dans la région DACH alors que la plupart des entreprises avaient déjà été contactées",
     href: "/resultats/hr-54-rendez-vous-dach",
     hero: "/images/case-studies/heroes/hr-54-rendez-vous-dach-hero.webp",
-    heroAlt: "CareerLunch_banner",
+    heroAlt: "Bannière étude de cas CareerLunch — 54 rendez-vous DACH",
     logo: "/images/case-studies/logos/hr-54-rendez-vous-dach-logo.jpg",
     logoAlt: "CareerLunch",
   },

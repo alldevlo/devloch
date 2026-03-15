@@ -2,7 +2,9 @@ import Link from "next/link";
 
 import { JsonLd } from "@/components/seo/json-ld";
 import { WaveDivider } from "@/components/ui/wave-divider";
+import { AuthorByline } from "@/components/shared/author-byline";
 import { CaseStudyBadge } from "@/components/shared/case-study-badge";
+import { ComparisonTable } from "@/components/shared/comparison-table";
 import { CaseStudyGrid } from "@/components/shared/case-study-grid";
 import { CTASection } from "@/components/shared/cta-section";
 import { FAQSection } from "@/components/shared/faq-section";
@@ -12,6 +14,7 @@ import { ServiceBenefits } from "@/components/shared/service-benefits";
 import { ServiceHero } from "@/components/shared/service-hero";
 import { ServiceLeadPanel } from "@/components/shared/service-lead-panel";
 import { ServiceProcess } from "@/components/shared/service-process";
+import { SummarySection } from "@/components/shared/summary-section";
 import { ServicesSectionHeader, ServicesSurfaceCard } from "@/components/services/services-ui";
 import { buttonClassName } from "@/components/ui/button";
 import { TRUSTED_LOGOS_STRIP } from "@/content/service-brand-assets";
@@ -22,6 +25,7 @@ import { getLocalizedServicesContent } from "@/lib/i18n/services-content";
 import { resolvePathForLocale, type SupportedLocale } from "@/lib/i18n/slug-map";
 import { toAbsoluteUrl } from "@/lib/seo/metadata";
 import { buildBreadcrumbSchema, buildFaqPageSchema, buildHowToSchema } from "@/lib/seo/schema-builders";
+import { RichParagraph } from "@/lib/utils/rich-text";
 
 function buildServiceSchema(service: ServicePageData) {
   return {
@@ -250,14 +254,36 @@ export function ServicePageTemplate({ service, locale = "fr" }: ServicePageProps
               </div>
 
               <ServicesSurfaceCard className="p-6 md:p-8">
-                <h2 className="text-2xl font-extrabold leading-[1.2] tracking-tight text-devlo-900 md:text-3xl">{localizedService.editorialTitle}</h2>
+                <AuthorByline
+                  datePublished={localizedService.datePublished}
+                  dateModified={localizedService.dateModified}
+                  locale={locale}
+                />
+                <h2 className="mt-4 text-2xl font-extrabold leading-[1.2] tracking-tight text-devlo-900 md:text-3xl">{localizedService.editorialTitle}</h2>
                 <div className="mt-5 space-y-4 text-neutral-600">
                   {localizedService.editorialParagraphs.map((paragraph, index) => (
-                    <p key={`${localizedService.slug}-editorial-${index}`} className="text-sm leading-7 md:text-base md:leading-8">
+                    <RichParagraph key={`${localizedService.slug}-editorial-${index}`} className="text-sm leading-7 md:text-base md:leading-8">
                       {paragraph}
-                    </p>
+                    </RichParagraph>
                   ))}
                 </div>
+                {localizedService.summaryPoints && localizedService.summaryPoints.length > 0 && (
+                  <div className="mt-6">
+                    <SummarySection
+                      title={localizedService.summaryTitle ?? (locale === "fr" ? "En résumé" : locale === "de" ? "Zusammenfassung" : locale === "nl" ? "Samenvatting" : "Key takeaways")}
+                      points={localizedService.summaryPoints}
+                    />
+                  </div>
+                )}
+                {localizedService.comparisonTable && (
+                  <div className="mt-6">
+                    <ComparisonTable
+                      caption={localizedService.comparisonTable.caption}
+                      headers={localizedService.comparisonTable.headers}
+                      rows={localizedService.comparisonTable.rows}
+                    />
+                  </div>
+                )}
               </ServicesSurfaceCard>
 
               <ServicesSurfaceCard id="resultats" className="scroll-mt-32 p-6 md:p-8">

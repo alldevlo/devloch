@@ -47,6 +47,9 @@ type BuildPageMetadataInput = {
   path: string;
   type?: "website" | "article";
   imagePath?: string;
+  datePublished?: string;
+  dateModified?: string;
+  author?: string;
 };
 
 export function buildPageMetadata({
@@ -55,6 +58,9 @@ export function buildPageMetadata({
   path,
   type = "website",
   imagePath,
+  datePublished,
+  dateModified,
+  author,
 }: BuildPageMetadataInput): Metadata {
   const canonicalPath = normalizeRoute(path);
   const override = getHadoSeoMetadataOverride(canonicalPath);
@@ -62,6 +68,12 @@ export function buildPageMetadata({
   const resolvedDescription = override?.description ?? description;
   const ogImage = resolveOgImagePath(override?.ogImage ?? imagePath);
   const ogImageAbsoluteUrl = toAbsoluteUrl(ogImage);
+  const ogTitle = resolvedTitle.toLowerCase().includes("devlo") ? resolvedTitle : `${resolvedTitle} | devlo`;
+
+  const other: Record<string, string> = {};
+  if (datePublished) other["article:published_time"] = datePublished;
+  if (dateModified) other["article:modified_time"] = dateModified;
+  if (author || datePublished) other["article:author"] = author ?? "Charles Perret";
 
   return {
     title: resolvedTitle,
@@ -76,7 +88,7 @@ export function buildPageMetadata({
       languages: buildLanguageAlternates(canonicalPath),
     },
     openGraph: {
-      title: resolvedTitle,
+      title: ogTitle,
       description: resolvedDescription,
       siteName: siteConfig.name,
       type,
@@ -97,5 +109,6 @@ export function buildPageMetadata({
       description: resolvedDescription,
       images: [ogImageAbsoluteUrl],
     },
+    ...(Object.keys(other).length > 0 ? { other } : {}),
   };
 }

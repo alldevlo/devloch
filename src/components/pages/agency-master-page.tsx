@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { AuthorByline } from "@/components/shared/author-byline";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { JsonLd } from "@/components/seo/json-ld";
 import { WaveDivider } from "@/components/ui/wave-divider";
@@ -178,6 +179,9 @@ export function AgencyMasterPage({ locale = "fr" }: AgencyMasterPageProps) {
           <h1 className="mt-4 max-w-3xl text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
             {content.h1}
           </h1>
+          <div className="mt-3">
+            <AuthorByline datePublished="2024-06-15" dateModified="2026-03-01" locale={locale} />
+          </div>
           <p className="mt-6 max-w-2xl text-base leading-7 text-white/85 md:text-lg">
             {content.intro}
           </p>

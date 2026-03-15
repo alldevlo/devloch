@@ -75,6 +75,15 @@ export type ServicePageData = {
   ctaTitle: string;
   ctaSubtitle: string;
   relatedServices: ServiceSlug[];
+  summaryTitle?: string;
+  summaryPoints?: string[];
+  datePublished?: string;
+  dateModified?: string;
+  comparisonTable?: {
+    caption: string;
+    headers: string[];
+    rows: Array<{ criterion: string; colA: string; colB: string }>;
+  };
 };
 
 export type ServiceHubCard = {

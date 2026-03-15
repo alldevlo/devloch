@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 
 import { WrittenTestimonialsCarousel } from "@/components/home/written-testimonials-carousel";
+import { FAQSection } from "@/components/shared/faq-section";
 import { SectionWrapper } from "@/components/shared/section-wrapper";
 import { InfiniteLogoRail, namesToLogoItems } from "@/components/shared/logo-rail";
 import { buttonClassName } from "@/components/ui/button";
@@ -65,19 +66,6 @@ const DeferredServicesCarousel = dynamic(
   },
 );
 
-const DeferredAccordionSingle = dynamic(
-  () => import("@/components/ui/accordion-single").then((module) => module.AccordionSingle),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="space-y-3">
-        <div className="h-16 rounded-xl border border-neutral-200 bg-white/80" />
-        <div className="h-16 rounded-xl border border-neutral-200 bg-white/80" />
-        <div className="h-16 rounded-xl border border-neutral-200 bg-white/80" />
-      </div>
-    ),
-  },
-);
  
 function ClientsRailRow({ names, reverse = false }: { names: string[]; reverse?: boolean }) {
   return <InfiniteLogoRail logos={namesToLogoItems(names)} pauseOnHover reverse={reverse} duration="slow" />;
@@ -392,19 +380,7 @@ export function HomePage({
       </SectionWrapper>
       <WaveDivider variant="layered-bottom" fromBg="#0F2B3C" toBg="#FFFFFF" />
 
-      <SectionWrapper background="white" className="py-[80px] md:py-[120px]">
-        <FadeInOnScroll>
-          <h2 className="text-center text-3xl font-bold leading-[1.2] text-devlo-900 md:text-4xl">{content.faqTitle}</h2>
-        </FadeInOnScroll>
-        <FadeInOnScroll delay={0.15}>
-          <p className="mx-auto mt-4 max-w-[820px] text-center text-base leading-7 text-neutral-600 md:text-lg">
-            {content.faqCtaText}
-          </p>
-        </FadeInOnScroll>
-        <div className="mx-auto mt-10 max-w-[980px]">
-          <DeferredAccordionSingle items={content.faqs} defaultOpenIndex={-1} />
-        </div>
-      </SectionWrapper>
+      <FAQSection title={content.faqTitle} items={content.faqs} />
     </>
   );
 }
