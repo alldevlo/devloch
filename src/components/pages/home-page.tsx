@@ -19,9 +19,13 @@ import {
 } from "lucide-react";
 
 import { WrittenTestimonialsCarousel } from "@/components/home/written-testimonials-carousel";
+import { AuthorByline } from "@/components/shared/author-byline";
+import { ComparisonTable } from "@/components/shared/comparison-table";
 import { FAQSection } from "@/components/shared/faq-section";
 import { SectionWrapper } from "@/components/shared/section-wrapper";
+import { SummarySection } from "@/components/shared/summary-section";
 import { InfiniteLogoRail, namesToLogoItems } from "@/components/shared/logo-rail";
+import { RichParagraph } from "@/lib/utils/rich-text";
 import { buttonClassName } from "@/components/ui/button";
 import { FadeInOnScroll } from "@/components/ui/fade-in-on-scroll";
 import { WaveDivider } from "@/components/ui/wave-divider";
@@ -71,8 +75,15 @@ function ClientsRailRow({ names, reverse = false }: { names: string[]; reverse?:
   return <InfiniteLogoRail logos={namesToLogoItems(names)} pauseOnHover reverse={reverse} duration="slow" />;
 }
 
+type HomeContentData = typeof homeContent & {
+  homeSummaryTitle?: string;
+  homeSummaryPoints?: string[];
+  homeComparisonTable?: { caption: string; headers: string[]; rows: Array<{ criterion: string; colA: string; colB: string }> };
+  homeAuthor?: { datePublished: string; dateModified: string };
+};
+
 type HomeContentProps = {
-  content?: typeof homeContent;
+  content?: HomeContentData;
   studies?: MasterCaseStudyCard[];
   serviceCards?: ServiceHubCard[];
   locale?: "fr" | "en" | "de" | "nl";
@@ -134,7 +145,7 @@ export function HomePage({
             </FadeInOnScroll>
 
             <FadeInOnScroll delay={0.3} eager>
-              <p className="mt-4 text-lg leading-relaxed text-neutral-600">{content.hero.paragraph}</p>
+              <RichParagraph className="mt-4 text-lg leading-relaxed text-neutral-600">{content.hero.paragraph}</RichParagraph>
             </FadeInOnScroll>
 
             <FadeInOnScroll delay={0.4} eager>
@@ -154,6 +165,13 @@ export function HomePage({
             <FadeInOnScroll delay={0.5} eager>
               <p className="mt-5 text-sm font-semibold text-neutral-600">{normalizeMetricSeparator(content.hero.microProof)}</p>
             </FadeInOnScroll>
+            <div className="mt-4">
+              <AuthorByline
+                datePublished={content.homeAuthor?.datePublished}
+                dateModified={content.homeAuthor?.dateModified}
+                locale={locale}
+              />
+            </div>
           </div>
 
           <FadeInOnScroll delay={0.2} direction="right" eager>
@@ -280,7 +298,7 @@ export function HomePage({
                 <article className="h-full rounded-2xl border border-neutral-200 bg-white p-6 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-panel">
                   <Icon className="h-8 w-8 text-devlo-700" aria-hidden />
                   <h3 className="mt-4 text-2xl font-semibold text-devlo-900">{card.title}</h3>
-                  <p className="mt-3 text-base leading-7 text-neutral-600">{card.text}</p>
+                  <RichParagraph className="mt-3 text-base leading-7 text-neutral-600">{card.text}</RichParagraph>
                 </article>
               </FadeInOnScroll>
             );
@@ -318,7 +336,7 @@ export function HomePage({
                         <Icon className="h-5 w-5 text-devlo-700" aria-hidden />
                         <h3 className="text-xl font-semibold text-devlo-900">{step.title}</h3>
                       </div>
-                      <p className="mt-2 text-sm leading-6 text-neutral-600">{step.text}</p>
+                      <RichParagraph className="mt-2 text-sm leading-6 text-neutral-600">{step.text}</RichParagraph>
                     </div>
                   </div>
                 </article>
@@ -341,7 +359,7 @@ export function HomePage({
                 <article className="h-full rounded-2xl border border-devlo-100 bg-white p-5 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-panel">
                   <Icon className="h-6 w-6 text-devlo-700" aria-hidden />
                   <h3 className="mt-3 text-xl font-semibold text-devlo-900">{card.title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-neutral-600">{card.text}</p>
+                  <RichParagraph className="mt-2 text-sm leading-6 text-neutral-600">{card.text}</RichParagraph>
                 </article>
               </FadeInOnScroll>
             );
@@ -362,7 +380,7 @@ export function HomePage({
           <h2 className="text-center text-3xl font-bold leading-[1.2] md:text-4xl">{content.ctaMid.title}</h2>
         </FadeInOnScroll>
         <FadeInOnScroll delay={0.2}>
-          <p className="mx-auto mt-4 max-w-[920px] text-center text-lg leading-8 text-white/90">{content.ctaMid.text}</p>
+          <RichParagraph className="mx-auto mt-4 max-w-[920px] text-center text-lg leading-8 text-white/90">{content.ctaMid.text}</RichParagraph>
         </FadeInOnScroll>
         <FadeInOnScroll delay={0.3}>
           <h3 className="mt-8 text-center text-2xl font-semibold md:text-3xl">{content.ctaMid.h3}</h3>
@@ -379,6 +397,26 @@ export function HomePage({
         </FadeInOnScroll>
       </SectionWrapper>
       <WaveDivider variant="layered-bottom" fromBg="#0F2B3C" toBg="#FFFFFF" />
+
+      {content.homeSummaryPoints && content.homeSummaryPoints.length > 0 && (
+        <section className="border-t border-neutral-200 bg-white py-14 md:py-20">
+          <div className="mx-auto max-w-5xl px-6">
+            <SummarySection
+              title={content.homeSummaryTitle ?? "En résumé"}
+              points={content.homeSummaryPoints}
+            />
+            {content.homeComparisonTable && (
+              <div className="mt-10">
+                <ComparisonTable
+                  caption={content.homeComparisonTable.caption}
+                  headers={content.homeComparisonTable.headers}
+                  rows={content.homeComparisonTable.rows}
+                />
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       <FAQSection title={content.faqTitle} items={content.faqs} />
     </>
