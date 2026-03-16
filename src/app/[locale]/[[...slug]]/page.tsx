@@ -31,6 +31,7 @@ import { getLocalizedMasterfileContent } from "@/lib/i18n/masterfile-content";
 import { getLocalizedServicesContent } from "@/lib/i18n/services-content";
 import { getSanityLocalizedPageData, getSanityLocalizedSeo } from "@/lib/i18n/localized-seo";
 import {
+  entriesByPageId,
   findEntryByFrPath,
   findEntryByLocalePath,
   normalizePath,
@@ -45,7 +46,33 @@ type Params = {
   };
 };
 
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
+
+export function generateStaticParams() {
+  const params: Array<{ locale: string; slug?: string[] }> = [];
+
+  for (const [, entry] of entriesByPageId()) {
+    for (const locale of ["en", "de", "nl"] as const) {
+      const path = entry[locale];
+      if (!path) continue;
+      const withoutPrefix = path.replace(new RegExp(`^/${locale}/?`), "");
+      params.push({
+        locale,
+        slug: withoutPrefix ? withoutPrefix.split("/") : undefined,
+      });
+    }
+
+    if (entry.fr && entry.fr !== "/") {
+      const frSegments = entry.fr.replace(/^\//, "").split("/");
+      params.push({
+        locale: frSegments[0],
+        slug: frSegments.length > 1 ? frSegments.slice(1) : undefined,
+      });
+    }
+  }
+
+  return params;
+}
 
 const consultationAliases = new Set([
   "/contact",
