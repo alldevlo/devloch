@@ -35,6 +35,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       urls.add(`${siteConfig.url}${normalized}`);
     }
   }
+  // Standalone pages not in slug-map (added manually)
+  urls.add(`${siteConfig.url}/insights/voice-to-content`);
+
   return Array.from(urls)
     .sort((a, b) => a.localeCompare(b))
     .map((url) => {

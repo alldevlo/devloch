@@ -52,11 +52,16 @@
 - [Externaliser sa prospection commerciale](https://devlo.ch/blog/externaliser-prospection-commerciale): Guide decisionnel pour externaliser la prospection B2B.
 - [Intent data : identifier les prospects](https://devlo.ch/blog/intent-data-prospects-prets-acheter): Utiliser les signaux d'intention d'achat pour cibler les bons prospects.
 
+## Insights
+
+- [Voice-to-Content : transformer la dictee vocale en contenu publiable](https://devlo.ch/insights/voice-to-content): Guide pratique pour convertir des transcriptions vocales (Wispr Flow) en posts LinkedIn, comptes-rendus et briefs clients via Claude Code.
+
 ## Pages principales
 
 - [Accueil](https://devlo.ch/)
 - [Etudes de cas](https://devlo.ch/etudes-de-cas)
 - [Outbound Academy](https://devlo.ch/academy)
+- [Insights](https://devlo.ch/insights/voice-to-content)
 - [Blog](https://devlo.ch/blog)
 - [Consultation gratuite](https://devlo.ch/consultation)
 
