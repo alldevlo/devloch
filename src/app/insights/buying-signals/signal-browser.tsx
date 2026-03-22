@@ -199,7 +199,7 @@ export function SignalBrowser({
 
       {/* Category tabs */}
       <div
-        className="mb-10 flex flex-wrap justify-center gap-2"
+        className="mb-10 flex justify-center gap-1.5 overflow-x-auto pb-2 sm:gap-2 sm:flex-wrap"
         role="tablist"
         aria-label="Catégories de signaux"
       >
@@ -221,7 +221,7 @@ export function SignalBrowser({
             role="tab"
             aria-selected={activeTab === cat.id}
             onClick={() => setActiveTab(cat.id)}
-            className="rounded-lg px-3.5 py-1.5 text-xs font-semibold transition-all duration-150 active:scale-[0.97]"
+            className="whitespace-nowrap rounded-lg px-3 py-1.5 text-[11px] font-semibold transition-all duration-150 active:scale-[0.97] sm:text-xs sm:px-3.5"
             style={{
               background: activeTab === cat.id ? "#074f74" : "#eeeff0",
               color: activeTab === cat.id ? "#ffffff" : "#666d70",

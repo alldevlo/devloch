@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { WaveDivider } from "@/components/ui/wave-divider";
 import { JsonLd } from "@/components/seo/json-ld";
-import { NewsletterSection } from "@/components/sections/newsletter-section";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import {
   buildBreadcrumbSchema,
@@ -896,7 +896,7 @@ export default function BuyingSignalsPage() {
                   textWrap: "balance",
                 } as React.CSSProperties}
               >
-                Signaux d&apos;Intention d&apos;Achat B2B
+                Liste des Signaux d&apos;Intention d&apos;Achat B2B
               </h1>
               <p
                 className="mx-auto max-w-xl text-white/80"
@@ -906,20 +906,21 @@ export default function BuyingSignalsPage() {
                   textWrap: "pretty",
                 } as React.CSSProperties}
               >
-                Le guide complet pour identifier vos prospects prêts à acheter
-                — avant vos concurrents. {totalSignals} signaux classés par
-                catégorie, intensité et outil de détection.
+                La liste la plus complète pour identifier vos prospects prêts à
+                acheter — avant vos concurrents. {totalSignals} signaux classés
+                par catégorie, intensité et outil de détection.
               </p>
             </div>
 
             {/* Author card */}
             <div className="flex items-center gap-3">
-              <div
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-[#074f74]"
-                style={{ background: "#ffffff" }}
-              >
-                CP
-              </div>
+              <Image
+                src="/images/CharlesPerretProfilePicture2025.webp"
+                alt="Charles Perret, fondateur de devlo"
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
               <div className="text-left">
                 <p className="text-sm font-semibold text-white">
                   Charles Perret
@@ -943,9 +944,38 @@ export default function BuyingSignalsPage() {
         <WaveDivider variant="layered-bottom" fromBg="#0a3a54" toBg="#FFFFFF" />
 
         {/* ============================================================ */}
-        {/*  Newsletter (between hero and signal browser)                 */}
+        {/*  Newsletter FR (between hero and signal browser)              */}
         {/* ============================================================ */}
-        <NewsletterSection />
+        <section className="mx-auto w-full max-w-3xl px-6 py-12">
+          <div className="rounded-xl border border-[#e0e4e6] bg-[#F7F8FC] p-8 text-center">
+            <h3 className="text-xl font-semibold text-[#0D0D0D]">
+              Recevez nos insights B2B chaque semaine
+            </h3>
+            <p className="mx-auto mt-2 max-w-lg text-sm text-[#4A4A4A]">
+              Stratégies outbound concrètes, automatisation IA et intelligence
+              du marché suisse. Pas de blabla — uniquement ce qui fonctionne.
+            </p>
+            <form
+              action="/api/newsletter"
+              method="POST"
+              className="mx-auto mt-6 flex max-w-md gap-2"
+            >
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="votre@email.com"
+                className="flex-1 rounded-md border border-[#E5E7EB] bg-white px-4 py-2.5 text-sm text-[#0D0D0D] placeholder:text-[#8C8C8C] focus:border-[#074f74] focus:outline-none focus:ring-1 focus:ring-[#074f74]"
+              />
+              <button
+                type="submit"
+                className="rounded-md bg-[#074f74] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#0a3a54]"
+              >
+                S&apos;abonner
+              </button>
+            </form>
+          </div>
+        </section>
 
         {/* ============================================================ */}
         {/*  Signal Browser (Client Component)                            */}
@@ -1090,6 +1120,9 @@ export default function BuyingSignalsPage() {
           </div>
         </section>
 
+        {/* Wave transition into CTA */}
+        <WaveDivider variant="layered-bottom" fromBg="#FFFFFF" toBg="#074f74" />
+
         {/* ============================================================ */}
         {/*  CTA Section                                                  */}
         {/* ============================================================ */}
@@ -1137,51 +1170,43 @@ export default function BuyingSignalsPage() {
           </div>
         </section>
 
-        {/* ============================================================ */}
-        {/*  Footer line                                                  */}
-        {/* ============================================================ */}
-        <footer
-          className="border-t px-6 py-12"
-          style={{ borderColor: "#e0e4e6" }}
-        >
-          <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 text-xs md:flex-row"
-            style={{ color: "#666d70" }}
-          >
-            <span>Dernière mise à jour : mars 2026</span>
-            <nav className="flex flex-wrap gap-6">
-              <Link
-                href="/services/cold-email"
-                className="transition-colors hover:text-[#0d1a21]"
-              >
-                Cold email
-              </Link>
-              <Link
-                href="/services/linkedin-outreach"
-                className="transition-colors hover:text-[#0d1a21]"
-              >
-                LinkedIn outreach
-              </Link>
-              <Link
-                href="/services/generation-leads"
-                className="transition-colors hover:text-[#0d1a21]"
-              >
-                Génération de leads
-              </Link>
-            </nav>
-            <span>
-              &copy; 2026{" "}
-              <a
-                href="https://devlo.ch"
-                className="underline transition-colors hover:text-[#0d1a21]"
-              >
-                devlo.ch
-              </a>
-            </span>
-          </div>
-        </footer>
+        {/* Freshness signal */}
+        <p className="py-8 text-center text-xs" style={{ color: "#666d70" }}>
+          Dernière mise à jour : mars 2026
+        </p>
       </main>
 
-      <NewsletterSection />
+      {/* Bottom newsletter — same French version */}
+      <section className="mx-auto w-full max-w-3xl px-6 py-12">
+        <div className="rounded-xl border border-[#e0e4e6] bg-[#F7F8FC] p-8 text-center">
+          <h3 className="text-xl font-semibold text-[#0D0D0D]">
+            Recevez nos insights B2B chaque semaine
+          </h3>
+          <p className="mx-auto mt-2 max-w-lg text-sm text-[#4A4A4A]">
+            Stratégies outbound concrètes, automatisation IA et intelligence
+            du marché suisse. Pas de blabla — uniquement ce qui fonctionne.
+          </p>
+          <form
+            action="/api/newsletter"
+            method="POST"
+            className="mx-auto mt-6 flex max-w-md gap-2"
+          >
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="votre@email.com"
+              className="flex-1 rounded-md border border-[#E5E7EB] bg-white px-4 py-2.5 text-sm text-[#0D0D0D] placeholder:text-[#8C8C8C] focus:border-[#074f74] focus:outline-none focus:ring-1 focus:ring-[#074f74]"
+            />
+            <button
+              type="submit"
+              className="rounded-md bg-[#074f74] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#0a3a54]"
+            >
+              S&apos;abonner
+            </button>
+          </form>
+        </div>
+      </section>
     </>
   );
 }

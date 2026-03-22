@@ -51,6 +51,7 @@ const navCopyByLocale: Record<
     academySubtitle: string;
     aiSalesOps: string;
     aiSalesOpsSubtitle: string;
+    insights: string;
   }
 > = {
   fr: {
@@ -61,6 +62,7 @@ const navCopyByLocale: Record<
     services: "Services",
     academy: "Outbound Academy",
     cta: "Consultation gratuite",
+    insights: "Insights",
     allServices: "Tous les services",
     seeAllServices: "Voir tous les services →",
     allCaseStudies: "Toutes les études de cas",
@@ -108,6 +110,7 @@ const navCopyByLocale: Record<
     academySubtitle: "Free B2B outbound training",
     aiSalesOps: "AI Sales Ops",
     aiSalesOpsSubtitle: "AI systems for B2B sales teams",
+    insights: "Insights",
   },
   de: {
     navigationAria: "Hauptnavigation",
@@ -136,6 +139,7 @@ const navCopyByLocale: Record<
     academySubtitle: "Kostenlose B2B-Akquise-Schulung",
     aiSalesOps: "AI Sales Ops",
     aiSalesOpsSubtitle: "KI-Systeme für B2B-Vertriebsteams",
+    insights: "Insights",
   },
   nl: {
     navigationAria: "Hoofdnavigatie",
@@ -164,6 +168,7 @@ const navCopyByLocale: Record<
     academySubtitle: "Gratis B2B outbound training",
     aiSalesOps: "AI Sales Ops",
     aiSalesOpsSubtitle: "AI-systemen voor B2B salesteams",
+    insights: "Insights",
   },
 };
 
@@ -182,7 +187,7 @@ export function SiteHeader() {
     { key: "caseStudies", href: caseStudiesHref as string, label: navCopy.caseStudies },
     { key: "aiSalesOps", href: aiSalesOpsHref as string, label: navCopy.aiSalesOps },
     { key: "services", href: toCurrentLocalePath("/services") as string, label: navCopy.services },
-    { key: "markets", href: toCurrentLocalePath("/prospection-commerciale-suisse") as string, label: navCopy.markets },
+    { key: "insights", href: "/insights" as string, label: navCopy.insights },
   ] as const;
 
   const geoLinks = [
@@ -555,7 +560,8 @@ export function SiteHeader() {
                 );
               }
 
-              if (item.key === "markets") {
+              if (item.key === "agency") {
+                const agencyOrMarketsActive = agencyActive || marketsActive;
                 return (
                   <div
                     key={item.key}
@@ -570,8 +576,8 @@ export function SiteHeader() {
                     }}
                     onFocusCapture={() => setIsMarketsMenuOpen(true)}
                   >
-                    <div className={desktopDropdownShellClass(marketsActive, isMarketsMenuOpen)}>
-                      <Link href={item.href} className={desktopDropdownLinkClass(marketsActive, isMarketsMenuOpen)}>
+                    <div className={desktopDropdownShellClass(agencyOrMarketsActive, isMarketsMenuOpen)}>
+                      <Link href={item.href} className={desktopDropdownLinkClass(agencyOrMarketsActive, isMarketsMenuOpen)}>
                         {item.label}
                       </Link>
                       <button
@@ -595,11 +601,24 @@ export function SiteHeader() {
                     {isMarketsMenuOpen ? (
                       <div className="absolute left-0 top-[calc(100%+4px)] z-[70] w-56 overflow-hidden rounded-2xl border border-devlo-700 bg-devlo-700 p-3 text-white shadow-panel motion-safe:animate-fade-in-up">
                         <div className="flex flex-col gap-1">
+                          <Link
+                            href={item.href}
+                            className={[
+                              "rounded-lg px-3 py-2 text-sm font-semibold transition",
+                              agencyActive ? "bg-white/20" : "hover:bg-white/10",
+                            ].join(" ")}
+                          >
+                            {navCopy.agency}
+                          </Link>
+                          <div className="my-1 border-t border-white/20" />
+                          <p className="px-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-white/60">
+                            {navCopy.markets}
+                          </p>
                           {geoLinks.map((geo) => (
                             <Link
-                              key={geo.href}
+                              key={geo.href as string}
                               href={geo.href}
-                              className="flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-3 py-2.5 text-sm font-semibold transition hover:border-white/40 hover:bg-white/15"
+                              className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm transition hover:bg-white/10"
                             >
                               <span>{geo.flag}</span>
                               <span>{geo.label}</span>
@@ -612,9 +631,10 @@ export function SiteHeader() {
                 );
               }
 
-              if (item.key === "agency") {
+              if (item.key === "insights") {
+                const insightsActive = canonicalFrPath.startsWith("/insights");
                 return (
-                  <Link key={item.href} href={item.href} className={desktopDirectLinkClass(agencyActive)}>
+                  <Link key={item.href} href={item.href} className={desktopDirectLinkClass(insightsActive)}>
                     {item.label}
                   </Link>
                 );
@@ -814,7 +834,8 @@ export function SiteHeader() {
                   );
                 }
 
-                if (item.key === "markets") {
+                if (item.key === "agency") {
+                  const agencyOrMarketsActive = agencyActive || marketsActive;
                   return (
                     <div key={`mobile-${item.key}`} className="rounded-xl border border-neutral-200 p-2">
                       <div className="flex items-center justify-between gap-2">
@@ -822,7 +843,7 @@ export function SiteHeader() {
                           href={item.href}
                           className={[
                             "flex min-h-[44px] flex-1 items-center rounded-lg px-3 py-2 text-xl font-semibold",
-                            marketsActive ? "bg-devlo-700 text-white" : "text-devlo-900",
+                            agencyOrMarketsActive ? "bg-devlo-700 text-white" : "text-devlo-900",
                           ].join(" ")}
                         >
                           {item.label}
@@ -840,6 +861,7 @@ export function SiteHeader() {
                       {isMobileMarketsOpen ? (
                         <div className="mt-2 overflow-hidden motion-safe:animate-fade-in-up">
                           <div className="grid gap-1.5">
+                            <p className="px-3 pt-1 text-xs font-semibold uppercase tracking-wider text-neutral-400">{navCopy.markets}</p>
                             {geoLinks.map((geo) => (
                               <Link
                                 key={`mobile-geo-${geo.href}`}
@@ -857,14 +879,15 @@ export function SiteHeader() {
                   );
                 }
 
-                if (item.key === "agency") {
+                if (item.key === "insights") {
+                  const insightsActive = canonicalFrPath.startsWith("/insights");
                   return (
                     <Link
                       key={item.href}
                       href={item.href}
                       className={[
                         "flex min-h-[44px] items-center rounded-xl border px-4 py-3 text-xl font-semibold",
-                        agencyActive
+                        insightsActive
                           ? "border-devlo-700 bg-devlo-700 text-white"
                           : "border-neutral-200 bg-white text-devlo-900",
                       ].join(" ")}

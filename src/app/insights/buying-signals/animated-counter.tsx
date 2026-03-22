@@ -31,8 +31,8 @@ export function AnimatedCounter({ target }: { target: number }) {
           inset: "-2rem",
           zIndex: 0,
           background:
-            "radial-gradient(circle, #074f74 0%, transparent 70%)",
-          opacity: 0.07,
+            "radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%)",
+          opacity: 1,
         }}
         aria-hidden="true"
       />
@@ -41,7 +41,7 @@ export function AnimatedCounter({ target }: { target: number }) {
         style={{
           fontSize: "clamp(5rem, 12vw, 10rem)",
           lineHeight: 0.9,
-          color: "#074f74",
+          color: "#ffffff",
         }}
       >
         {count}
