@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 
-import { Breadcrumb } from "@/components/ui/breadcrumb";
-import { WaveDivider } from "@/components/ui/wave-divider";
 import { JsonLd } from "@/components/seo/json-ld";
 import { NewsletterSection } from "@/components/sections/newsletter-section";
 import { buildPageMetadata } from "@/lib/seo/metadata";
@@ -12,6 +9,9 @@ import {
   buildArticleSchema,
   buildFaqPageSchema,
 } from "@/lib/seo/schema-builders";
+
+import { AnimatedCounter } from "./animated-counter";
+import { SignalBrowser } from "./signal-browser";
 
 /* ------------------------------------------------------------------ */
 /*  Metadata                                                          */
@@ -818,45 +818,31 @@ const CATEGORIES: SignalCategory[] = [
 ];
 
 /* ------------------------------------------------------------------ */
-/*  Helpers                                                           */
+/*  Email framework steps                                              */
 /* ------------------------------------------------------------------ */
 
-function IntensityBadge({ level }: { level: Signal["intensity"] }) {
-  const config = {
-    "tres-forte": { label: "Tres forte", bg: "bg-red-100 text-red-800" },
-    forte: { label: "Forte", bg: "bg-orange-100 text-orange-800" },
-    moyenne: { label: "Moyenne", bg: "bg-yellow-100 text-yellow-800" },
-    faible: { label: "Faible", bg: "bg-gray-100 text-gray-700" },
-  };
-  const c = config[level];
-  return (
-    <span
-      className={`inline-block rounded-full px-2.5 py-0.5 text-xs font-semibold ${c.bg}`}
-    >
-      {c.label}
-    </span>
-  );
-}
-
-function CategoryNav({
-  categories,
-}: {
-  categories: SignalCategory[];
-}) {
-  return (
-    <nav className="flex flex-wrap gap-2">
-      {categories.map((cat) => (
-        <a
-          key={cat.id}
-          href={`#${cat.id}`}
-          className="rounded-lg border border-[#074f74]/15 bg-[#074f74]/5 px-3 py-1.5 text-xs font-semibold text-[#074f74] transition hover:bg-[#074f74]/10"
-        >
-          {cat.title} ({cat.count})
-        </a>
-      ))}
-    </nav>
-  );
-}
+const EMAIL_STEPS = [
+  {
+    step: "Signal",
+    desc: "L'evenement observable que vous avez detecte",
+  },
+  {
+    step: "Probleme",
+    desc: "Le defi que ce signal implique pour le prospect",
+  },
+  {
+    step: "Solution",
+    desc: "Comment vous aidez a resoudre ce probleme",
+  },
+  {
+    step: "CTA",
+    desc: "Une question simple et non-engageante",
+  },
+  {
+    step: "P.S.",
+    desc: "Un proof point concret (resultat client, chiffre)",
+  },
+];
 
 /* ------------------------------------------------------------------ */
 /*  Page                                                              */
@@ -887,238 +873,271 @@ export default function BuyingSignalsPage() {
         ]}
       />
 
-      {/* Hero */}
-      <section className="bg-gradient-to-b from-[#074f74] to-[#0a3a54] pt-2 text-white">
-        <Breadcrumb items={breadcrumbItems} variant="dark" />
+      <main>
+        {/* ============================================================ */}
+        {/*  Hero Section                                                 */}
+        {/* ============================================================ */}
+        <section
+          style={{
+            background:
+              "linear-gradient(165deg, hsl(200 30% 97%) 0%, hsl(200 40% 93%) 100%)",
+          }}
+        >
+          {/* Bottom decorative line */}
+          <div className="relative">
+            <div className="mx-auto flex max-w-6xl flex-col items-center gap-8 px-6 py-24 text-center md:py-32">
+              {/* Animated counter */}
+              <AnimatedCounter target={totalSignals} />
 
-        <div className="mx-auto w-full max-w-3xl px-6 pb-14 pt-10 text-center lg:px-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.15em] text-white/60">
-            Insight
-          </p>
-          <h1 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight lg:text-5xl">
-            94 Signaux d&apos;Intention d&apos;Achat B2B
-          </h1>
-          <p className="mx-auto mt-5 max-w-xl text-lg font-semibold leading-relaxed text-white/85">
-            Le guide complet pour identifier vos prospects prets a acheter —
-            avant vos concurrents.
-          </p>
-          <div className="mt-8 flex items-center justify-center gap-3">
-            <Image
-              src="/images/CharlesPerretProfilePicture2025.webp"
-              alt="Charles Perret, fondateur de devlo"
-              width={40}
-              height={40}
-              className="rounded-full"
-            />
-            <div className="text-left text-sm">
-              <p className="font-medium text-white">Par Charles Perret</p>
-              <p className="text-white/50">Mars 2026 · 15 min de lecture</p>
+              {/* Headline + subtitle */}
+              <div className="space-y-5">
+                <h1
+                  className="font-black tracking-tight"
+                  style={{
+                    fontSize: "clamp(1.75rem, 4vw, 2.75rem)",
+                    lineHeight: 1.1,
+                    textWrap: "balance",
+                    color: "#0d1a21",
+                  } as React.CSSProperties}
+                >
+                  Signaux d&apos;Intention d&apos;Achat B2B
+                </h1>
+                <p
+                  className="mx-auto max-w-xl"
+                  style={{
+                    fontSize: "clamp(1rem, 1.5vw, 1.25rem)",
+                    lineHeight: 1.625,
+                    textWrap: "pretty",
+                    color: "#666d70",
+                  } as React.CSSProperties}
+                >
+                  Le guide complet pour identifier vos prospects prets a acheter
+                  — avant vos concurrents. {totalSignals} signaux classes par
+                  categorie, intensite et outil de detection.
+                </p>
+              </div>
+
+              {/* Author card */}
+              <div className="flex items-center gap-3">
+                <div
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white"
+                  style={{ background: "#074f74" }}
+                >
+                  CP
+                </div>
+                <div className="text-left">
+                  <p className="text-sm font-semibold" style={{ color: "#0d1a21" }}>
+                    Charles Perret
+                  </p>
+                  <p className="text-xs" style={{ color: "#666d70" }}>
+                    Fondateur de{" "}
+                    <a
+                      href="https://devlo.ch"
+                      className="underline transition-colors hover:text-[#0d1a21]"
+                    >
+                      devlo.ch
+                    </a>{" "}
+                    &middot; Mars 2026
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <WaveDivider variant="layered-bottom" fromBg="#0a3a54" toBg="#FFFFFF" />
-
-      {/* Body */}
-      <article className="mx-auto w-full max-w-3xl px-6 py-14 lg:px-10">
-        {/* Intro */}
-        <section className="space-y-5">
-          <h2 className="text-2xl font-semibold text-[#153a54]">
-            Pourquoi les signaux d&apos;achat changent tout
-          </h2>
-          <p className="text-base leading-relaxed text-[#2a4c63]/80">
-            Un signal d&apos;intention d&apos;achat est un evenement observable
-            dans la vie d&apos;une entreprise ou d&apos;un contact qui indique
-            un besoin reel pour votre solution. Recrutement massif, levee de
-            fonds, changement de tech stack, score NPS en chute : chaque signal
-            represente un moment ou le prospect est plus receptif qu&apos;a
-            n&apos;importe quel autre moment.
-          </p>
-          <p className="text-base leading-relaxed text-[#2a4c63]/80">
-            Ce guide recense <strong>{totalSignals} signaux</strong> repartis
-            en {CATEGORIES.length} categories. Pour chaque signal, vous
-            trouverez une description, un niveau d&apos;intensite (de faible a
-            tres forte), et les outils pour le detecter automatiquement.
-          </p>
-        </section>
-
-        {/* Table of contents */}
-        <section className="mt-10 rounded-xl border border-[#074f74]/10 bg-[#074f74]/5 p-6">
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-[#074f74]">
-            Sommaire
-          </h3>
-          <div className="mt-4">
-            <CategoryNav categories={CATEGORIES} />
+            {/* Bottom gradient line */}
+            <div
+              className="h-px w-full"
+              style={{
+                background:
+                  "linear-gradient(90deg, transparent, #e0e4e6, transparent)",
+              }}
+              aria-hidden="true"
+            />
           </div>
         </section>
 
-        {/* Signal categories */}
-        {CATEGORIES.map((category) => (
-          <section key={category.id} id={category.id} className="mt-16">
-            <div className="mb-6 border-b-2 border-[#074f74]/20 pb-3">
-              <h2 className="text-2xl font-semibold text-[#153a54]">
-                {category.title}
+        {/* ============================================================ */}
+        {/*  Signal Browser (Client Component)                            */}
+        {/* ============================================================ */}
+        <SignalBrowser categories={CATEGORIES} />
+
+        {/* ============================================================ */}
+        {/*  Email Framework                                              */}
+        {/* ============================================================ */}
+        <section style={{ background: "hsl(200 25% 97%)" }}>
+          <div className="mx-auto max-w-4xl px-6 py-20 md:py-28">
+            <div className="mb-14 text-center">
+              <h2
+                className="font-black tracking-tight"
+                style={{
+                  fontSize: "clamp(1.5rem, 3vw, 2.25rem)",
+                  lineHeight: 1.15,
+                  textWrap: "balance",
+                  color: "#0d1a21",
+                } as React.CSSProperties}
+              >
+                Comment utiliser ces signaux dans un email
               </h2>
-              <p className="mt-1 text-sm text-[#2a4c63]/60">
-                {category.count} signaux
+              <p
+                className="mx-auto mt-4 max-w-xl text-sm leading-relaxed"
+                style={{ color: "#666d70" }}
+              >
+                Chaque email de prospection base sur un signal suit un framework
+                en 5 parties. Contactez dans les 24-48h suivant la detection
+                pour un impact maximal.
               </p>
             </div>
 
-            <div className="space-y-6">
-              {category.signals.map((signal, index) => (
-                <div
-                  key={index}
-                  className="rounded-lg border border-[#074f74]/10 bg-white p-5 shadow-sm transition hover:shadow-md"
-                >
-                  <div className="flex flex-wrap items-center gap-3">
-                    <h3 className="text-base font-semibold text-[#153a54]">
-                      {signal.name}
-                    </h3>
-                    <IntensityBadge level={signal.intensity} />
-                  </div>
-                  <p className="mt-2 text-sm leading-relaxed text-[#2a4c63]/80">
-                    {signal.description}
-                  </p>
-                  <p className="mt-3 text-xs text-[#2a4c63]/50">
-                    <span className="font-semibold text-[#2a4c63]/70">
-                      Detection :
-                    </span>{" "}
-                    {signal.detection}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </section>
-        ))}
-
-        {/* Framework email */}
-        <section className="mt-16 space-y-5">
-          <h2 className="text-2xl font-semibold text-[#153a54]">
-            Comment utiliser ces signaux dans un email
-          </h2>
-          <p className="text-base leading-relaxed text-[#2a4c63]/80">
-            Chaque email de prospection base sur un signal suit un framework en
-            5 parties :
-          </p>
-          <div className="space-y-3">
-            {[
-              {
-                step: "Signal",
-                desc: "L'evenement observable que vous avez detecte",
-              },
-              {
-                step: "Probleme",
-                desc: "Le defi que ce signal implique pour le prospect",
-              },
-              {
-                step: "Solution",
-                desc: "Comment vous aidez a resoudre ce probleme",
-              },
-              {
-                step: "CTA",
-                desc: "Une question simple et non-engageante",
-              },
-              {
-                step: "P.S.",
-                desc: "Un proof point concret (resultat client, chiffre)",
-              },
-            ].map((item, i) => (
-              <div key={i} className="flex gap-3">
-                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#074f74] text-xs font-bold text-white">
-                  {i + 1}
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-[#153a54]">
-                    {item.step}
-                  </p>
-                  <p className="text-sm text-[#2a4c63]/80">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Pro tips */}
-        <section className="mt-14 space-y-4">
-          <h2 className="text-2xl font-semibold text-[#153a54]">
-            Bonnes pratiques
-          </h2>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {[
-              {
-                label: "Timing",
-                desc: "Contactez dans les 24-48h. Apres 7 jours, c'est de l'info perimee.",
-              },
-              {
-                label: "Mobile first",
-                desc: "80% des emails sont lus sur mobile. Paragraphes de 2-3 lignes max.",
-              },
-              {
-                label: "Personnalisation intelligente",
-                desc: "Ne mentionnez que les details qui connectent au probleme resolu.",
-              },
-              {
-                label: "Test & iterate",
-                desc: "A/B testez vos signaux, problemes et CTAs par segment.",
-              },
-            ].map((item) => (
+            <div className="relative">
+              {/* Vertical timeline line */}
               <div
-                key={item.label}
-                className="rounded-lg border border-[#074f74]/10 bg-[#074f74]/5 p-4"
-              >
-                <p className="text-sm font-semibold text-[#153a54]">
-                  {item.label}
-                </p>
-                <p className="mt-1 text-xs text-[#2a4c63]/80">{item.desc}</p>
+                className="absolute bottom-0 left-6 top-0 hidden w-px sm:block md:left-8"
+                style={{
+                  background:
+                    "linear-gradient(180deg, #e0e4e6, rgba(7,79,116,0.3), #e0e4e6)",
+                }}
+                aria-hidden="true"
+              />
+
+              <div className="space-y-6">
+                {EMAIL_STEPS.map((item, i) => (
+                  <div
+                    key={i}
+                    className="group flex items-start gap-5 sm:gap-6"
+                  >
+                    <div
+                      className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl font-black text-lg text-white transition-transform duration-200 group-hover:scale-105 md:h-16 md:w-16 md:text-xl"
+                      style={{
+                        background: "#074f74",
+                        boxShadow: "0 4px 12px rgba(7,79,116,0.25)",
+                      }}
+                    >
+                      {i + 1}
+                    </div>
+                    <div className="pt-1 md:pt-3">
+                      <p
+                        className="text-base font-bold md:text-lg"
+                        style={{ color: "#0d1a21" }}
+                      >
+                        {item.step}
+                      </p>
+                      <p
+                        className="mt-1 text-sm leading-relaxed"
+                        style={{ color: "#666d70" }}
+                      >
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </section>
 
-        {/* FAQ */}
-        <section className="mt-14 space-y-5">
-          <h2 className="text-2xl font-semibold text-[#153a54]">
+        {/* ============================================================ */}
+        {/*  FAQ Section                                                  */}
+        {/* ============================================================ */}
+        <section id="faq" className="mx-auto max-w-3xl px-6 py-20 md:py-28">
+          <h2
+            className="mb-12 text-center font-black tracking-tight"
+            style={{
+              fontSize: "clamp(1.5rem, 3vw, 2.25rem)",
+              lineHeight: 1.15,
+              textWrap: "balance",
+              color: "#0d1a21",
+            } as React.CSSProperties}
+          >
             Questions frequentes
           </h2>
-          <div className="space-y-4">
+
+          <div
+            className="overflow-hidden rounded-xl border bg-white p-2 md:p-4"
+            style={{
+              borderColor: "#e0e4e6",
+              boxShadow: "0 1px 3px hsl(200 20% 80% / 0.3)",
+            }}
+          >
             {faqItems.map((item, i) => (
               <details
                 key={i}
-                className="group rounded-lg border border-[#074f74]/10 bg-white"
+                className="group border-b last:border-b-0"
+                style={{ borderColor: "#e0e4e6" }}
               >
-                <summary className="cursor-pointer p-4 text-sm font-semibold text-[#153a54] transition hover:text-[#074f74]">
-                  {item.question}
+                <summary className="flex cursor-pointer select-none list-none items-center justify-between py-5 [&::-webkit-details-marker]:hidden">
+                  <h3
+                    className="pr-4 text-sm font-semibold md:text-base"
+                    style={{ color: "#0d1a21" }}
+                  >
+                    {item.question}
+                  </h3>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="shrink-0 text-[#666d70] transition-transform duration-200 group-open:rotate-180"
+                    aria-hidden="true"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
                 </summary>
-                <p className="px-4 pb-4 text-sm leading-relaxed text-[#2a4c63]/80">
-                  {item.answer}
-                </p>
+                <div className="pb-5 pr-8">
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ color: "#666d70" }}
+                  >
+                    {item.answer}
+                  </p>
+                </div>
               </details>
             ))}
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="mt-14">
-          <div className="rounded-xl bg-gradient-to-b from-[#074f74] to-[#0a3a54] p-8 text-center text-white md:p-12">
-            <h2 className="text-2xl font-bold">
+        {/* ============================================================ */}
+        {/*  CTA Section                                                  */}
+        {/* ============================================================ */}
+        <section
+          style={{
+            background:
+              "linear-gradient(165deg, #074f74 0%, #0a3a54 100%)",
+          }}
+        >
+          <div className="mx-auto max-w-2xl space-y-8 px-6 py-20 text-center md:py-28">
+            <h2
+              className="font-black text-white"
+              style={{
+                fontSize: "clamp(1.5rem, 3.5vw, 2.5rem)",
+                lineHeight: 1.1,
+                textWrap: "balance",
+              } as React.CSSProperties}
+            >
               Vous voulez detecter ces signaux automatiquement ?
             </h2>
-            <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-white/75">
-              devlo configure et automatise la detection de signaux d&apos;achat
-              pour vos campagnes de prospection B2B. On transforme les signaux
-              en rendez-vous qualifies.
+            <p className="text-base text-white/80">
+              devlo configure et automatise la detection de signaux
+              d&apos;achat pour vos campagnes de prospection B2B. On transforme
+              les signaux en rendez-vous qualifies.
             </p>
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 href="/consultation"
-                className="inline-flex h-11 items-center rounded-lg bg-white px-6 text-sm font-semibold uppercase tracking-[0.08em] text-[#074f74] transition hover:bg-white/90"
+                className="rounded-lg px-7 py-3 text-sm font-bold text-[#074f74] transition-all duration-150 active:scale-[0.97]"
+                style={{
+                  background: "#ffffff",
+                  boxShadow: "0 4px 14px rgba(0,0,0,0.2)",
+                }}
               >
                 Reserver une consultation
               </Link>
               <Link
                 href="/services/cold-email"
-                className="inline-flex h-11 items-center rounded-lg border border-white/30 px-6 text-sm font-semibold uppercase tracking-[0.08em] text-white transition hover:border-white/50 hover:bg-white/10"
+                className="rounded-lg border px-7 py-3 text-sm font-bold text-white transition-all duration-150 active:scale-[0.97]"
+                style={{ borderColor: "rgba(255,255,255,0.3)" }}
               >
                 Voir nos services
               </Link>
@@ -1126,48 +1145,49 @@ export default function BuyingSignalsPage() {
           </div>
         </section>
 
-        {/* Internal links */}
-        <section className="mt-14 space-y-3">
-          <h2 className="text-2xl font-semibold text-[#153a54]">
-            Pour aller plus loin
-          </h2>
-          <p className="text-base leading-relaxed text-[#2a4c63]/80">
-            Les signaux d&apos;achat sont au coeur de la methode{" "}
-            <Link
-              href="/"
-              className="font-medium text-[#074f74] underline hover:text-[#0a3a54]"
-            >
-              devlo
-            </Link>
-            . Decouvrez comment nous les utilisons dans nos campagnes de{" "}
-            <Link
-              href="/services/cold-email"
-              className="font-medium text-[#074f74] underline hover:text-[#0a3a54]"
-            >
-              cold email
-            </Link>
-            , de{" "}
-            <Link
-              href="/services/linkedin-outreach"
-              className="font-medium text-[#074f74] underline hover:text-[#0a3a54]"
-            >
-              LinkedIn outreach
-            </Link>{" "}
-            et de{" "}
-            <Link
-              href="/services/generation-leads"
-              className="font-medium text-[#074f74] underline hover:text-[#0a3a54]"
-            >
-              generation de leads B2B
-            </Link>
-            .
-          </p>
-        </section>
-
-        <p className="mt-10 text-xs text-[#2a4c63]/50">
-          Derniere mise a jour : mars 2026
-        </p>
-      </article>
+        {/* ============================================================ */}
+        {/*  Footer line                                                  */}
+        {/* ============================================================ */}
+        <footer
+          className="border-t px-6 py-12"
+          style={{ borderColor: "#e0e4e6" }}
+        >
+          <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 text-xs md:flex-row"
+            style={{ color: "#666d70" }}
+          >
+            <span>Derniere mise a jour : mars 2026</span>
+            <nav className="flex flex-wrap gap-6">
+              <Link
+                href="/services/cold-email"
+                className="transition-colors hover:text-[#0d1a21]"
+              >
+                Cold email
+              </Link>
+              <Link
+                href="/services/linkedin-outreach"
+                className="transition-colors hover:text-[#0d1a21]"
+              >
+                LinkedIn outreach
+              </Link>
+              <Link
+                href="/services/generation-leads"
+                className="transition-colors hover:text-[#0d1a21]"
+              >
+                Generation de leads
+              </Link>
+            </nav>
+            <span>
+              &copy; 2026{" "}
+              <a
+                href="https://devlo.ch"
+                className="underline transition-colors hover:text-[#0d1a21]"
+              >
+                devlo.ch
+              </a>
+            </span>
+          </div>
+        </footer>
+      </main>
 
       <NewsletterSection />
     </>
