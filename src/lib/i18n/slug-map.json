@@ -328,5 +328,11 @@
     "en": "/en/insights/buying-signals",
     "de": "/de/insights/buying-signals",
     "nl": "/nl/insights/buying-signals"
+  },
+  "insights": {
+    "fr": "/insights",
+    "en": "/en/insights",
+    "de": "/de/insights",
+    "nl": "/nl/insights"
   }
 }
