@@ -334,5 +334,161 @@
     "en": "/en/insights",
     "de": "/de/insights",
     "nl": "/nl/insights"
+  },
+  "insight:cold-email-templates": {
+    "fr": "/insights/cold-email-templates",
+    "en": "/en/insights/cold-email-templates",
+    "de": "/de/insights/cold-email-templates",
+    "nl": "/nl/insights/cold-email-templates"
+  },
+  "template:b2b-sales-training": {
+    "fr": "/insights/cold-email-templates/b2b-sales-training",
+    "en": "/en/insights/cold-email-templates/b2b-sales-training",
+    "de": "/de/insights/cold-email-templates/b2b-sales-training",
+    "nl": "/nl/insights/cold-email-templates/b2b-sales-training"
+  },
+  "template:cybersecurity-outreach": {
+    "fr": "/insights/cold-email-templates/cybersecurity-outreach",
+    "en": "/en/insights/cold-email-templates/cybersecurity-outreach",
+    "de": "/de/insights/cold-email-templates/cybersecurity-outreach",
+    "nl": "/nl/insights/cold-email-templates/cybersecurity-outreach"
+  },
+  "template:apiary-services": {
+    "fr": "/insights/cold-email-templates/apiary-services",
+    "en": "/en/insights/cold-email-templates/apiary-services",
+    "de": "/de/insights/cold-email-templates/apiary-services",
+    "nl": "/nl/insights/cold-email-templates/apiary-services"
+  },
+  "template:employee-engagement": {
+    "fr": "/insights/cold-email-templates/employee-engagement",
+    "en": "/en/insights/cold-email-templates/employee-engagement",
+    "de": "/de/insights/cold-email-templates/employee-engagement",
+    "nl": "/nl/insights/cold-email-templates/employee-engagement"
+  },
+  "template:learning-development": {
+    "fr": "/insights/cold-email-templates/learning-development",
+    "en": "/en/insights/cold-email-templates/learning-development",
+    "de": "/de/insights/cold-email-templates/learning-development",
+    "nl": "/nl/insights/cold-email-templates/learning-development"
+  },
+  "template:cleaning-management": {
+    "fr": "/insights/cold-email-templates/cleaning-management",
+    "en": "/en/insights/cold-email-templates/cleaning-management",
+    "de": "/de/insights/cold-email-templates/cleaning-management",
+    "nl": "/nl/insights/cold-email-templates/cleaning-management"
+  },
+  "template:recruiting-platform": {
+    "fr": "/insights/cold-email-templates/recruiting-platform",
+    "en": "/en/insights/cold-email-templates/recruiting-platform",
+    "de": "/de/insights/cold-email-templates/recruiting-platform",
+    "nl": "/nl/insights/cold-email-templates/recruiting-platform"
+  },
+  "template:bike-parking": {
+    "fr": "/insights/cold-email-templates/bike-parking",
+    "en": "/en/insights/cold-email-templates/bike-parking",
+    "de": "/de/insights/cold-email-templates/bike-parking",
+    "nl": "/nl/insights/cold-email-templates/bike-parking"
+  },
+  "template:it-integrator": {
+    "fr": "/insights/cold-email-templates/it-integrator",
+    "en": "/en/insights/cold-email-templates/it-integrator",
+    "de": "/de/insights/cold-email-templates/it-integrator",
+    "nl": "/nl/insights/cold-email-templates/it-integrator"
+  },
+  "template:merchandise-products": {
+    "fr": "/insights/cold-email-templates/merchandise-products",
+    "en": "/en/insights/cold-email-templates/merchandise-products",
+    "de": "/de/insights/cold-email-templates/merchandise-products",
+    "nl": "/nl/insights/cold-email-templates/merchandise-products"
+  },
+  "template:corporate-catering": {
+    "fr": "/insights/cold-email-templates/corporate-catering",
+    "en": "/en/insights/cold-email-templates/corporate-catering",
+    "de": "/de/insights/cold-email-templates/corporate-catering",
+    "nl": "/nl/insights/cold-email-templates/corporate-catering"
+  },
+  "template:devops-engineering": {
+    "fr": "/insights/cold-email-templates/devops-engineering",
+    "en": "/en/insights/cold-email-templates/devops-engineering",
+    "de": "/de/insights/cold-email-templates/devops-engineering",
+    "nl": "/nl/insights/cold-email-templates/devops-engineering"
+  },
+  "template:market-intelligence": {
+    "fr": "/insights/cold-email-templates/market-intelligence",
+    "en": "/en/insights/cold-email-templates/market-intelligence",
+    "de": "/de/insights/cold-email-templates/market-intelligence",
+    "nl": "/nl/insights/cold-email-templates/market-intelligence"
+  },
+  "template:property-management": {
+    "fr": "/insights/cold-email-templates/property-management",
+    "en": "/en/insights/cold-email-templates/property-management",
+    "de": "/de/insights/cold-email-templates/property-management",
+    "nl": "/nl/insights/cold-email-templates/property-management"
+  },
+  "template:it-security-soc": {
+    "fr": "/insights/cold-email-templates/it-security-soc",
+    "en": "/en/insights/cold-email-templates/it-security-soc",
+    "de": "/de/insights/cold-email-templates/it-security-soc",
+    "nl": "/nl/insights/cold-email-templates/it-security-soc"
+  },
+  "template:clinical-research": {
+    "fr": "/insights/cold-email-templates/clinical-research",
+    "en": "/en/insights/cold-email-templates/clinical-research",
+    "de": "/de/insights/cold-email-templates/clinical-research",
+    "nl": "/nl/insights/cold-email-templates/clinical-research"
+  },
+  "template:solar-energy": {
+    "fr": "/insights/cold-email-templates/solar-energy",
+    "en": "/en/insights/cold-email-templates/solar-energy",
+    "de": "/de/insights/cold-email-templates/solar-energy",
+    "nl": "/nl/insights/cold-email-templates/solar-energy"
+  },
+  "template:it-risk-compliance": {
+    "fr": "/insights/cold-email-templates/it-risk-compliance",
+    "en": "/en/insights/cold-email-templates/it-risk-compliance",
+    "de": "/de/insights/cold-email-templates/it-risk-compliance",
+    "nl": "/nl/insights/cold-email-templates/it-risk-compliance"
+  },
+  "template:healthcare-technology": {
+    "fr": "/insights/cold-email-templates/healthcare-technology",
+    "en": "/en/insights/cold-email-templates/healthcare-technology",
+    "de": "/de/insights/cold-email-templates/healthcare-technology",
+    "nl": "/nl/insights/cold-email-templates/healthcare-technology"
+  },
+  "template:web-technology": {
+    "fr": "/insights/cold-email-templates/web-technology",
+    "en": "/en/insights/cold-email-templates/web-technology",
+    "de": "/de/insights/cold-email-templates/web-technology",
+    "nl": "/nl/insights/cold-email-templates/web-technology"
+  },
+  "template:cybersecurity-risk-management": {
+    "fr": "/insights/cold-email-templates/cybersecurity-risk-management",
+    "en": "/en/insights/cold-email-templates/cybersecurity-risk-management",
+    "de": "/de/insights/cold-email-templates/cybersecurity-risk-management",
+    "nl": "/nl/insights/cold-email-templates/cybersecurity-risk-management"
+  },
+  "template:biotech-rwe": {
+    "fr": "/insights/cold-email-templates/biotech-rwe",
+    "en": "/en/insights/cold-email-templates/biotech-rwe",
+    "de": "/de/insights/cold-email-templates/biotech-rwe",
+    "nl": "/nl/insights/cold-email-templates/biotech-rwe"
+  },
+  "template:digital-marketing": {
+    "fr": "/insights/cold-email-templates/digital-marketing",
+    "en": "/en/insights/cold-email-templates/digital-marketing",
+    "de": "/de/insights/cold-email-templates/digital-marketing",
+    "nl": "/nl/insights/cold-email-templates/digital-marketing"
+  },
+  "template:hr-services": {
+    "fr": "/insights/cold-email-templates/hr-services",
+    "en": "/en/insights/cold-email-templates/hr-services",
+    "de": "/de/insights/cold-email-templates/hr-services",
+    "nl": "/nl/insights/cold-email-templates/hr-services"
+  },
+  "template:supply-chain": {
+    "fr": "/insights/cold-email-templates/supply-chain",
+    "en": "/en/insights/cold-email-templates/supply-chain",
+    "de": "/de/insights/cold-email-templates/supply-chain",
+    "nl": "/nl/insights/cold-email-templates/supply-chain"
   }
 }
