@@ -1,5 +1,6 @@
 import insightsContent from "@/lib/i18n/insights-content.json";
 import coldEmailHubContent from "@/lib/i18n/cold-email-hub-content.json";
+import coldEmailSequencesContent from "@/lib/i18n/cold-email-sequences-content.json";
 import type { SupportedLocale } from "@/lib/i18n/slug-map";
 
 type Signal = {
@@ -223,4 +224,61 @@ export function getLocalizedBuyingSignals(locale: SupportedLocale) {
 
 export function getLocalizedColdEmailHub(locale: SupportedLocale) {
   return coldEmailHubContent[locale];
+}
+
+export function getLocalizedColdEmailSequence(slug: string, locale: SupportedLocale) {
+  const sequences = coldEmailSequencesContent.sequences as Record<string, Record<string, unknown>>;
+  const sequenceData = sequences[slug];
+  if (!sequenceData) return null;
+  const localeData = sequenceData[locale];
+  if (!localeData) return null;
+  return localeData as {
+    metaTitle: string;
+    metaDescription: string;
+    lastBreadcrumb: string;
+    heroTitle: string;
+    heroSubtitle: string;
+    sequenceHeading: string;
+    sequenceSubtitle: string;
+    tags: string[];
+    metrics: Array<{ value: string; label: string }>;
+    touches: Array<{
+      number: number;
+      channel: "email" | "call" | "linkedin";
+      label: string;
+      timing: string;
+      subject: string | null;
+      content: string;
+    }>;
+    whyItWorks: { heading: string; paragraphs: string[] };
+    learnings: { heading: string; items: Array<{ title: string; desc: string }> };
+    whenToUse: { heading: string; items: Array<{ title: string; desc: string }> };
+    whoCanUse: { heading: string; items: Array<{ title: string; desc: string }> };
+    faq: Array<{ question: string; answer: string }>;
+  };
+}
+
+export function getLocalizedColdEmailSequenceShared(locale: SupportedLocale) {
+  const shared = coldEmailSequencesContent.shared as Record<string, unknown>;
+  return shared[locale] as {
+    breadcrumbs: { home: string; insights: string; templates: string };
+    channelLabels: { email: string; call: string; linkedin: string };
+    subjectLabel: string;
+    faqSectionTitle: string;
+    backLinkText: string;
+    lastUpdated: string;
+    authorRole: string;
+    authorAlt: string;
+    dateLabel: string;
+    cta: {
+      heading: string;
+      body: string;
+      primaryButton: string;
+      secondaryButton: string;
+    };
+  };
+}
+
+export function getColdEmailSequenceSlugs(): string[] {
+  return coldEmailSequencesContent._meta.slugs;
 }

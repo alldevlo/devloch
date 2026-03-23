@@ -19,13 +19,14 @@ import { ServicePageTemplate } from "@/components/pages/service-page";
 import { InsightsHubMasterPage } from "@/components/pages/insights-hub-master-page";
 import { BuyingSignalsMasterPage } from "@/components/pages/buying-signals-master-page";
 import { ColdEmailTemplatesMasterPage } from "@/components/pages/cold-email-templates-master-page";
+import { ColdEmailSequenceMasterPage } from "@/components/pages/cold-email-sequence-master-page";
 import { LocalizedPage as LocalizedContentPage } from "@/components/pages/localized-page";
 import { GEO_PAGES } from "@/content/geo-pages";
 import { ALTERNATIVE_PAGES } from "@/content/alternatives";
 import { agencyContent } from "@/content/agency";
 import { SERVICE_PAGE_DATA, type ServiceSlug } from "@/content/services";
 import { academySeo, caseStudiesSeo, conditionsSeo, consultationSeo, homeSeo } from "@/content/masterfile.fr";
-import { getLocalizedInsightsHub, getLocalizedBuyingSignals, getLocalizedColdEmailHub } from "@/lib/i18n/insights-helpers";
+import { getLocalizedInsightsHub, getLocalizedBuyingSignals, getLocalizedColdEmailHub, getLocalizedColdEmailSequence, getLocalizedColdEmailSequenceShared } from "@/lib/i18n/insights-helpers";
 import { getLocalizedBlogArticle } from "@/lib/i18n/blog-content";
 import { getLocalizedGeoContent } from "@/lib/i18n/geo-content";
 import { getLocalizedAlternativeContent } from "@/lib/i18n/alternatives-content";
@@ -420,6 +421,9 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const localizedColdEmailHubSeo = resolved.frPath === "/insights/cold-email-templates"
     ? getLocalizedColdEmailHub(resolved.locale)
     : null;
+  const localizedColdEmailSequenceSeo = resolved.frPath.startsWith("/insights/cold-email-templates/")
+    ? getLocalizedColdEmailSequence(resolved.frPath.slice("/insights/cold-email-templates/".length), resolved.locale)
+    : null;
   const baseSeo = resolved.frPath === "/ai-sales-ops"
     ? {
         title: getLocalizedAiSalesOpsContent(resolved.locale).metaTitle,
@@ -442,6 +446,12 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
               description: localizedColdEmailHubSeo.metaDescription,
               type: "article" as const,
             }
+          : localizedColdEmailSequenceSeo
+            ? {
+                title: localizedColdEmailSequenceSeo.metaTitle,
+                description: localizedColdEmailSequenceSeo.metaDescription,
+                type: "article" as const,
+              }
           : localizedGeoSeo
           ? {
               title: localizedGeoSeo.metaTitle,
@@ -602,13 +612,10 @@ export default async function LocalizedRoutePage({ params }: Params) {
   }
 
   if (frPath.startsWith("/insights/cold-email-templates/")) {
-    const slug = frPath.slice("/insights/cold-email-templates/".length);
-    try {
-      const { default: SequencePage } = await import(`@/app/insights/cold-email-templates/${slug}/page`);
-      return <SequencePage />;
-    } catch {
-      notFound();
-    }
+    const sequenceSlug = frPath.slice("/insights/cold-email-templates/".length);
+    const sequenceContent = getLocalizedColdEmailSequence(sequenceSlug, resolved.locale);
+    if (!sequenceContent) notFound();
+    return <ColdEmailSequenceMasterPage slug={sequenceSlug} locale={resolved.locale} />;
   }
 
   if (frPath === "/blog") {
