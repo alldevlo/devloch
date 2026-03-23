@@ -570,6 +570,7 @@ export default async function LocalizedRoutePage({ params }: Params) {
     return <BuyingSignalsMasterPage locale={resolved.locale} />;
   }
 
+
   if (frPath === "/blog") {
     return <BlogHubMasterPage locale={resolved.locale} />;
   }
