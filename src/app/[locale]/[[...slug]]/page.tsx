@@ -18,13 +18,14 @@ import { ServicesHubPage as ServicesHubView } from "@/components/pages/services-
 import { ServicePageTemplate } from "@/components/pages/service-page";
 import { InsightsHubMasterPage } from "@/components/pages/insights-hub-master-page";
 import { BuyingSignalsMasterPage } from "@/components/pages/buying-signals-master-page";
+import { ColdEmailTemplatesMasterPage } from "@/components/pages/cold-email-templates-master-page";
 import { LocalizedPage as LocalizedContentPage } from "@/components/pages/localized-page";
 import { GEO_PAGES } from "@/content/geo-pages";
 import { ALTERNATIVE_PAGES } from "@/content/alternatives";
 import { agencyContent } from "@/content/agency";
 import { SERVICE_PAGE_DATA, type ServiceSlug } from "@/content/services";
 import { academySeo, caseStudiesSeo, conditionsSeo, consultationSeo, homeSeo } from "@/content/masterfile.fr";
-import { getLocalizedInsightsHub, getLocalizedBuyingSignals } from "@/lib/i18n/insights-helpers";
+import { getLocalizedInsightsHub, getLocalizedBuyingSignals, getLocalizedColdEmailHub } from "@/lib/i18n/insights-helpers";
 import { getLocalizedBlogArticle } from "@/lib/i18n/blog-content";
 import { getLocalizedGeoContent } from "@/lib/i18n/geo-content";
 import { getLocalizedAlternativeContent } from "@/lib/i18n/alternatives-content";
@@ -416,6 +417,9 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const localizedBuyingSignalsSeo = resolved.frPath === "/insights/buying-signals"
     ? getLocalizedBuyingSignals(resolved.locale)
     : null;
+  const localizedColdEmailHubSeo = resolved.frPath === "/insights/cold-email-templates"
+    ? getLocalizedColdEmailHub(resolved.locale)
+    : null;
   const baseSeo = resolved.frPath === "/ai-sales-ops"
     ? {
         title: getLocalizedAiSalesOpsContent(resolved.locale).metaTitle,
@@ -432,7 +436,13 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
             description: localizedBuyingSignalsSeo.metaDescription,
             type: "article" as const,
           }
-        : localizedGeoSeo
+        : localizedColdEmailHubSeo
+          ? {
+              title: localizedColdEmailHubSeo.metaTitle,
+              description: localizedColdEmailHubSeo.metaDescription,
+              type: "article" as const,
+            }
+          : localizedGeoSeo
           ? {
               title: localizedGeoSeo.metaTitle,
               description: localizedGeoSeo.metaDescription,
@@ -588,8 +598,7 @@ export default async function LocalizedRoutePage({ params }: Params) {
   }
 
   if (frPath === "/insights/cold-email-templates") {
-    const { default: ColdEmailTemplatesPage } = await import("@/app/insights/cold-email-templates/page");
-    return <ColdEmailTemplatesPage />;
+    return <ColdEmailTemplatesMasterPage locale={resolved.locale} />;
   }
 
   if (frPath.startsWith("/insights/cold-email-templates/")) {

@@ -56,6 +56,7 @@
 
 - [Voice-to-Content : transformer la dictee vocale en contenu publiable](https://devlo.ch/insights/voice-to-content): Guide pratique pour convertir des transcriptions vocales (Wispr Flow) en posts LinkedIn, comptes-rendus et briefs clients via Claude Code.
 - [94 Signaux d'Intention d'Achat B2B](https://devlo.ch/insights/buying-signals): Guide complet des 94 signaux d'achat B2B classes par categorie (entreprise, personne, tech stack, usage produit, communaute, evenements). Detectez les prospects prets a acheter avant vos concurrents.
+- [25 Sequences Cold Email B2B](https://devlo.ch/insights/cold-email-templates): 25 sequences cold email testees avec resultats reels. Industrie, metriques, emails complets — templates prets a utiliser pour votre prospection B2B.
 
 ## Pages principales
 

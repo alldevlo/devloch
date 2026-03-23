@@ -1,0 +1,322 @@
+{
+  "fr": {
+    "metaTitle": "25 Séquences Cold Email B2B avec Résultats — Templates Gratuits",
+    "metaDescription": "Templates cold email B2B testés sur 1000+ campagnes. Séquences outreach complètes avec métriques réelles, exemples emails prospection et résultats mesurés.",
+    "hero": {
+      "title": "25 Séquences Cold Email B2B avec Résultats",
+      "subtitle": "Des séquences complètes testées sur plus de 1000 campagnes. Industrie, métriques, emails complets — utilisez-les comme base pour vos propres séquences.",
+      "authorRole": "Fondateur de",
+      "dateLabel": "Mars 2026"
+    },
+    "breadcrumbs": {
+      "home": "Accueil",
+      "insights": "Insights",
+      "coldEmailTemplates": "Templates Cold Email"
+    },
+    "browser": {
+      "title": "25 Séquences Cold Email B2B",
+      "subtitle": "Inspiration et résultats réels",
+      "searchPlaceholder": "Rechercher une séquence...",
+      "industryLabel": "Industrie",
+      "channelLabel": "Canal",
+      "allFilter": "Tous",
+      "emailOnly": "Email seul",
+      "multichannel": "Multicanal",
+      "noResults": "Aucune séquence ne correspond à ces filtres. Voici toutes les {count} séquences disponibles :",
+      "resultsCounter": "{count} séquence{plural} affichée{plural}",
+      "sequenceOf": "Séquence de",
+      "sentLabel": "Envoyés",
+      "openedLabel": "Ouverts",
+      "repliesLabel": "Réponses",
+      "interestedLabel": "Intéressés",
+      "stepsLabel": "étapes",
+      "daysLabel": "jours",
+      "targetIcp": "Cible (ICP)",
+      "abTest": "Test A/B",
+      "fullSequence": "Séquence complète",
+      "duration": "Durée",
+      "viewFullSequence": "Voir la séquence complète",
+      "subjectLabel": "Objet",
+      "callLabel": "Appel"
+    },
+    "metrics": {
+      "titleTemplate": "25 séquences. {touches} étapes. {withResults} avec résultats mesurés.",
+      "sequences": "séquences",
+      "totalSteps": "étapes au total",
+      "avgReplyRate": "taux de réponse moyen",
+      "industriesCovered": "industries couvertes"
+    },
+    "faq": [
+      {
+        "question": "Qu'est-ce qu'une séquence cold email ?",
+        "answer": "Une séquence cold email est une série d'emails envoyés automatiquement à des prospects qui ne vous connaissent pas encore. Chaque email de la séquence est espacé dans le temps et conçu pour créer de la valeur, établir la confiance et déclencher une réponse. Les meilleures séquences combinent plusieurs canaux (email, LinkedIn, appel) et s'appuient sur des signaux d'achat pour personnaliser chaque message."
+      },
+      {
+        "question": "Comment personnaliser ces séquences ?",
+        "answer": "Pour personnaliser efficacement une séquence, commencez par identifier des signaux d'achat concrets : levée de fonds, recrutement, changement de direction, adoption d'une nouvelle technologie. Référencez des événements réels dans vos icebreakers (un post LinkedIn, un article de presse, une participation à un salon). Adaptez la proposition de valeur au contexte spécifique du prospect plutôt que d'envoyer un message générique."
+      },
+      {
+        "question": "Combien d'étapes devrait avoir une séquence ?",
+        "answer": "Nos données sur 25 séquences montrent une moyenne de 6,9 étapes par séquence, avec une fourchette optimale entre 5 et 9 touches. Les séquences trop courtes (moins de 4 touches) ne laissent pas assez de chances au prospect de répondre, tandis que les séquences trop longues (plus de 10 touches) risquent d'être perçues comme du spam. La durée moyenne est de 25 jours."
+      },
+      {
+        "question": "Ces séquences fonctionnent-elles pour mon industrie ?",
+        "answer": "Cette collection couvre plus de 15 industries différentes : Cybersecurity, SaaS, RH, Finance, Pharma, Immobilier, Manufacturing, et bien d'autres. Même si votre industrie exacte n'est pas représentée, les structures, les frameworks de personnalisation et les techniques de copywriting sont transférables. L'important est d'adapter le message à votre ICP et à vos signaux d'achat spécifiques."
+      }
+    ],
+    "faqSectionTitle": "Questions fréquentes",
+    "cta": {
+      "heading": "Vous voulez des séquences personnalisées pour votre industrie ?",
+      "body": "devlo conçoit et exécute des campagnes cold email B2B sur-mesure. ICP, signaux d'achat, séquences multichannel — on s'occupe de tout.",
+      "primaryButton": "Réserver une consultation",
+      "secondaryButton": "Voir nos services"
+    },
+    "newsletter": {
+      "title": "Recevez nos insights B2B chaque semaine",
+      "subtitle": "Stratégies outbound concrètes, automatisation IA et intelligence du marché suisse. Pas de blabla — uniquement ce qui fonctionne.",
+      "button": "S'abonner",
+      "placeholder": "votre@email.com"
+    },
+    "lastUpdated": "Dernière mise à jour : mars 2026"
+  },
+  "en": {
+    "metaTitle": "25 B2B Cold Email Sequences with Results — Free Templates",
+    "metaDescription": "B2B cold email templates tested on 1000+ campaigns. Complete outreach sequences with real metrics, examples of prospecting emails and measured results.",
+    "hero": {
+      "title": "25 B2B Cold Email Sequences with Results",
+      "subtitle": "Complete sequences tested on over 1,000 campaigns. Industry, metrics, full emails — use them as the basis for your own sequences.",
+      "authorRole": "Founder of",
+      "dateLabel": "March 2026"
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "insights": "Insights",
+      "coldEmailTemplates": "Cold Email Templates"
+    },
+    "browser": {
+      "title": "25 B2B Cold Email Sequences",
+      "subtitle": "Inspiration and real results",
+      "searchPlaceholder": "Search for a sequence...",
+      "industryLabel": "Industry",
+      "channelLabel": "Channel",
+      "allFilter": "All",
+      "emailOnly": "Email only",
+      "multichannel": "Multichannel",
+      "noResults": "No sequences match these filters. Here are all {count} sequences available:",
+      "resultsCounter": "{count} sequence{plural} displayed",
+      "sequenceOf": "Sequence:",
+      "sentLabel": "Sent",
+      "openedLabel": "Opened",
+      "repliesLabel": "Replies",
+      "interestedLabel": "Interested",
+      "stepsLabel": "steps",
+      "daysLabel": "days",
+      "targetIcp": "Target (ICP)",
+      "abTest": "A/B Test",
+      "fullSequence": "Full sequence",
+      "duration": "Duration",
+      "viewFullSequence": "View full sequence",
+      "subjectLabel": "Subject",
+      "callLabel": "Call"
+    },
+    "metrics": {
+      "titleTemplate": "25 sequences. {touches} steps. {withResults} with measured results.",
+      "sequences": "sequences",
+      "totalSteps": "total steps",
+      "avgReplyRate": "average reply rate",
+      "industriesCovered": "industries covered"
+    },
+    "faq": [
+      {
+        "question": "What is a cold email sequence?",
+        "answer": "A cold email sequence is a series of emails sent automatically to prospects who don't yet know you. Each email in the sequence is spaced out over time and designed to create value, build trust and trigger a response. The best sequences combine several channels (email, LinkedIn, call) and use buying signals to personalise each message."
+      },
+      {
+        "question": "How do you customise these sequences?",
+        "answer": "To personalise a sequence effectively, start by identifying concrete buying signals: fund-raising, recruitment, change of management, adoption of a new technology. Reference real events in your icebreakers (a LinkedIn post, a press article, participation in a trade show). Adapt the value proposition to the prospect's specific context rather than sending a generic message."
+      },
+      {
+        "question": "How many stages should a sequence have?",
+        "answer": "Our data on 25 sequences shows an average of 6.9 steps per sequence, with an optimal range between 5 and 9 touches. Sequences that are too short (less than 4 touches) do not give the prospect enough chance to respond, while sequences that are too long (more than 10 touches) risk being perceived as spam. The average duration is 25 days."
+      },
+      {
+        "question": "Do these sequences work for my industry?",
+        "answer": "This collection covers more than 15 different industries: Cybersecurity, SaaS, HR, Finance, Pharma, Real Estate, Manufacturing, and many more. Even if your exact industry isn't represented, the structures, personalisation frameworks and copywriting techniques are transferable. The important thing is to adapt the message to your ICP and specific buying signals."
+      }
+    ],
+    "faqSectionTitle": "Frequently asked questions",
+    "cta": {
+      "heading": "Want customised sequences for your industry?",
+      "body": "devlo designs and executes tailor-made B2B cold email campaigns. ICP, buying signals, multichannel sequences — we take care of everything.",
+      "primaryButton": "Book a consultation",
+      "secondaryButton": "See our services"
+    },
+    "newsletter": {
+      "title": "Receive our weekly B2B insights",
+      "subtitle": "Concrete outbound strategies, AI automation and Swiss market intelligence. No fluff — just what works.",
+      "button": "Subscribe",
+      "placeholder": "your@email.com"
+    },
+    "lastUpdated": "Last updated: March 2026"
+  },
+  "de": {
+    "metaTitle": "25 Cold Email B2B-Sequenzen mit Ergebnissen — Kostenlose Templates",
+    "metaDescription": "B2B Cold E-Mail Templates, die in 1000+ Kampagnen getestet wurden. Vollständige Outreach-Sequenzen mit realen Metriken, Beispielen für Akquise-E-Mails und gemessenen Ergebnissen.",
+    "hero": {
+      "title": "25 Cold Email B2B-Sequenzen mit Ergebnissen",
+      "subtitle": "Vollständige Sequenzen, die in über 1000 Kampagnen getestet wurden. Branche, Metriken, vollständige E-Mails — nutzen Sie sie als Grundlage für Ihre eigenen Sequenzen.",
+      "authorRole": "Gründer von",
+      "dateLabel": "März 2026"
+    },
+    "breadcrumbs": {
+      "home": "Startseite",
+      "insights": "Insights",
+      "coldEmailTemplates": "Cold Email Templates"
+    },
+    "browser": {
+      "title": "25 Cold Email B2B-Sequenzen",
+      "subtitle": "Inspiration und echte Ergebnisse",
+      "searchPlaceholder": "Nach einer Sequenz suchen...",
+      "industryLabel": "Branche",
+      "channelLabel": "Kanal",
+      "allFilter": "Alle",
+      "emailOnly": "Nur E-Mail",
+      "multichannel": "Multikanal",
+      "noResults": "Keine Sequenzen entsprechen diesen Filtern. Hier sind alle {count} verfügbaren Sequenzen:",
+      "resultsCounter": "{count} Sequenz{plural} angezeigt",
+      "sequenceOf": "Sequenz:",
+      "sentLabel": "Gesendet",
+      "openedLabel": "Geöffnet",
+      "repliesLabel": "Antworten",
+      "interestedLabel": "Interessiert",
+      "stepsLabel": "Schritte",
+      "daysLabel": "Tage",
+      "targetIcp": "Zielgruppe (ICP)",
+      "abTest": "A/B-Test",
+      "fullSequence": "Vollständige Sequenz",
+      "duration": "Dauer",
+      "viewFullSequence": "Vollständige Sequenz ansehen",
+      "subjectLabel": "Betreff",
+      "callLabel": "Anruf"
+    },
+    "metrics": {
+      "titleTemplate": "25 Sequenzen. {touches} Schritte. {withResults} mit gemessenen Ergebnissen.",
+      "sequences": "Sequenzen",
+      "totalSteps": "Schritte insgesamt",
+      "avgReplyRate": "durchschnittliche Antwortrate",
+      "industriesCovered": "abgedeckte Branchen"
+    },
+    "faq": [
+      {
+        "question": "Was ist eine Cold-E-Mail-Sequenz?",
+        "answer": "Eine Cold-E-Mail-Sequenz ist eine Reihe von E-Mails, die automatisch an potenzielle Kunden gesendet werden, die Sie noch nicht kennen. Jede E-Mail in der Sequenz liegt zeitlich auseinander und ist so gestaltet, dass sie Wert schafft, Vertrauen aufbaut und eine Reaktion auslöst. Die besten Sequenzen kombinieren mehrere Kanäle (E-Mail, LinkedIn, Anruf) und stützen sich auf Kaufsignale, um jede Nachricht zu personalisieren."
+      },
+      {
+        "question": "Wie lassen sich diese Sequenzen anpassen?",
+        "answer": "Um eine Sequenz wirksam zu personalisieren, beginnen Sie damit, konkrete Kaufsignale zu identifizieren: Kapitalbeschaffung, Einstellung, Wechsel in der Geschäftsführung, Einführung einer neuen Technologie. Verweisen Sie in Ihren Icebreakers auf reale Ereignisse (ein LinkedIn-Post, ein Zeitungsartikel, eine Messeteilnahme). Passen Sie das Wertangebot an den spezifischen Kontext des Interessenten an, anstatt eine generische Botschaft zu versenden."
+      },
+      {
+        "question": "Wie viele Schritte sollte eine Sequenz haben?",
+        "answer": "Unsere Daten aus 25 Sequenzen zeigen einen Durchschnitt von 6,9 Schritten pro Sequenz, wobei der optimale Bereich zwischen 5 und 9 Berührungen liegt. Zu kurze Sequenzen (weniger als 4 Berührungen) geben dem potenziellen Kunden nicht genügend Chancen zu antworten, während zu lange Sequenzen (mehr als 10 Berührungen) als Spam wahrgenommen werden könnten. Die durchschnittliche Dauer beträgt 25 Tage."
+      },
+      {
+        "question": "Funktionieren diese Sequenzen für meine Branche?",
+        "answer": "Diese Sammlung deckt mehr als 15 verschiedene Branchen ab: Cybersecurity, SaaS, HR, Finanzwesen, Pharma, Immobilien, Fertigung und viele andere. Auch wenn Ihre genaue Branche nicht vertreten ist, sind die Strukturen, Anpassungsframeworks und Copywriting-Techniken übertragbar. Wichtig ist, dass Sie die Botschaft auf Ihren ICP und Ihre spezifischen Kaufsignale abstimmen."
+      }
+    ],
+    "faqSectionTitle": "Häufig gestellte Fragen",
+    "cta": {
+      "heading": "Sie wollen maßgeschneiderte Sequenzen für Ihre Branche?",
+      "body": "devlo entwirft und führt massgeschneiderte B2B-Cold-E-Mail-Kampagnen durch. ICP, Kaufsignale, Multichannel-Sequenzen — wir kümmern uns um alles.",
+      "primaryButton": "Beratung buchen",
+      "secondaryButton": "Unsere Dienstleistungen"
+    },
+    "newsletter": {
+      "title": "Erhalten Sie jede Woche unsere B2B-Insights",
+      "subtitle": "Konkrete Outbound-Strategien, KI-Automatisierung und Schweizer Marktintelligenz. Kein Blabla — nur das, was funktioniert.",
+      "button": "Abonnieren",
+      "placeholder": "ihre@email.com"
+    },
+    "lastUpdated": "Letzte Aktualisierung: März 2026"
+  },
+  "nl": {
+    "metaTitle": "25 B2B Cold Email Sequenties met Resultaten — Gratis Templates",
+    "metaDescription": "B2B cold email templates getest op meer dan 1000 campagnes. Complete outreach-sequenties met echte statistieken, voorbeelden van prospectie-e-mails en gemeten resultaten.",
+    "hero": {
+      "title": "25 B2B Cold Email Sequenties met Resultaten",
+      "subtitle": "Complete sequenties getest op meer dan 1000 campagnes. Branche, statistieken, volledige e-mails — gebruik ze als basis voor je eigen sequenties.",
+      "authorRole": "Oprichter van",
+      "dateLabel": "Maart 2026"
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "insights": "Insights",
+      "coldEmailTemplates": "Cold Email Templates"
+    },
+    "browser": {
+      "title": "25 B2B Cold Email Sequenties",
+      "subtitle": "Inspiratie en echte resultaten",
+      "searchPlaceholder": "Zoek een sequentie...",
+      "industryLabel": "Sector",
+      "channelLabel": "Kanaal",
+      "allFilter": "Alle",
+      "emailOnly": "Alleen e-mail",
+      "multichannel": "Multikanaal",
+      "noResults": "Geen sequenties komen overeen met deze filters. Hier zijn alle {count} beschikbare sequenties:",
+      "resultsCounter": "{count} sequentie{plural} weergegeven",
+      "sequenceOf": "Sequentie:",
+      "sentLabel": "Verzonden",
+      "openedLabel": "Geopend",
+      "repliesLabel": "Antwoorden",
+      "interestedLabel": "Geïnteresseerd",
+      "stepsLabel": "stappen",
+      "daysLabel": "dagen",
+      "targetIcp": "Doelgroep (ICP)",
+      "abTest": "A/B-test",
+      "fullSequence": "Volledige sequentie",
+      "duration": "Duur",
+      "viewFullSequence": "Bekijk volledige sequentie",
+      "subjectLabel": "Onderwerp",
+      "callLabel": "Bellen"
+    },
+    "metrics": {
+      "titleTemplate": "25 sequenties. {touches} stappen. {withResults} met gemeten resultaten.",
+      "sequences": "sequenties",
+      "totalSteps": "stappen totaal",
+      "avgReplyRate": "gemiddeld antwoordpercentage",
+      "industriesCovered": "sectoren gedekt"
+    },
+    "faq": [
+      {
+        "question": "Wat is een koude e-mailreeks?",
+        "answer": "Een koude e-mailreeks is een reeks e-mails die automatisch wordt verzonden naar prospects die je nog niet kennen. Elke e-mail in de reeks is gespreid in de tijd en ontworpen om waarde te creëren, vertrouwen op te bouwen en een reactie uit te lokken. De beste sequenties combineren verschillende kanalen (e-mail, LinkedIn, bellen) en gebruiken koopsignalen om elk bericht te personaliseren."
+      },
+      {
+        "question": "Hoe pas je deze sequenties aan?",
+        "answer": "Om een reeks effectief te personaliseren, begin je met het identificeren van concrete koopsignalen: fondsenwerving, aanwerving, verandering van management, invoering van een nieuwe technologie. Verwijs in je ijsbrekers naar echte gebeurtenissen (een LinkedIn-post, een persartikel, deelname aan een beurs). Pas de waardepropositie aan de specifieke context van de prospect aan in plaats van een algemene boodschap te sturen."
+      },
+      {
+        "question": "Hoeveel fasen moet een sequentie hebben?",
+        "answer": "Onze gegevens over 25 sequenties laten een gemiddelde van 6,9 stappen per sequentie zien, met een optimaal bereik tussen 5 en 9 aanrakingen. Te korte sequenties (minder dan 4 aanrakingen) geven de prospect niet genoeg kans om te reageren, terwijl te lange sequenties (meer dan 10 aanrakingen) het risico lopen als spam te worden gezien. De gemiddelde duur is 25 dagen."
+      },
+      {
+        "question": "Werken deze sequenties voor mijn branche?",
+        "answer": "Deze collectie omvat meer dan 15 verschillende sectoren: Cybersecurity, SaaS, HR, Finance, Pharma, Vastgoed, Manufacturing en nog veel meer. Zelfs als je exacte branche niet vertegenwoordigd is, zijn de structuren, personalisatiekaders en copywritingtechnieken overdraagbaar. Het belangrijkste is om de boodschap aan te passen aan uw ICP en specifieke koopsignalen."
+      }
+    ],
+    "faqSectionTitle": "Veelgestelde vragen",
+    "cta": {
+      "heading": "Wilt u sequenties op maat voor uw branche?",
+      "body": "devlo ontwerpt en voert B2B cold email campagnes op maat uit. ICP, koopsignalen, multichannel sequenties — wij zorgen voor alles.",
+      "primaryButton": "Boek een consultatie",
+      "secondaryButton": "Bekijk onze diensten"
+    },
+    "newsletter": {
+      "title": "Ontvang onze wekelijkse B2B-inzichten",
+      "subtitle": "Concrete outbound-strategieën, AI-automatisering en Zwitserse marktintelligentie. Geen blabla — gewoon wat werkt.",
+      "button": "Aanmelden",
+      "placeholder": "uw@email.com"
+    },
+    "lastUpdated": "Laatst bijgewerkt: maart 2026"
+  }
+}

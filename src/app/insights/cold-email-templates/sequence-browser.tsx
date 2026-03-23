@@ -9,8 +9,6 @@ import type { Sequence } from "./sequence-data";
 
 import Link from "next/link";
 
-const ALL_FILTER = "Tous";
-
 const SEQUENCE_SLUGS: Record<number, string> = {
   1: "b2b-sales-training",
   2: "cybersecurity-outreach",
@@ -110,7 +108,7 @@ function ChannelIcon({ channel }: { channel: string }) {
 /*  Channel badge with color                                           */
 /* ------------------------------------------------------------------ */
 
-function ChannelBadge({ type }: { type: string }) {
+function ChannelBadge({ type, callLabel = "Appel" }: { type: string; callLabel?: string }) {
   const lower = type.toLowerCase();
 
   if (lower.includes("linkedin")) {
@@ -126,7 +124,7 @@ function ChannelBadge({ type }: { type: string }) {
     return (
       <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold text-orange-600">
         <PhoneIcon />
-        Appel
+        {callLabel}
       </span>
     );
   }
@@ -316,14 +314,71 @@ function matchesSearch(seq: Sequence, query: string): boolean {
 /*  Main browser component                                             */
 /* ------------------------------------------------------------------ */
 
+export type SequenceBrowserLabels = {
+  title: string;
+  subtitle: string;
+  searchPlaceholder: string;
+  industryLabel: string;
+  channelLabel: string;
+  allFilter: string;
+  emailOnly: string;
+  multichannel: string;
+  noResults: string;
+  resultsCounter: string;
+  sequenceOf: string;
+  sentLabel: string;
+  openedLabel: string;
+  repliesLabel: string;
+  interestedLabel: string;
+  stepsLabel: string;
+  daysLabel: string;
+  targetIcp: string;
+  abTest: string;
+  fullSequence: string;
+  duration: string;
+  viewFullSequence: string;
+  subjectLabel: string;
+  callLabel: string;
+};
+
+const DEFAULT_LABELS: SequenceBrowserLabels = {
+  title: "25 Séquences Cold Email B2B",
+  subtitle: "Inspiration et résultats réels",
+  searchPlaceholder: "Rechercher une séquence...",
+  industryLabel: "Industrie",
+  channelLabel: "Canal",
+  allFilter: "Tous",
+  emailOnly: "Email seul",
+  multichannel: "Multicanal",
+  noResults: "Aucune séquence ne correspond à ces filtres. Voici toutes les {count} séquences disponibles :",
+  resultsCounter: "{count} séquence{plural} affichée{plural}",
+  sequenceOf: "Séquence de",
+  sentLabel: "Envoyés",
+  openedLabel: "Ouverts",
+  repliesLabel: "Réponses",
+  interestedLabel: "Intéressés",
+  stepsLabel: "étapes",
+  daysLabel: "jours",
+  targetIcp: "Cible (ICP)",
+  abTest: "Test A/B",
+  fullSequence: "Séquence complète",
+  duration: "Durée",
+  viewFullSequence: "Voir la séquence complète",
+  subjectLabel: "Objet",
+  callLabel: "Appel",
+};
+
 export function SequenceBrowser({
   sequences,
+  uiLabels,
 }: {
   sequences: Sequence[];
+  uiLabels?: SequenceBrowserLabels;
 }) {
+  const L = uiLabels ?? DEFAULT_LABELS;
   const [search, setSearch] = useState("");
-  const [industryFilter, setIndustryFilter] = useState(ALL_FILTER);
-  const [channelFilter, setChannelFilter] = useState(ALL_FILTER);
+  const [industryFilter, setIndustryFilter] = useState(L.allFilter);
+  const [channelFilter, setChannelFilter] = useState(L.allFilter);
 
   const industries = useMemo(
     () => getUniqueIndustries(sequences),
@@ -334,9 +389,10 @@ export function SequenceBrowser({
     return sequences.map((seq) => {
       const industryFirst = seq.industry.split(" / ")[0].trim();
       const matchesIndustry =
-        industryFilter === ALL_FILTER || industryFirst === industryFilter;
+        industryFilter === L.allFilter || industryFirst === industryFilter;
+      const isAllChannel = channelFilter === L.allFilter;
       const matchesCh =
-        channelFilter === ALL_FILTER ||
+        isAllChannel ||
         (channelFilter === "email-only"
           ? getChannelType(seq) === "email-only"
           : getChannelType(seq) === "multichannel");
@@ -362,13 +418,13 @@ export function SequenceBrowser({
           lineHeight: 1.2,
         }}
       >
-        25 Séquences Cold Email B2B
+        {L.title}
       </h2>
       <p
         className="mb-10 text-center text-sm"
         style={{ color: "#666d70" }}
       >
-        Inspiration et résultats réels
+        {L.subtitle}
       </p>
 
       {/* ── Filter bar ── */}
@@ -392,7 +448,7 @@ export function SequenceBrowser({
           </svg>
           <input
             type="search"
-            placeholder="Rechercher une séquence..."
+            placeholder={L.searchPlaceholder}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="w-full rounded-xl border border-[#e0e4e6] bg-white py-3 pl-11 pr-4 text-sm text-[#0D0D0D] placeholder:text-[#8c8c8c] focus:border-[#074f74] focus:outline-none focus:ring-1 focus:ring-[#074f74]"
@@ -407,10 +463,10 @@ export function SequenceBrowser({
               className="text-xs font-semibold uppercase tracking-wider"
               style={{ color: "#8c8c8c" }}
             >
-              Industrie
+              {L.industryLabel}
             </label>
             <div className="flex flex-wrap gap-2">
-              {[ALL_FILTER, ...industries.slice(0, 8)].map((ind) => (
+              {[L.allFilter, ...industries.slice(0, 8)].map((ind) => (
                 <button
                   key={ind}
                   onClick={() => setIndustryFilter(ind)}
@@ -433,13 +489,13 @@ export function SequenceBrowser({
               className="text-xs font-semibold uppercase tracking-wider"
               style={{ color: "#8c8c8c" }}
             >
-              Canal
+              {L.channelLabel}
             </label>
             <div className="flex gap-2">
               {[
-                { key: ALL_FILTER, label: "Tous" },
-                { key: "email-only", label: "Email seul" },
-                { key: "multichannel", label: "Multicanal" },
+                { key: L.allFilter, label: L.allFilter },
+                { key: "email-only", label: L.emailOnly },
+                { key: "multichannel", label: L.multichannel },
               ].map(({ key, label }) => (
                 <button
                   key={key}
@@ -460,8 +516,10 @@ export function SequenceBrowser({
 
         <p className="text-sm" style={{ color: "#666d70" }}>
           {showFallback
-            ? `Aucune séquence ne correspond à ces filtres. Voici toutes les ${sequences.length} séquences disponibles :`
-            : `${visibleCount} séquence${visibleCount !== 1 ? "s" : ""} affichée${visibleCount !== 1 ? "s" : ""}`}
+            ? L.noResults.replace("{count}", String(sequences.length))
+            : L.resultsCounter
+                .replace("{count}", String(visibleCount))
+                .replace(/{plural}/g, visibleCount !== 1 ? "s" : "")}
         </p>
       </div>
 
@@ -480,7 +538,7 @@ export function SequenceBrowser({
                   {/* Title row */}
                   <div className="flex flex-wrap items-center gap-2">
                     <h3 className="text-base font-bold text-[#0D0D0D]">
-                      Séquence de {seq.industry.toLowerCase()}
+                      {L.sequenceOf} {seq.industry.toLowerCase()}
                     </h3>
                     <LanguageBadge lang={seq.language} />
                   </div>
@@ -489,23 +547,23 @@ export function SequenceBrowser({
                   <div className="flex flex-wrap items-center gap-3">
                     {/* Metrics as colored badges */}
                     <MetricBadge
-                      label="Envoyés"
+                      label={L.sentLabel}
                       value={seq.metrics.sent}
                       pct={null}
                     />
                     <MetricBadge
-                      label="Ouverts"
+                      label={L.openedLabel}
                       value={null}
                       pct={null}
                     />
                     <MetricBadge
-                      label="Réponses"
+                      label={L.repliesLabel}
                       value={seq.metrics.replied}
                       pct={seq.metrics.repliedPct}
                       thresholds={{ green: 20, yellow: 10 }}
                     />
                     <MetricBadge
-                      label="Intéressés"
+                      label={L.interestedLabel}
                       value={seq.metrics.interested}
                       pct={seq.metrics.interestedPct}
                       thresholds={{ green: 20, yellow: 10 }}
@@ -522,7 +580,7 @@ export function SequenceBrowser({
                         className="text-xs"
                         style={{ color: "#8c8c8c" }}
                       >
-                        {seq.numTouches} étapes &middot; {seq.durationDays} jours
+                        {seq.numTouches} {L.stepsLabel} &middot; {seq.durationDays} {L.daysLabel}
                       </span>
                     </div>
                   </div>
@@ -542,7 +600,7 @@ export function SequenceBrowser({
                       className="mb-1.5 text-xs font-semibold uppercase tracking-wider"
                       style={{ color: "#8c8c8c" }}
                     >
-                      Cible (ICP)
+                      {L.targetIcp}
                     </h4>
                     <p
                       className="text-sm leading-relaxed"
@@ -562,7 +620,7 @@ export function SequenceBrowser({
                         className="mb-1.5 text-xs font-semibold uppercase tracking-wider"
                         style={{ color: "#8c8c8c" }}
                       >
-                        Test A/B
+                        {L.abTest}
                       </h4>
                       <p
                         className="text-sm"
@@ -580,10 +638,10 @@ export function SequenceBrowser({
                   className="text-xs font-semibold uppercase tracking-wider"
                   style={{ color: "#8c8c8c" }}
                 >
-                  Séquence complète ({seq.touches.length} étapes)
+                  {L.fullSequence} ({seq.touches.length} {L.stepsLabel})
                 </h4>
                 <span className="text-xs" style={{ color: "#b0b0b0" }}>
-                  Durée : {seq.durationDays} jours
+                  {L.duration} : {seq.durationDays} {L.daysLabel}
                 </span>
               </div>
 
@@ -628,7 +686,7 @@ export function SequenceBrowser({
                             >
                               {touch.number}
                             </span>
-                            <ChannelBadge type={touch.type} />
+                            <ChannelBadge type={touch.type} callLabel={L.callLabel} />
                             <span
                               className="text-xs"
                               style={{ color: "#8c8c8c" }}
@@ -641,7 +699,7 @@ export function SequenceBrowser({
                               className="mb-3 text-xs font-semibold"
                               style={{ color: "#4a4a4a" }}
                             >
-                              Objet : {touch.subject}
+                              {L.subjectLabel} : {touch.subject}
                             </p>
                           )}
                           <FormattedContent text={touch.content} />
@@ -658,7 +716,7 @@ export function SequenceBrowser({
                       href={`/insights/cold-email-templates/${SEQUENCE_SLUGS[seq.id]}`}
                       className="inline-flex items-center gap-2 rounded-lg bg-[#074f74] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#0a3a54]"
                     >
-                      Voir la séquence complète
+                      {L.viewFullSequence}
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                         <path d="M5 12h14M12 5l7 7-7 7" />
                       </svg>

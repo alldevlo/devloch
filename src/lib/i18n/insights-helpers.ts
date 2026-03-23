@@ -1,4 +1,5 @@
 import insightsContent from "@/lib/i18n/insights-content.json";
+import coldEmailHubContent from "@/lib/i18n/cold-email-hub-content.json";
 import type { SupportedLocale } from "@/lib/i18n/slug-map";
 
 type Signal = {
@@ -218,4 +219,8 @@ export function getLocalizedInsightsHub(locale: SupportedLocale) {
 
 export function getLocalizedBuyingSignals(locale: SupportedLocale) {
   return insightsContent.buyingSignals[locale];
+}
+
+export function getLocalizedColdEmailHub(locale: SupportedLocale) {
+  return coldEmailHubContent[locale];
 }
