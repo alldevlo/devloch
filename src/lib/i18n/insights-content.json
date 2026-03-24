@@ -38,14 +38,14 @@
       "metaTitle": "Insights - Resources and guides for B2B prospecting",
       "metaDescription": "Practical guides, reference lists and resources to improve your B2B prospecting. Buy signals, AI automation, and outbound strategies.",
       "breadcrumbs": {
-        "home": "Accueil",
+        "home": "Home",
         "insights": "Insights"
       },
       "cards": [
         {
           "title": "94 B2B signals of intent to buy",
           "description": "The most comprehensive list of B2B buy signals. 7 categories, detection tools and intensity levels for each signal.",
-          "tag": "Liste",
+          "tag": "List",
           "date": "March 2026"
         },
         {
@@ -70,7 +70,7 @@
       "metaTitle": "Insights - Ressourcen und Leitfäden für die B2B-Akquise",
       "metaDescription": "Praktische Leitfäden, Referenzlisten und Ressourcen zur Verbesserung Ihrer B2B-Akquise. Kaufsignale, KI-Automatisierung und Outbound-Strategien.",
       "breadcrumbs": {
-        "home": "Accueil",
+        "home": "Startseite",
         "insights": "Insights"
       },
       "cards": [
@@ -83,7 +83,7 @@
         {
           "title": "Dictation-Clean",
           "description": "Verwandeln Sie Ihre Sprachdiktate mit Wispr Flow und Claude Code in strukturierte Inhalte. Schritt-für-Schritt-Anleitung.",
-          "tag": "Guide",
+          "tag": "Leitfaden",
           "date": "März 2026"
         }
       ],
@@ -102,20 +102,20 @@
       "metaTitle": "Inzichten - Hulpmiddelen en gidsen voor B2B prospectie",
       "metaDescription": "Praktische gidsen, referentielijsten en hulpmiddelen om je B2B prospectie te verbeteren. Koopsignalen, AI-automatisering en uitgaande strategieën.",
       "breadcrumbs": {
-        "home": "Accueil",
+        "home": "Home",
         "insights": "Insights"
       },
       "cards": [
         {
           "title": "94 B2B-signalen van koopintentie",
           "description": "De meest uitgebreide lijst van B2B koopsignalen. 7 categorieën, detectietools en intensiteitsniveaus voor elk signaal.",
-          "tag": "Liste",
+          "tag": "Lijst",
           "date": "Maart 2026"
         },
         {
           "title": "Dictation-Clean",
           "description": "Zet je voice dictations om in gestructureerde content met Wispr Flow en Claude Code. Stap-voor-stap handleiding.",
-          "tag": "Guide",
+          "tag": "Gids",
           "date": "Maart 2026"
         }
       ],
@@ -439,7 +439,7 @@
         "dateLabel": "March 2026"
       },
       "breadcrumbs": {
-        "home": "Accueil",
+        "home": "Home",
         "insights": "Insights",
         "buyingSignals": "94 B2B Purchase Signals"
       },
@@ -740,7 +740,7 @@
         "dateLabel": "März 2026"
       },
       "breadcrumbs": {
-        "home": "Accueil",
+        "home": "Startseite",
         "insights": "Insights",
         "buyingSignals": "94 B2B-Kaufsignale"
       },
@@ -1041,7 +1041,7 @@
         "dateLabel": "Maart 2026"
       },
       "breadcrumbs": {
-        "home": "Accueil",
+        "home": "Home",
         "insights": "Insights",
         "buyingSignals": "94 B2B-aankoopsignalen"
       },

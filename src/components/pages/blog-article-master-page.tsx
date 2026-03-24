@@ -97,6 +97,7 @@ export function BlogArticleMasterPage({ frSlug, locale = "fr" }: BlogArticleMast
             <SummarySection
               title={locale === "fr" ? "Points clés à retenir" : locale === "de" ? "Wichtigste Erkenntnisse" : locale === "nl" ? "Belangrijkste punten" : "Key takeaways"}
               points={article.summaryPoints}
+              locale={locale}
             />
           </div>
         )}

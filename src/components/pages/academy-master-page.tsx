@@ -9,7 +9,8 @@ import { buttonClassName } from "@/components/ui/button";
 import { FadeInOnScroll } from "@/components/ui/fade-in-on-scroll";
 import { WistiaPlayer } from "@/components/ui/wistia-player";
 import { RichParagraph } from "@/lib/utils/rich-text";
-import { academyContent, academyGeoContent, homeContent } from "@/content/masterfile.fr";
+import { academyContent, homeContent } from "@/content/masterfile.fr";
+import type { SupportedLocale } from "@/lib/i18n/slug-map";
 
 const DeferredAccordionSingle = dynamic(
   () => import("@/components/ui/accordion-single").then((module) => module.AccordionSingle),
@@ -53,12 +54,82 @@ function LogosRail({ names }: { names: string[] }) {
 type AcademyMasterPageProps = {
   content?: typeof academyContent;
   sharedHomeContent?: typeof homeContent;
+  locale?: SupportedLocale;
+};
+
+const academyGeoContentByLocale: Record<
+  SupportedLocale,
+  {
+    editorialTitle: string;
+    editorialParagraphs: string[];
+    summaryTitle: string;
+    summaryPoints: string[];
+  }
+> = {
+  fr: {
+    editorialTitle: "Pourquoi les équipes commerciales B2B investissent-elles dans une formation prospection structurée ?",
+    editorialParagraphs: [
+      "Une équipe commerciale performante ne se résume pas à un bon script. Elle a besoin d'une méthode claire pour définir l'ICP, construire les listes, structurer les séquences et suivre les indicateurs qui comptent.",
+      "L'Outbound Academy de devlo formalise ce que nous avons appris sur plus de 1'000 campagnes. L'objectif n'est pas de diffuser de la théorie générale, mais de transmettre les workflows, outils et standards qui permettent d'obtenir des rendez-vous qualifiés plus vite.",
+      "Pour une PME, une startup ou un SDR internalisé, cette approche réduit le temps perdu, standardise l'exécution et accélère la montée en compétence de l'équipe.",
+    ],
+    summaryTitle: "En résumé",
+    summaryPoints: [
+      "**Méthode structurée** : ICP, données, messages, séquences et suivi sont couverts de bout en bout.",
+      "**Approche terrain** : contenu issu de campagnes réellement exécutées, pas d'un cours théorique.",
+      "**Montée en compétence plus rapide** : les équipes réduisent les essais-erreurs et passent plus vite à l'exécution.",
+    ],
+  },
+  en: {
+    editorialTitle: "Why do B2B sales teams invest in structured prospecting training?",
+    editorialParagraphs: [
+      "A high-performing sales team is not built on scripts alone. It needs a clear method to define the ICP, build lists, structure sequences, and track the metrics that actually matter.",
+      "devlo's Outbound Academy packages what we learned across 1,000+ campaigns. The goal is not generic theory, but practical workflows, tools, and standards that help teams generate qualified meetings faster.",
+      "For SMEs, startups, and in-house SDR teams, this reduces wasted time, standardises execution, and shortens the ramp-up period.",
+    ],
+    summaryTitle: "Key takeaways",
+    summaryPoints: [
+      "**Structured method**: ICP, data, messaging, sequences, and reporting are covered end to end.",
+      "**Execution-first approach**: the material comes from live campaigns, not abstract theory.",
+      "**Faster ramp-up**: teams spend less time guessing and more time executing.",
+    ],
+  },
+  de: {
+    editorialTitle: "Warum investieren B2B-Vertriebsteams in ein strukturiertes Akquise-Training?",
+    editorialParagraphs: [
+      "Ein leistungsstarkes Vertriebsteam basiert nicht nur auf guten Skripten. Es braucht eine klare Methode, um den ICP zu definieren, Listen aufzubauen, Sequenzen zu strukturieren und die wirklich relevanten Kennzahlen zu verfolgen.",
+      "Die Outbound Academy von devlo bündelt das, was wir in mehr als 1.000 Kampagnen gelernt haben. Ziel ist nicht allgemeine Theorie, sondern praxistaugliche Workflows, Tools und Standards, mit denen Teams schneller qualifizierte Termine generieren.",
+      "Für KMU, Startups und interne SDR-Teams bedeutet das weniger Zeitverlust, standardisierte Umsetzung und eine kürzere Anlaufphase.",
+    ],
+    summaryTitle: "Zusammenfassung",
+    summaryPoints: [
+      "**Strukturierte Methode**: ICP, Daten, Messaging, Sequenzen und Reporting werden ganzheitlich behandelt.",
+      "**Praxisorientiert**: die Inhalte stammen aus realen Kampagnen statt aus abstrakter Theorie.",
+      "**Schneller produktiv**: Teams reduzieren Trial-and-Error und kommen schneller in die Umsetzung.",
+    ],
+  },
+  nl: {
+    editorialTitle: "Waarom investeren B2B-verkoopteams in gestructureerde prospectietraining?",
+    editorialParagraphs: [
+      "Een sterk verkoopteam draait niet alleen om goede scripts. Het heeft een duidelijke methode nodig om de ICP te definiëren, lijsten op te bouwen, sequenties te structureren en de juiste KPI's te volgen.",
+      "devlo's Outbound Academy bundelt wat we leerden uit meer dan 1.000 campagnes. Het doel is geen algemene theorie, maar praktische workflows, tools en standaarden waarmee teams sneller gekwalificeerde afspraken genereren.",
+      "Voor kmo's, startups en interne SDR-teams betekent dit minder tijdverlies, meer consistente uitvoering en een kortere opstarttijd.",
+    ],
+    summaryTitle: "Belangrijkste punten",
+    summaryPoints: [
+      "**Gestructureerde methode**: ICP, data, messaging, sequenties en rapportage worden end-to-end behandeld.",
+      "**Praktijkgericht**: de inhoud komt uit echte campagnes, niet uit abstracte theorie.",
+      "**Sneller operationeel**: teams verspillen minder tijd aan trial-and-error en voeren sneller uit.",
+    ],
+  },
 };
 
 export function AcademyMasterPage({
   content = academyContent,
   sharedHomeContent = homeContent,
+  locale = "fr",
 }: AcademyMasterPageProps) {
+  const academyGeoContent = academyGeoContentByLocale[locale];
   return (
     <>
       <SectionWrapper background="white" className="pt-[80px] md:pt-[120px]">
@@ -88,7 +159,7 @@ export function AcademyMasterPage({
         </FadeInOnScroll>
         <FadeInOnScroll delay={0.4}>
           <div className="mt-6 flex justify-center">
-            <AuthorByline datePublished="2024-06-15" dateModified="2026-03-01" locale="fr" />
+            <AuthorByline datePublished="2024-06-15" dateModified="2026-03-01" locale={locale} />
           </div>
         </FadeInOnScroll>
       </SectionWrapper>
@@ -287,7 +358,7 @@ export function AcademyMasterPage({
                 ))}
               </div>
               <div className="mt-6">
-                <SummarySection title={academyGeoContent.summaryTitle} points={academyGeoContent.summaryPoints} />
+                <SummarySection title={academyGeoContent.summaryTitle} points={academyGeoContent.summaryPoints} locale={locale} />
               </div>
             </div>
           </div>

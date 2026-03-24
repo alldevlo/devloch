@@ -18,6 +18,13 @@ const labelsByLocale: Record<SupportedLocale, { by: string; published: string; u
   nl: { by: "Door", published: "Gepubliceerd op", updated: "Bijgewerkt op" },
 };
 
+const defaultRoleByLocale: Record<SupportedLocale, string> = {
+  fr: "Fondateur, devlo",
+  en: "Founder, devlo",
+  de: "Gründer, devlo",
+  nl: "Oprichter, devlo",
+};
+
 function formatDate(iso: string, locale: SupportedLocale): string {
   const localeMap: Record<SupportedLocale, string> = { fr: "fr-CH", en: "en-GB", de: "de-CH", nl: "nl-BE" };
   try {
@@ -29,13 +36,14 @@ function formatDate(iso: string, locale: SupportedLocale): string {
 
 export function AuthorByline({
   name = "Charles Perret",
-  role = "Founder, devlo",
+  role,
   avatarSrc = "/images/CharlesPerretProfilePicture2025.webp",
   datePublished,
   dateModified,
   locale = "fr",
 }: AuthorBylineProps) {
   const labels = labelsByLocale[locale];
+  const resolvedRole = role ?? defaultRoleByLocale[locale];
 
   return (
     <div
@@ -59,7 +67,7 @@ export function AuthorByline({
         <span>
           {labels.by}{" "}
           <span className="font-semibold text-[var(--text-primary)]" itemProp="name">{name}</span>
-          <span className="hidden sm:inline" itemProp="jobTitle">, {role}</span>
+          <span className="hidden sm:inline" itemProp="jobTitle">, {resolvedRole}</span>
         </span>
       </div>
       {datePublished && (

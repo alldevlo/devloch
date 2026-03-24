@@ -11,6 +11,7 @@ import {
 } from "@/lib/seo/schema-builders";
 import type { SupportedLocale } from "@/lib/i18n/slug-map";
 import { getLocalizedColdEmailHub } from "@/lib/i18n/insights-helpers";
+import { normalizeLocalizedCopyDeep } from "@/lib/i18n/text-normalization";
 
 import { SEQUENCES } from "@/app/insights/cold-email-templates/sequence-data";
 import { SequenceBrowser } from "@/app/insights/cold-email-templates/sequence-browser";
@@ -32,18 +33,19 @@ const LOCALE_SERVICES_HREFS: Record<SupportedLocale, string> = {
 export function ColdEmailTemplatesMasterPage({ locale }: { locale: SupportedLocale }) {
   const content = getLocalizedColdEmailHub(locale);
   const prefix = locale === "fr" ? "" : `/${locale}`;
+  const localizedSequences = normalizeLocalizedCopyDeep(SEQUENCES, locale);
 
-  const totalTouches = SEQUENCES.reduce((sum, s) => sum + s.numTouches, 0);
-  const sequencesWithResults = SEQUENCES.filter(
+  const totalTouches = localizedSequences.reduce((sum, s) => sum + s.numTouches, 0);
+  const sequencesWithResults = localizedSequences.filter(
     (s) => s.metrics.repliedPct !== null
   ).length;
   const avgReplyRate =
-    SEQUENCES.filter((s) => s.metrics.repliedPct !== null).reduce(
+    localizedSequences.filter((s) => s.metrics.repliedPct !== null).reduce(
       (sum, s) => sum + (s.metrics.repliedPct ?? 0),
       0
     ) / sequencesWithResults;
   const industries = new Set(
-    SEQUENCES.map((s) => s.industry.split(" / ")[0].trim())
+    localizedSequences.map((s) => s.industry.split(" / ")[0].trim())
   );
 
   const breadcrumbItems = [
@@ -133,7 +135,7 @@ export function ColdEmailTemplatesMasterPage({ locale }: { locale: SupportedLoca
 
         {/* Sequence Browser */}
         <section className="mx-auto max-w-4xl px-6 py-16">
-          <SequenceBrowser sequences={SEQUENCES} uiLabels={content.browser} />
+          <SequenceBrowser sequences={localizedSequences} uiLabels={content.browser} />
         </section>
 
         {/* Metrics summary */}

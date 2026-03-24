@@ -1,81 +1,91 @@
 # devlo
 
-> Agence suisse de prospection commerciale B2B. Nous aidons les entreprises a generer des leads qualifies et des rendez-vous avec des decideurs via des campagnes outbound multicanales (cold email, LinkedIn, cold calling).
+> Swiss B2B outbound agency specializing in lead generation and qualified meeting booking via multichannel campaigns (cold email, LinkedIn, cold calling).
 
-## A propos
+## About
 
-- Fondee en 2020 a Rivaz, Suisse (Vaud)
-- Bureau US a Albuquerque, NM
-- Plus de 1000 campagnes deployees
-- Equipe multilangue : francais, anglais, allemand, neerlandais
-- Zones desservies : Suisse, Belgique, France, Allemagne, Luxembourg, USA, Canada
+- Founded in 2020 in Rivaz, Switzerland (Vaud)
+- US office in Albuquerque, NM
+- More than 1,000 campaigns deployed
+- Multilingual team: French, English, German, Dutch
+- Areas served: Switzerland, Belgium, France, Germany, Luxembourg, USA, Canada
 
 ## Services
 
-- [Prospection Outbound Multicanal](https://devlo.ch/services/outbound-multicanal): Strategie de prospection combinant email, LinkedIn et appels pour maximiser les rendez-vous B2B.
-- [Cold Email B2B](https://devlo.ch/services/cold-email): Campagnes d'emails personnalises a grande echelle pour generer des leads qualifies.
-- [LinkedIn Outreach](https://devlo.ch/services/linkedin-outreach): Prospection via Sales Navigator et messages personnalises sur LinkedIn.
-- [Cold Calling B2B](https://devlo.ch/services/cold-calling): Teleprospection externalisee avec gestion des objections et scripts personnalises.
-- [Intent Data](https://devlo.ch/services/intent-data): Identification des prospects chauds grace aux signaux d'intention d'achat.
-- [Enrichissement Clay](https://devlo.ch/services/enrichissement-clay): Enrichissement de donnees multi-sources pour des listes de prospection ultra-ciblees.
-- [Generation de Leads](https://devlo.ch/services/generation-leads): Construction de listes ICP qualifiees avec verification des donnees.
-- [Qualification de Leads](https://devlo.ch/services/qualification-leads): SDR externalise pour qualifier les prospects avant transfert aux equipes commerciales.
-- [Prise de Rendez-vous](https://devlo.ch/services/prise-de-rendez-vous): Booking de rendez-vous qualifies avec les decideurs cibles.
-- [CRM & Delivrabilite](https://devlo.ch/services/crm-delivrabilite): Configuration HubSpot, Salesforce et optimisation de la delivrabilite email.
+- [Multichannel Outbound Prospecting](https://devlo.ch/services/outbound-multicanal): Combined email, LinkedIn, and calling strategy to maximize B2B meetings.
+- [B2B Cold Email](https://devlo.ch/services/cold-email): Personalized email campaigns at scale to generate qualified leads.
+- [LinkedIn Outreach](https://devlo.ch/services/linkedin-outreach): Prospecting via Sales Navigator and personalized LinkedIn messaging.
+- [B2B Cold Calling](https://devlo.ch/services/cold-calling): Outsourced teleprospecting with objection handling and custom scripts.
+- [Intent Data](https://devlo.ch/services/intent-data): Identify hot prospects using buying intent signals.
+- [Clay Enrichment](https://devlo.ch/services/enrichissement-clay): Multi-source data enrichment for ultra-targeted prospect lists.
+- [Lead Generation](https://devlo.ch/services/generation-leads): Build qualified ICP lists with data verification.
+- [Lead Qualification](https://devlo.ch/services/qualification-leads): Outsourced SDR to qualify prospects before handoff to sales teams.
+- [Meeting Booking](https://devlo.ch/services/prise-de-rendez-vous): Book qualified meetings with target decision-makers.
+- [CRM & Deliverability](https://devlo.ch/services/crm-delivrabilite): HubSpot, Salesforce setup and email deliverability optimization.
 
-## Etudes de cas
+## Case Studies
 
-- [Horus Software — 200K EUR de contrats signes](https://devlo.ch/etudes-de-cas/logiciel-comptable-200k-ca): Logiciel comptable, 80 rendez-vous qualifies, 45 nouveaux clients en Belgique.
-- [HR Tech — 54 rendez-vous DACH](https://devlo.ch/etudes-de-cas/hr-54-rendez-vous-dach): Solution RH, 54 rendez-vous en region DACH.
-- [Proprete urbaine — 71 rendez-vous](https://devlo.ch/etudes-de-cas/proprete-urbaine-71-rendez-vous): Services de proprete, 71 rendez-vous generes.
-- [Biocarburants — 52 rendez-vous](https://devlo.ch/etudes-de-cas/biocarburants-52-rendez-vous): Secteur biocarburants, 52 rendez-vous qualifies.
-- [Formation — 14 rendez-vous](https://devlo.ch/etudes-de-cas/formation-14-rendez-vous): Organisme de formation, 14 rendez-vous B2B.
-- [Audiovisuel — 16 rendez-vous](https://devlo.ch/etudes-de-cas/audiovisuel-16-rendez-vous): Entreprise audiovisuelle, 16 rendez-vous.
-- [Cybersecurite — 4500 entreprises](https://devlo.ch/etudes-de-cas/cybersecurite-4500-entreprises): Solution cybersecurite, campagne a 4500 entreprises.
-- [Biodiversite — 70 rendez-vous](https://devlo.ch/etudes-de-cas/biodiversite-70-rendez-vous): Secteur biodiversite, 70 rendez-vous generes.
-- [Mobilite — 40 prospects](https://devlo.ch/etudes-de-cas/mobilite-40-prospects): Solution mobilite, 40 prospects qualifies.
-- [Merchandising — 23 prospects](https://devlo.ch/etudes-de-cas/merchandising-23-prospects): Merchandising, 23 prospects qualifies.
-- [Immobilier — 11 prospects](https://devlo.ch/etudes-de-cas/immobilier-11-prospects): Immobilier, 11 prospects generes.
-- [Immobilier — 30 prospects](https://devlo.ch/etudes-de-cas/immobilier-30-prospects): Immobilier, 30 prospects qualifies.
-- [Monizze — 120 rendez-vous](https://devlo.ch/etudes-de-cas/monizze-120-rendez-vous): Fintech belge, 120 rendez-vous qualifies.
-- [IDDI — Generation leads biotech pharma](https://devlo.ch/etudes-de-cas/iddi-generation-leads-biotech-pharma): CRO biotech/pharma, generation de leads qualifies.
+- [Horus Software — EUR 200K in signed contracts](https://devlo.ch/etudes-de-cas/logiciel-comptable-200k-ca): Accounting software, 80 qualified meetings, 45 new clients in Belgium.
+- [HR Tech — 54 DACH meetings](https://devlo.ch/etudes-de-cas/hr-54-rendez-vous-dach): HR solution, 54 meetings in the DACH region.
+- [Urban Cleanliness — 71 meetings](https://devlo.ch/etudes-de-cas/proprete-urbaine-71-rendez-vous): Cleaning services, 71 meetings generated.
+- [Biofuels — 52 meetings](https://devlo.ch/etudes-de-cas/biocarburants-52-rendez-vous): Biofuels sector, 52 qualified meetings.
+- [Training — 14 meetings](https://devlo.ch/etudes-de-cas/formation-14-rendez-vous): Training organization, 14 B2B meetings.
+- [Audiovisual — 16 meetings](https://devlo.ch/etudes-de-cas/audiovisuel-16-rendez-vous): Audiovisual company, 16 meetings.
+- [Cybersecurity — 4,500 companies](https://devlo.ch/etudes-de-cas/cybersecurite-4500-entreprises): Cybersecurity solution, campaign reaching 4,500 companies.
+- [Biodiversity — 70 meetings](https://devlo.ch/etudes-de-cas/biodiversite-70-rendez-vous): Biodiversity sector, 70 meetings generated.
+- [Mobility — 40 prospects](https://devlo.ch/etudes-de-cas/mobilite-40-prospects): Mobility solution, 40 qualified prospects.
+- [Merchandising — 23 prospects](https://devlo.ch/etudes-de-cas/merchandising-23-prospects): Merchandising, 23 qualified prospects.
+- [Real Estate — 11 prospects](https://devlo.ch/etudes-de-cas/immobilier-11-prospects): Real estate, 11 prospects generated.
+- [Real Estate — 30 prospects](https://devlo.ch/etudes-de-cas/immobilier-30-prospects): Real estate, 30 qualified prospects.
+- [Monizze — 120 meetings](https://devlo.ch/etudes-de-cas/monizze-120-rendez-vous): Belgian fintech, 120 qualified meetings.
+- [IDDI — Biotech pharma lead generation](https://devlo.ch/etudes-de-cas/iddi-generation-leads-biotech-pharma): Biotech/pharma CRO, qualified lead generation.
 
-## Prospection par pays
+## Prospecting by Country
 
-- [Prospection commerciale en Suisse](https://devlo.ch/prospection-commerciale-suisse): Campagnes B2B ciblees sur le marche suisse romand, alemanique et tessinois.
-- [Prospection commerciale en Belgique](https://devlo.ch/prospection-commerciale-belgique): Campagnes B2B en francais et neerlandais pour le marche belge.
-- [Prospection commerciale en France](https://devlo.ch/prospection-commerciale-france): Campagnes outbound pour penetrer le marche francais.
-
-## Blog
-
-- [Cold email B2B : guide complet](https://devlo.ch/blog/cold-email-b2b-guide-complet): Comment structurer et deployer des campagnes cold email performantes.
-- [Externaliser sa prospection commerciale](https://devlo.ch/blog/externaliser-prospection-commerciale): Guide decisionnel pour externaliser la prospection B2B.
-- [Intent data : identifier les prospects](https://devlo.ch/blog/intent-data-prospects-prets-acheter): Utiliser les signaux d'intention d'achat pour cibler les bons prospects.
+- [B2B Prospecting in Switzerland](https://devlo.ch/prospection-commerciale-suisse): Targeted B2B campaigns for the Swiss market (Romandy, German-speaking, Ticino).
+- [B2B Prospecting in Belgium](https://devlo.ch/prospection-commerciale-belgique): B2B campaigns in French and Dutch for the Belgian market.
+- [B2B Prospecting in France](https://devlo.ch/prospection-commerciale-france): Outbound campaigns for the French market.
 
 ## Insights
 
-- [Voice-to-Content : transformer la dictee vocale en contenu publiable](https://devlo.ch/insights/voice-to-content): Guide pratique pour convertir des transcriptions vocales (Wispr Flow) en posts LinkedIn, comptes-rendus et briefs clients via Claude Code.
-- [94 Signaux d'Intention d'Achat B2B](https://devlo.ch/insights/buying-signals): Guide complet des 94 signaux d'achat B2B classes par categorie (entreprise, personne, tech stack, usage produit, communaute, evenements). Detectez les prospects prets a acheter avant vos concurrents.
-- [25 Sequences Cold Email B2B](https://devlo.ch/insights/cold-email-templates): 25 sequences cold email testees avec resultats reels. Industrie, metriques, emails complets — templates prets a utiliser pour votre prospection B2B.
+- [94 B2B Buying Intent Signals](https://devlo.ch/insights/buying-signals): Complete guide to 94 B2B buying signals categorized by company, person, tech stack, product usage, community, and events. Detect purchase-ready prospects before your competitors.
+- [25 B2B Cold Email Sequences](https://devlo.ch/insights/cold-email-templates): 25 tested cold email sequences with real results. Industry, metrics, complete emails -- ready-to-use templates for B2B prospecting.
 
-## Pages principales
+## Blog
 
-- [Accueil](https://devlo.ch/)
-- [Etudes de cas](https://devlo.ch/etudes-de-cas)
+- [B2B Cold Email: Complete Guide](https://devlo.ch/blog/cold-email-b2b-guide-complet): How to structure and deploy high-performing cold email campaigns.
+- [Outsourcing Commercial Prospecting](https://devlo.ch/blog/externaliser-prospection-commerciale): Decision guide for outsourcing B2B prospecting.
+- [Intent Data: Identify Prospects](https://devlo.ch/blog/intent-data-prospects-prets-acheter): Using buying intent signals to target the right prospects.
+
+## Key Pages
+
+- [Homepage (FR)](https://devlo.ch/)
+- [Homepage (EN)](https://devlo.ch/en/)
+- [Homepage (DE)](https://devlo.ch/de/)
+- [Homepage (NL)](https://devlo.ch/nl/)
+- [Case Studies](https://devlo.ch/etudes-de-cas)
 - [Outbound Academy](https://devlo.ch/academy)
-- [Insights](https://devlo.ch/insights/voice-to-content)
+- [Insights](https://devlo.ch/insights)
 - [Blog](https://devlo.ch/blog)
-- [Consultation gratuite](https://devlo.ch/consultation)
+- [Free Consultation](https://devlo.ch/consultation)
+
+## Optional
+
+- [About / Agency](https://devlo.ch/agence)
+- [AI Sales Ops](https://devlo.ch/ai-sales-ops)
+- [Terms & Conditions](https://devlo.ch/conditions)
 
 ## Contact
 
-- EMEA : emea@devlo.ch | +41 79 758 64 03
-- Americas : americas@devlo.ch | +1 234 201 8019
-- LinkedIn : https://www.linkedin.com/company/devlo-connects-you-with-more-prospects/
+- EMEA: emea@devlo.ch | +41 79 758 64 03
+- Americas: americas@devlo.ch | +1 234 201 8019
+- LinkedIn: https://www.linkedin.com/company/devlo-connects-you-with-more-prospects/
 
-## Langues disponibles
+## Available Languages
 
-- Francais : https://devlo.ch/
-- English : https://devlo.ch/en/
-- Deutsch : https://devlo.ch/de/
-- Nederlands : https://devlo.ch/nl/
+- [Francais](https://devlo.ch/)
+- [English](https://devlo.ch/en/)
+- [Deutsch](https://devlo.ch/de/)
+- [Nederlands](https://devlo.ch/nl/)
+
+Last-Updated: 2026-03-24

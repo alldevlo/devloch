@@ -2730,7 +2730,42 @@
           "Qualified appointments typically arrive within **1 to 5 weeks** of campaign launch"
         ],
         "datePublished": "2024-06-15",
-        "dateModified": "2026-03-01"
+        "dateModified": "2026-03-01",
+        "comparisonTable": {
+          "caption": "Comparison between outsourced multi-channel prospecting with devlo and in-house prospecting",
+          "headers": [
+            "Criterion",
+            "In-house",
+            "With devlo"
+          ],
+          "rows": [
+            {
+              "criterion": "Time to launch",
+              "colA": "3-6 months (hiring, training, stack)",
+              "colB": "2-3 weeks, campaigns live"
+            },
+            {
+              "criterion": "Annual cost",
+              "colA": "CHF 80-120k (SDR salary + tools)",
+              "colB": "Starting from CHF 3k/month"
+            },
+            {
+              "criterion": "Channels activated",
+              "colA": "Often only 1 channel mastered",
+              "colB": "Email + LinkedIn + Calling coordinated"
+            },
+            {
+              "criterion": "Copywriting expertise",
+              "colA": "Learning by trial and error",
+              "colB": "1,000+ campaigns of experience"
+            },
+            {
+              "criterion": "Scalability",
+              "colA": "Limited by team size",
+              "colB": "Volume adjustable every month"
+            }
+          ]
+        }
       },
       "cold-email": {
         "slug": "cold-email",
@@ -2926,7 +2961,42 @@
           "A/B testing on **subject lines, hooks, and CTAs** drives continuous improvement"
         ],
         "datePublished": "2024-06-15",
-        "dateModified": "2026-03-01"
+        "dateModified": "2026-03-01",
+        "comparisonTable": {
+          "caption": "Comparison between outsourced cold email with devlo and in-house cold email",
+          "headers": [
+            "Criterion",
+            "In-house",
+            "With devlo"
+          ],
+          "rows": [
+            {
+              "criterion": "Deliverability",
+              "colA": "Risk of blacklisting without expertise",
+              "colB": "Dedicated infrastructure, SPF/DKIM/DMARC, warm-up"
+            },
+            {
+              "criterion": "Average open rate",
+              "colA": "25-35%",
+              "colB": "55-75% thanks to optimised copywriting"
+            },
+            {
+              "criterion": "Copywriting",
+              "colA": "Generic templates",
+              "colB": "Hyper-personalised, A/B tested messages"
+            },
+            {
+              "criterion": "Volume",
+              "colA": "Limited by a single domain",
+              "colB": "Multi-domain, automated rotation"
+            },
+            {
+              "criterion": "Optimisation",
+              "colA": "Manual, occasional analysis",
+              "colB": "Weekly data-driven iterations"
+            }
+          ]
+        }
       },
       "linkedin-outreach": {
         "slug": "linkedin-outreach",
@@ -3120,7 +3190,42 @@
           "LinkedIn outreach is especially effective for **C-level targets** in saturated email markets"
         ],
         "datePublished": "2024-06-15",
-        "dateModified": "2026-03-01"
+        "dateModified": "2026-03-01",
+        "comparisonTable": {
+          "caption": "Comparison between outsourced LinkedIn prospecting with devlo and in-house LinkedIn prospecting",
+          "headers": [
+            "Criterion",
+            "In-house",
+            "With devlo"
+          ],
+          "rows": [
+            {
+              "criterion": "Targeting",
+              "colA": "Manual search, often imprecise",
+              "colB": "Advanced Sales Navigator + boolean filters"
+            },
+            {
+              "criterion": "Messages",
+              "colA": "Identical templates for everyone",
+              "colB": "Contextual personalisation by segment"
+            },
+            {
+              "criterion": "Response rate",
+              "colA": "5-15%",
+              "colB": "25-69% thanks to the devlo method"
+            },
+            {
+              "criterion": "Multi-channel follow-up",
+              "colA": "LinkedIn only",
+              "colB": "LinkedIn + Email + Calling coordinated"
+            },
+            {
+              "criterion": "LinkedIn compliance",
+              "colA": "Risk of account restriction",
+              "colB": "Volumes compliant with LinkedIn limits"
+            }
+          ]
+        }
       },
       "cold-calling": {
         "slug": "cold-calling",
@@ -5070,7 +5175,42 @@
           "devlo orchestriert den gesamten Zyklus, von der **ICP-Definition** bis zur Terminvereinbarung in Ihrem Kalender."
         ],
         "datePublished": "2024-06-15",
-        "dateModified": "2026-03-01"
+        "dateModified": "2026-03-01",
+        "comparisonTable": {
+          "caption": "Vergleich zwischen ausgelagerter Multichannel-Akquise mit devlo und interner Akquise",
+          "headers": [
+            "Kriterium",
+            "Intern",
+            "Mit devlo"
+          ],
+          "rows": [
+            {
+              "criterion": "Anlaufzeit",
+              "colA": "3-6 Monate (Rekrutierung, Schulung, Stack)",
+              "colB": "2-3 Wochen, Kampagnen live"
+            },
+            {
+              "criterion": "Jahreskosten",
+              "colA": "80-120k CHF (SDR-Gehalt + Tools)",
+              "colB": "Ab 3k CHF/Monat"
+            },
+            {
+              "criterion": "Aktivierte Kanäle",
+              "colA": "Oft nur 1 Kanal beherrscht",
+              "colB": "E-Mail + LinkedIn + Calling koordiniert"
+            },
+            {
+              "criterion": "Copywriting-Expertise",
+              "colA": "Lernen durch Versuch und Irrtum",
+              "colB": "Über 1.000 Kampagnen Erfahrung"
+            },
+            {
+              "criterion": "Skalierbarkeit",
+              "colA": "Begrenzt durch die Teamgrösse",
+              "colB": "Volumen monatlich anpassbar"
+            }
+          ]
+        }
       },
       "cold-email": {
         "slug": "cold-email",
@@ -5266,7 +5406,42 @@
           "Erfolgreiche Kampagnen erreichen **70%+ Öffnungsraten** und generieren qualifizierte Geschäftsgespräche."
         ],
         "datePublished": "2024-06-15",
-        "dateModified": "2026-03-01"
+        "dateModified": "2026-03-01",
+        "comparisonTable": {
+          "caption": "Vergleich zwischen ausgelagertem Cold Email mit devlo und internem Cold Email",
+          "headers": [
+            "Kriterium",
+            "Intern",
+            "Mit devlo"
+          ],
+          "rows": [
+            {
+              "criterion": "Zustellbarkeit",
+              "colA": "Blacklist-Risiko ohne Expertise",
+              "colB": "Dedizierte Infrastruktur, SPF/DKIM/DMARC, Warm-up"
+            },
+            {
+              "criterion": "Durchschnittliche Öffnungsrate",
+              "colA": "25-35%",
+              "colB": "55-75% dank optimiertem Copywriting"
+            },
+            {
+              "criterion": "Copywriting",
+              "colA": "Generische Vorlagen",
+              "colB": "Hyper-personalisierte, A/B-getestete Nachrichten"
+            },
+            {
+              "criterion": "Volumen",
+              "colA": "Begrenzt durch eine einzige Domain",
+              "colB": "Multi-Domain, automatisierte Rotation"
+            },
+            {
+              "criterion": "Optimierung",
+              "colA": "Manuelle, gelegentliche Analyse",
+              "colB": "Wöchentliche datengetriebene Iterationen"
+            }
+          ]
+        }
       },
       "linkedin-outreach": {
         "slug": "linkedin-outreach",
@@ -5460,7 +5635,42 @@
           "devlo nutzt **Sales Navigator** für präzises Targeting und koordinierte Outreach-Sequenzen."
         ],
         "datePublished": "2024-06-15",
-        "dateModified": "2026-03-01"
+        "dateModified": "2026-03-01",
+        "comparisonTable": {
+          "caption": "Vergleich zwischen ausgelagerter LinkedIn-Akquise mit devlo und interner LinkedIn-Akquise",
+          "headers": [
+            "Kriterium",
+            "Intern",
+            "Mit devlo"
+          ],
+          "rows": [
+            {
+              "criterion": "Targeting",
+              "colA": "Manuelle Suche, oft ungenau",
+              "colB": "Erweiterter Sales Navigator + boolesche Filter"
+            },
+            {
+              "criterion": "Nachrichten",
+              "colA": "Identische Vorlagen für alle",
+              "colB": "Kontextuelle Personalisierung nach Segment"
+            },
+            {
+              "criterion": "Antwortrate",
+              "colA": "5-15%",
+              "colB": "25-69% dank der devlo-Methode"
+            },
+            {
+              "criterion": "Multichannel-Follow-up",
+              "colA": "Nur LinkedIn",
+              "colB": "LinkedIn + E-Mail + Calling koordiniert"
+            },
+            {
+              "criterion": "LinkedIn-Konformität",
+              "colA": "Risiko einer Kontobeschränkung",
+              "colB": "Volumen konform mit LinkedIn-Limits"
+            }
+          ]
+        }
       },
       "cold-calling": {
         "slug": "cold-calling",
@@ -7410,7 +7620,42 @@
           "devlo orkestreert de hele cyclus, van de **ICP-definitie** tot het boeken van afspraken in uw agenda."
         ],
         "datePublished": "2024-06-15",
-        "dateModified": "2026-03-01"
+        "dateModified": "2026-03-01",
+        "comparisonTable": {
+          "caption": "Vergelijking tussen uitbestede multichannel-prospectie met devlo en interne prospectie",
+          "headers": [
+            "Criterium",
+            "Intern",
+            "Met devlo"
+          ],
+          "rows": [
+            {
+              "criterion": "Opstartijd",
+              "colA": "3-6 maanden (werving, training, stack)",
+              "colB": "2-3 weken, campagnes live"
+            },
+            {
+              "criterion": "Jaarlijkse kosten",
+              "colA": "CHF 80-120k (SDR-salaris + tools)",
+              "colB": "Vanaf CHF 3k/maand"
+            },
+            {
+              "criterion": "Geactiveerde kanalen",
+              "colA": "Vaak slechts 1 kanaal beheerst",
+              "colB": "E-mail + LinkedIn + Calling gecoordineerd"
+            },
+            {
+              "criterion": "Copywriting-expertise",
+              "colA": "Leren door vallen en opstaan",
+              "colB": "Meer dan 1.000 campagnes ervaring"
+            },
+            {
+              "criterion": "Schaalbaarheid",
+              "colA": "Beperkt door teamgrootte",
+              "colB": "Volume maandelijks aanpasbaar"
+            }
+          ]
+        }
       },
       "cold-email": {
         "slug": "cold-email",
@@ -7606,7 +7851,42 @@
           "Succesvolle campagnes bereiken **70%+ open rates** en genereren gekwalificeerde verkoopgesprekken."
         ],
         "datePublished": "2024-06-15",
-        "dateModified": "2026-03-01"
+        "dateModified": "2026-03-01",
+        "comparisonTable": {
+          "caption": "Vergelijking tussen uitbestede cold email met devlo en interne cold email",
+          "headers": [
+            "Criterium",
+            "Intern",
+            "Met devlo"
+          ],
+          "rows": [
+            {
+              "criterion": "Deliverability",
+              "colA": "Risico op blacklisting zonder expertise",
+              "colB": "Dedicated infrastructuur, SPF/DKIM/DMARC, warm-up"
+            },
+            {
+              "criterion": "Gemiddelde open rate",
+              "colA": "25-35%",
+              "colB": "55-75% dankzij geoptimaliseerde copywriting"
+            },
+            {
+              "criterion": "Copywriting",
+              "colA": "Generieke templates",
+              "colB": "Hyper-gepersonaliseerde, A/B-geteste berichten"
+            },
+            {
+              "criterion": "Volume",
+              "colA": "Beperkt door een enkel domein",
+              "colB": "Multi-domein, geautomatiseerde rotatie"
+            },
+            {
+              "criterion": "Optimalisatie",
+              "colA": "Handmatige, incidentele analyse",
+              "colB": "Wekelijkse datagedreven iteraties"
+            }
+          ]
+        }
       },
       "linkedin-outreach": {
         "slug": "linkedin-outreach",
@@ -7800,7 +8080,42 @@
           "devlo gebruikt **Sales Navigator** voor nauwkeurige targeting en gecoördineerde outreach-sequenties."
         ],
         "datePublished": "2024-06-15",
-        "dateModified": "2026-03-01"
+        "dateModified": "2026-03-01",
+        "comparisonTable": {
+          "caption": "Vergelijking tussen uitbestede LinkedIn-prospectie met devlo en interne LinkedIn-prospectie",
+          "headers": [
+            "Criterium",
+            "Intern",
+            "Met devlo"
+          ],
+          "rows": [
+            {
+              "criterion": "Targeting",
+              "colA": "Handmatig zoeken, vaak onnauwkeurig",
+              "colB": "Geavanceerde Sales Navigator + booleaanse filters"
+            },
+            {
+              "criterion": "Berichten",
+              "colA": "Identieke templates voor iedereen",
+              "colB": "Contextuele personalisatie per segment"
+            },
+            {
+              "criterion": "Responsgraad",
+              "colA": "5-15%",
+              "colB": "25-69% dankzij de devlo-methode"
+            },
+            {
+              "criterion": "Multichannel follow-up",
+              "colA": "Alleen LinkedIn",
+              "colB": "LinkedIn + E-mail + Calling gecoordineerd"
+            },
+            {
+              "criterion": "LinkedIn-compliance",
+              "colA": "Risico op accountbeperking",
+              "colB": "Volumes conform LinkedIn-limieten"
+            }
+          ]
+        }
       },
       "cold-calling": {
         "slug": "cold-calling",

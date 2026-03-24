@@ -484,6 +484,7 @@ export function HomePage({
             <SummarySection
               title={content.homeSummaryTitle ?? "En résumé"}
               points={content.homeSummaryPoints}
+              locale={locale}
             />
             {content.homeComparisonTable && (
               <div className="mt-10">

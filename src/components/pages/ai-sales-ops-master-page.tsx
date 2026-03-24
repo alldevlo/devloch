@@ -393,6 +393,7 @@ export function AiSalesOpsMasterPage({ locale = "fr" }: AiSalesOpsMasterPageProp
                   <SummarySection
                     title={content.summaryTitle ?? "En résumé"}
                     points={content.summaryPoints ?? []}
+                    locale={locale}
                   />
                 </div>
               )}

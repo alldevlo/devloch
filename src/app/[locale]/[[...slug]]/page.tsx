@@ -13,6 +13,7 @@ import { ConditionsMasterPage } from "@/components/pages/conditions-master-page"
 import { ConsultationMasterPage } from "@/components/pages/consultation-master-page";
 import { GeoLandingPage } from "@/components/pages/geo-landing-page";
 import { AlternativePage } from "@/components/pages/alternative-page";
+import { DictationCleanMasterPage } from "@/components/pages/dictation-clean-master-page";
 import { HomePage } from "@/components/pages/home-page";
 import { ServicesHubPage as ServicesHubView } from "@/components/pages/services-hub-page";
 import { ServicePageTemplate } from "@/components/pages/service-page";
@@ -23,9 +24,7 @@ import { ColdEmailSequenceMasterPage } from "@/components/pages/cold-email-seque
 import { LocalizedPage as LocalizedContentPage } from "@/components/pages/localized-page";
 import { GEO_PAGES } from "@/content/geo-pages";
 import { ALTERNATIVE_PAGES } from "@/content/alternatives";
-import { agencyContent } from "@/content/agency";
-import { SERVICE_PAGE_DATA, type ServiceSlug } from "@/content/services";
-import { academySeo, caseStudiesSeo, conditionsSeo, consultationSeo, homeSeo } from "@/content/masterfile.fr";
+import { type ServiceSlug } from "@/content/services";
 import { getLocalizedInsightsHub, getLocalizedBuyingSignals, getLocalizedColdEmailHub, getLocalizedColdEmailSequence, getLocalizedAutoAmelioration } from "@/lib/i18n/insights-helpers";
 import { AutoAmeliorationMasterPage } from "@/components/pages/auto-amelioration-master-page";
 import { getLocalizedBlogArticle } from "@/lib/i18n/blog-content";
@@ -33,6 +32,8 @@ import { getLocalizedGeoContent } from "@/lib/i18n/geo-content";
 import { getLocalizedAlternativeContent } from "@/lib/i18n/alternatives-content";
 import { getLocalizedAiSalesOpsContent } from "@/lib/i18n/ai-sales-ops-content";
 import { getLocalizedCaseStudyBySlug } from "@/lib/i18n/case-studies-content";
+import { getLocalizedAgencyContent } from "@/lib/i18n/agency-content";
+import { getLocalizedDictationCleanContent } from "@/lib/i18n/dictation-clean-content";
 import { getLocalizedMasterfileContent } from "@/lib/i18n/masterfile-content";
 import { getLocalizedServicesContent } from "@/lib/i18n/services-content";
 import { getSanityLocalizedPageData, getSanityLocalizedSeo } from "@/lib/i18n/localized-seo";
@@ -181,8 +182,18 @@ function buildAlternates(entry: { fr: string | null; en: string | null; de: stri
   };
 }
 
-function resolveFrSeo(frPath: string): { title: string; description: string; imagePath?: string; type?: "website" | "article" } {
+function resolveLocalizedSeo(
+  frPath: string,
+  locale: SupportedLocale,
+): { title: string; description: string; imagePath?: string; type?: "website" | "article" } {
   const path = normalizePath(frPath);
+  const masterfile = getLocalizedMasterfileContent(locale);
+  const services = getLocalizedServicesContent(locale);
+  const homeSeo = masterfile.homeSeo as { title: string; description: string };
+  const academySeo = masterfile.academySeo as { title: string; description: string };
+  const consultationSeo = masterfile.consultationSeo as { title: string; description: string };
+  const conditionsSeo = masterfile.conditionsSeo as { title: string; description: string };
+  const caseStudiesSeo = masterfile.caseStudiesSeo as { title: string; description: string };
 
   if (path === "/") return { title: homeSeo.title.replace(/\s*\|\s*devlo$/i, ""), description: homeSeo.description };
   if (path === "/academy") return { title: academySeo.title.replace(/\s*\|\s*devlo$/i, ""), description: academySeo.description };
@@ -192,15 +203,14 @@ function resolveFrSeo(frPath: string): { title: string; description: string; ima
 
   if (path === "/services") {
     return {
-      title: "Services de prospection B2B : cold email, LinkedIn, calling",
-      description:
-        "devlo est une agence de prospection B2B basée en Suisse : génération de leads, cold email, LinkedIn outreach, cold calling, intent data et enrichissement Clay.",
+      title: services.hubCopy.title,
+      description: services.hubCopy.description,
     };
   }
 
   if (path.startsWith("/services/")) {
     const serviceSlug = path.slice("/services/".length) as ServiceSlug;
-    const service = SERVICE_PAGE_DATA[serviceSlug];
+    const service = services.SERVICE_PAGE_DATA[serviceSlug];
     if (service) {
       return {
         title: service.metadataTitle,
@@ -211,30 +221,25 @@ function resolveFrSeo(frPath: string): { title: string; description: string; ima
 
   if (path.startsWith("/etudes-de-cas/")) {
     const caseStudySlug = path.slice("/etudes-de-cas/".length);
+    const caseStudy = getLocalizedCaseStudyBySlug(locale)[caseStudySlug];
+    if (caseStudy) {
+      return {
+        title: caseStudy.title,
+        description: caseStudy.summary || caseStudy.heroSubtitle || caseStudiesSeo.description,
+        type: "article",
+      };
+    }
     const metadata = generateCaseStudyFrMetadata({ params: { slug: caseStudySlug } });
-    const title = typeof metadata.title === "string" ? metadata.title : "Étude de cas";
+    const title = typeof metadata.title === "string" ? metadata.title : caseStudiesSeo.title;
     const description = metadata.description ?? caseStudiesSeo.description;
-    const image = Array.isArray(metadata.openGraph?.images) && metadata.openGraph.images.length > 0
-      ? metadata.openGraph.images[0]
-      : defaultOgImagePath;
-    const imagePath =
-      typeof image === "string"
-        ? image
-        : image instanceof URL
-          ? image.toString()
-          : String(image.url);
-    return {
-      title,
-      description,
-      imagePath,
-      type: "article",
-    };
+    return { title, description, imagePath: defaultOgImagePath, type: "article" };
   }
 
   if (path === "/agence") {
+    const agency = getLocalizedAgencyContent(locale);
     return {
-      title: agencyContent.metaTitle.replace(/\s*—\s*devlo$/i, ""),
-      description: agencyContent.metaDescription,
+      title: agency.metaTitle.replace(/\s*—\s*devlo$/i, ""),
+      description: agency.metaDescription,
     };
   }
 
@@ -251,6 +256,15 @@ function resolveFrSeo(frPath: string): { title: string; description: string; ima
       title: "Insights — Ressources et guides pour la prospection B2B",
       description:
         "Guides pratiques, listes de reference et ressources pour ameliorer votre prospection B2B. Signaux d'achat, automatisation IA, et strategies outbound.",
+    };
+  }
+
+  if (path === "/insights/dictation-clean") {
+    const content = getLocalizedDictationCleanContent(locale);
+    return {
+      title: content.metaTitle,
+      description: content.metaDescription,
+      type: "article",
     };
   }
 
@@ -322,8 +336,8 @@ function resolveFrSeo(frPath: string): { title: string; description: string; ima
   }
 
   return {
-    title: homeSeo.title.replace(/\s*\|\s*devlo$/i, ""),
-    description: homeSeo.description,
+      title: homeSeo.title.replace(/\s*\|\s*devlo$/i, ""),
+      description: homeSeo.description,
   };
 }
 
@@ -481,7 +495,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
                 title: localizedAlternativeSeo.metaTitle,
                 description: localizedAlternativeSeo.metaDescription,
               }
-            : resolveFrSeo(resolved.frPath);
+            : resolveLocalizedSeo(resolved.frPath, resolved.locale);
   const sanitySeo = await getSanityLocalizedSeo(resolved.pageId, resolved.locale);
   const title = stripDevloSuffix(sanitySeo?.title ?? baseSeo.title);
   const description = sanitySeo?.description ?? baseSeo.description;
@@ -575,6 +589,7 @@ export default async function LocalizedRoutePage({ params }: Params) {
         sharedHomeContent={
           localizedTemplate.content.homeContent as Parameters<typeof AcademyMasterPage>[0]["sharedHomeContent"]
         }
+        locale={resolved.locale}
       />
     );
   }
@@ -626,6 +641,10 @@ export default async function LocalizedRoutePage({ params }: Params) {
     return <AutoAmeliorationMasterPage locale={resolved.locale} />;
   }
 
+  if (frPath === "/insights/dictation-clean") {
+    return <DictationCleanMasterPage locale={resolved.locale} />;
+  }
+
   if (frPath === "/insights/buying-signals") {
     return <BuyingSignalsMasterPage locale={resolved.locale} />;
   }
@@ -666,7 +685,7 @@ export default async function LocalizedRoutePage({ params }: Params) {
 
   const pageData = await getSanityLocalizedPageData(resolved.pageId, resolved.locale);
 
-  const baseSeo = resolveFrSeo(frPath);
+  const baseSeo = resolveLocalizedSeo(frPath, resolved.locale);
   let localizedData = pageData;
 
   if (frPath.startsWith("/etudes-de-cas/")) {

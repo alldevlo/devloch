@@ -372,6 +372,7 @@ export function AgencyMasterPage({ locale = "fr" }: AgencyMasterPageProps) {
                   <SummarySection
                     title={content.summaryTitle ?? (locale === "fr" ? "En résumé" : locale === "de" ? "Zusammenfassung" : locale === "nl" ? "Samenvatting" : "Key takeaways")}
                     points={content.summaryPoints ?? []}
+                    locale={locale}
                   />
                 </div>
               )}

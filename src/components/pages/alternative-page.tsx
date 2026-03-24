@@ -9,7 +9,7 @@ import { InfiniteLogoRail } from "@/components/shared/logo-rail";
 import { SummarySection } from "@/components/shared/summary-section";
 import { TRUSTED_LOGOS_STRIP } from "@/content/service-brand-assets";
 import { type AlternativePageData } from "@/content/alternatives";
-import { caseStudyBySlug } from "@/lib/case-studies";
+import { getLocalizedCaseStudyBySlug } from "@/lib/i18n/case-studies-content";
 import { getLocalizedAlternativeContent } from "@/lib/i18n/alternatives-content";
 import { resolvePathForLocale, type SupportedLocale } from "@/lib/i18n/slug-map";
 import { buildArticleSchema, buildBreadcrumbSchema, buildFaqPageSchema } from "@/lib/seo/schema-builders";
@@ -23,6 +23,7 @@ const copyByLocale: Record<
     ctaConsultation: string;
     comparatifEyebrow: string;
     comparisonEyebrow: string;
+    criterion: string;
     whyDevloEyebrow: string;
     whyDevloHeading: string;
     caseStudiesEyebrow: string;
@@ -39,6 +40,7 @@ const copyByLocale: Record<
     ctaConsultation: "Consultation gratuite",
     comparatifEyebrow: "Comparatif agences B2B",
     comparisonEyebrow: "Comparaison",
+    criterion: "Critère",
     whyDevloEyebrow: "Pourquoi devlo",
     whyDevloHeading: "Ce que devlo apporte de différent",
     caseStudiesEyebrow: "Résultats clients",
@@ -54,6 +56,7 @@ const copyByLocale: Record<
     ctaConsultation: "Free consultation",
     comparatifEyebrow: "B2B agency comparison",
     comparisonEyebrow: "Comparison",
+    criterion: "Criterion",
     whyDevloEyebrow: "Why devlo",
     whyDevloHeading: "What devlo brings differently",
     caseStudiesEyebrow: "Client results",
@@ -69,6 +72,7 @@ const copyByLocale: Record<
     ctaConsultation: "Kostenlose Beratung",
     comparatifEyebrow: "B2B-Agenturvergleich",
     comparisonEyebrow: "Vergleich",
+    criterion: "Kriterium",
     whyDevloEyebrow: "Warum devlo",
     whyDevloHeading: "Was devlo anders macht",
     caseStudiesEyebrow: "Kundenergebnisse",
@@ -84,6 +88,7 @@ const copyByLocale: Record<
     ctaConsultation: "Gratis consultatie",
     comparatifEyebrow: "B2B bureau vergelijking",
     comparisonEyebrow: "Vergelijking",
+    criterion: "Criterium",
     whyDevloEyebrow: "Waarom devlo",
     whyDevloHeading: "Wat devlo anders doet",
     caseStudiesEyebrow: "Klantresultaten",
@@ -109,9 +114,10 @@ export function AlternativePage({ data, locale = "fr" }: { data: AlternativePage
   const summaryPoints = localizedContent?.summaryPoints ?? [];
   const datePublished = localizedContent?.datePublished ?? "2024-06-15";
   const dateModified = localizedContent?.dateModified ?? "2026-03-01";
+  const localizedCaseStudies = getLocalizedCaseStudyBySlug(locale);
 
   const studies = data.caseStudySlugs
-    .map((slug) => caseStudyBySlug[slug])
+    .map((slug) => localizedCaseStudies[slug])
     .filter(Boolean);
 
   const homePath = resolvePathForLocale("/", locale).path;
@@ -198,7 +204,7 @@ export function AlternativePage({ data, locale = "fr" }: { data: AlternativePage
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-neutral-200 bg-[#f7f8fc]">
-                  <th className="px-6 py-4 text-left font-semibold text-[#153a54]">Critère</th>
+                  <th className="px-6 py-4 text-left font-semibold text-[#153a54]">{copy.criterion}</th>
                   <th className="px-6 py-4 text-left font-semibold text-[#074f74]">devlo</th>
                   <th className="px-6 py-4 text-left font-semibold text-neutral-500">{data.competitorName}</th>
                 </tr>
@@ -300,6 +306,7 @@ export function AlternativePage({ data, locale = "fr" }: { data: AlternativePage
                   <SummarySection
                     title={summaryTitle ?? (locale === "fr" ? "En résumé" : locale === "de" ? "Zusammenfassung" : locale === "nl" ? "Samenvatting" : "Key takeaways")}
                     points={summaryPoints}
+                    locale={locale}
                   />
                 </div>
               )}

@@ -93,12 +93,12 @@
       ],
       "comparisonTable": [
         {
-          "feature": "Approche",
+          "feature": "Approach",
           "devlo": "Multi-channel (cold email + LinkedIn + calling)",
           "competitor": "Mainly cold email"
         },
         {
-          "feature": "Langues",
+          "feature": "Languages",
           "devlo": "FR / DE / EN / NL native",
           "competitor": "EN mainly"
         },
@@ -147,7 +147,22 @@
           "question": "How do I migrate from Undersales to devlo?",
           "answer": "The transition takes 2 weeks: ICP workshop, transfer of prospect lists, infrastructure setup, validation of sequences. Our first results came in the 3rd week of the campaign."
         }
-      ]
+      ],
+      "editorialTitle": "Devlo vs Undersales: which agency should you choose for your multilingual B2B prospecting?",
+      "editorialParagraphs": [
+        "The choice between two B2B prospecting agencies is not just about price -- it comes down to **geographical coverage, channel expertise and speed of initial results**. devlo and Undersales both operate in the French-speaking market, but their scope diverges significantly as soon as you look at the Swiss, German-speaking and DACH markets.",
+        "devlo has been based in Switzerland since 2020 and has deployed **more than 500 campaigns in Switzerland, Belgium, France and DACH**. Our team writes and prospects natively in FR, DE, EN and NL -- a decisive advantage for companies targeting multiple markets simultaneously. According to HubSpot 2024, native-language messages generate **2.1 times more responses** than translated messages.",
+        "Therefore, if your target market includes German-speaking Switzerland, DACH or the Netherlands, devlo offers integrated coverage that Undersales does not provide. Our clients get their first appointments from the **3rd week**, with a real-time tracking dashboard and a dedicated weekly call."
+      ],
+      "summaryTitle": "Key points",
+      "summaryPoints": [
+        "**Native multi-channel**: devlo combines cold email + LinkedIn + calling in a coordinated sequence -- not just cold email.",
+        "**Native FR/DE/EN/NL**: coverage of Switzerland + DACH + BeNeLux without multiplying agencies.",
+        "**1,000+ campaigns since 2020**: proven methodology with 14 public case studies and verifiable metrics.",
+        "**Real-time dashboard + weekly call**: full transparency on performance, not just a monthly report."
+      ],
+      "datePublished": "2024-06-15",
+      "dateModified": "2026-03-01"
     },
     "de": {
       "metaTitle": "Alternative zu Undersales | B2B Prospektionsagentur Schweiz | devlo",
@@ -160,12 +175,12 @@
       ],
       "comparisonTable": [
         {
-          "feature": "Approche",
+          "feature": "Ansatz",
           "devlo": "Multichannel (cold email + LinkedIn + calling)",
           "competitor": "Hauptsächlich Cold E-Mail"
         },
         {
-          "feature": "Langues",
+          "feature": "Sprachen",
           "devlo": "FR / DE / EN / NL Muttersprachler",
           "competitor": "DE hauptsächlich"
         },
@@ -190,7 +205,7 @@
           "competitor": "Nicht-öffentliche Daten"
         },
         {
-          "feature": "Reporting",
+          "feature": "Berichterstattung",
           "devlo": "Dashboard in Echtzeit + weekly call",
           "competitor": "Monatlicher Bericht"
         }
@@ -214,7 +229,22 @@
           "question": "Wie migriere ich von Undersales zu devlo?",
           "answer": "Die Umstellung dauert zwei Wochen: ICP-Workshop, Übertragung der Listen mit potenziellen Kunden, Setup der Infrastruktur, Validierung der Sequenzen. Unsere ersten Ergebnisse kommen bereits in der dritten Kampagnenwoche."
         }
-      ]
+      ],
+      "editorialTitle": "Devlo vs. Undersales: Welche Agentur sollten Sie für Ihre mehrsprachige B2B-Akquise wählen?",
+      "editorialParagraphs": [
+        "Die Wahl zwischen zwei B2B-Akquise-Agenturen dreht sich nicht nur um den Preis -- es geht um **geografische Abdeckung, Kanalkompetenz und Schnelligkeit der ersten Ergebnisse**. devlo und Undersales sind beide auf dem französischsprachigen Markt tätig, aber ihre Reichweite unterscheidet sich erheblich, sobald man den Schweizer, deutschsprachigen und DACH-Markt betrachtet.",
+        "devlo hat seinen Sitz seit 2020 in der Schweiz und hat **über 500 Kampagnen in der Schweiz, Belgien, Frankreich und DACH** durchgeführt. Unser Team schreibt und akquiriert muttersprachlich in FR, DE, EN und NL -- ein entscheidender Vorteil für Unternehmen, die mehrere Märkte gleichzeitig ansprechen. Laut HubSpot 2024 generieren muttersprachliche Nachrichten **2,1-mal mehr Antworten** als übersetzte Nachrichten.",
+        "Wenn Ihr Zielmarkt die Deutschschweiz, DACH oder die Niederlande umfasst, bietet devlo eine integrierte Abdeckung, die Undersales nicht bietet. Unsere Kunden erhalten ihre ersten Termine ab der **3. Woche**, mit einem Echtzeit-Dashboard und einem wöchentlichen dedizierten Call."
+      ],
+      "summaryTitle": "Schlüsselpunkte",
+      "summaryPoints": [
+        "**Natives Multichannel**: devlo kombiniert Cold E-Mail + LinkedIn + Calling in einer koordinierten Sequenz -- nicht nur Cold E-Mail.",
+        "**Natives FR/DE/EN/NL**: Abdeckung Schweiz + DACH + BeNeLux ohne mehrere Agenturen.",
+        "**1.000+ Kampagnen seit 2020**: bewährte Methodik mit 14 öffentlichen Fallstudien und überprüfbaren Metriken.",
+        "**Echtzeit-Dashboard + wöchentlicher Call**: volle Transparenz über die Leistung, nicht nur ein monatlicher Bericht."
+      ],
+      "datePublished": "2024-06-15",
+      "dateModified": "2026-03-01"
     },
     "nl": {
       "metaTitle": "Alternatief voor Undersales | B2B prospectiebureau Zwitserland | devlo",
@@ -227,12 +257,12 @@
       ],
       "comparisonTable": [
         {
-          "feature": "Approche",
+          "feature": "Aanpak",
           "devlo": "Multi-channel (koude e-mail + LinkedIn + bellen)",
           "competitor": "Voornamelijk koude e-mail"
         },
         {
-          "feature": "Langues",
+          "feature": "Talen",
           "devlo": "FR / DE / EN / NL moedertaal",
           "competitor": "NL voornamelijk"
         },
@@ -257,7 +287,7 @@
           "competitor": "Niet-openbare gegevens"
         },
         {
-          "feature": "Reporting",
+          "feature": "Rapportage",
           "devlo": "Real-time dashboard + wekelijks gesprek",
           "competitor": "Maandelijks verslag"
         }
@@ -281,7 +311,22 @@
           "question": "Hoe migreer ik van Undersales naar devlo?",
           "answer": "De overgang duurt 2 weken: ICP-workshop, overdracht van prospectlijsten, opzetten van infrastructuur, validatie van sequenties. Onze eerste resultaten kwamen in de 3e week van de campagne."
         }
-      ]
+      ],
+      "editorialTitle": "Devlo vs Undersales: welk bureau kies je voor je meertalige B2B-prospectie?",
+      "editorialParagraphs": [
+        "De keuze tussen twee B2B-prospectiebureaus draait niet alleen om prijs -- het gaat om **geografische dekking, kanaalexpertise en snelheid van de eerste resultaten**. devlo en Undersales zijn beide actief op de Franstalige markt, maar hun bereik verschilt aanzienlijk zodra je kijkt naar de Zwitserse, Duitstalige en DACH-markten.",
+        "devlo is sinds 2020 gevestigd in Zwitserland en heeft **meer dan 500 campagnes in Zwitserland, België, Frankrijk en DACH** uitgevoerd. Ons team schrijft en prospecteert moedertaal in FR, DE, EN en NL -- een doorslaggevend voordeel voor bedrijven die meerdere markten tegelijkertijd willen bereiken. Volgens HubSpot 2024 genereren moedertaalberichten **2,1 keer meer reacties** dan vertaalde berichten.",
+        "Als uw doelmarkt Duitstalig Zwitserland, DACH of Nederland omvat, biedt devlo een geïntegreerde dekking die Undersales niet biedt. Onze klanten krijgen hun eerste afspraken vanaf de **3e week**, met een realtime tracking dashboard en een wekelijks dedicated gesprek."
+      ],
+      "summaryTitle": "Belangrijkste punten",
+      "summaryPoints": [
+        "**Native multichannel**: devlo combineert cold e-mail + LinkedIn + bellen in een gecoördineerde sequentie -- niet alleen cold e-mail.",
+        "**Native FR/DE/EN/NL**: dekking van Zwitserland + DACH + BeNeLux zonder meerdere bureaus.",
+        "**1.000+ campagnes sinds 2020**: bewezen methodologie met 14 openbare casestudies en controleerbare statistieken.",
+        "**Realtime dashboard + wekelijks gesprek**: volledige transparantie over prestaties, niet alleen een maandelijks rapport."
+      ],
+      "datePublished": "2024-06-15",
+      "dateModified": "2026-03-01"
     }
   },
   "alternative-lalaleads": {
@@ -378,7 +423,7 @@
       ],
       "comparisonTable": [
         {
-          "feature": "Approche",
+          "feature": "Approach",
           "devlo": "Multi-channel (cold email + LinkedIn + calling)",
           "competitor": "Cold email & LinkedIn"
         },
@@ -398,7 +443,7 @@
           "competitor": "Not proposed"
         },
         {
-          "feature": "Enrichissement",
+          "feature": "Enrichment",
           "devlo": "Clay + Apollo + Cognism integrated",
           "competitor": "Standard tools"
         },
@@ -408,7 +453,7 @@
           "competitor": "Limited data"
         },
         {
-          "feature": "Langues",
+          "feature": "Languages",
           "devlo": "FR / DE / EN / NL",
           "competitor": "FR / EN"
         }
@@ -460,7 +505,7 @@
       ],
       "comparisonTable": [
         {
-          "feature": "Approche",
+          "feature": "Ansatz",
           "devlo": "Multichannel (cold email + LinkedIn + calling)",
           "competitor": "Cold email & LinkedIn"
         },
@@ -480,7 +525,7 @@
           "competitor": "Nicht vorgeschlagen"
         },
         {
-          "feature": "Enrichissement",
+          "feature": "Anreicherung",
           "devlo": "Clay + Apollo + Cognism integriert",
           "competitor": "Standard-Tools"
         },
@@ -490,7 +535,7 @@
           "competitor": "Begrenzte Daten"
         },
         {
-          "feature": "Langues",
+          "feature": "Sprachen",
           "devlo": "FR / DE / EN / NL",
           "competitor": "FR / EN"
         }
@@ -542,7 +587,7 @@
       ],
       "comparisonTable": [
         {
-          "feature": "Approche",
+          "feature": "Aanpak",
           "devlo": "Multi-channel (koude e-mail + LinkedIn + bellen)",
           "competitor": "Koude e-mail & LinkedIn"
         },
@@ -562,7 +607,7 @@
           "competitor": "Niet voorgesteld"
         },
         {
-          "feature": "Enrichissement",
+          "feature": "Verrijking",
           "devlo": "Klei + Apollo + Cognisme geïntegreerd",
           "competitor": "Standaard gereedschap"
         },
@@ -572,7 +617,7 @@
           "competitor": "Beperkte gegevens"
         },
         {
-          "feature": "Langues",
+          "feature": "Talen",
           "devlo": "FR / DE / EN / NL",
           "competitor": "FR / EN"
         }
@@ -711,7 +756,7 @@
       ],
       "comparisonTable": [
         {
-          "feature": "Approche",
+          "feature": "Approach",
           "devlo": "Multi-channel (cold email + LinkedIn + calling)",
           "competitor": "Varies by agency"
         },
@@ -721,7 +766,7 @@
           "competitor": "Often secondary"
         },
         {
-          "feature": "Langues",
+          "feature": "Languages",
           "devlo": "FR / DE / EN / NL native",
           "competitor": "EN mainly"
         },
@@ -796,7 +841,7 @@
       ],
       "comparisonTable": [
         {
-          "feature": "Approche",
+          "feature": "Ansatz",
           "devlo": "Multichannel (cold email + LinkedIn + calling)",
           "competitor": "Je nach Agentur unterschiedlich"
         },
@@ -806,7 +851,7 @@
           "competitor": "Häufig sekundär"
         },
         {
-          "feature": "Langues",
+          "feature": "Sprachen",
           "devlo": "FR / DE / EN / NL Muttersprachler",
           "competitor": "DE hauptsächlich"
         },
@@ -881,7 +926,7 @@
       ],
       "comparisonTable": [
         {
-          "feature": "Approche",
+          "feature": "Aanpak",
           "devlo": "Multi-channel (koude e-mail + LinkedIn + bellen)",
           "competitor": "Verschilt per agentschap"
         },
@@ -891,7 +936,7 @@
           "competitor": "Vaak secundair"
         },
         {
-          "feature": "Langues",
+          "feature": "Talen",
           "devlo": "FR / DE / EN / NL moedertaal",
           "competitor": "NL voornamelijk"
         },

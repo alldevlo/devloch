@@ -10,7 +10,7 @@ import { InfiniteLogoRail } from "@/components/shared/logo-rail";
 import { SummarySection } from "@/components/shared/summary-section";
 import { TRUSTED_LOGOS_STRIP } from "@/content/service-brand-assets";
 import { type GeoPageData } from "@/content/geo-pages";
-import { caseStudyBySlug } from "@/lib/case-studies";
+import { getLocalizedCaseStudyBySlug } from "@/lib/i18n/case-studies-content";
 import { getLocalizedGeoContent } from "@/lib/i18n/geo-content";
 import { resolvePathForLocale, type SupportedLocale } from "@/lib/i18n/slug-map";
 import { buildArticleSchema, buildBreadcrumbSchema, buildFaqPageSchema } from "@/lib/seo/schema-builders";
@@ -83,9 +83,10 @@ export function GeoLandingPage({ data, locale = "fr" }: { data: GeoPageData; loc
   const summaryPoints = localizedContent?.summaryPoints ?? [];
   const datePublished = localizedContent?.datePublished ?? "2024-06-15";
   const dateModified = localizedContent?.dateModified ?? "2026-03-01";
+  const localizedCaseStudies = getLocalizedCaseStudyBySlug(locale);
 
   const studies = data.caseStudySlugs
-    .map((slug) => caseStudyBySlug[slug])
+    .map((slug) => localizedCaseStudies[slug])
     .filter(Boolean);
 
   const logos = data.excludeLogos
@@ -174,6 +175,7 @@ export function GeoLandingPage({ data, locale = "fr" }: { data: GeoPageData; loc
                   <SummarySection
                     title={summaryTitle ?? (locale === "fr" ? "En résumé" : locale === "de" ? "Zusammenfassung" : locale === "nl" ? "Samenvatting" : "Key takeaways")}
                     points={summaryPoints}
+                    locale={locale}
                   />
                 </div>
               )}

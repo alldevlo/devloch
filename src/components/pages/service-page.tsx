@@ -281,6 +281,7 @@ export function ServicePageTemplate({ service, locale = "fr" }: ServicePageProps
                     <SummarySection
                       title={localizedService.summaryTitle ?? (locale === "fr" ? "En résumé" : locale === "de" ? "Zusammenfassung" : locale === "nl" ? "Samenvatting" : "Key takeaways")}
                       points={localizedService.summaryPoints}
+                      locale={locale}
                     />
                   </div>
                 )}
