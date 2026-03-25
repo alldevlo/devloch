@@ -15,9 +15,9 @@ export type GeoPageData = {
     telephone: string;
     email: string;
     address: {
-      streetAddress: string;
+      streetAddress?: string;
       addressLocality: string;
-      postalCode: string;
+      postalCode?: string;
       addressRegion: string;
       addressCountry: string;
     };
