@@ -507,7 +507,7 @@ export const faqs: FaqItem[] = [
 export const footerContent = {
   mission:
     "Notre mission est de permettre aux entreprises B2B de rencontrer leurs prospects au travers de campagnes de prospection commerciale ultra-ciblées et personnalisées, et d'un démarchage télémarketing innovant et digital.",
-  switzerlandOffice: ["SWITZERLAND OFFICE", "Ruelle des Dolles 1", "CH-1071 Rivaz", "Suisse", "+41 79 758 64 03", "emea@devlo.ch"],
+  switzerlandOffice: ["SWITZERLAND OFFICE", "Lausanne", "Suisse", "+41 79 758 64 03", "emea@devlo.ch"],
   usaOffice: [
     "USA OFFICE",
     "devlo LLC",

@@ -33,7 +33,7 @@ export const GEO_PAGES: Record<string, GeoPageData> = {
       "Agence de prospection commerciale B2B basée en Suisse. Générez des leads qualifiés et des rendez-vous avec des décideurs suisses via cold email, LinkedIn et calling.",
     h1: "Prospection commerciale B2B en Suisse",
     intro: [
-      "Basée à Rivaz dans le canton de Vaud, devlo accompagne les entreprises suisses et internationales dans leur développement commercial B2B sur le marché helvétique.",
+      "Basée à Lausanne dans le canton de Vaud, devlo accompagne les entreprises suisses et internationales dans leur développement commercial B2B sur le marché helvétique.",
       "Notre connaissance du tissu économique suisse — romand, alémanique et tessinois — nous permet de construire des campagnes outbound multicanales adaptées aux spécificités locales.",
       "Plus de 200 campagnes déployées en Suisse depuis 2018, avec un taux de réponse moyen de 7% sur les décideurs contactés.",
     ],
@@ -72,9 +72,7 @@ export const GEO_PAGES: Record<string, GeoPageData> = {
       telephone: "+41-79-758-64-03",
       email: "emea@devlo.ch",
       address: {
-        streetAddress: "Ruelle des Dolles 1",
-        addressLocality: "Rivaz",
-        postalCode: "1071",
+        addressLocality: "Lausanne",
         addressRegion: "Vaud",
         addressCountry: "CH",
       },
@@ -144,9 +142,7 @@ export const GEO_PAGES: Record<string, GeoPageData> = {
       telephone: "+41-79-758-64-03",
       email: "emea@devlo.ch",
       address: {
-        streetAddress: "Ruelle des Dolles 1",
-        addressLocality: "Rivaz",
-        postalCode: "1071",
+        addressLocality: "Lausanne",
         addressRegion: "Vaud",
         addressCountry: "CH",
       },
@@ -215,9 +211,7 @@ export const GEO_PAGES: Record<string, GeoPageData> = {
       telephone: "+41-79-758-64-03",
       email: "emea@devlo.ch",
       address: {
-        streetAddress: "Ruelle des Dolles 1",
-        addressLocality: "Rivaz",
-        postalCode: "1071",
+        addressLocality: "Lausanne",
         addressRegion: "Vaud",
         addressCountry: "CH",
       },

@@ -86,7 +86,7 @@ export function AiSalesOpsMasterPage({ locale = "fr" }: AiSalesOpsMasterPageProp
       url: siteConfig.url,
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Vevey",
+        addressLocality: "Lausanne",
         addressCountry: "CH",
       },
     },

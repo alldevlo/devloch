@@ -146,9 +146,7 @@ function buildLayoutSchemas(locale: LayoutLocale) {
     ],
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Ruelle des Dolles 1",
-      addressLocality: "Rivaz",
-      postalCode: "1071",
+      addressLocality: "Lausanne",
       addressRegion: "Vaud",
       addressCountry: "CH",
     },
@@ -183,16 +181,14 @@ function buildLayoutSchemas(locale: LayoutLocale) {
     description: copy.organizationDescription,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Ruelle des Dolles 1",
-      addressLocality: "Rivaz",
-      postalCode: "1071",
+      addressLocality: "Lausanne",
       addressRegion: "Vaud",
       addressCountry: "CH",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 46.4744,
-      longitude: 6.8432,
+      latitude: 46.5197,
+      longitude: 6.6323,
     },
     areaServed: [
       { "@type": "Country", name: "Switzerland" },

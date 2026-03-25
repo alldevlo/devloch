@@ -8,7 +8,7 @@
 
 **Name:** devlo
 **Founded:** 2020
-**Headquarters:** Ruelle des Dolles 1, 1071 Rivaz, Vaud, Switzerland
+**Headquarters:** Lausanne, Vaud, Switzerland
 **US Office:** 500 4th St NW Suite 102 #1591, Albuquerque, NM 87102, USA
 **Website:** https://devlo.ch
 **Languages:** French, English, German, Dutch

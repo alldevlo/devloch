@@ -1063,8 +1063,7 @@ export const footerContent = {
   mission:
     "Notre mission : permettre aux entreprises B2B de rencontrer leurs prospects grâce à des campagnes de prospection commerciale ultra-ciblées et personnalisées, et une téléprospection digitale innovante.",
   swissOffice: [
-    "Ruelle des Dolles 1",
-    "CH-1071 Rivaz",
+    "Lausanne",
     "Suisse",
     "+41 79 758 64 03",
     "emea@devlo.ch",

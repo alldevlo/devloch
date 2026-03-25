@@ -37,9 +37,7 @@ export const seoConfig = {
 
     /** Swiss headquarters */
     addressCH: {
-      streetAddress: "Ruelle des Dolles 1",
-      addressLocality: "Rivaz",
-      postalCode: "1071",
+      addressLocality: "Lausanne",
       addressRegion: "Vaud",
       addressCountry: "CH",
     },
